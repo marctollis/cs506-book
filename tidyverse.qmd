@@ -1,0 +1,18 @@
+---
+title: "Tidy Data and the Tidyverse"
+---
+
+## Learning Objectives
+
+-   Define tidy data principles\
+-   Install and load the `tidyverse` package\
+-   Understand the core tidyverse packages and their roles :contentReference[oaicite:6]{index="6"}
+
+## Key Concepts
+
+-   Tidy data: one row per observation, one column per variable
+-   Install and load:
+
+```r 
+install.packages("tidyverse")
+library(tidyverse)

@@ -1,0 +1,26 @@
+---
+title: "Introduction to R and RStudio"
+---
+
+## Learning Objectives
+
+-   Install R and RStudio\
+-   Navigate the RStudio interface\
+-   Understand the console vs script vs environment\
+-   Run simple R code and inspect datasets
+
+## Key Concepts
+
+-   RStudio panes: Source, Console, Environment, Files\
+-   Script vs interactive console\
+-   Basic data types (`numeric`, `character`, `logical`) and vectors\
+-   Using `dput()` for reproducible sharing (R4DS Intro) :contentReference[oaicite:1]{index="1"}
+
+## Example
+
+```{r}
+
+# Load built‑in dataset and inspect 
+data(mtcars)
+str(mtcars)
+summary(mtcars)
