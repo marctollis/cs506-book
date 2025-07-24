@@ -45,6 +45,7 @@ Install and load the full tidyverse:
 ```{r install, eval=FALSE}
 # Run this in the Console if you haven't installed yet
 # install.packages("tidyverse")
+# install.packages("reader")
 ```
 
 ```{r}
@@ -95,7 +96,7 @@ df_tibble
 
 ## Practice Exercises
 
-1.  Use read_csv() to import the Palmer Penguins dataset:
+1.  Use `read_csv()` to import the Palmer Penguins dataset:
 
 -   URL: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv
 
