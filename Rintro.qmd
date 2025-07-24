@@ -17,10 +17,8 @@ title: "Introduction to R and RStudio"
 -   Using `dput()` for reproducible sharing (R4DS Intro) :contentReference[oaicite:1]{index="1"}
 
 ## Example
-
-```{r}
-
 # Load built‑in dataset and inspect 
+```{r}
 data(mtcars)
 str(mtcars)
 summary(mtcars)
