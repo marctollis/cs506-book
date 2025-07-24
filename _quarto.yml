@@ -1,23 +1,33 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "CS506: Data Wrangling and Management"
-  author: "Norah Jones"
-  date: "7/24/2025"
-  chapters:
+  subtitle: "Fall 2025"
+  author: 
+    - name: Marc Tollis, PhD
+      - affiliations: Northern Arizona University
+cover-image: cover.png
+site-url: https://tollislab.org/
+repo-url: https://marctollis.github.io/cs506-book/
+repo-actions: [source, issue]
+chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
     - references.qmd
 
 bibliography: references.bib
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
+    smooth-scroll: true
+    code-link: true
+    code-tools:
+      toggle: true
+    code-fold: false
+    highlight-style: printing
+    code-block-bg: true
   pdf:
     documentclass: scrreprt
 
