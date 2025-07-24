@@ -6,30 +6,30 @@ title: "Introduction to R and RStudio"
 
 By the end of this chapter, you should be able to:
 
-- Install and open R and RStudio  
-- Navigate the four-pane layout of RStudio  
-- Create and run R scripts  
-- Understand the differences between the console, script editor, and environment  
-- Execute basic R operations and understand data types  
-- Install and load R packages  
-## Getting Started
+-   Install and open R and RStudio\
+-   Navigate the four-pane layout of RStudio\
+-   Create and run R scripts\
+-   Understand the differences between the console, script editor, and environment\
+-   Execute basic R operations and understand data types\
+-   Install and load R packages\
+    \## Getting Started
 
-**R** is a programming language designed for data analysis.  
+**R** is a programming language designed for data analysis.\
 **RStudio** is an Integrated Development Environment (IDE) that makes working with R easier.
 
 ### Installing R and RStudio
 
-1. Install R: [https://cran.r-project.org/](https://cran.r-project.org/)  
-2. Install RStudio: [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+1.  Install R: <https://cran.r-project.org/>\
+2.  Install RStudio: <https://posit.co/download/rstudio-desktop/>
 
 Once you open RStudio, you'll see four panes:
 
-- **Console** – for running code interactively  
-- **Source** – to write and save scripts  
-- **Environment/History** – to view and manage objects  
-- **Files/Plots/Packages/Help/Viewer** – navigation and visualization tools  
+-   **Console** – for running code interactively\
+-   **Source** – to write and save scripts\
+-   **Environment/History** – to view and manage objects\
+-   **Files/Plots/Packages/Help/Viewer** – navigation and visualization tools
 
----
+------------------------------------------------------------------------
 
 ## Basic R Concepts
 
@@ -39,4 +39,77 @@ Once you open RStudio, you'll see four panes:
 x <- 5
 y <- 10
 z <- x + y
-z ```
+z
+```
+
+### Vectors and Functions
+
+```{r}
+ages <- c(25, 30, 35, 40)
+mean(ages)
+sd(ages)
+```
+
+### Data Frames
+
+```{r}
+name <- c("Alice", "Bob", "Charlie")
+age <- c(25, 30, 35)
+student_data <- data.frame(name, age)
+student_data
+```
+
+### Inspecting Data
+
+```{r}
+str(student_data)
+summary(student_data)
+head(student_data)
+```
+
+### Comments and Help
+
+```{r}
+# This is a comment
+?mean  # Help for the mean function
+```
+
+### Using Scripts and Console
+
+-   Write your code in the script editor and run lines with Ctrl+Enter (Cmd+Enter on Mac)
+-   Save your work with .R extensions
+-   Use the Console for quick exploration
+
+### Insalling and Loading Packages
+
+#Run this manually in the Console, not in the book install.packages("tidyverse")
+
+### Practice Exercises
+
+1.  Create a script that assigns two numbers and prints their sum
+2.  Create a vector of Celsius temperatures and convert to Fahrenheit
+3.  Create a data frame with columns: name, age, major
+
+```{r}
+# Exercise 1
+a <- 15
+b <- 20
+a + b
+
+# Exercise 2
+celsius <- c(0, 10, 20)
+fahrenheit <- celsius * 9/5 + 32
+fahrenheit
+
+# Exercise 3
+students <- data.frame(
+  name = c("Lily", "Mark", "Tom"),
+  age = c(21, 22, 23),
+  major = c("Biology", "Math", "History")
+)
+str(students)
+```
+
+### Next Steps
+
+Now that you can run R scripts and explore objects, you'll learn how to load and reshape real data using the `tidyverse` in the next chapter.

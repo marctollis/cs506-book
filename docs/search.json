@@ -72,9 +72,9 @@
   {
     "objectID": "Rintro.html",
     "href": "Rintro.html",
-    "title": "2  Introduction to R and RStudio",
+    "title": "\n2  Introduction to R and RStudio\n",
     "section": "",
-    "text": "2.1 Learning Objectives\nBy the end of this chapter, you should be able to:\nR is a programming language designed for data analysis.\nRStudio is an Integrated Development Environment (IDE) that makes working with R easier.",
+    "text": "2.1 Learning Objectives\nBy the end of this chapter, you should be able to:\nR is a programming language designed for data analysis.RStudio is an Integrated Development Environment (IDE) that makes working with R easier.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
@@ -82,9 +82,9 @@
   {
     "objectID": "Rintro.html#learning-objectives",
     "href": "Rintro.html#learning-objectives",
-    "title": "2  Introduction to R and RStudio",
+    "title": "\n2  Introduction to R and RStudio\n",
     "section": "",
-    "text": "Install and open R and RStudio\n\nNavigate the four-pane layout of RStudio\n\nCreate and run R scripts\n\nUnderstand the differences between the console, script editor, and environment\n\nExecute basic R operations and understand data types\n\nInstall and load R packages\n## Getting Started\n\n\n\n2.1.1 Installing R and RStudio\n\nInstall R: https://cran.r-project.org/\n\nInstall RStudio: https://posit.co/download/rstudio-desktop/\n\nOnce you open RStudio, you’ll see four panes:\n\nConsole – for running code interactively\n\nSource – to write and save scripts\n\nEnvironment/History – to view and manage objects\n\nFiles/Plots/Packages/Help/Viewer – navigation and visualization tools",
+    "text": "Install and open R and RStudio\n\nNavigate the four-pane layout of RStudio\n\nCreate and run R scripts\n\nUnderstand the differences between the console, script editor, and environment\n\nExecute basic R operations and understand data types\n\nInstall and load R packages\n## Getting Started\n\n\n\n2.1.1 Installing R and RStudio\n\nInstall R: https://cran.r-project.org/\n\nInstall RStudio: https://posit.co/download/rstudio-desktop/\n\n\nOnce you open RStudio, you’ll see four panes:\n\n\nConsole – for running code interactively\n\n\nSource – to write and save scripts\n\n\nEnvironment/History – to view and manage objects\n\n\nFiles/Plots/Packages/Help/Viewer – navigation and visualization tools",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
@@ -747,9 +747,9 @@
   {
     "objectID": "Rintro.html#basic-r-concepts",
     "href": "Rintro.html#basic-r-concepts",
-    "title": "2  Introduction to R and RStudio",
-    "section": "2.2 Basic R Concepts",
-    "text": "2.2 Basic R Concepts\n\n2.2.1 Variables and Assignments\nx &lt;- 5 y &lt;- 10 z &lt;- x + y z ```",
+    "title": "\n2  Introduction to R and RStudio\n",
+    "section": "\n2.2 Basic R Concepts",
+    "text": "2.2 Basic R Concepts\n\n2.2.1 Variables and Assignments\n\nx &lt;- 5\ny &lt;- 10\nz &lt;- x + y\nz\n\n[1] 15\n\n\n\n2.2.2 Vectors and Functions\n\nages &lt;- c(25, 30, 35, 40)\nmean(ages)\n\n[1] 32.5\n\nsd(ages)\n\n[1] 6.454972\n\n\n\n2.2.3 Data Frames\n\nname &lt;- c(\"Alice\", \"Bob\", \"Charlie\")\nage &lt;- c(25, 30, 35)\nstudent_data &lt;- data.frame(name, age)\nstudent_data\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35\n\n\n\n2.2.4 Inspecting Data\n\nstr(student_data)\n\n'data.frame':   3 obs. of  2 variables:\n $ name: chr  \"Alice\" \"Bob\" \"Charlie\"\n $ age : num  25 30 35\n\nsummary(student_data)\n\n     name                age      \n Length:3           Min.   :25.0  \n Class :character   1st Qu.:27.5  \n Mode  :character   Median :30.0  \n                    Mean   :30.0  \n                    3rd Qu.:32.5  \n                    Max.   :35.0  \n\nhead(student_data)\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35\n\n\n\n2.2.5 Comments and Help\n\n# This is a comment\n?mean  # Help for the mean function\n\n\n2.2.6 Using Scripts and Console\n\nWrite your code in the script editor and run lines with Ctrl+Enter (Cmd+Enter on Mac)\nSave your work with .R extensions\nUse the Console for quick exploration\n\n2.2.7 Insalling and Loading Packages\n#Run this manually in the Console, not in the book install.packages(“tidyverse”)\n\n2.2.8 Practice Exercises\n\nCreate a script that assigns two numbers and prints their sum\nCreate a vector of Celsius temperatures and convert to Fahrenheit\nCreate a data frame with columns: name, age, major\n\n\n# Exercise 1\na &lt;- 15\nb &lt;- 20\na + b\n\n[1] 35\n\n# Exercise 2\ncelsius &lt;- c(0, 10, 20)\nfahrenheit &lt;- celsius * 9/5 + 32\nfahrenheit\n\n[1] 32 50 68\n\n# Exercise 3\nstudents &lt;- data.frame(\n  name = c(\"Lily\", \"Mark\", \"Tom\"),\n  age = c(21, 22, 23),\n  major = c(\"Biology\", \"Math\", \"History\")\n)\nstr(students)\n\n'data.frame':   3 obs. of  3 variables:\n $ name : chr  \"Lily\" \"Mark\" \"Tom\"\n $ age  : num  21 22 23\n $ major: chr  \"Biology\" \"Math\" \"History\"\n\n\n\n2.2.9 Next Steps\nNow that you can run R scripts and explore objects, you’ll learn how to load and reshape real data using the tidyverse in the next chapter.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
