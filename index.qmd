@@ -16,7 +16,7 @@ Welcome to CS506: Data Wrangling and Management. This course introduces graduate
 
 -   Apply data wrangling techniques to real-world datasets
 
-**Textbook:** *R for Data Science* by Hadley Wickham & Garrett Grolemund (Available for free: <https://r4ds.had.co.nz/>)
+**Textbook:** *R for Data Science* by Hadley Wickham & Garrett Grolemund (Available for free: <https://r4ds.hadley.nz/>)
 
 **Software Requirements:**
 
