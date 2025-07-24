@@ -8,5 +8,146 @@
     "crumbs": [
       "Preface"
     ]
+  },
+  {
+    "objectID": "welcome.html",
+    "href": "welcome.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>welcome.html</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html",
+    "href": "Rintro.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rintro.html</span>"
+    ]
+  },
+  {
+    "objectID": "tidyverse.html",
+    "href": "tidyverse.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>tidyverse.html</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html",
+    "href": "dplyr1.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>dplyr1.html</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr2.html",
+    "href": "dplyr2.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>dplyr2.html</span>"
+    ]
+  },
+  {
+    "objectID": "cleaning.html",
+    "href": "cleaning.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>cleaning.html</span>"
+    ]
+  },
+  {
+    "objectID": "tidyr.html",
+    "href": "tidyr.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>tidyr.html</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html",
+    "href": "ggplot2.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>ggplot2.html</span>"
+    ]
+  },
+  {
+    "objectID": "dataviz2.html",
+    "href": "dataviz2.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>dataviz2.html</span>"
+    ]
+  },
+  {
+    "objectID": "regex.html",
+    "href": "regex.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>regex.html</span>"
+    ]
+  },
+  {
+    "objectID": "merging.html",
+    "href": "merging.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>merging.html</span>"
+    ]
+  },
+  {
+    "objectID": "web.html",
+    "href": "web.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>web.html</span>"
+    ]
+  },
+  {
+    "objectID": "databases.html",
+    "href": "databases.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>databases.html</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>syllabus.html</span>"
+    ]
   }
 ]
