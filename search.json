@@ -72,19 +72,19 @@
   {
     "objectID": "Rintro.html",
     "href": "Rintro.html",
-    "title": "\n2  Introduction to R and RStudio\n",
+    "title": "2  Introduction to R and RStudio",
     "section": "",
-    "text": "2.1 Overview\nThis chapter covers the following:",
+    "text": "2.1 Learning Objectives",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
   },
   {
-    "objectID": "Rintro.html#overview",
-    "href": "Rintro.html#overview",
-    "title": "\n2  Introduction to R and RStudio\n",
+    "objectID": "Rintro.html#learning-objectives",
+    "href": "Rintro.html#learning-objectives",
+    "title": "2  Introduction to R and RStudio",
     "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
+    "text": "Install R and RStudio\n\nNavigate the RStudio interface\n\nUnderstand the console vs script vs environment\n\nRun simple R code and inspect datasets",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
@@ -92,9 +92,9 @@
   {
     "objectID": "Rintro.html#key-concepts",
     "href": "Rintro.html#key-concepts",
-    "title": "\n2  Introduction to R and RStudio\n",
-    "section": "\n2.2 Key Concepts",
-    "text": "2.2 Key Concepts\nWrite your lecture content here.",
+    "title": "2  Introduction to R and RStudio",
+    "section": "2.2 Key Concepts",
+    "text": "2.2 Key Concepts\n\nRStudio panes: Source, Console, Environment, Files\n\nScript vs interactive console\n\nBasic data types (numeric, character, logical) and vectors\n\nUsing dput() for reproducible sharing (R4DS Intro) :contentReferenceoaicite:1",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
@@ -102,19 +102,9 @@
   {
     "objectID": "Rintro.html#example",
     "href": "Rintro.html#example",
-    "title": "\n2  Introduction to R and RStudio\n",
-    "section": "\n2.3 Example",
-    "text": "2.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "Rintro.html#practice-exercises",
-    "href": "Rintro.html#practice-exercises",
-    "title": "\n2  Introduction to R and RStudio\n",
-    "section": "\n2.4 Practice Exercises",
-    "text": "2.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "title": "2  Introduction to R and RStudio",
+    "section": "2.3 Example",
+    "text": "2.3 Example",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
@@ -122,19 +112,19 @@
   {
     "objectID": "tidyverse.html",
     "href": "tidyverse.html",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
+    "title": "3  Tidy Data and the Tidyverse",
     "section": "",
-    "text": "3.1 Overview\nThis chapter covers the following:",
+    "text": "3.1 Learning Objectives",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
     ]
   },
   {
-    "objectID": "tidyverse.html#overview",
-    "href": "tidyverse.html#overview",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
+    "objectID": "tidyverse.html#learning-objectives",
+    "href": "tidyverse.html#learning-objectives",
+    "title": "3  Tidy Data and the Tidyverse",
     "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
+    "text": "Define tidy data principles\n\nInstall and load the tidyverse package\n\nUnderstand the core tidyverse packages and their roles :contentReferenceoaicite:6",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
     ]
@@ -142,29 +132,9 @@
   {
     "objectID": "tidyverse.html#key-concepts",
     "href": "tidyverse.html#key-concepts",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.2 Key Concepts",
-    "text": "3.2 Key Concepts\nWrite your lecture content here.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#example",
-    "href": "tidyverse.html#example",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.3 Example",
-    "text": "3.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#practice-exercises",
-    "href": "tidyverse.html#practice-exercises",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.4 Practice Exercises",
-    "text": "3.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "title": "3  Tidy Data and the Tidyverse",
+    "section": "3.2 Key Concepts",
+    "text": "3.2 Key Concepts\n\nTidy data: one row per observation, one column per variable\nInstall and load:\n\ninstall.packages(\"tidyverse\")\nlibrary(tidyverse)\n\n\n\n\n:::{#quarto-navigation-envelope .hidden}\n[CS506: Data Wrangling and Management]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl\"}\n[CS506: Data Wrangling and Management]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1uYXZiYXItdGl0bGU=\"}\n[&lt;span class='chapter-number'&gt;4&lt;/span&gt;  &lt;span class='chapter-title'&gt;Data Manipulation with dplyr (Part 1)&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1uZXh0\"}\n[&lt;span class='chapter-number'&gt;2&lt;/span&gt;  &lt;span class='chapter-title'&gt;Introduction to R and RStudio&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1wcmV2\"}\n[Preface]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sUHJlZmFjZQ==\"}\n[&lt;span class='chapter-number'&gt;1&lt;/span&gt;  &lt;span class='chapter-title'&gt;Welcome and How to Use This Book&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi93ZWxjb21lLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjE8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+V2VsY29tZS1hbmQtSG93LXRvLVVzZS1UaGlzLUJvb2s8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;2&lt;/span&gt;  &lt;span class='chapter-title'&gt;Introduction to R and RStudio&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9SaW50cm8uaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mjwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5JbnRyb2R1Y3Rpb24tdG8tUi1hbmQtUlN0dWRpbzwvc3Bhbj4=\"}\n[&lt;span class='chapter-number'&gt;3&lt;/span&gt;  &lt;span class='chapter-title'&gt;Tidy Data and the Tidyverse&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi90aWR5dmVyc2UuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5UaWR5LURhdGEtYW5kLXRoZS1UaWR5dmVyc2U8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;4&lt;/span&gt;  &lt;span class='chapter-title'&gt;Data Manipulation with dplyr (Part 1)&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9kcGx5cjEuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+NDwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5EYXRhLU1hbmlwdWxhdGlvbi13aXRoLWRwbHlyLShQYXJ0LTEpPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;5&lt;/span&gt;  &lt;span class='chapter-title'&gt;Data Manipulation with dplyr (Part 2)&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9kcGx5cjIuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+NTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5EYXRhLU1hbmlwdWxhdGlvbi13aXRoLWRwbHlyLShQYXJ0LTIpPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;6&lt;/span&gt;  &lt;span class='chapter-title'&gt;Data Cleaning and Handling Missing Values&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9jbGVhbmluZy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz42PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkRhdGEtQ2xlYW5pbmctYW5kLUhhbmRsaW5nLU1pc3NpbmctVmFsdWVzPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;7&lt;/span&gt;  &lt;span class='chapter-title'&gt;Data Reshaping with tidyr&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi90aWR5ci5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz43PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkRhdGEtUmVzaGFwaW5nLXdpdGgtdGlkeXI8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;8&lt;/span&gt;  &lt;span class='chapter-title'&gt;Data Visualization with ggplot2 (Part 1)&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9nZ3Bsb3QyLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjg8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+RGF0YS1WaXN1YWxpemF0aW9uLXdpdGgtZ2dwbG90Mi0oUGFydC0xKTwvc3Bhbj4=\"}\n[&lt;span class='chapter-number'&gt;9&lt;/span&gt;  &lt;span class='chapter-title'&gt;Data Visualization with ggplot2 (Part 2)&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9kYXRhdml6Mi5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz45PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkRhdGEtVmlzdWFsaXphdGlvbi13aXRoLWdncGxvdDItKFBhcnQtMik8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;10&lt;/span&gt;  &lt;span class='chapter-title'&gt;String Processing and Regular Expressions&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9yZWdleC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xMDwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5TdHJpbmctUHJvY2Vzc2luZy1hbmQtUmVndWxhci1FeHByZXNzaW9uczwvc3Bhbj4=\"}\n[&lt;span class='chapter-number'&gt;11&lt;/span&gt;  &lt;span class='chapter-title'&gt;Merging and Joining Data&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9tZXJnaW5nLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjExPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPk1lcmdpbmctYW5kLUpvaW5pbmctRGF0YTwvc3Bhbj4=\"}\n[&lt;span class='chapter-number'&gt;12&lt;/span&gt;  &lt;span class='chapter-title'&gt;Web Scraping in R&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi93ZWIuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+MTI8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+V2ViLVNjcmFwaW5nLWluLVI8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;13&lt;/span&gt;  &lt;span class='chapter-title'&gt;Using Databases and SQL in R&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9kYXRhYmFzZXMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+MTM8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+VXNpbmctRGF0YWJhc2VzLWFuZC1TUUwtaW4tUjwvc3Bhbj4=\"}\n[&lt;span class='chapter-number'&gt;14&lt;/span&gt;  &lt;span class='chapter-title'&gt;References&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9yZWZlcmVuY2VzLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjE0PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlJlZmVyZW5jZXM8L3NwYW4+\"}\n[Appendices]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==\"}\n[&lt;span class='chapter-number'&gt;A&lt;/span&gt;  &lt;span class='chapter-title'&gt;Course Syllabus&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9zeWxsYWJ1cy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz5BPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkNvdXJzZS1TeWxsYWJ1czwvc3Bhbj4=\"}\n[&lt;span class='chapter-number'&gt;3&lt;/span&gt;  &lt;span class='chapter-title'&gt;Tidy Data and the Tidyverse&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5UaWR5LURhdGEtYW5kLXRoZS1UaWR5dmVyc2U8L3NwYW4+\"}\n:::\n\n\n\n:::{#quarto-meta-markdown .hidden}\n[[3]{.chapter-number}  [Tidy Data and the Tidyverse]{.chapter-title} – CS506: Data Wrangling and Management]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW1ldGF0aXRsZQ==\"}\n[[3]{.chapter-number}  [Tidy Data and the Tidyverse]{.chapter-title} – CS506: Data Wrangling and Management]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=\"}\n[[3]{.chapter-number}  [Tidy Data and the Tidyverse]{.chapter-title} – CS506: Data Wrangling and Management]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW9nY2FyZHRpdGxl\"}\n[CS506: Data Wrangling and Management]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW1ldGFzaXRlbmFtZQ==\"}\n[]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==\"}\n[]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW9nY2FyZGRkZXNj\"}\n:::\n\n\n\n\n&lt;!-- --&gt;\n\n::: {.quarto-embedded-source-code}\n```````````````````{.markdown shortcodes=\"false\"}\n---\ntitle: \"Tidy Data and the Tidyverse\"\n---\n\n## Learning Objectives\n\n-   Define tidy data principles\\\n-   Install and load the `tidyverse` package\\\n-   Understand the core tidyverse packages and their roles :contentReference[oaicite:6]{index=\"6\"}\n\n## Key Concepts\n\n-   Tidy data: one row per observation, one column per variable\n-   Install and load:\n\n```r \ninstall.packages(\"tidyverse\")\nlibrary(tidyverse)\n:::",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
     ]
