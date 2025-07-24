@@ -22,142 +22,756 @@
   {
     "objectID": "welcome.html",
     "href": "welcome.html",
-    "title": "",
+    "title": "\n1  Welcome and How to Use This Book\n",
     "section": "",
-    "text": "Code",
+    "text": "1.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>welcome.html</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and How to Use This Book</span>"
+    ]
+  },
+  {
+    "objectID": "welcome.html#overview",
+    "href": "welcome.html#overview",
+    "title": "\n1  Welcome and How to Use This Book\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and How to Use This Book</span>"
+    ]
+  },
+  {
+    "objectID": "welcome.html#key-concepts",
+    "href": "welcome.html#key-concepts",
+    "title": "\n1  Welcome and How to Use This Book\n",
+    "section": "\n1.2 Key Concepts",
+    "text": "1.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and How to Use This Book</span>"
+    ]
+  },
+  {
+    "objectID": "welcome.html#example",
+    "href": "welcome.html#example",
+    "title": "\n1  Welcome and How to Use This Book\n",
+    "section": "\n1.3 Example",
+    "text": "1.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and How to Use This Book</span>"
+    ]
+  },
+  {
+    "objectID": "welcome.html#practice-exercises",
+    "href": "welcome.html#practice-exercises",
+    "title": "\n1  Welcome and How to Use This Book\n",
+    "section": "\n1.4 Practice Exercises",
+    "text": "1.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and How to Use This Book</span>"
     ]
   },
   {
     "objectID": "Rintro.html",
     "href": "Rintro.html",
-    "title": "",
+    "title": "\n2  Introduction to R and RStudio\n",
     "section": "",
-    "text": "Code",
+    "text": "2.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Rintro.html</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#overview",
+    "href": "Rintro.html#overview",
+    "title": "\n2  Introduction to R and RStudio\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#key-concepts",
+    "href": "Rintro.html#key-concepts",
+    "title": "\n2  Introduction to R and RStudio\n",
+    "section": "\n2.2 Key Concepts",
+    "text": "2.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#example",
+    "href": "Rintro.html#example",
+    "title": "\n2  Introduction to R and RStudio\n",
+    "section": "\n2.3 Example",
+    "text": "2.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#practice-exercises",
+    "href": "Rintro.html#practice-exercises",
+    "title": "\n2  Introduction to R and RStudio\n",
+    "section": "\n2.4 Practice Exercises",
+    "text": "2.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
   },
   {
     "objectID": "tidyverse.html",
     "href": "tidyverse.html",
-    "title": "",
+    "title": "\n3  Tidy Data and the Tidyverse\n",
     "section": "",
-    "text": "Code",
+    "text": "3.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>tidyverse.html</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "tidyverse.html#overview",
+    "href": "tidyverse.html#overview",
+    "title": "\n3  Tidy Data and the Tidyverse\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "tidyverse.html#key-concepts",
+    "href": "tidyverse.html#key-concepts",
+    "title": "\n3  Tidy Data and the Tidyverse\n",
+    "section": "\n3.2 Key Concepts",
+    "text": "3.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "tidyverse.html#example",
+    "href": "tidyverse.html#example",
+    "title": "\n3  Tidy Data and the Tidyverse\n",
+    "section": "\n3.3 Example",
+    "text": "3.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "tidyverse.html#practice-exercises",
+    "href": "tidyverse.html#practice-exercises",
+    "title": "\n3  Tidy Data and the Tidyverse\n",
+    "section": "\n3.4 Practice Exercises",
+    "text": "3.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
     ]
   },
   {
     "objectID": "dplyr1.html",
     "href": "dplyr1.html",
-    "title": "",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
     "section": "",
-    "text": "Code",
+    "text": "4.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>dplyr1.html</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#overview",
+    "href": "dplyr1.html#overview",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#key-concepts",
+    "href": "dplyr1.html#key-concepts",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.2 Key Concepts",
+    "text": "4.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#example",
+    "href": "dplyr1.html#example",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.3 Example",
+    "text": "4.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#practice-exercises",
+    "href": "dplyr1.html#practice-exercises",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.4 Practice Exercises",
+    "text": "4.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html",
     "href": "dplyr2.html",
-    "title": "",
+    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
     "section": "",
-    "text": "Code",
+    "text": "5.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>dplyr2.html</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr2.html#overview",
+    "href": "dplyr2.html#overview",
+    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr2.html#key-concepts",
+    "href": "dplyr2.html#key-concepts",
+    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
+    "section": "\n5.2 Key Concepts",
+    "text": "5.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr2.html#example",
+    "href": "dplyr2.html#example",
+    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
+    "section": "\n5.3 Example",
+    "text": "5.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr2.html#practice-exercises",
+    "href": "dplyr2.html#practice-exercises",
+    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
+    "section": "\n5.4 Practice Exercises",
+    "text": "5.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "cleaning.html",
     "href": "cleaning.html",
-    "title": "",
+    "title": "\n6  Data Cleaning and Handling Missing Values\n",
     "section": "",
-    "text": "Code",
+    "text": "6.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>cleaning.html</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
+    ]
+  },
+  {
+    "objectID": "cleaning.html#overview",
+    "href": "cleaning.html#overview",
+    "title": "\n6  Data Cleaning and Handling Missing Values\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
+    ]
+  },
+  {
+    "objectID": "cleaning.html#key-concepts",
+    "href": "cleaning.html#key-concepts",
+    "title": "\n6  Data Cleaning and Handling Missing Values\n",
+    "section": "\n6.2 Key Concepts",
+    "text": "6.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
+    ]
+  },
+  {
+    "objectID": "cleaning.html#example",
+    "href": "cleaning.html#example",
+    "title": "\n6  Data Cleaning and Handling Missing Values\n",
+    "section": "\n6.3 Example",
+    "text": "6.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
+    ]
+  },
+  {
+    "objectID": "cleaning.html#practice-exercises",
+    "href": "cleaning.html#practice-exercises",
+    "title": "\n6  Data Cleaning and Handling Missing Values\n",
+    "section": "\n6.4 Practice Exercises",
+    "text": "6.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
     ]
   },
   {
     "objectID": "tidyr.html",
     "href": "tidyr.html",
-    "title": "",
+    "title": "\n7  Data Reshaping with tidyr\n",
     "section": "",
-    "text": "Code",
+    "text": "7.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>tidyr.html</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidyr.html#overview",
+    "href": "tidyr.html#overview",
+    "title": "\n7  Data Reshaping with tidyr\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidyr.html#key-concepts",
+    "href": "tidyr.html#key-concepts",
+    "title": "\n7  Data Reshaping with tidyr\n",
+    "section": "\n7.2 Key Concepts",
+    "text": "7.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidyr.html#example",
+    "href": "tidyr.html#example",
+    "title": "\n7  Data Reshaping with tidyr\n",
+    "section": "\n7.3 Example",
+    "text": "7.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidyr.html#practice-exercises",
+    "href": "tidyr.html#practice-exercises",
+    "title": "\n7  Data Reshaping with tidyr\n",
+    "section": "\n7.4 Practice Exercises",
+    "text": "7.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
     ]
   },
   {
     "objectID": "ggplot2.html",
     "href": "ggplot2.html",
-    "title": "",
+    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
     "section": "",
-    "text": "Code",
+    "text": "8.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>ggplot2.html</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#overview",
+    "href": "ggplot2.html#overview",
+    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#key-concepts",
+    "href": "ggplot2.html#key-concepts",
+    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
+    "section": "\n8.2 Key Concepts",
+    "text": "8.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#example",
+    "href": "ggplot2.html#example",
+    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
+    "section": "\n8.3 Example",
+    "text": "8.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#practice-exercises",
+    "href": "ggplot2.html#practice-exercises",
+    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
+    "section": "\n8.4 Practice Exercises",
+    "text": "8.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
     ]
   },
   {
     "objectID": "dataviz2.html",
     "href": "dataviz2.html",
-    "title": "",
+    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
     "section": "",
-    "text": "Code",
+    "text": "9.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>dataviz2.html</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dataviz2.html#overview",
+    "href": "dataviz2.html#overview",
+    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dataviz2.html#key-concepts",
+    "href": "dataviz2.html#key-concepts",
+    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
+    "section": "\n9.2 Key Concepts",
+    "text": "9.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dataviz2.html#example",
+    "href": "dataviz2.html#example",
+    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
+    "section": "\n9.3 Example",
+    "text": "9.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dataviz2.html#practice-exercises",
+    "href": "dataviz2.html#practice-exercises",
+    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
+    "section": "\n9.4 Practice Exercises",
+    "text": "9.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
     ]
   },
   {
     "objectID": "regex.html",
     "href": "regex.html",
-    "title": "",
+    "title": "\n10  String Processing and Regular Expressions\n",
     "section": "",
-    "text": "Code",
+    "text": "10.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>regex.html</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
+    ]
+  },
+  {
+    "objectID": "regex.html#overview",
+    "href": "regex.html#overview",
+    "title": "\n10  String Processing and Regular Expressions\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
+    ]
+  },
+  {
+    "objectID": "regex.html#key-concepts",
+    "href": "regex.html#key-concepts",
+    "title": "\n10  String Processing and Regular Expressions\n",
+    "section": "\n10.2 Key Concepts",
+    "text": "10.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
+    ]
+  },
+  {
+    "objectID": "regex.html#example",
+    "href": "regex.html#example",
+    "title": "\n10  String Processing and Regular Expressions\n",
+    "section": "\n10.3 Example",
+    "text": "10.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
+    ]
+  },
+  {
+    "objectID": "regex.html#practice-exercises",
+    "href": "regex.html#practice-exercises",
+    "title": "\n10  String Processing and Regular Expressions\n",
+    "section": "\n10.4 Practice Exercises",
+    "text": "10.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
     ]
   },
   {
     "objectID": "merging.html",
     "href": "merging.html",
-    "title": "",
+    "title": "\n11  Merging and Joining Data\n",
     "section": "",
-    "text": "Code",
+    "text": "11.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>merging.html</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
+    ]
+  },
+  {
+    "objectID": "merging.html#overview",
+    "href": "merging.html#overview",
+    "title": "\n11  Merging and Joining Data\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
+    ]
+  },
+  {
+    "objectID": "merging.html#key-concepts",
+    "href": "merging.html#key-concepts",
+    "title": "\n11  Merging and Joining Data\n",
+    "section": "\n11.2 Key Concepts",
+    "text": "11.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
+    ]
+  },
+  {
+    "objectID": "merging.html#example",
+    "href": "merging.html#example",
+    "title": "\n11  Merging and Joining Data\n",
+    "section": "\n11.3 Example",
+    "text": "11.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
+    ]
+  },
+  {
+    "objectID": "merging.html#practice-exercises",
+    "href": "merging.html#practice-exercises",
+    "title": "\n11  Merging and Joining Data\n",
+    "section": "\n11.4 Practice Exercises",
+    "text": "11.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
     ]
   },
   {
     "objectID": "web.html",
     "href": "web.html",
-    "title": "",
+    "title": "\n12  Web Scraping in R\n",
     "section": "",
-    "text": "Code",
+    "text": "12.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>web.html</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
+    ]
+  },
+  {
+    "objectID": "web.html#overview",
+    "href": "web.html#overview",
+    "title": "\n12  Web Scraping in R\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
+    ]
+  },
+  {
+    "objectID": "web.html#key-concepts",
+    "href": "web.html#key-concepts",
+    "title": "\n12  Web Scraping in R\n",
+    "section": "\n12.2 Key Concepts",
+    "text": "12.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
+    ]
+  },
+  {
+    "objectID": "web.html#example",
+    "href": "web.html#example",
+    "title": "\n12  Web Scraping in R\n",
+    "section": "\n12.3 Example",
+    "text": "12.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
+    ]
+  },
+  {
+    "objectID": "web.html#practice-exercises",
+    "href": "web.html#practice-exercises",
+    "title": "\n12  Web Scraping in R\n",
+    "section": "\n12.4 Practice Exercises",
+    "text": "12.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
     ]
   },
   {
     "objectID": "databases.html",
     "href": "databases.html",
-    "title": "",
+    "title": "\n13  Using Databases and SQL in R\n",
     "section": "",
-    "text": "Code",
+    "text": "13.1 Overview\nThis chapter covers the following:",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>databases.html</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
+    ]
+  },
+  {
+    "objectID": "databases.html#overview",
+    "href": "databases.html#overview",
+    "title": "\n13  Using Databases and SQL in R\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
+    ]
+  },
+  {
+    "objectID": "databases.html#key-concepts",
+    "href": "databases.html#key-concepts",
+    "title": "\n13  Using Databases and SQL in R\n",
+    "section": "\n13.2 Key Concepts",
+    "text": "13.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
+    ]
+  },
+  {
+    "objectID": "databases.html#example",
+    "href": "databases.html#example",
+    "title": "\n13  Using Databases and SQL in R\n",
+    "section": "\n13.3 Example",
+    "text": "13.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
+    ]
+  },
+  {
+    "objectID": "databases.html#practice-exercises",
+    "href": "databases.html#practice-exercises",
+    "title": "\n13  Using Databases and SQL in R\n",
+    "section": "\n13.4 Practice Exercises",
+    "text": "13.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "\n14  References\n",
+    "section": "",
+    "text": "14.1 Overview\nThis chapter covers the following:",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "references.html#overview",
+    "href": "references.html#overview",
+    "title": "\n14  References\n",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "references.html#key-concepts",
+    "href": "references.html#key-concepts",
+    "title": "\n14  References\n",
+    "section": "\n14.2 Key Concepts",
+    "text": "14.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "references.html#example",
+    "href": "references.html#example",
+    "title": "\n14  References\n",
+    "section": "\n14.3 Example",
+    "text": "14.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "references.html#practice-exercises",
+    "href": "references.html#practice-exercises",
+    "title": "\n14  References\n",
+    "section": "\n14.4 Practice Exercises",
+    "text": "14.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
     ]
   },
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
-    "title": "",
+    "title": "Appendix A: Course Syllabus",
     "section": "",
-    "text": "Code",
+    "text": "A.1 Overview\nThis chapter covers the following:",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>syllabus.html</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Course Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#overview",
+    "href": "syllabus.html#overview",
+    "title": "Appendix A: Course Syllabus",
+    "section": "",
+    "text": "Key concepts\nExamples\nPractice Exercises",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Course Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#key-concepts",
+    "href": "syllabus.html#key-concepts",
+    "title": "Appendix A: Course Syllabus",
+    "section": "\nA.2 Key Concepts",
+    "text": "A.2 Key Concepts\nWrite your lecture content here.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Course Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#example",
+    "href": "syllabus.html#example",
+    "title": "Appendix A: Course Syllabus",
+    "section": "\nA.3 Example",
+    "text": "A.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Course Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#practice-exercises",
+    "href": "syllabus.html#practice-exercises",
+    "title": "Appendix A: Course Syllabus",
+    "section": "\nA.4 Practice Exercises",
+    "text": "A.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Course Syllabus</span>"
     ]
   }
 ]
