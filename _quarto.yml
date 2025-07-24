@@ -10,7 +10,7 @@ book:
       affiliations:
         - name: Northern Arizona University
   cover-image: cover.png
-  site-url: https://tollislab.org/
+  site-url: https://marctollis.github.io/cs506-book/
   repo-url: https://github.com/marctollis/cs506-book
   repo-actions: [source, issue]
   chapters:
