@@ -4,24 +4,39 @@ title: "Introduction to R and RStudio"
 
 ## Learning Objectives
 
--   Install R and RStudio\
--   Navigate the RStudio interface\
--   Understand the console vs script vs environment\
--   Run simple R code and inspect datasets
+By the end of this chapter, you should be able to:
 
-## Key Concepts
+- Install and open R and RStudio  
+- Navigate the four-pane layout of RStudio  
+- Create and run R scripts  
+- Understand the differences between the console, script editor, and environment  
+- Execute basic R operations and understand data types  
+- Install and load R packages  
+## Getting Started
 
--   RStudio panes: Source, Console, Environment, Files\
--   Script vs interactive console\
--   Basic data types (`numeric`, `character`, `logical`) and vectors\
--   Using `dput()` for reproducible sharing (R4DS Intro) :contentReference[oaicite:1]{index="1"}
+**R** is a programming language designed for data analysis.  
+**RStudio** is an Integrated Development Environment (IDE) that makes working with R easier.
 
-## Example
+### Installing R and RStudio
 
-# Load built‑in dataset and inspect
+1. Install R: [https://cran.r-project.org/](https://cran.r-project.org/)  
+2. Install RStudio: [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+
+Once you open RStudio, you'll see four panes:
+
+- **Console** – for running code interactively  
+- **Source** – to write and save scripts  
+- **Environment/History** – to view and manage objects  
+- **Files/Plots/Packages/Help/Viewer** – navigation and visualization tools  
+
+---
+
+## Basic R Concepts
+
+### Variables and Assignments
 
 ```{r}
-data(mtcars)
-str(mtcars)
-summary(mtcars)
-```
+x <- 5
+y <- 10
+z <- x + y
+z ```

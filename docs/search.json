@@ -72,9 +72,9 @@
   {
     "objectID": "Rintro.html",
     "href": "Rintro.html",
-    "title": "\n2  Introduction to R and RStudio\n",
+    "title": "2  Introduction to R and RStudio",
     "section": "",
-    "text": "2.1 Learning Objectives",
+    "text": "2.1 Learning Objectives\nBy the end of this chapter, you should be able to:\nR is a programming language designed for data analysis.\nRStudio is an Integrated Development Environment (IDE) that makes working with R easier.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
@@ -82,9 +82,9 @@
   {
     "objectID": "Rintro.html#learning-objectives",
     "href": "Rintro.html#learning-objectives",
-    "title": "\n2  Introduction to R and RStudio\n",
+    "title": "2  Introduction to R and RStudio",
     "section": "",
-    "text": "Install R and RStudio\n\nNavigate the RStudio interface\n\nUnderstand the console vs script vs environment\n\nRun simple R code and inspect datasets",
+    "text": "Install and open R and RStudio\n\nNavigate the four-pane layout of RStudio\n\nCreate and run R scripts\n\nUnderstand the differences between the console, script editor, and environment\n\nExecute basic R operations and understand data types\n\nInstall and load R packages\n## Getting Started\n\n\n\n2.1.1 Installing R and RStudio\n\nInstall R: https://cran.r-project.org/\n\nInstall RStudio: https://posit.co/download/rstudio-desktop/\n\nOnce you open RStudio, you’ll see four panes:\n\nConsole – for running code interactively\n\nSource – to write and save scripts\n\nEnvironment/History – to view and manage objects\n\nFiles/Plots/Packages/Help/Viewer – navigation and visualization tools",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
@@ -742,6 +742,16 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Course Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#basic-r-concepts",
+    "href": "Rintro.html#basic-r-concepts",
+    "title": "2  Introduction to R and RStudio",
+    "section": "2.2 Basic R Concepts",
+    "text": "2.2 Basic R Concepts\n\n2.2.1 Variables and Assignments\nx &lt;- 5 y &lt;- 10 z &lt;- x + y z ```",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
     ]
   }
 ]
