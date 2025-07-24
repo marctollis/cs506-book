@@ -124,7 +124,7 @@
     "href": "tidyverse.html#learning-objectives",
     "title": "3  Tidy Data and the Tidyverse",
     "section": "",
-    "text": "Define tidy data principles\n\nInstall and load the tidyverse package\n\nUnderstand the core tidyverse packages and their roles :contentReferenceoaicite:6",
+    "text": "Define tidy data principles\n\nInstall and load the tidyverse package\n\nUnderstand the core tidyverse packages and their roles",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "tidyverse.html#key-concepts",
     "title": "3  Tidy Data and the Tidyverse",
     "section": "3.2 Key Concepts",
-    "text": "3.2 Key Concepts\n\nTidy data: one row per observation, one column per variable\nInstall and load:\n\ninstall.packages(“tidyverse”) # Run this manually if needed library(tidyverse)",
+    "text": "3.2 Key Concepts\n\nTidy data: one row per observation, one column per variable\nInstall and load:\ninstall.packages(“tidyverse”) # Run this manually if needed\nlibrary(tidyverse)",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
     ]
