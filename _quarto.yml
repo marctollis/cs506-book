@@ -15,7 +15,22 @@ book:
   repo-actions: [source, issue]
   chapters:
     - index.qmd
+    - welcome.qmd
+    - Rintro.qmd
+    - tidyverse.qmd
+    - dplyr1.qmd
+    - dplyr2.qmd
+    - cleaning.qmd
+    - tidyr.qmd
+    - ggplot2.qmd
+    - dataviz2.qmd
+    - regex.qmd
+    - merging.qmd
+    - web.qmd
+    - databases.qmd
     - references.qmd
+  appendices:
+    - syllabus.qmd
   sidebar:
     style: "floating"
     collapse-level: 1
