@@ -11,7 +11,7 @@ book:
         - name: Northern Arizona University
   cover-image: cover.png
   site-url: https://tollislab.org/
-  repo-url: https://marctollis.github.io/cs506-book/
+  repo-url: https://github.com/marctollis/cs506-book
   repo-actions: [source, issue]
   chapters:
     - index.qmd
