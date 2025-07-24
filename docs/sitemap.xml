@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tollislab.org/index.html</loc>
-    <lastmod>2025-07-24T20:05:44.132Z</lastmod>
+    <loc>https://marctollis.github.io/cs506-book/index.html</loc>
+    <lastmod>2025-07-24T20:30:21.533Z</lastmod>
   </url>
   <url>
-    <loc>https://tollislab.org/references.html</loc>
-    <lastmod>2025-07-24T19:57:49.373Z</lastmod>
+    <loc>https://marctollis.github.io/cs506-book/welcome.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/Rintro.html</loc>
+    <lastmod>2025-07-24T20:47:58.735Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/tidyverse.html</loc>
+    <lastmod>2025-07-24T20:43:14.312Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/dplyr1.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/dplyr2.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/cleaning.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/tidyr.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/ggplot2.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/dataviz2.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/regex.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/merging.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/web.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/databases.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/references.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marctollis.github.io/cs506-book/syllabus.html</loc>
+    <lastmod>2025-07-25T03:34:18.000Z</lastmod>
   </url>
 </urlset>
