@@ -26,6 +26,4 @@ Upon successful completion of the course, students will be able to:
 
 -   RStudio (<https://posit.co/downloads/>)
 
-```{r}
-1 + 1
-```
+
