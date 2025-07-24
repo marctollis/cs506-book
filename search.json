@@ -134,7 +134,7 @@
     "href": "tidyverse.html#what-is-the-tidyverse",
     "title": "\n3  Tidy Data and the Tidyverse\n",
     "section": "\n3.3 What is the Tidyverse?",
-    "text": "3.3 What is the Tidyverse?\nThe Tidyverse is a collection of R packages designed for data science. It includes:\n\n\nPackage\nPurpose\n\n\n\nggplot2\nData visualization\n\n\ndplyr\nData manipulation\n\n\ntidyr\nData reshaping\n\n\nreadr\nReading data\n\n\npurrr\nFunctional programming\n\n\ntibble\nModern data frames\n\n\nstringr\nString manipulation\n\n\nforcats\nFactor handling\n\n\n\nInstall and load the full tidyverse:\n\n# Run this in the Console if you haven't installed yet\n# install.packages(\"tidyverse\")\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors",
+    "text": "3.3 What is the Tidyverse?\nThe Tidyverse is a collection of R packages designed for data science. It includes:\n\n\nPackage\nPurpose\n\n\n\nggplot2\nData visualization\n\n\ndplyr\nData manipulation\n\n\ntidyr\nData reshaping\n\n\nreadr\nReading data\n\n\npurrr\nFunctional programming\n\n\ntibble\nModern data frames\n\n\nstringr\nString manipulation\n\n\nforcats\nFactor handling\n\n\n\nInstall and load the full tidyverse:\n\n# Run this in the Console if you haven't installed yet\n# install.packages(\"tidyverse\")\n# install.packages(\"reader\")\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
     ]
@@ -204,37 +204,87 @@
     "href": "dplyr1.html",
     "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
     "section": "",
-    "text": "4.1 Overview\nThis chapter covers the following:",
+    "text": "4.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
     ]
   },
   {
-    "objectID": "dplyr1.html#overview",
-    "href": "dplyr1.html#overview",
+    "objectID": "dplyr1.html#learning-objectives",
+    "href": "dplyr1.html#learning-objectives",
     "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
     "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
+    "text": "Filter rows using filter()\n\nSelect columns using select()\n\nCreate new columns using mutate()\n\nSort rows using arrange()\n\nUse the pipe operator (|&gt;) or %&gt;% for chaining functions",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
     ]
   },
   {
-    "objectID": "dplyr1.html#key-concepts",
-    "href": "dplyr1.html#key-concepts",
+    "objectID": "dplyr1.html#introduction-to-dplyr",
+    "href": "dplyr1.html#introduction-to-dplyr",
     "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.2 Key Concepts",
-    "text": "4.2 Key Concepts\nWrite your lecture content here.",
+    "section": "\n4.2 Introduction to dplyr",
+    "text": "4.2 Introduction to dplyr\nThe dplyr package is the foundation of tidy data manipulation. It provides a consistent grammar of data wrangling using verbs that correspond to common tasks:\n\n\nVerb\nAction\n\n\n\nfilter()\nPick rows based on condition\n\n\nselect()\nPick columns\n\n\nmutate()\nCreate or transform columns\n\n\narrange()\nSort rows\n\n\nrename()\nRename columns\n\n\n\nWe’ll explore each of these in this chapter.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
     ]
   },
   {
-    "objectID": "dplyr1.html#example",
-    "href": "dplyr1.html#example",
+    "objectID": "dplyr1.html#example-dataset-nycflights13",
+    "href": "dplyr1.html#example-dataset-nycflights13",
     "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.3 Example",
-    "text": "4.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "section": "\n4.3 Example Dataset: nycflights13",
+    "text": "4.3 Example Dataset: nycflights13\nWe’ll use the flights dataset from the nycflights13 package, which contains ~336,000 flights departing NYC in 2013.\n\n# Run this in the Console if you haven't installed yet\n# install.packages(\"nycflights13\")\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(nycflights13)\n\nglimpse(flights)\n\nRows: 336,776\nColumns: 19\n$ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2…\n$ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 558, …\n$ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 600, …\n$ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2, -1…\n$ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 849,…\n$ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 851,…\n$ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7, -1…\n$ carrier        &lt;chr&gt; \"UA\", \"UA\", \"AA\", \"B6\", \"DL\", \"UA\", \"B6\", \"EV\", \"B6\", \"…\n$ flight         &lt;int&gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79, 301, 4…\n$ tailnum        &lt;chr&gt; \"N14228\", \"N24211\", \"N619AA\", \"N804JB\", \"N668DN\", \"N394…\n$ origin         &lt;chr&gt; \"EWR\", \"LGA\", \"JFK\", \"JFK\", \"LGA\", \"EWR\", \"EWR\", \"LGA\",…\n$ dest           &lt;chr&gt; \"IAH\", \"IAH\", \"MIA\", \"BQN\", \"ATL\", \"ORD\", \"FLL\", \"IAD\",…\n$ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149, 1…\n$ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 733, …\n$ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6, 6…\n$ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 0…\n$ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-01 0…",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#filtering-rows-filter",
+    "href": "dplyr1.html#filtering-rows-filter",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.4 Filtering Rows: filter()\n",
+    "text": "4.4 Filtering Rows: filter()\n\nUse filter() to extract a subset of rows that match logical conditions.\n\n# Flights on January 1st\njan1 &lt;- filter(flights, month == 1, day == 1)\n\n# Flights with arrival delay more than 2 hours\narr_delay &lt;- filter(flights, arr_delay &gt; 120)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#selecting-columns-select",
+    "href": "dplyr1.html#selecting-columns-select",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.5 Selecting columns: select()\n",
+    "text": "4.5 Selecting columns: select()\n\nUse select() to pick a subset of columns.\n\n# Select specific columns\nselect(flights, year, month, day, dep_time, arr_time)\n\n# A tibble: 336,776 × 5\n    year month   day dep_time arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;    &lt;int&gt;\n 1  2013     1     1      517      830\n 2  2013     1     1      533      850\n 3  2013     1     1      542      923\n 4  2013     1     1      544     1004\n 5  2013     1     1      554      812\n 6  2013     1     1      554      740\n 7  2013     1     1      555      913\n 8  2013     1     1      557      709\n 9  2013     1     1      557      838\n10  2013     1     1      558      753\n# ℹ 336,766 more rows\n\n# Drop columns with minus\nselect(flights, -year, -month, -day)\n\n# A tibble: 336,776 × 16\n   dep_time sched_dep_time dep_delay arr_time sched_arr_time arr_delay carrier\n      &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;  \n 1      517            515         2      830            819        11 UA     \n 2      533            529         4      850            830        20 UA     \n 3      542            540         2      923            850        33 AA     \n 4      544            545        -1     1004           1022       -18 B6     \n 5      554            600        -6      812            837       -25 DL     \n 6      554            558        -4      740            728        12 UA     \n 7      555            600        -5      913            854        19 B6     \n 8      557            600        -3      709            723       -14 EV     \n 9      557            600        -3      838            846        -8 B6     \n10      558            600        -2      753            745         8 AA     \n# ℹ 336,766 more rows\n# ℹ 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,\n#   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;\n\n\nYou can also use starts_with(), contains(), and matches() for flexible column selection.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#creating-new-columns-mutate",
+    "href": "dplyr1.html#creating-new-columns-mutate",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.6 Creating New Columns: mutate()\n",
+    "text": "4.6 Creating New Columns: mutate()\n\nUse mutate() to add new columns or transform existing ones.\n\n# Compute speed in miles per hour\nflights &lt;- mutate(flights, speed = distance / air_time * 60)\n\n# Create multiple new columns\nflights &lt;- mutate(flights,\n  gain = arr_delay - dep_delay,\n  hours = air_time / 60\n)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#sorting-rows-arrange",
+    "href": "dplyr1.html#sorting-rows-arrange",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.7 Sorting Rows: arrange()\n",
+    "text": "4.7 Sorting Rows: arrange()\n\n\n# Sort by arrival delay\narrange(flights, arr_delay)\n\n# A tibble: 336,776 × 22\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     5     7     1715           1729       -14     1944           2110\n 2  2013     5    20      719            735       -16      951           1110\n 3  2013     5     2     1947           1949        -2     2209           2324\n 4  2013     5     6     1826           1830        -4     2045           2200\n 5  2013     5     4     1816           1820        -4     2017           2131\n 6  2013     5     2     1926           1929        -3     2157           2310\n 7  2013     5     6     1753           1755        -2     2004           2115\n 8  2013     5     7     2054           2055        -1     2317             28\n 9  2013     5    13      657            700        -3      908           1019\n10  2013     1     4     1026           1030        -4     1305           1415\n# ℹ 336,766 more rows\n# ℹ 14 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, speed &lt;dbl&gt;, gain &lt;dbl&gt;,\n#   hours &lt;dbl&gt;\n\n# Sort in descending order\narrange(flights, desc(arr_delay))\n\n# A tibble: 336,776 × 22\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     9      641            900      1301     1242           1530\n 2  2013     6    15     1432           1935      1137     1607           2120\n 3  2013     1    10     1121           1635      1126     1239           1810\n 4  2013     9    20     1139           1845      1014     1457           2210\n 5  2013     7    22      845           1600      1005     1044           1815\n 6  2013     4    10     1100           1900       960     1342           2211\n 7  2013     3    17     2321            810       911      135           1020\n 8  2013     7    22     2257            759       898      121           1026\n 9  2013    12     5      756           1700       896     1058           2020\n10  2013     5     3     1133           2055       878     1250           2215\n# ℹ 336,766 more rows\n# ℹ 14 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, speed &lt;dbl&gt;, gain &lt;dbl&gt;,\n#   hours &lt;dbl&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#piping-commands-or",
+    "href": "dplyr1.html#piping-commands-or",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.8 Piping Commands” %>% or |>\n",
+    "text": "4.8 Piping Commands” %&gt;% or |&gt;\n\nUse %&gt;% (magrittr pipe) or |&gt;(base R pipe) to chain commands and improve readability.\n\n# Calculate speed for JFK departures in June\nflights |&gt; \n  filter(origin == \"JFK\", month == 6) |&gt; \n  mutate(speed = distance / air_time * 60) |&gt; \n  select(tailnum, speed, distance, air_time) |&gt; \n  arrange(desc(speed)) |&gt; \n  head(5)\n\n# A tibble: 5 × 4\n  tailnum speed distance air_time\n  &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 N3759    524.     1598      183\n2 N659JB   522.     1576      181\n3 N641JB   521.     1598      184\n4 N5EXAA   519.     1089      126\n5 N627JB   518.     1598      185\n\n\nPiping allows you to read your code top-to-bottom, like a recipe.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
     ]
@@ -243,8 +293,28 @@
     "objectID": "dplyr1.html#practice-exercises",
     "href": "dplyr1.html#practice-exercises",
     "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.4 Practice Exercises",
-    "text": "4.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "section": "\n4.9 Practice Exercises",
+    "text": "4.9 Practice Exercises\n\nFilter all flights that departed in July and had a departure delay &gt; 60 minutes.\nSelect only carrier, flight, and dep_delay, and sort by longest delay first.\nCreate a new column gain defined as arr_delay - dep_delay, and sort by biggest gain.\nChain together at least 3 dplyr verbs using %&gt;% or |&gt;.\n\n\n# 1\njuly_delays &lt;- filter(flights, month == 7, dep_delay &gt; 60)\n\n# 2\nselect(july_delays, carrier, flight, dep_delay) |&gt; arrange(desc(dep_delay))\n\n# A tibble: 3,820 × 3\n   carrier flight dep_delay\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 MQ        3075      1005\n 2 DL        2047       898\n 3 VX         187       653\n 4 VX         411       634\n 5 VX          23       629\n 6 DL         141       589\n 7 AA        1895       580\n 8 FL         349       576\n 9 EV        5716       536\n10 MQ        3075       486\n# ℹ 3,810 more rows\n\n# 3\nmutate(flights, gain = arr_delay - dep_delay) |&gt; arrange(desc(gain))\n\n# A tibble: 336,776 × 22\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013    11     1      658            700        -2     1329           1015\n 2  2013     4    18      558            600        -2     1149            850\n 3  2013     8     8     1819           1519       180        5           1820\n 4  2013     7    10     1916           1900        16      137           2240\n 5  2013     6    27     1608           1525        43     2045           1725\n 6  2013     7    22     1606           1615        -9     2056           1831\n 7  2013     7     1      811            800        11     1344           1100\n 8  2013     7    10     2011           1520       291     2357           1636\n 9  2013     7    22     1626           1545        41     2051           1740\n10  2013     4    18      655            700        -5     1213            950\n# ℹ 336,766 more rows\n# ℹ 14 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, speed &lt;dbl&gt;, gain &lt;dbl&gt;,\n#   hours &lt;dbl&gt;\n\n# 4\nflights %&gt;%\n  filter(month == 1, day == 1) %&gt;%\n  mutate(speed = distance / air_time * 60) %&gt;%\n  arrange(desc(speed))\n\n# A tibble: 842 × 22\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      909            810        59     1331           1315\n 2  2013     1     1      615            615         0     1039           1100\n 3  2013     1     1      820            820         0     1249           1329\n 4  2013     1     1     1716           1545        91     2140           2039\n 5  2013     1     1      913            918        -5     1346           1416\n 6  2013     1     1     2353           2359        -6      418            442\n 7  2013     1     1      544            545        -1     1004           1022\n 8  2013     1     1     1202           1159         3     1645           1653\n 9  2013     1     1      701            700         1     1123           1154\n10  2013     1     1      840            845        -5     1311           1350\n# ℹ 832 more rows\n# ℹ 14 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, speed &lt;dbl&gt;, gain &lt;dbl&gt;,\n#   hours &lt;dbl&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#summary",
+    "href": "dplyr1.html#summary",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.10 Summary",
+    "text": "4.10 Summary\n\n\nfilter() extracts rows by condition\n\nselect() picks columns\n\nmutate() adds new variables\n\narrange() reorders rows",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#next-steps",
+    "href": "dplyr1.html#next-steps",
+    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
+    "section": "\n4.11 Next Steps",
+    "text": "4.11 Next Steps\nIn the next chapter, we’ll learn how to group data using group_by() and summarize it using summarize() — foundational tools for aggregating and analyzing grouped data. {r} Copy Edit",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
     ]
