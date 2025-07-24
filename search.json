@@ -72,7 +72,7 @@
   {
     "objectID": "Rintro.html",
     "href": "Rintro.html",
-    "title": "2  Introduction to R and RStudio",
+    "title": "\n2  Introduction to R and RStudio\n",
     "section": "",
     "text": "2.1 Learning Objectives",
     "crumbs": [
@@ -82,7 +82,7 @@
   {
     "objectID": "Rintro.html#learning-objectives",
     "href": "Rintro.html#learning-objectives",
-    "title": "2  Introduction to R and RStudio",
+    "title": "\n2  Introduction to R and RStudio\n",
     "section": "",
     "text": "Install R and RStudio\n\nNavigate the RStudio interface\n\nUnderstand the console vs script vs environment\n\nRun simple R code and inspect datasets",
     "crumbs": [
@@ -92,8 +92,8 @@
   {
     "objectID": "Rintro.html#key-concepts",
     "href": "Rintro.html#key-concepts",
-    "title": "2  Introduction to R and RStudio",
-    "section": "2.2 Key Concepts",
+    "title": "\n2  Introduction to R and RStudio\n",
+    "section": "\n2.2 Key Concepts",
     "text": "2.2 Key Concepts\n\nRStudio panes: Source, Console, Environment, Files\n\nScript vs interactive console\n\nBasic data types (numeric, character, logical) and vectors\n\nUsing dput() for reproducible sharing (R4DS Intro) :contentReferenceoaicite:1",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
@@ -102,8 +102,8 @@
   {
     "objectID": "Rintro.html#example",
     "href": "Rintro.html#example",
-    "title": "2  Introduction to R and RStudio",
-    "section": "2.3 Example",
+    "title": "\n2  Introduction to R and RStudio\n",
+    "section": "\n2.3 Example",
     "text": "2.3 Example",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
