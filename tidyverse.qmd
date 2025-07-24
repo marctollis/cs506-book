@@ -14,5 +14,5 @@ title: "Tidy Data and the Tidyverse"
 -   Install and load:
 
 
-# install.packages("tidyverse") # Run this manually if needed
-# library(tidyverse)
+install.packages("tidyverse") # Run this manually if needed
+library(tidyverse)
