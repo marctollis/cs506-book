@@ -12,5 +12,3 @@ title: "Tidy Data and the Tidyverse"
 
 -   Tidy data: one row per observation, one column per variable
 -   Install and load
--   install.packages("tidyverse") # Run this manually if needed
--   library(tidyverse)

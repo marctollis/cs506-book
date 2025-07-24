@@ -134,7 +134,7 @@
     "href": "tidyverse.html#key-concepts",
     "title": "3  Tidy Data and the Tidyverse",
     "section": "3.2 Key Concepts",
-    "text": "3.2 Key Concepts\n\nTidy data: one row per observation, one column per variable\nInstall and load\ninstall.packages(“tidyverse”) # Run this manually if needed\nlibrary(tidyverse)",
+    "text": "3.2 Key Concepts\n\nTidy data: one row per observation, one column per variable\nInstall and load",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
     ]
