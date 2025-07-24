@@ -4,11 +4,117 @@ title: "Tidy Data and the Tidyverse"
 
 ## Learning Objectives
 
--   Define tidy data principles\
--   Install and load the `tidyverse` package\
--   Understand the core tidyverse packages and their roles
+By the end of this chapter, you should be able to:
 
-## Key Concepts
+-   Define “tidy data” and explain why it's important\
+-   Load the Tidyverse and understand the role of its core packages\
+-   Import a dataset using `readr::read_csv()`\
+-   Use `glimpse()`, `str()`, and `summary()` to explore data
 
--   Tidy data: one row per observation, one column per variable
--   Install and load
+------------------------------------------------------------------------
+
+## What is Tidy Data?
+
+**Tidy data** follows three key principles (from [R for Data Science](https://r4ds.hadley.nz/data-tidy.html)):
+
+1.  Each variable forms a column\
+2.  Each observation forms a row\
+3.  Each type of observational unit forms a table
+
+Tidy data makes it easier to manipulate, visualize, and model data using consistent, reproducible tools.
+
+------------------------------------------------------------------------
+
+## What is the Tidyverse?
+
+The **Tidyverse** is a collection of R packages designed for data science. It includes:
+
+| Package   | Purpose                |
+|-----------|------------------------|
+| `ggplot2` | Data visualization     |
+| `dplyr`   | Data manipulation      |
+| `tidyr`   | Data reshaping         |
+| `readr`   | Reading data           |
+| `purrr`   | Functional programming |
+| `tibble`  | Modern data frames     |
+| `stringr` | String manipulation    |
+| `forcats` | Factor handling        |
+
+Install and load the full tidyverse:
+
+```{r install, eval=FALSE}
+# Run this in the Console if you haven't installed yet
+# install.packages("tidyverse")
+```
+
+```{r}
+library(tidyverse)
+```
+
+## Example: Reading in Data with `readr`
+
+```{r}
+# Built-in example from the readr package
+library(readr)
+
+heights <- read_csv("https://raw.githubusercontent.com/hadley/r4ds/refs/heads/main/data/heights.csv")
+
+glimpse(heights)
+```
+
+`read_csv()` is faster and more predictable than base R's `read.csv()`. It does not convert strings to factors and returns a tibble by default.
+
+## Exploring a Dataset
+
+```{r}
+# Inspecting data structure
+head(heights)
+str(heights)
+summary(heights)
+```
+
+You can also use `View(heights)` to open a spreadsheet-like viewer in RStudio (note: this won't work when rendering a book).
+
+## Tibbles verssus Data Frames
+
+Tibbles are a modern version of data frames that:
+
+-   Do not convert strings to factors
+
+-   Have cleaner printing behavior
+
+-   Work better with tidyverse functions
+
+```{r}
+df_base <- data.frame(x = 1:3, y = letters[1:3])
+df_tibble <- tibble(x = 1:3, y = letters[1:3])
+
+df_base
+df_tibble
+```
+
+## Practice Exercises
+
+1.  Use read_csv() to import the Palmer Penguins dataset:
+
+-   URL: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv
+
+3.  Use glimpse() to inspect the structure of the data.
+
+4.  What do you notice about the column types? Which ones are characters, doubles, or factors?
+
+```{r}
+penguins <- read_csv("https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv")
+glimpse(penguins)
+```
+
+## Summary
+
+-   Tidy data format is foundational for data science in R
+-   The `tidyverse` packages are designed to work together
+-   `read_csv()` from `readr` is you go-to function for reading flat files
+-   Always explore dat awith `glimpse()`, `str()`, and `summary()`
+
+## Next Steps
+
+In the next chapter, we’ll learn how to filter, select, and transform data using `dplyr` — the primary grammar of data manipulation in the tidyverse.
