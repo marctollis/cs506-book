@@ -23,3 +23,8 @@ Welcome to CS506: Data Wrangling and Management. This course introduces graduate
 -   R (<https://www.r-project.org/>)
 
 -   RStudio (<https://posit.co/downloads/>)
+
+## Footnotes
+
+-   This is a Quarto book. To learn more about Quarto books visit [https://quarto.org/docs/books](https://quarto.org/docs/books){target="_blank"}.
+-   This website is published using [Github Pages](https://pages.github.com/){target="_blank"}.
