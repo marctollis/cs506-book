@@ -844,7 +844,7 @@
     "href": "syllabus.html",
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
     "section": "",
-    "text": "A.1 Course Overview\nINF506: Data Management and Wrangling introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
+    "text": "A.1 Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
@@ -917,11 +917,33 @@
     ]
   },
   {
+    "objectID": "syllabus.html#required-materials",
+    "href": "syllabus.html#required-materials",
+    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "section": "A.7 Required Materials",
+    "text": "A.7 Required Materials\n\nTextbook: R for Data Science (free online)\nSoftware:\n\nR\nRStudio",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#assessments",
+    "href": "syllabus.html#assessments",
+    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "section": "A.8 Assessments",
+    "text": "A.8 Assessments\n\n\n\nComponent\nWeight\n\n\n\n\nProblem Sets (8 total)\n22.5%\n\n\nHomeworks (6 total)\n22.5%\n\n\nQuizzes (6 total, lowest dropped)\n55%\n\n\n\n\nProblem sets and homeworks are marked as complete or incomplete.\nProblem sets are simpler assignments and will be completed on your own, while homeworks can be done in groups.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+    ]
+  },
+  {
     "objectID": "syllabus.html#grading-and-submission",
     "href": "syllabus.html#grading-and-submission",
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "E.1 Grading and Submission",
-    "text": "E.1 Grading and Submission\n\nProblem Sets and Homeworks will be submitted via Canvas.\n\nQuizzes are written and completed in-class.",
+    "section": "C.1 Grading and Submission",
+    "text": "C.1 Grading and Submission\n\nProblem Sets and Homeworks will be submitted via Canvas.\n\nQuizzes are written and completed in-class.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
@@ -931,8 +953,8 @@
     "objectID": "syllabus.html#resources",
     "href": "syllabus.html#resources",
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "E.2 Resources",
-    "text": "E.2 Resources\n\nRStudio Cheatsheets\nDataCamp & Coursera tutorials for extra practice\nOffice hours for additional help\n\n\n\nThis syllabus is subject to minor adjustments. Updates will be announced in class and posted on Canvas.",
+    "section": "C.2 Resources",
+    "text": "C.2 Resources\n\nRStudio Cheatsheets\nDataCamp & Coursera tutorials for extra practice\nOffice hours for additional help\n\n\n\nThis syllabus is subject to minor adjustments. Updates will be announced in class and posted on Canvas.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
