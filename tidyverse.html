@@ -231,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Course Syllabus</span></span></a>
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">CS506: Data Management and Wrangling – Syllabus</span></span></a>
   </div>
 </li>
       </ul>
@@ -249,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#what-is-the-tidyverse" id="toc-what-is-the-tidyverse" class="nav-link" data-scroll-target="#what-is-the-tidyverse"><span class="header-section-number">3.3</span> What is the Tidyverse?</a></li>
   <li><a href="#example-reading-in-data-with-readr" id="toc-example-reading-in-data-with-readr" class="nav-link" data-scroll-target="#example-reading-in-data-with-readr"><span class="header-section-number">3.4</span> Example: Reading in Data with <code>readr</code></a></li>
   <li><a href="#exploring-a-dataset" id="toc-exploring-a-dataset" class="nav-link" data-scroll-target="#exploring-a-dataset"><span class="header-section-number">3.5</span> Exploring a Dataset</a></li>
-  <li><a href="#tibbles-verssus-data-frames" id="toc-tibbles-verssus-data-frames" class="nav-link" data-scroll-target="#tibbles-verssus-data-frames"><span class="header-section-number">3.6</span> Tibbles verssus Data Frames</a></li>
+  <li><a href="#tibbles-versus-data-frames" id="toc-tibbles-versus-data-frames" class="nav-link" data-scroll-target="#tibbles-versus-data-frames"><span class="header-section-number">3.6</span> Tibbles versus Data Frames</a></li>
   <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises"><span class="header-section-number">3.7</span> Practice Exercises</a></li>
   <li><a href="#in-class-exercises" id="toc-in-class-exercises" class="nav-link" data-scroll-target="#in-class-exercises"><span class="header-section-number">3.8</span> In-Class Exercises</a></li>
   <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">3.9</span> Homework Preview</a></li>
@@ -448,8 +448,8 @@ $ race   &lt;chr&gt; "white", "white", "white", "other", "white", "white", "whit
 </div>
 </div>
 <p>You can also use <code>View(heights)</code> to open a spreadsheet-like viewer in RStudio (note: this won’t work when rendering a book).</p>
-</section><section id="tibbles-verssus-data-frames" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="tibbles-verssus-data-frames">
-<span class="header-section-number">3.6</span> Tibbles verssus Data Frames</h2>
+</section><section id="tibbles-versus-data-frames" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="tibbles-versus-data-frames">
+<span class="header-section-number">3.6</span> Tibbles versus Data Frames</h2>
 <p>Tibbles are a modern version of data frames that:</p>
 <ul>
 <li><p>Do not convert strings to factors</p></li>
@@ -486,7 +486,7 @@ $ race   &lt;chr&gt; "white", "white", "white", "other", "white", "white", "whit
 <li>URL: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv</li>
 </ul>
 <ol start="3" type="1">
-<li><p>Use glimpse() to inspect the structure of the data.</p></li>
+<li><p>Use <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code> to inspect the structure of the data.</p></li>
 <li><p>What do you notice about the column types? Which ones are characters, doubles, or factors?</p></li>
 </ol>
 <div class="cell">
@@ -1186,7 +1186,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb32-82"><a href="#cb32-82" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-83"><a href="#cb32-83" aria-hidden="true" tabindex="-1"></a>You can also use <span class="in">`View(heights)`</span> to open a spreadsheet-like viewer in RStudio (note: this won't work when rendering a book).</span>
 <span id="cb32-84"><a href="#cb32-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-85"><a href="#cb32-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tibbles verssus Data Frames</span></span>
+<span id="cb32-85"><a href="#cb32-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tibbles versus Data Frames</span></span>
 <span id="cb32-86"><a href="#cb32-86" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-87"><a href="#cb32-87" aria-hidden="true" tabindex="-1"></a>Tibbles are a modern version of data frames that:</span>
 <span id="cb32-88"><a href="#cb32-88" aria-hidden="true" tabindex="-1"></a></span>
@@ -1210,7 +1210,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb32-108"><a href="#cb32-108" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-109"><a href="#cb32-109" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>URL: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv</span>
 <span id="cb32-110"><a href="#cb32-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-111"><a href="#cb32-111" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Use glimpse() to inspect the structure of the data.</span>
+<span id="cb32-111"><a href="#cb32-111" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Use <span class="in">`glimpse()`</span> to inspect the structure of the data.</span>
 <span id="cb32-112"><a href="#cb32-112" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-113"><a href="#cb32-113" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>What do you notice about the column types? Which ones are characters, doubles, or factors?</span>
 <span id="cb32-114"><a href="#cb32-114" aria-hidden="true" tabindex="-1"></a></span>
@@ -1259,11 +1259,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb32-163"><a href="#cb32-163" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb32-164"><a href="#cb32-164" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-165"><a href="#cb32-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## Homework Preview</span></span>
-<span id="cb32-166"><a href="#cb32-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Import two different CSV datasets (e.g., <span class="in">`penguins`</span>, <span class="in">`flights`</span>) using <span class="in">`read_csv()`</span></span>
-<span id="cb32-167"><a href="#cb32-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Inspect them with <span class="in">`glimpse()`</span>, <span class="in">`str()`</span>, and <span class="in">`summary()`</span></span>
-<span id="cb32-168"><a href="#cb32-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Identify untidy aspects (if any) and make at least one change to improve tidiness</span>
-<span id="cb32-169"><a href="#cb32-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use <span class="in">`mutate()`</span> to add at least two new calculated columns (e.g., unit conversions or derived metrics)</span>
-<span id="cb32-170"><a href="#cb32-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-166"><a href="#cb32-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-167"><a href="#cb32-167" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Import two different CSV datasets (e.g., <span class="in">`penguins`</span>, <span class="in">`flights`</span>) using <span class="in">`read_csv()`</span></span>
+<span id="cb32-168"><a href="#cb32-168" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Inspect them with <span class="in">`glimpse()`</span>, <span class="in">`str()`</span>, and <span class="in">`summary()`</span></span>
+<span id="cb32-169"><a href="#cb32-169" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Identify untidy aspects (if any) and make at least one change to improve tidiness</span>
+<span id="cb32-170"><a href="#cb32-170" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use <span class="in">`mutate()`</span> to add at least two new calculated columns (e.g., unit conversions or derived metrics)</span>
 <span id="cb32-171"><a href="#cb32-171" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-172"><a href="#cb32-172" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
 <span id="cb32-173"><a href="#cb32-173" aria-hidden="true" tabindex="-1"></a></span>
