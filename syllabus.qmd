@@ -106,22 +106,22 @@ This course directly supports the following program student outcomes in the Mast
 # Course Schedule (Fall 2025)
 
 | **Week** | **Dates (T/Th)** | **Topics** | **Assignments** | **Quiz** |
-|---------------|---------------|---------------|---------------|---------------|
-| 1 | Aug 26 / 28 | Introduction to R and RStudio | PS1 |  |
-| 2 | Sept 2 / 4 | Tidy Data & Tidyverse | PS2, HW1 |  |
-| 3 | Sept 9 / 11 | dplyr Part 1 | PS3 | Quiz 1 |
-| 4 | Sept 16 / 18 | dplyr Part 2 | HW2 |  |
-| 5 | Sept 23 / 25 | Data Cleaning & Missing Data | PS4 | Quiz 2 |
-| 6 | Sept 30 / Oct 2 | Reshaping Data with tidyr | HW3 |  |
-| 7 | Oct 7 / 9 | EDA with ggplot2 | PS5 | Quiz 3 |
-| 8 | Oct 14 / 16 | Advanced Visualization | HW4 |  |
-| 9 | Oct 21 / 23 | String Handling & Regex | PS6 | Quiz 4 |
-| 10 | Oct 28 / 30 | Merging Datasets | HW5 |  |
-| 11 | Nov 4 / 6 | Web Scraping | PS7 | Quiz 5 |
-| 12 | Nov 11\* / 13 | SQL in R | HW6 |  |
-| 13 | Nov 18 / 20 | Final Review | — |  |
-| 14 | Nov 25 / 27\* | **Thanksgiving Break – No Class 11/27** | — | — |
-| 15 | Dec 2 / 4 | Wrap-up & Final Quiz | PS8 | Quiz 6 |
+|----------|------------------|------------|-----------------|----------|
+| 1  | Aug 26 / 28  | [Introduction to R and RStudio](Rintro.html) | PS1 |  |
+| 2  | Sept 2 / 4   | [Tidy Data & Tidyverse](tidyverse.html) | PS2, HW1 |  |
+| 3  | Sept 9 / 11  | [dplyr Part 1](dplyr1.html) | PS3 | Quiz 1 |
+| 4  | Sept 16 / 18 | [dplyr Part 2](dplyr2.html) | HW2 |  |
+| 5  | Sept 23 / 25 | [Data Cleaning & Missing Data](cleaning.html) | PS4 | Quiz 2 |
+| 6  | Sept 30 / Oct 2 | [Reshaping Data with tidyr](tidyr.html) | HW3 |  |
+| 7  | Oct 7 / 9    | [EDA with ggplot2](ggplot2.html) | PS5 | Quiz 3 |
+| 8  | Oct 14 / 16  | [Advanced Visualization](dataviz2.html) | HW4 |  |
+| 9  | Oct 21 / 23  | [String Handling & Regex](regex.html) | PS6 | Quiz 4 |
+| 10 | Oct 28 / 30  | [Merging Datasets](merging.html) | HW5 |  |
+| 11 | Nov 4 / 6    | [Web Scraping](web.html) | PS7 | Quiz 5 |
+| 12 | Nov 11* / 13 | [SQL in R](databases.html) | HW6 |  |
+| 13 | Nov 18 / 20  | Final Review | — |  |
+| 14 | Nov 25 / 27*  | **Thanksgiving Break – No Class 11/27** | — | — |
+| 15 | Dec 2 / 4    | Wrap-up & Final Quiz | PS8 | Quiz 6 |
 
 > \* **Nov 11 (Veterans Day)** is a university holiday — no class that Tuesday. Week 12 will have class only on Nov 13.
 
