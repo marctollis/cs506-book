@@ -76,7 +76,7 @@ summary(heights)
 
 You can also use `View(heights)` to open a spreadsheet-like viewer in RStudio (note: this won't work when rendering a book).
 
-## Tibbles verssus Data Frames
+## Tibbles versus Data Frames
 
 Tibbles are a modern version of data frames that:
 
@@ -100,7 +100,7 @@ df_tibble
 
 -   URL: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv
 
-3.  Use glimpse() to inspect the structure of the data.
+3.  Use `glimpse()` to inspect the structure of the data.
 
 4.  What do you notice about the column types? Which ones are characters, doubles, or factors?
 
@@ -149,11 +149,11 @@ glimpse(my_tbl)
 ```
 
 ## Homework Preview
-- Import two different CSV datasets (e.g., `penguins`, `flights`) using `read_csv()`
-- Inspect them with `glimpse()`, `str()`, and `summary()`
-- Identify untidy aspects (if any) and make at least one change to improve tidiness
-- Use `mutate()` to add at least two new calculated columns (e.g., unit conversions or derived metrics)
 
+-   Import two different CSV datasets (e.g., `penguins`, `flights`) using `read_csv()`
+-   Inspect them with `glimpse()`, `str()`, and `summary()`
+-   Identify untidy aspects (if any) and make at least one change to improve tidiness
+-   Use `mutate()` to add at least two new calculated columns (e.g., unit conversions or derived metrics)
 
 ## Summary
 

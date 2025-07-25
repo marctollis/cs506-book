@@ -1,27 +1,151 @@
 ---
-title: "Course Syllabus"
+title: "CS506: Data Management and Wrangling – Syllabus"
+format: html
 ---
 
-## Overview
+![](nau_siccs_logo.png){fig-align="center"}\
 
-This chapter covers the following:
+## Course Overview
 
-- Key concepts
-- Examples
-- Practice Exercises
+**INF506: Data Management and Wrangling** introduces graduate students to data wrangling and management using **R** and the **Tidyverse** ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.
 
-## Key Concepts
+-   CS 506, Spring 2024, 3 units
+-   Section 001: TuTh 9:35AM-10:50AM, Learning Resource Ctr Rm 106C
+-   Prerequisite: Graduate status
+-   Mode of Instruction: Face-to-face (in person)
+-   Instructor's Name & Contact:
+    -   Marc Tollis (marc.tollis\@nau.edu)
+        -   Room 209, SICCS (Building 90, second floor)
+        -   Office Hours: Tue 11AM-12PM
+        -   928-523-3406
 
-Write your lecture content here.
+## Canvas & Recorded Lectures
 
-## Example
+We will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.
 
-```{r}
-# Example R code
-summary(mtcars)
-```
+## CS506 Book Website
 
-## Practice Exercises
+I have compiled a [course website](https://marctollis.github.io/cs506-book/) that has supplemental text and coded examples that we will walk through in class. This website essentially serves as the course textbook and is required reading. There will be other required reading material.
 
-1. Describe the task
-2. Load and analyze a dataset
+------------------------------------------------------------------------
+
+## Course Objectives
+
+By the end of the course, students will be able to:
+
+-   Use R and RStudio for data analysis
+-   Import structured and unstructured data
+-   Clean and transform data using `dplyr`, `tidyr`, and other Tidyverse packages
+-   Create effective visualizations using `ggplot2`
+-   Perform exploratory data analysis (EDA)
+-   Apply data wrangling techniques to real datasets
+
+## Course Student Learning Outcomes
+
+**LO1.** Compare and contrast major classes of and techniques for data handling (synthesis).\
+
+Students will be able to:\
+1. Identify various sources of data\
+2. Identify and utilize tool chains appropriate for accessing data\
+
+**LO2.** Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).
+
+Students will be able to:\
+1. Aggregate data from multiple sources\
+2. Reshape data for further analysis\
+3. Validate data\
+4. Generate meaningful statistics summarizing the data\
+5. Visualize trends in data\
+
+**LO3.** Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)
+
+**LO4.** Develop a conceptual understanding of how the field of data management is evolving (knowledge).\
+
+Students will be able to:\
+1. Find and employ data management tools in **R**\
+2. Find and employ data visualization tools in **R**
+
+## Program Student Outcomes supported by this class
+
+This course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:
+
+**SO2.** Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.
+
+**SO3.** Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.
+
+**SO4.** Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.
+
+**SO7.** Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.
+
+------------------------------------------------------------------------
+
+# Required Materials
+
+-   **Textbook:** [*R for Data Science*](https://r4ds.hadley.nz/) (free online)
+-   **Software:**
+    -   [R](https://www.r-project.org/)
+    -   [RStudio](https://posit.co/downloads/)
+
+------------------------------------------------------------------------
+
+# Assessments
+
+| Component                         | Weight |
+|-----------------------------------|--------|
+| Problem Sets (8 total)            | 22.5%  |
+| Homeworks (6 total)               | 22.5%  |
+| Quizzes (6 total, lowest dropped) | 55%    |
+
+-   **Problem sets** and **homeworks** are marked as **complete** or **incomplete**.
+
+-   **Problem sets** are simpler assignments and will be completed on your own, while **homeworks** can be done in groups.
+
+# Course Schedule (Fall 2025)
+
+| **Week** | **Dates (T/Th)** | **Topics** | **Assignments** | **Quiz** |
+|----|----|----|----|----|
+| 1 | Aug 26 / 28 | Introduction to R and RStudio | PS1 |  |
+| 2 | Sept 2 / 4 | Tidy Data & Tidyverse | PS2, HW1 |  |
+| 3 | Sept 9 / 11 | dplyr Part 1 | PS3 | Quiz 1 |
+| 4 | Sept 16 / 18 | dplyr Part 2 | HW2 |  |
+| 5 | Sept 23 / 25 | Data Cleaning & Missing Data | PS4 | Quiz 2 |
+| 6 | Sept 30 / Oct 2 | Reshaping Data with tidyr | HW3 |  |
+| 7 | Oct 7 / 9 | EDA with ggplot2 | PS5 | Quiz 3 |
+| 8 | Oct 14 / 16 | Advanced Visualization | HW4 |  |
+| 9 | Oct 21 / 23 | String Handling & Regex | PS6 | Quiz 4 |
+| 10 | Oct 28 / 30 | Merging Datasets | HW5 |  |
+| 11 | Nov 4 / 6 | Web Scraping | PS7 | Quiz 5 |
+| 12 | Nov 11\* / 13 | SQL in R | HW6 |  |
+| 13 | Nov 18 / 20 | Final Review | — |  |
+| 14 | Nov 25 / 27 | **Thanksgiving Break – No Class** | — | — |
+| 15 | Dec 2 / 4 | Wrap-up & Final Quiz | PS8 | Quiz 6 |
+
+> \* **Nov 11 (Veterans Day)** is a university holiday — no class that Tuesday. Week 12 will have class only on Nov 13.
+
+------------------------------------------------------------------------
+
+# Policies
+
+-   **Attendance:** Active participation in coding activities is expected.
+-   **Collaboration:** Allowed for **homeworks**; **problem sets** and **quizzes** must be completed individually.
+-   **Late Work:** Accepted only with prior arrangement.
+-   **Academic Integrity:** Students must adhere to NAU’s academic integrity policy.
+
+------------------------------------------------------------------------
+
+## Grading and Submission
+
+-   **Problem Sets** and **Homeworks** will be submitted via Canvas.\
+-   **Quizzes** are written and completed in-class.
+
+------------------------------------------------------------------------
+
+## Resources
+
+-   [RStudio Cheatsheets](https://posit.co/resources/cheatsheets/)
+-   DataCamp & Coursera tutorials for extra practice
+-   Office hours for additional help
+
+------------------------------------------------------------------------
+
+> This syllabus is subject to minor adjustments. Updates will be announced in class and posted on Canvas.
