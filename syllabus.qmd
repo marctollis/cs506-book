@@ -7,7 +7,7 @@ format: html
 
 ## Course Overview
 
-**INF506: Data Management and Wrangling** introduces graduate students to data wrangling and management using **R** and the **Tidyverse** ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.
+**INF506: Data Wrangling and** **Management** introduces graduate students to data wrangling and management using **R** and the **Tidyverse** ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.
 
 -   CS 506, Spring 2024, 3 units
 -   Section 001: TuTh 9:35AM-10:50AM, Learning Resource Ctr Rm 106C
@@ -79,7 +79,7 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-# Required Materials
+## Required Materials
 
 -   **Textbook:** [*R for Data Science*](https://r4ds.hadley.nz/) (free online)
 -   **Software:**
@@ -88,7 +88,7 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-# Assessments
+## Assessments
 
 | Component                         | Weight |
 |-----------------------------------|--------|
@@ -103,7 +103,7 @@ This course directly supports the following program student outcomes in the Mast
 # Course Schedule (Fall 2025)
 
 | **Week** | **Dates (T/Th)** | **Topics** | **Assignments** | **Quiz** |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | 1 | Aug 26 / 28 | Introduction to R and RStudio | PS1 |  |
 | 2 | Sept 2 / 4 | Tidy Data & Tidyverse | PS2, HW1 |  |
 | 3 | Sept 9 / 11 | dplyr Part 1 | PS3 | Quiz 1 |
@@ -117,7 +117,7 @@ This course directly supports the following program student outcomes in the Mast
 | 11 | Nov 4 / 6 | Web Scraping | PS7 | Quiz 5 |
 | 12 | Nov 11\* / 13 | SQL in R | HW6 |  |
 | 13 | Nov 18 / 20 | Final Review | — |  |
-| 14 | Nov 25 / 27 | **Thanksgiving Break – No Class** | — | — |
+| 14 | Nov 25 / 27\* | **Thanksgiving Break – No Class 11/27** | — | — |
 | 15 | Dec 2 / 4 | Wrap-up & Final Quiz | PS8 | Quiz 6 |
 
 > \* **Nov 11 (Veterans Day)** is a university holiday — no class that Tuesday. Week 12 will have class only on Nov 13.
