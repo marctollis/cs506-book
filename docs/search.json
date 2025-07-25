@@ -844,7 +844,7 @@
     "href": "syllabus.html",
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
     "section": "",
-    "text": "A.1 Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
+    "text": "B Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
@@ -865,8 +865,8 @@
     "objectID": "syllabus.html#canvas-recorded-lectures",
     "href": "syllabus.html#canvas-recorded-lectures",
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "A.2 Canvas & Recorded Lectures",
-    "text": "A.2 Canvas & Recorded Lectures\nWe will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.",
+    "section": "B.1 Canvas & Recorded Lectures",
+    "text": "B.1 Canvas & Recorded Lectures\nWe will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
@@ -876,8 +876,8 @@
     "objectID": "syllabus.html#cs506-book-website",
     "href": "syllabus.html#cs506-book-website",
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "A.3 CS506 Book Website",
-    "text": "A.3 CS506 Book Website\nI have compiled a course website that has supplemental text and coded examples that we will walk through in class. This website essentially serves as the course textbook and is required reading. There will be other required reading material.",
+    "section": "B.2 CS506 Book Website",
+    "text": "B.2 CS506 Book Website\nI have compiled a course website that has supplemental text and coded examples that we will walk through in class. This website essentially serves as the course textbook and is required reading. There will be other required reading material.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
@@ -898,8 +898,8 @@
     "objectID": "syllabus.html#course-student-learning-outcomes",
     "href": "syllabus.html#course-student-learning-outcomes",
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "A.5 Course Student Learning Outcomes",
-    "text": "A.5 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R",
+    "section": "C.1 Course Student Learning Outcomes",
+    "text": "C.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
@@ -909,8 +909,8 @@
     "objectID": "syllabus.html#program-student-outcomes-supported-by-this-class",
     "href": "syllabus.html#program-student-outcomes-supported-by-this-class",
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "A.6 Program Student Outcomes supported by this class",
-    "text": "A.6 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
+    "section": "C.2 Program Student Outcomes supported by this class",
+    "text": "C.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
@@ -939,28 +939,6 @@
     ]
   },
   {
-    "objectID": "syllabus.html#grading-and-submission",
-    "href": "syllabus.html#grading-and-submission",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "B.3 Grading and Submission",
-    "text": "B.3 Grading and Submission\n\nProblem Sets and homeworks will be submitted via Canvas.\nQuizzes are written and completed in-class.\nAll assignments are due Sunday 11:59PM the week they are assigned.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#resources",
-    "href": "syllabus.html#resources",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "B.4 Resources",
-    "text": "B.4 Resources\n\nRStudio Cheatsheets\nDataCamp & Coursera tutorials for extra practice\nOffice hours for additional help\n\n\n\nThis syllabus is subject to minor adjustments. Updates will be announced in class and posted on Canvas.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
-    ]
-  },
-  {
     "objectID": "syllabus.html#course-policies",
     "href": "syllabus.html#course-policies",
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
@@ -977,6 +955,28 @@
     "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
     "section": "B.2 University Policies",
     "text": "B.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#grading-and-submission",
+    "href": "syllabus.html#grading-and-submission",
+    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "section": "B.3 Grading and Submission",
+    "text": "B.3 Grading and Submission\n\nProblem Sets and homeworks will be submitted via Canvas.\nQuizzes are written and completed in-class.\nAll assignments are due Sunday 11:59PM the week they are assigned.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#resources",
+    "href": "syllabus.html#resources",
+    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "section": "B.4 Resources",
+    "text": "B.4 Resources\n\nRStudio Cheatsheets\nDataCamp & Coursera tutorials for extra practice\nOffice hours for additional help\n\n\n\nThis syllabus is subject to minor adjustments. Updates will be announced in class and posted on Canvas.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"

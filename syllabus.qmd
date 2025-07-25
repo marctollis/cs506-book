@@ -5,7 +5,7 @@ format: html
 
 ![](nau_siccs_logo.png){fig-align="center"}\
 
-## Course Overview
+# Course Overview
 
 **INF506: Data Wrangling and** **Management** introduces graduate students to data wrangling and management using **R** and the **Tidyverse** ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.
 
@@ -29,7 +29,7 @@ I have compiled a [course website](https://marctollis.github.io/cs506-book/) tha
 
 ------------------------------------------------------------------------
 
-## Course Objectives
+# Course Objectives
 
 By the end of the course, students will be able to:
 
@@ -79,7 +79,7 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-## Required Materials
+# Required Materials
 
 -   **Textbook:** [*R for Data Science*](https://r4ds.hadley.nz/) (free online)
 -   **Software:**
@@ -88,7 +88,7 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-## Assessments
+# Assessments
 
 | Component                         | Weight |
 |-----------------------------------|--------|
@@ -124,7 +124,7 @@ This course directly supports the following program student outcomes in the Mast
 > \* **Nov 11 (Veterans Day)** is a university holiday — no class that Tuesday. Week 12 will have class only on Nov 13.
 
 ------------------------------------------------------------------------
-
+# Policies
 ## Course Policies
 
 -   Students are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.
@@ -155,7 +155,7 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-## Grading and Submission
+# Grading and Submission
 
 -   **Problem Sets** and **homeworks** will be submitted via Canvas.
 -   **Quizzes** are written and completed in-class.
@@ -163,7 +163,7 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-## Resources
+# Resources
 
 -   [RStudio Cheatsheets](https://posit.co/resources/cheatsheets/)
 -   DataCamp & Coursera tutorials for extra practice
