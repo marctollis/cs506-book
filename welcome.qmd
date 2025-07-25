@@ -1,27 +1,16 @@
 ---
-title: "Welcome and How to Use This Book"
+title: "Software"
 ---
 
-## Overview
+You will need to have all of the following free software downloaded and in working order on your laptop.
 
-This chapter covers the following:
+::: callout-important
+## Prior to first lecture
 
-- Key concepts
-- Examples
-- Practice Exercises
+You must have the following on your laptops prior to the first lecture.
+:::
 
-## Key Concepts
-
-Write your lecture content here.
-
-## Example
-
-```{r}
-# Example R code
-summary(mtcars)
-```
-
-## Practice Exercises
-
-1. Describe the task
-2. Load and analyze a dataset
+-   Compatible version of [R software environment](https://ftp.osuosl.org/pub/cran/){target="_blank"}
+-   Latest version of [RStudio Desktop IDE](https://posit.co/downloads/){target="_blank"}
+-   [Quarto](https://quarto.org/docs/get-started/){target="_blank"} publishing system (for documents with integrated code).
+-   You must have a functional PDF Engine to render Quarto (`.qmd`) documents into PDF. See this section on [PDF Engines](https://quarto.org/docs/output-formats/pdf-engine.html){target="_blank"}, and be sure to test whether you can render an example `.qmd` file into a PDF.
