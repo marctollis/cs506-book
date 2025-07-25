@@ -80,11 +80,14 @@ head(student_data)
 -   Save your work with .R extensions
 -   Use the Console for quick exploration
 
-### Insalling and Loading Packages
+### Installing and Loading Packages
 
-#Run this manually in the Console, not in the book install.packages("tidyverse")
+```{r install, eval=FALSE}
+# Run this in the Console if you haven't installed yet
+# install.packages("tidyverse")
+```
 
-### Practice Exercises
+## Practice Exercises
 
 1.  Create a script that assigns two numbers and prints their sum
 2.  Create a vector of Celsius temperatures and convert to Fahrenheit
@@ -110,6 +113,34 @@ students <- data.frame(
 str(students)
 ```
 
-### Next Steps
+## More In-Class Exercises
+
+-   Create a vector of 5 numbers and calculate the mean, median, and standard deviation.
+-   Create a data frame with three columns (e.g., name, age, and major) and print its structure.
+-   Import a dataset using `read.csv()` from a URL and summarize it using `summary()`.
+
+```{r}
+my_vec <- c(10, 20, 30, 40, 50)
+mean(my_vec)
+median(my_vec)
+sd(my_vec)
+
+df <- data.frame(
+  name = c("Lily", "Mark", "Tom"),
+  age = c(21, 22, 23),
+  major = c("Biology", "Math", "History")
+)
+str(df)
+
+data <- read.csv("https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv")
+summary(data)
+```
+
+## Homework Preview
+
+-   Write a script to create three different vectors and compute descriptive statistics.
+-   Import a CSV dataset of your choice, explore it with `str()` and `summary()`, and write one paragraph about what you've learned.
+
+## Next Steps
 
 Now that you can run R scripts and explore objects, you'll learn how to load and reshape real data using the `tidyverse` in the next chapter.
