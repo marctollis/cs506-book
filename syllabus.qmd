@@ -101,14 +101,12 @@ This course directly supports the following program student outcomes in the Mast
 
 -   **Problem sets** and **homeworks** are marked as **complete** or **incomplete**.
 
--   
-
-    ## **Problem sets** are simpler assignments and will be completed on your own, while **homeworks** can be done in groups.
+-  **Problem sets** are simpler assignments and will be completed on your own, while **homeworks** can be done in groups.
 
 # Course Schedule (Fall 2025)
 
 | **Week** | **Dates (T/Th)** | **Topics** | **Assignments** | **Quiz** |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | 1 | Aug 26 / 28 | Introduction to R and RStudio | PS1 |  |
 | 2 | Sept 2 / 4 | Tidy Data & Tidyverse | PS2, HW1 |  |
 | 3 | Sept 9 / 11 | dplyr Part 1 | PS3 | Quiz 1 |
