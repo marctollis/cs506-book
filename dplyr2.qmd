@@ -14,7 +14,7 @@ By the end of this chapter, you should be able to:
 
 ---
 
-# 1. Grouped Summaries
+## Grouped Summaries
 
 Grouping allows you to calculate statistics **per group**.  
 We will use the `nycflights13::flights` dataset.
@@ -32,7 +32,7 @@ flights |>
   )
 ```
 
-### Multiple Summaries
+## Multiple Summaries
 
 ```{r}
 flights |>
@@ -46,7 +46,7 @@ flights |>
 
 ---
 
-## In-Class Exercise 1 – Grouped Summaries
+### In-Class Exercise 1 – Grouped Summaries
 
 Using `flights`:
 
@@ -56,7 +56,7 @@ Using `flights`:
 
 ---
 
-# 2. Grouping with Multiple Variables
+## Grouping with Multiple Variables
 
 You can group by multiple columns at once.
 
@@ -71,7 +71,7 @@ flights |>
 
 ---
 
-## In-Class Exercise 2 – Multiple Grouping
+### In-Class Exercise 2 – Multiple Grouping
 
 1. Group by `origin` and `carrier`.  
 2. Summarize with the average `air_time`.  
@@ -79,7 +79,7 @@ flights |>
 
 ---
 
-# 3. Joining Datasets
+## Joining Datasets
 
 `dplyr` provides functions to join tables by a common key:
 
@@ -99,7 +99,7 @@ flights |>
 
 ---
 
-## In-Class Exercise 3 – Joins
+### In-Class Exercise 3 – Joins
 
 1. Use `left_join()` to add airline names to the flights dataset.  
 2. Use `count()` to find how many flights each airline operates.  
@@ -107,7 +107,7 @@ flights |>
 
 ---
 
-# 4. Chaining with Pipes
+## Chaining with Pipes
 
 We can combine `group_by()`, `summarize()`, and joins in a single pipeline.
 
@@ -137,7 +137,7 @@ Using the flights dataset:
 
 ---
 
-# Homework Preview
+## Homework Preview
 
 For Homework 2 (continued), extend your data transformation by:
 
@@ -148,6 +148,6 @@ For Homework 2 (continued), extend your data transformation by:
 
 ---
 
-# Next Steps
+## Next Steps
 
 Next week, we will explore **tidy data principles** and learn how to reshape datasets using `tidyr`.
