@@ -680,6 +680,126 @@
     ]
   },
   {
+    "objectID": "relational.html",
+    "href": "relational.html",
+    "title": "\n12  Relational Data with dplyr Joins\n",
+    "section": "",
+    "text": "12.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+    ]
+  },
+  {
+    "objectID": "relational.html#learning-objectives",
+    "href": "relational.html#learning-objectives",
+    "title": "\n12  Relational Data with dplyr Joins\n",
+    "section": "",
+    "text": "Understand the concept of relational data and keys\nCombine multiple datasets using different join functions\nUse left_join(), inner_join(), full_join(), and semi_join()\n\nDiagnose and handle join problems (missing keys, duplicates)\nApply joins in analysis workflows",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+    ]
+  },
+  {
+    "objectID": "relational.html#in-class-exercise-1-basic-joins",
+    "href": "relational.html#in-class-exercise-1-basic-joins",
+    "title": "\n12  Relational Data with dplyr Joins\n",
+    "section": "\n15.1 In-Class Exercise 1 – Basic Joins",
+    "text": "15.1 In-Class Exercise 1 – Basic Joins\n\nUse left_join() to add airline names to flights (rename to airline_name).\n\nCount the number of flights for each airline.\n\nUse inner_join() and compare the number of rows.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+    ]
+  },
+  {
+    "objectID": "relational.html#in-class-exercise-2-multi-table-joins",
+    "href": "relational.html#in-class-exercise-2-multi-table-joins",
+    "title": "\n12  Relational Data with dplyr Joins\n",
+    "section": "\n16.1 In-Class Exercise 2 – Multi-Table Joins",
+    "text": "16.1 In-Class Exercise 2 – Multi-Table Joins\n\nJoin flights with airports to add destination airport names.\n\nSummarize average arrival delay by airport.\n\nWhich airport has the longest average delay?",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+    ]
+  },
+  {
+    "objectID": "relational.html#in-class-challenge-join-workflow",
+    "href": "relational.html#in-class-challenge-join-workflow",
+    "title": "\n12  Relational Data with dplyr Joins\n",
+    "section": "\n17.1 In-Class Challenge – Join Workflow",
+    "text": "17.1 In-Class Challenge – Join Workflow\n\nJoin flights with airlines and airports\n\nCalculate average arrival delay by airline and destination\n\nArrange by delay and identify the worst-performing routes",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_import.html",
+    "href": "advanced_import.html",
+    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "",
+    "text": "13.1 Learning Objectives\nBy the end of this lecture, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_import.html#learning-objectives",
+    "href": "advanced_import.html#learning-objectives",
+    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "",
+    "text": "Import and work with data from Excel and Google Sheets\nConnect to and query relational databases from R\nUse Arrow to work efficiently with parquet files and large datasets\nAccess and tidy hierarchical JSON data\nPerform basic web scraping to extract data from web pages",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_import.html#in-class-exercise-1-spreadsheets",
+    "href": "advanced_import.html#in-class-exercise-1-spreadsheets",
+    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n14.1 In-Class Exercise 1 – Spreadsheets",
+    "text": "14.1 In-Class Exercise 1 – Spreadsheets\n\nRead an Excel file from the course data folder.\n\nLoad a Google Sheet you create (optional, requires authentication).\n\nSummarize one numeric column.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_import.html#in-class-exercise-2-databases",
+    "href": "advanced_import.html#in-class-exercise-2-databases",
+    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n15.1 In-Class Exercise 2 – Databases",
+    "text": "15.1 In-Class Exercise 2 – Databases\n\nConnect to the provided SQLite database.\n\nList tables with dbListTables().\n\nQuery the flights table for flights delayed more than 2 hours.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_import.html#in-class-exercise-3-arrow",
+    "href": "advanced_import.html#in-class-exercise-3-arrow",
+    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n16.1 In-Class Exercise 3 – Arrow",
+    "text": "16.1 In-Class Exercise 3 – Arrow\n\nOpen a parquet dataset using arrow::open_dataset().\n\nRun a filter and select query.\n\nCompare performance to reading the equivalent CSV.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_import.html#in-class-exercise-4-json-rectangling",
+    "href": "advanced_import.html#in-class-exercise-4-json-rectangling",
+    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n17.1 In-Class Exercise 4 – JSON Rectangling",
+    "text": "17.1 In-Class Exercise 4 – JSON Rectangling\n\nLoad a nested JSON file.\n\nUse unnest_wider() or unnest_longer() to flatten it.\n\nCreate a tidy table with one row per observation.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+    ]
+  },
+  {
+    "objectID": "advanced_import.html#in-class-exercise-5-web-scraping",
+    "href": "advanced_import.html#in-class-exercise-5-web-scraping",
+    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n18.1 In-Class Exercise 5 – Web Scraping",
+    "text": "18.1 In-Class Exercise 5 – Web Scraping\n\nUse rvest to scrape a simple table from Wikipedia.\n\nConvert it to a tibble and clean column names.\n\nCreate a plot of GDP vs. rank.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+    ]
+  },
+  {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
@@ -754,6 +874,39 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "codestyle.html",
+    "href": "codestyle.html",
+    "title": "Appendix A: Appendix: Coding Style Guidelines",
+    "section": "",
+    "text": "A.1 Why Style Matters\nConsistent code style makes your work:\nThis appendix summarizes the tidyverse style guide based on R4DS Workflow: Style.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendix: Coding Style Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "codestyle.html#why-style-matters",
+    "href": "codestyle.html#why-style-matters",
+    "title": "Appendix A: Appendix: Coding Style Guidelines",
+    "section": "",
+    "text": "Easier to read (for you and collaborators)\n\nEasier to debug (clean structure reveals problems quickly)\n\nEasier to maintain (future you will thank present you)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendix: Coding Style Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "codestyle.html#in-class-exercise",
+    "href": "codestyle.html#in-class-exercise",
+    "title": "Appendix A: Appendix: Coding Style Guidelines",
+    "section": "\nI.1 In-Class Exercise",
+    "text": "I.1 In-Class Exercise\n\nTake a messy R script (provided in class).\n\nReformat it to follow these style guidelines.\n\nCompare before vs. after readability.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendix: Coding Style Guidelines</span>"
     ]
   }
 ]
