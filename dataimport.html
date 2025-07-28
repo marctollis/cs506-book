@@ -224,14 +224,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codestyle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></span></a>
+  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
+  <a href="./codestyle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></span></a>
   </div>
 </li>
       </ul>
@@ -246,36 +246,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
 <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">9.1</span> Learning Objectives</a></li>
   <li>
-<a href="#reading-csv-and-tsv-files" id="toc-reading-csv-and-tsv-files" class="nav-link" data-scroll-target="#reading-csv-and-tsv-files"><span class="header-section-number">10</span> 1. Reading CSV and TSV Files</a>
+<a href="#reading-csv-and-tsv-files" id="toc-reading-csv-and-tsv-files" class="nav-link" data-scroll-target="#reading-csv-and-tsv-files"><span class="header-section-number">9.2</span> Reading CSV and TSV Files</a>
   <ul class="collapse">
-<li><a href="#example-reading-a-csv-file" id="toc-example-reading-a-csv-file" class="nav-link" data-scroll-target="#example-reading-a-csv-file"><span class="header-section-number">10.0.1</span> Example: Reading a CSV file</a></li>
-  <li><a href="#example-reading-a-tsv-file" id="toc-example-reading-a-tsv-file" class="nav-link" data-scroll-target="#example-reading-a-tsv-file"><span class="header-section-number">10.0.2</span> Example: Reading a TSV file</a></li>
-  <li><a href="#in-class-exercise-1-csvtsv" id="toc-in-class-exercise-1-csvtsv" class="nav-link" data-scroll-target="#in-class-exercise-1-csvtsv"><span class="header-section-number">10.1</span> In-Class Exercise 1 – CSV/TSV</a></li>
+<li><a href="#example-reading-a-csv-file" id="toc-example-reading-a-csv-file" class="nav-link" data-scroll-target="#example-reading-a-csv-file"><span class="header-section-number">9.2.1</span> Example: Reading a CSV file</a></li>
+  <li><a href="#example-reading-a-tsv-file" id="toc-example-reading-a-tsv-file" class="nav-link" data-scroll-target="#example-reading-a-tsv-file"><span class="header-section-number">9.2.2</span> Example: Reading a TSV file</a></li>
+  <li><a href="#in-class-exercise-1-csvtsv" id="toc-in-class-exercise-1-csvtsv" class="nav-link" data-scroll-target="#in-class-exercise-1-csvtsv"><span class="header-section-number">9.2.3</span> In-Class Exercise 1 – CSV/TSV</a></li>
   </ul>
 </li>
   <li>
-<a href="#column-types-and-parsing" id="toc-column-types-and-parsing" class="nav-link" data-scroll-target="#column-types-and-parsing"><span class="header-section-number">11</span> 2. Column Types and Parsing</a>
+<a href="#column-types-and-parsing" id="toc-column-types-and-parsing" class="nav-link" data-scroll-target="#column-types-and-parsing"><span class="header-section-number">9.3</span> Column Types and Parsing</a>
   <ul class="collapse">
-<li><a href="#example-overriding-column-types" id="toc-example-overriding-column-types" class="nav-link" data-scroll-target="#example-overriding-column-types"><span class="header-section-number">11.0.1</span> Example: Overriding column types</a></li>
-  <li><a href="#in-class-exercise-2-parsing" id="toc-in-class-exercise-2-parsing" class="nav-link" data-scroll-target="#in-class-exercise-2-parsing"><span class="header-section-number">11.1</span> In-Class Exercise 2 – Parsing</a></li>
+<li><a href="#example-overriding-column-types" id="toc-example-overriding-column-types" class="nav-link" data-scroll-target="#example-overriding-column-types"><span class="header-section-number">9.3.1</span> Example: Overriding column types</a></li>
+  <li><a href="#in-class-exercise-2-parsing" id="toc-in-class-exercise-2-parsing" class="nav-link" data-scroll-target="#in-class-exercise-2-parsing"><span class="header-section-number">9.3.2</span> In-Class Exercise 2 – Parsing</a></li>
   </ul>
 </li>
   <li>
-<a href="#importing-excel-files" id="toc-importing-excel-files" class="nav-link" data-scroll-target="#importing-excel-files"><span class="header-section-number">12</span> 3. Importing Excel Files</a>
+<a href="#importing-excel-files" id="toc-importing-excel-files" class="nav-link" data-scroll-target="#importing-excel-files"><span class="header-section-number">9.4</span> Importing Excel Files</a>
   <ul class="collapse">
-<li><a href="#example-reading-an-excel-sheet" id="toc-example-reading-an-excel-sheet" class="nav-link" data-scroll-target="#example-reading-an-excel-sheet"><span class="header-section-number">12.0.1</span> Example: Reading an Excel sheet</a></li>
-  <li><a href="#in-class-exercise-3-excel-import" id="toc-in-class-exercise-3-excel-import" class="nav-link" data-scroll-target="#in-class-exercise-3-excel-import"><span class="header-section-number">12.1</span> In-Class Exercise 3 – Excel Import</a></li>
+<li><a href="#example-reading-an-excel-sheet" id="toc-example-reading-an-excel-sheet" class="nav-link" data-scroll-target="#example-reading-an-excel-sheet"><span class="header-section-number">9.4.1</span> Example: Reading an Excel sheet</a></li>
+  <li><a href="#in-class-exercise-3-excel-import" id="toc-in-class-exercise-3-excel-import" class="nav-link" data-scroll-target="#in-class-exercise-3-excel-import"><span class="header-section-number">9.4.2</span> In-Class Exercise 3 – Excel Import</a></li>
   </ul>
 </li>
-  <li><a href="#handling-import-problems" id="toc-handling-import-problems" class="nav-link" data-scroll-target="#handling-import-problems"><span class="header-section-number">13</span> 4. Handling Import Problems</a></li>
+  <li><a href="#handling-import-problems" id="toc-handling-import-problems" class="nav-link" data-scroll-target="#handling-import-problems"><span class="header-section-number">9.5</span> Handling Import Problems</a></li>
   <li>
-<a href="#reading-other-formats-optional" id="toc-reading-other-formats-optional" class="nav-link" data-scroll-target="#reading-other-formats-optional"><span class="header-section-number">14</span> 5. Reading Other Formats (Optional)</a>
+<a href="#reading-other-formats-optional" id="toc-reading-other-formats-optional" class="nav-link" data-scroll-target="#reading-other-formats-optional"><span class="header-section-number">9.6</span> Reading Other Formats (Optional)</a>
   <ul class="collapse">
-<li><a href="#in-class-challenge-import-clean-workflow" id="toc-in-class-challenge-import-clean-workflow" class="nav-link" data-scroll-target="#in-class-challenge-import-clean-workflow"><span class="header-section-number">14.1</span> In-Class Challenge – Import &amp; Clean Workflow</a></li>
+<li><a href="#in-class-challenge-import-clean-workflow" id="toc-in-class-challenge-import-clean-workflow" class="nav-link" data-scroll-target="#in-class-challenge-import-clean-workflow"><span class="header-section-number">9.6.1</span> In-Class Challenge – Import &amp; Clean Workflow</a></li>
   </ul>
 </li>
-  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">15</span> Homework Preview</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">16</span> Next Steps</a></li>
+  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">9.7</span> Homework Preview</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">9.8</span> Next Steps</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/marctollis/cs506-book/blob/main/dataimport.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/marctollis/cs506-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -308,11 +308,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Parse dates, times, and numbers correctly</li>
 <li>Diagnose and fix import problems</li>
 </ul>
-<hr></section><section id="reading-csv-and-tsv-files" class="level1" data-number="10"><h1 data-number="10">
-<span class="header-section-number">10</span> 1. Reading CSV and TSV Files</h1>
+<hr></section><section id="reading-csv-and-tsv-files" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="reading-csv-and-tsv-files">
+<span class="header-section-number">9.2</span> Reading CSV and TSV Files</h2>
 <p>The <code>readr</code> package (part of the tidyverse) provides fast and friendly functions for reading text data.</p>
-<section id="example-reading-a-csv-file" class="level3" data-number="10.0.1"><h3 data-number="10.0.1" class="anchored" data-anchor-id="example-reading-a-csv-file">
-<span class="header-section-number">10.0.1</span> Example: Reading a CSV file</h3>
+<section id="example-reading-a-csv-file" class="level3" data-number="9.2.1"><h3 data-number="9.2.1" class="anchored" data-anchor-id="example-reading-a-csv-file">
+<span class="header-section-number">9.2.1</span> Example: Reading a CSV file</h3>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -348,13 +348,13 @@ $ `1959` &lt;dbl&gt; 360, 342, 406, 396, 420, 472, 548, 559, 463, 407, 362, 405
 $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432</code></pre>
 </div>
 </div>
-</section><section id="example-reading-a-tsv-file" class="level3" data-number="10.0.2"><h3 data-number="10.0.2" class="anchored" data-anchor-id="example-reading-a-tsv-file">
-<span class="header-section-number">10.0.2</span> Example: Reading a TSV file</h3>
+</section><section id="example-reading-a-tsv-file" class="level3" data-number="9.2.2"><h3 data-number="9.2.2" class="anchored" data-anchor-id="example-reading-a-tsv-file">
+<span class="header-section-number">9.2.2</span> Example: Reading a TSV file</h3>
 <div class="cell">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df_tsv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_tsv</a></span><span class="op">(</span><span class="st">"data/example.tsv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="in-class-exercise-1-csvtsv" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="in-class-exercise-1-csvtsv">
-<span class="header-section-number">10.1</span> In-Class Exercise 1 – CSV/TSV</h2>
+<hr></section><section id="in-class-exercise-1-csvtsv" class="level3" data-number="9.2.3"><h3 data-number="9.2.3" class="anchored" data-anchor-id="in-class-exercise-1-csvtsv">
+<span class="header-section-number">9.2.3</span> In-Class Exercise 1 – CSV/TSV</h3>
 <ol type="1">
 <li>Download a small CSV file (e.g., from the course repository).<br>
 </li>
@@ -364,11 +364,11 @@ $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432<
 </li>
 <li>What data types were automatically detected?</li>
 </ol>
-<hr></section></section><section id="column-types-and-parsing" class="level1" data-number="11"><h1 data-number="11">
-<span class="header-section-number">11</span> 2. Column Types and Parsing</h1>
+<hr></section></section><section id="column-types-and-parsing" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="column-types-and-parsing">
+<span class="header-section-number">9.3</span> Column Types and Parsing</h2>
 <p><code>readr</code> automatically guesses column types, but you can override them.</p>
-<section id="example-overriding-column-types" class="level3" data-number="11.0.1"><h3 data-number="11.0.1" class="anchored" data-anchor-id="example-overriding-column-types">
-<span class="header-section-number">11.0.1</span> Example: Overriding column types</h3>
+<section id="example-overriding-column-types" class="level3" data-number="9.3.1"><h3 data-number="9.3.1" class="anchored" data-anchor-id="example-overriding-column-types">
+<span class="header-section-number">9.3.1</span> Example: Overriding column types</h3>
 <div class="cell">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/mydata.csv"</span>, col_types <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/cols.html">cols</a></span><span class="op">(</span></span>
 <span>  id <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_atomic.html">col_character</a></span><span class="op">(</span><span class="op">)</span>,</span>
@@ -376,8 +376,8 @@ $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432<
 <span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can parse numbers with <code><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number()</a></code>, dates with <code><a href="https://readr.tidyverse.org/reference/parse_datetime.html">parse_date()</a></code>, and times with <code><a href="https://readr.tidyverse.org/reference/parse_datetime.html">parse_time()</a></code>.</p>
-<hr></section><section id="in-class-exercise-2-parsing" class="level2" data-number="11.1"><h2 data-number="11.1" class="anchored" data-anchor-id="in-class-exercise-2-parsing">
-<span class="header-section-number">11.1</span> In-Class Exercise 2 – Parsing</h2>
+<hr></section><section id="in-class-exercise-2-parsing" class="level3" data-number="9.3.2"><h3 data-number="9.3.2" class="anchored" data-anchor-id="in-class-exercise-2-parsing">
+<span class="header-section-number">9.3.2</span> In-Class Exercise 2 – Parsing</h3>
 <ol type="1">
 <li>Create a vector of messy numbers: <code>c("$100", "250%", "300")</code>.<br>
 </li>
@@ -385,19 +385,19 @@ $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432<
 </li>
 <li>Create a vector of dates as strings and use <code><a href="https://readr.tidyverse.org/reference/parse_datetime.html">parse_date()</a></code>.</li>
 </ol>
-<hr></section></section><section id="importing-excel-files" class="level1" data-number="12"><h1 data-number="12">
-<span class="header-section-number">12</span> 3. Importing Excel Files</h1>
+<hr></section></section><section id="importing-excel-files" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="importing-excel-files">
+<span class="header-section-number">9.4</span> Importing Excel Files</h2>
 <p>The <code>readxl</code> package is used to read Excel files (<code>.xls</code>, <code>.xlsx</code>).</p>
-<section id="example-reading-an-excel-sheet" class="level3" data-number="12.0.1"><h3 data-number="12.0.1" class="anchored" data-anchor-id="example-reading-an-excel-sheet">
-<span class="header-section-number">12.0.1</span> Example: Reading an Excel sheet</h3>
+<section id="example-reading-an-excel-sheet" class="level3" data-number="9.4.1"><h3 data-number="9.4.1" class="anchored" data-anchor-id="example-reading-an-excel-sheet">
+<span class="header-section-number">9.4.1</span> Example: Reading an Excel sheet</h3>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">excel_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"data/example.xlsx"</span>, sheet <span class="op">=</span> <span class="st">"Sheet1"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">excel_df</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="in-class-exercise-3-excel-import" class="level2" data-number="12.1"><h2 data-number="12.1" class="anchored" data-anchor-id="in-class-exercise-3-excel-import">
-<span class="header-section-number">12.1</span> In-Class Exercise 3 – Excel Import</h2>
+<hr></section><section id="in-class-exercise-3-excel-import" class="level3" data-number="9.4.2"><h3 data-number="9.4.2" class="anchored" data-anchor-id="in-class-exercise-3-excel-import">
+<span class="header-section-number">9.4.2</span> In-Class Exercise 3 – Excel Import</h3>
 <ol type="1">
 <li>Use a provided Excel file (or download one).<br>
 </li>
@@ -405,8 +405,8 @@ $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432<
 </li>
 <li>Specify a different sheet and check the result.</li>
 </ol>
-<hr></section></section><section id="handling-import-problems" class="level1" data-number="13"><h1 data-number="13">
-<span class="header-section-number">13</span> 4. Handling Import Problems</h1>
+<hr></section></section><section id="handling-import-problems" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="handling-import-problems">
+<span class="header-section-number">9.5</span> Handling Import Problems</h2>
 <p>When column parsing fails:</p>
 <ul>
 <li>Use <code><a href="https://readr.tidyverse.org/reference/problems.html">problems()</a></code> to diagnose</li>
@@ -419,8 +419,8 @@ $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432<
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bad</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/bad.csv"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://readr.tidyverse.org/reference/problems.html">problems</a></span><span class="op">(</span><span class="va">bad</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="reading-other-formats-optional" class="level1" data-number="14"><h1 data-number="14">
-<span class="header-section-number">14</span> 5. Reading Other Formats (Optional)</h1>
+<hr></section><section id="reading-other-formats-optional" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="reading-other-formats-optional">
+<span class="header-section-number">9.6</span> Reading Other Formats (Optional)</h2>
 <ul>
 <li>
 <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_delim()</a></code> – for custom delimiters</li>
@@ -432,8 +432,8 @@ $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432<
 <code><a href="https://jeroen.r-universe.dev/jsonlite/reference/fromJSON.html">jsonlite::fromJSON()</a></code> – for JSON files (optional preview)</li>
 </ul>
 <hr>
-<section id="in-class-challenge-import-clean-workflow" class="level2" data-number="14.1"><h2 data-number="14.1" class="anchored" data-anchor-id="in-class-challenge-import-clean-workflow">
-<span class="header-section-number">14.1</span> In-Class Challenge – Import &amp; Clean Workflow</h2>
+<section id="in-class-challenge-import-clean-workflow" class="level3" data-number="9.6.1"><h3 data-number="9.6.1" class="anchored" data-anchor-id="in-class-challenge-import-clean-workflow">
+<span class="header-section-number">9.6.1</span> In-Class Challenge – Import &amp; Clean Workflow</h3>
 <ol type="1">
 <li>Import a messy CSV file with mixed types.<br>
 </li>
@@ -443,8 +443,8 @@ $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432<
 </li>
 <li>Summarize the data by a grouping variable.</li>
 </ol>
-<hr></section></section><section id="homework-preview" class="level1" data-number="15"><h1 data-number="15">
-<span class="header-section-number">15</span> Homework Preview</h1>
+<hr></section></section><section id="homework-preview" class="level2" data-number="9.7"><h2 data-number="9.7" class="anchored" data-anchor-id="homework-preview">
+<span class="header-section-number">9.7</span> Homework Preview</h2>
 <p>For Homework 6, you will:</p>
 <ul>
 <li>Import at least <strong>one CSV</strong> and <strong>one Excel</strong> dataset</li>
@@ -454,8 +454,8 @@ $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432<
 <li>Provide a short summary (using <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code>)</li>
 <li>Render to PDF and submit</li>
 </ul>
-<hr></section><section id="next-steps" class="level1" data-number="16"><h1 data-number="16">
-<span class="header-section-number">16</span> Next Steps</h1>
+<hr></section><section id="next-steps" class="level2" data-number="9.8"><h2 data-number="9.8" class="anchored" data-anchor-id="next-steps">
+<span class="header-section-number">9.8</span> Next Steps</h2>
 <p>Next week, we will learn to <strong>work with text data and regular expressions</strong> using the <code>stringr</code> package.</p>
 
 
@@ -955,7 +955,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. Reading CSV and TSV Files</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reading CSV and TSV Files</span></span>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>The <span class="in">`readr`</span> package (part of the tidyverse) provides fast and friendly functions for reading text data.</span>
 <span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
@@ -976,7 +976,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 1 – CSV/TSV</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 1 – CSV/TSV</span></span>
 <span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Download a small CSV file (e.g., from the course repository).  </span>
 <span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Read it into R using <span class="in">`read_csv()`</span>.  </span>
@@ -985,7 +985,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a><span class="fu"># 2. Column Types and Parsing</span></span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Column Types and Parsing</span></span>
 <span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="in">`readr`</span> automatically guesses column types, but you can override them.</span>
 <span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a></span>
@@ -1002,7 +1002,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 2 – Parsing</span></span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 2 – Parsing</span></span>
 <span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create a vector of messy numbers: <span class="in">`c("$100", "250%", "300")`</span>.  </span>
 <span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Use <span class="in">`parse_number()`</span> to extract numeric values.  </span>
@@ -1010,7 +1010,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a><span class="fu"># 3. Importing Excel Files</span></span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## Importing Excel Files</span></span>
 <span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a>The <span class="in">`readxl`</span> package is used to read Excel files (<span class="in">`.xls`</span>, <span class="in">`.xlsx`</span>).</span>
 <span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a></span>
@@ -1025,7 +1025,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 3 – Excel Import</span></span>
+<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 3 – Excel Import</span></span>
 <span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Use a provided Excel file (or download one).  </span>
 <span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Read the first sheet with <span class="in">`read_excel()`</span>.  </span>
@@ -1033,7 +1033,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a><span class="fu"># 4. Handling Import Problems</span></span>
+<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## Handling Import Problems</span></span>
 <span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a>When column parsing fails:</span>
 <span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a></span>
@@ -1050,7 +1050,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a><span class="fu"># 5. Reading Other Formats (Optional)</span></span>
+<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reading Other Formats (Optional)</span></span>
 <span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`read_delim()`</span> – for custom delimiters</span>
 <span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`read_table()`</span> – for whitespace-delimited files</span>
@@ -1059,7 +1059,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Challenge – Import &amp; Clean Workflow</span></span>
+<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Challenge – Import &amp; Clean Workflow</span></span>
 <span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Import a messy CSV file with mixed types.  </span>
 <span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Fix incorrect column parsing.  </span>
@@ -1068,7 +1068,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a><span class="fu"># Homework Preview</span></span>
+<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## Homework Preview</span></span>
 <span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a>For Homework 6, you will:</span>
 <span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a></span>
@@ -1080,7 +1080,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a><span class="fu"># Next Steps</span></span>
+<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
 <span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a>Next week, we will learn to **work with text data and regular expressions** using the <span class="in">`stringr`</span> package.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>

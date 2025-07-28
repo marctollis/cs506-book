@@ -224,14 +224,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codestyle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></span></a>
+  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
+  <a href="./codestyle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></span></a>
   </div>
 </li>
       </ul>
@@ -245,38 +245,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">11.1</span> Learning Objectives</a></li>
-  <li><a href="#introduction-to-factors" id="toc-introduction-to-factors" class="nav-link" data-scroll-target="#introduction-to-factors"><span class="header-section-number">12</span> 1. Introduction to Factors</a></li>
-  <li><a href="#using-forcats" id="toc-using-forcats" class="nav-link" data-scroll-target="#using-forcats"><span class="header-section-number">13</span> 2. Using forcats</a></li>
+  <li><a href="#introduction-to-factors" id="toc-introduction-to-factors" class="nav-link" data-scroll-target="#introduction-to-factors"><span class="header-section-number">11.2</span> Introduction to Factors</a></li>
+  <li><a href="#using-forcats" id="toc-using-forcats" class="nav-link" data-scroll-target="#using-forcats"><span class="header-section-number">11.3</span> Using forcats</a></li>
   <li>
-<a href="#reordering-factor-levels" id="toc-reordering-factor-levels" class="nav-link" data-scroll-target="#reordering-factor-levels"><span class="header-section-number">14</span> 3. Reordering Factor Levels</a>
+<a href="#reordering-factor-levels" id="toc-reordering-factor-levels" class="nav-link" data-scroll-target="#reordering-factor-levels"><span class="header-section-number">11.4</span> Reordering Factor Levels</a>
   <ul class="collapse">
-<li><a href="#fct_reorder" id="toc-fct_reorder" class="nav-link" data-scroll-target="#fct_reorder"><span class="header-section-number">14.0.1</span> <code>fct_reorder()</code></a></li>
-  <li><a href="#in-class-exercise-1-reordering" id="toc-in-class-exercise-1-reordering" class="nav-link" data-scroll-target="#in-class-exercise-1-reordering"><span class="header-section-number">14.1</span> In-Class Exercise 1 – Reordering</a></li>
+<li><a href="#fct_reorder" id="toc-fct_reorder" class="nav-link" data-scroll-target="#fct_reorder"><span class="header-section-number">11.4.1</span> <code>fct_reorder()</code></a></li>
+  <li><a href="#in-class-exercise-1-reordering" id="toc-in-class-exercise-1-reordering" class="nav-link" data-scroll-target="#in-class-exercise-1-reordering"><span class="header-section-number">11.4.2</span> In-Class Exercise 1 – Reordering</a></li>
   </ul>
 </li>
   <li>
-<a href="#changing-factor-labels" id="toc-changing-factor-labels" class="nav-link" data-scroll-target="#changing-factor-labels"><span class="header-section-number">15</span> 4. Changing Factor Labels</a>
+<a href="#changing-factor-labels" id="toc-changing-factor-labels" class="nav-link" data-scroll-target="#changing-factor-labels"><span class="header-section-number">11.5</span> Changing Factor Labels</a>
   <ul class="collapse">
-<li><a href="#fct_recode" id="toc-fct_recode" class="nav-link" data-scroll-target="#fct_recode"><span class="header-section-number">15.0.1</span> <code>fct_recode()</code></a></li>
-  <li><a href="#in-class-exercise-2-recoding" id="toc-in-class-exercise-2-recoding" class="nav-link" data-scroll-target="#in-class-exercise-2-recoding"><span class="header-section-number">15.1</span> In-Class Exercise 2 – Recoding</a></li>
+<li><a href="#fct_recode" id="toc-fct_recode" class="nav-link" data-scroll-target="#fct_recode"><span class="header-section-number">11.5.1</span> <code>fct_recode()</code></a></li>
+  <li><a href="#in-class-exercise-2-recoding" id="toc-in-class-exercise-2-recoding" class="nav-link" data-scroll-target="#in-class-exercise-2-recoding"><span class="header-section-number">11.5.2</span> In-Class Exercise 2 – Recoding</a></li>
   </ul>
 </li>
   <li>
-<a href="#collapsing-levels" id="toc-collapsing-levels" class="nav-link" data-scroll-target="#collapsing-levels"><span class="header-section-number">16</span> 5. Collapsing Levels</a>
+<a href="#collapsing-levels" id="toc-collapsing-levels" class="nav-link" data-scroll-target="#collapsing-levels"><span class="header-section-number">11.6</span> Collapsing Levels</a>
   <ul class="collapse">
-<li><a href="#fct_collapse" id="toc-fct_collapse" class="nav-link" data-scroll-target="#fct_collapse"><span class="header-section-number">16.0.1</span> <code>fct_collapse()</code></a></li>
-  <li><a href="#in-class-exercise-3-collapsing-levels" id="toc-in-class-exercise-3-collapsing-levels" class="nav-link" data-scroll-target="#in-class-exercise-3-collapsing-levels"><span class="header-section-number">16.1</span> In-Class Exercise 3 – Collapsing Levels</a></li>
+<li><a href="#fct_collapse" id="toc-fct_collapse" class="nav-link" data-scroll-target="#fct_collapse"><span class="header-section-number">11.6.1</span> <code>fct_collapse()</code></a></li>
+  <li><a href="#in-class-exercise-3-collapsing-levels" id="toc-in-class-exercise-3-collapsing-levels" class="nav-link" data-scroll-target="#in-class-exercise-3-collapsing-levels"><span class="header-section-number">11.6.2</span> In-Class Exercise 3 – Collapsing Levels</a></li>
   </ul>
 </li>
   <li>
-<a href="#reordering-factors-for-plots" id="toc-reordering-factors-for-plots" class="nav-link" data-scroll-target="#reordering-factors-for-plots"><span class="header-section-number">17</span> 6. Reordering Factors for Plots</a>
+<a href="#reordering-factors-for-plots" id="toc-reordering-factors-for-plots" class="nav-link" data-scroll-target="#reordering-factors-for-plots"><span class="header-section-number">11.7</span> Reordering Factors for Plots</a>
   <ul class="collapse">
-<li><a href="#fct_infreq" id="toc-fct_infreq" class="nav-link" data-scroll-target="#fct_infreq"><span class="header-section-number">17.0.1</span> <code>fct_infreq()</code></a></li>
-  <li><a href="#in-class-challenge-factor-workflow" id="toc-in-class-challenge-factor-workflow" class="nav-link" data-scroll-target="#in-class-challenge-factor-workflow"><span class="header-section-number">17.1</span> In-Class Challenge – Factor Workflow</a></li>
+<li><a href="#fct_infreq" id="toc-fct_infreq" class="nav-link" data-scroll-target="#fct_infreq"><span class="header-section-number">11.7.1</span> <code>fct_infreq()</code></a></li>
+  <li><a href="#in-class-challenge-factor-workflow" id="toc-in-class-challenge-factor-workflow" class="nav-link" data-scroll-target="#in-class-challenge-factor-workflow"><span class="header-section-number">11.7.2</span> In-Class Challenge – Factor Workflow</a></li>
   </ul>
 </li>
-  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">18</span> Homework Preview</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">19</span> Next Steps</a></li>
+  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">11.8</span> Homework Preview</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">11.9</span> Next Steps</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/marctollis/cs506-book/blob/main/factors.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/marctollis/cs506-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -307,8 +307,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Collapse multiple levels into broader categories</li>
 <li>Use <code>forcats</code> functions to manipulate categorical variables effectively</li>
 </ul>
-<hr></section><section id="introduction-to-factors" class="level1" data-number="12"><h1 data-number="12">
-<span class="header-section-number">12</span> 1. Introduction to Factors</h1>
+<hr></section><section id="introduction-to-factors" class="level2" data-number="11.2"><h2 data-number="11.2" class="anchored" data-anchor-id="introduction-to-factors">
+<span class="header-section-number">11.2</span> Introduction to Factors</h2>
 <p>Factors are used to work with <strong>categorical data</strong> (variables with a fixed set of possible values).<br>
 R uses factors to control ordering in plots and summaries.</p>
 <p>Example:</p>
@@ -319,8 +319,8 @@ R uses factors to control ordering in plots and summaries.</p>
 <pre><code>[1] "high"   "low"    "medium"</code></pre>
 </div>
 </div>
-<hr></section><section id="using-forcats" class="level1" data-number="13"><h1 data-number="13">
-<span class="header-section-number">13</span> 2. Using forcats</h1>
+<hr></section><section id="using-forcats" class="level2" data-number="11.3"><h2 data-number="11.3" class="anchored" data-anchor-id="using-forcats">
+<span class="header-section-number">11.3</span> Using forcats</h2>
 <p>The <code>forcats</code> package provides helper functions for factors.</p>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://forcats.tidyverse.org/">forcats</a></span><span class="op">)</span></span>
@@ -337,10 +337,10 @@ R uses factors to control ordering in plots and summaries.</p>
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 </div>
-<hr></section><section id="reordering-factor-levels" class="level1" data-number="14"><h1 data-number="14">
-<span class="header-section-number">14</span> 3. Reordering Factor Levels</h1>
-<section id="fct_reorder" class="level3" data-number="14.0.1"><h3 data-number="14.0.1" class="anchored" data-anchor-id="fct_reorder">
-<span class="header-section-number">14.0.1</span> <code>fct_reorder()</code>
+<hr></section><section id="reordering-factor-levels" class="level2" data-number="11.4"><h2 data-number="11.4" class="anchored" data-anchor-id="reordering-factor-levels">
+<span class="header-section-number">11.4</span> Reordering Factor Levels</h2>
+<section id="fct_reorder" class="level3" data-number="11.4.1"><h3 data-number="11.4.1" class="anchored" data-anchor-id="fct_reorder">
+<span class="header-section-number">11.4.1</span> <code>fct_reorder()</code>
 </h3>
 <p>Reorders factor levels by another variable (e.g., mean of a numeric variable):</p>
 <div class="cell">
@@ -353,8 +353,8 @@ R uses factors to control ordering in plots and summaries.</p>
 </div>
 </div>
 </div>
-<hr></section><section id="in-class-exercise-1-reordering" class="level2" data-number="14.1"><h2 data-number="14.1" class="anchored" data-anchor-id="in-class-exercise-1-reordering">
-<span class="header-section-number">14.1</span> In-Class Exercise 1 – Reordering</h2>
+<hr></section><section id="in-class-exercise-1-reordering" class="level3" data-number="11.4.2"><h3 data-number="11.4.2" class="anchored" data-anchor-id="in-class-exercise-1-reordering">
+<span class="header-section-number">11.4.2</span> In-Class Exercise 1 – Reordering</h3>
 <ol type="1">
 <li>Use <code><a href="https://forcats.tidyverse.org/reference/fct_reorder.html">fct_reorder()</a></code> to reorder car classes in the <code>mpg</code> dataset by highway mpg.<br>
 </li>
@@ -362,10 +362,10 @@ R uses factors to control ordering in plots and summaries.</p>
 </li>
 <li>Which class has the highest median mpg?</li>
 </ol>
-<hr></section></section><section id="changing-factor-labels" class="level1" data-number="15"><h1 data-number="15">
-<span class="header-section-number">15</span> 4. Changing Factor Labels</h1>
-<section id="fct_recode" class="level3" data-number="15.0.1"><h3 data-number="15.0.1" class="anchored" data-anchor-id="fct_recode">
-<span class="header-section-number">15.0.1</span> <code>fct_recode()</code>
+<hr></section></section><section id="changing-factor-labels" class="level2" data-number="11.5"><h2 data-number="11.5" class="anchored" data-anchor-id="changing-factor-labels">
+<span class="header-section-number">11.5</span> Changing Factor Labels</h2>
+<section id="fct_recode" class="level3" data-number="11.5.1"><h3 data-number="11.5.1" class="anchored" data-anchor-id="fct_recode">
+<span class="header-section-number">11.5.1</span> <code>fct_recode()</code>
 </h3>
 <p>Renames levels:</p>
 <div class="cell">
@@ -385,17 +385,17 @@ R uses factors to control ordering in plots and summaries.</p>
 3 rear-wheel     25</code></pre>
 </div>
 </div>
-<hr></section><section id="in-class-exercise-2-recoding" class="level2" data-number="15.1"><h2 data-number="15.1" class="anchored" data-anchor-id="in-class-exercise-2-recoding">
-<span class="header-section-number">15.1</span> In-Class Exercise 2 – Recoding</h2>
+<hr></section><section id="in-class-exercise-2-recoding" class="level3" data-number="11.5.2"><h3 data-number="11.5.2" class="anchored" data-anchor-id="in-class-exercise-2-recoding">
+<span class="header-section-number">11.5.2</span> In-Class Exercise 2 – Recoding</h3>
 <ol type="1">
 <li>Recode the <code>drv</code> variable to use descriptive names.<br>
 </li>
 <li>Count the number of cars in each drive category.</li>
 </ol>
-<hr></section></section><section id="collapsing-levels" class="level1" data-number="16"><h1 data-number="16">
-<span class="header-section-number">16</span> 5. Collapsing Levels</h1>
-<section id="fct_collapse" class="level3" data-number="16.0.1"><h3 data-number="16.0.1" class="anchored" data-anchor-id="fct_collapse">
-<span class="header-section-number">16.0.1</span> <code>fct_collapse()</code>
+<hr></section></section><section id="collapsing-levels" class="level2" data-number="11.6"><h2 data-number="11.6" class="anchored" data-anchor-id="collapsing-levels">
+<span class="header-section-number">11.6</span> Collapsing Levels</h2>
+<section id="fct_collapse" class="level3" data-number="11.6.1"><h3 data-number="11.6.1" class="anchored" data-anchor-id="fct_collapse">
+<span class="header-section-number">11.6.1</span> <code>fct_collapse()</code>
 </h3>
 <p>Combines multiple levels into broader categories.</p>
 <div class="cell">
@@ -414,17 +414,17 @@ R uses factors to control ordering in plots and summaries.</p>
 3 large           106</code></pre>
 </div>
 </div>
-<hr></section><section id="in-class-exercise-3-collapsing-levels" class="level2" data-number="16.1"><h2 data-number="16.1" class="anchored" data-anchor-id="in-class-exercise-3-collapsing-levels">
-<span class="header-section-number">16.1</span> In-Class Exercise 3 – Collapsing Levels</h2>
+<hr></section><section id="in-class-exercise-3-collapsing-levels" class="level3" data-number="11.6.2"><h3 data-number="11.6.2" class="anchored" data-anchor-id="in-class-exercise-3-collapsing-levels">
+<span class="header-section-number">11.6.2</span> In-Class Exercise 3 – Collapsing Levels</h3>
 <ol type="1">
 <li>Create a new variable that collapses <code>class</code> into <code>small</code> vs.&nbsp;<code>large</code>.<br>
 </li>
 <li>Make a bar chart of the collapsed variable.</li>
 </ol>
-<hr></section></section><section id="reordering-factors-for-plots" class="level1" data-number="17"><h1 data-number="17">
-<span class="header-section-number">17</span> 6. Reordering Factors for Plots</h1>
-<section id="fct_infreq" class="level3" data-number="17.0.1"><h3 data-number="17.0.1" class="anchored" data-anchor-id="fct_infreq">
-<span class="header-section-number">17.0.1</span> <code>fct_infreq()</code>
+<hr></section></section><section id="reordering-factors-for-plots" class="level2" data-number="11.7"><h2 data-number="11.7" class="anchored" data-anchor-id="reordering-factors-for-plots">
+<span class="header-section-number">11.7</span> Reordering Factors for Plots</h2>
+<section id="fct_infreq" class="level3" data-number="11.7.1"><h3 data-number="11.7.1" class="anchored" data-anchor-id="fct_infreq">
+<span class="header-section-number">11.7.1</span> <code>fct_infreq()</code>
 </h3>
 <p>Orders factors by frequency:</p>
 <div class="cell">
@@ -439,16 +439,16 @@ R uses factors to control ordering in plots and summaries.</p>
 </div>
 </div>
 </div>
-<hr></section><section id="in-class-challenge-factor-workflow" class="level2" data-number="17.1"><h2 data-number="17.1" class="anchored" data-anchor-id="in-class-challenge-factor-workflow">
-<span class="header-section-number">17.1</span> In-Class Challenge – Factor Workflow</h2>
+<hr></section><section id="in-class-challenge-factor-workflow" class="level3" data-number="11.7.2"><h3 data-number="11.7.2" class="anchored" data-anchor-id="in-class-challenge-factor-workflow">
+<span class="header-section-number">11.7.2</span> In-Class Challenge – Factor Workflow</h3>
 <p>Using the <code>mpg</code> dataset:</p>
 <ul>
 <li>Reorder the <code>manufacturer</code> variable by number of cars</li>
 <li>Collapse classes into fewer categories</li>
 <li>Create a bar plot that uses the new ordering and grouping</li>
 </ul>
-<hr></section></section><section id="homework-preview" class="level1" data-number="18"><h1 data-number="18">
-<span class="header-section-number">18</span> Homework Preview</h1>
+<hr></section></section><section id="homework-preview" class="level2" data-number="11.8"><h2 data-number="11.8" class="anchored" data-anchor-id="homework-preview">
+<span class="header-section-number">11.8</span> Homework Preview</h2>
 <p>For the next homework, you will:</p>
 <ul>
 <li>Choose a dataset with at least one categorical variable</li>
@@ -462,8 +462,8 @@ R uses factors to control ordering in plots and summaries.</p>
 <li>Produce at least one visualization that uses your factor manipulations</li>
 <li>Render to PDF and submit on Canvas</li>
 </ul>
-<hr></section><section id="next-steps" class="level1" data-number="19"><h1 data-number="19">
-<span class="header-section-number">19</span> Next Steps</h1>
+<hr></section><section id="next-steps" class="level2" data-number="11.9"><h2 data-number="11.9" class="anchored" data-anchor-id="next-steps">
+<span class="header-section-number">11.9</span> Next Steps</h2>
 <p>Next, we will learn how to work with <strong>relational data</strong> using <code>dplyr</code> join functions to combine multiple datasets.</p>
 
 
@@ -963,7 +963,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. Introduction to Factors</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction to Factors</span></span>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>Factors are used to work with **categorical data** (variables with a fixed set of possible values).  </span>
 <span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>R uses factors to control ordering in plots and summaries.</span>
@@ -977,7 +977,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># 2. Using forcats</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Using forcats</span></span>
 <span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>The <span class="in">`forcats`</span> package provides helper functions for factors.</span>
 <span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a></span>
@@ -988,7 +988,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="fu"># 3. Reordering Factor Levels</span></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reordering Factor Levels</span></span>
 <span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a><span class="fu">### `fct_reorder()`</span></span>
 <span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a></span>
@@ -1001,7 +1001,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 1 – Reordering</span></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 1 – Reordering</span></span>
 <span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Use <span class="in">`fct_reorder()`</span> to reorder car classes in the <span class="in">`mpg`</span> dataset by highway mpg.  </span>
 <span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Make a boxplot of <span class="in">`hwy`</span> by class.  </span>
@@ -1009,7 +1009,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="fu"># 4. Changing Factor Labels</span></span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Changing Factor Labels</span></span>
 <span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a><span class="fu">### `fct_recode()`</span></span>
 <span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a></span>
@@ -1027,14 +1027,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 2 – Recoding</span></span>
+<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 2 – Recoding</span></span>
 <span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Recode the <span class="in">`drv`</span> variable to use descriptive names.  </span>
 <span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Count the number of cars in each drive category.</span>
 <span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a><span class="fu"># 5. Collapsing Levels</span></span>
+<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Collapsing Levels</span></span>
 <span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a><span class="fu">### `fct_collapse()`</span></span>
 <span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a></span>
@@ -1051,14 +1051,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 3 – Collapsing Levels</span></span>
+<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 3 – Collapsing Levels</span></span>
 <span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create a new variable that collapses <span class="in">`class`</span> into <span class="in">`small`</span> vs. <span class="in">`large`</span>.  </span>
 <span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Make a bar chart of the collapsed variable.</span>
 <span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a><span class="fu"># 6. Reordering Factors for Plots</span></span>
+<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reordering Factors for Plots</span></span>
 <span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a><span class="fu">### `fct_infreq()`</span></span>
 <span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a></span>
@@ -1073,7 +1073,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Challenge – Factor Workflow</span></span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Challenge – Factor Workflow</span></span>
 <span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a>Using the <span class="in">`mpg`</span> dataset:</span>
 <span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a></span>
@@ -1083,7 +1083,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a><span class="fu"># Homework Preview</span></span>
+<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## Homework Preview</span></span>
 <span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a>For the next homework, you will:</span>
 <span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a></span>
@@ -1097,7 +1097,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a><span class="fu"># Next Steps</span></span>
+<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
 <span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a>Next, we will learn how to work with **relational data** using <span class="in">`dplyr`</span> join functions to combine multiple datasets.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
