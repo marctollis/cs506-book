@@ -19,6 +19,11 @@ book:
     - Rintro.qmd
     - ggplot2.qmd
     - dplyr1.qmd
+    - dplyr2.qmd
+    - eda.qmd
+    - tidy.qmd
+    - workflow.qmd
+    - dataimport.qmd
 
   appendices:
     - syllabus.qmd

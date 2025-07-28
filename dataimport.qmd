@@ -1,0 +1,144 @@
+---
+title: "Week 9: Data Import with readr and readxl"
+---
+
+## Learning Objectives
+
+By the end of this chapter, you should be able to:
+
+- Import CSV and TSV files with `readr`
+- Read Excel files with `readxl`
+- Understand how column types are parsed
+- Parse dates, times, and numbers correctly
+- Diagnose and fix import problems
+
+---
+
+# 1. Reading CSV and TSV Files
+
+The `readr` package (part of the tidyverse) provides fast and friendly functions for reading text data.
+
+### Example: Reading a CSV file
+
+```{r}
+library(tidyverse)
+
+df <- read_csv("https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv")
+glimpse(df)
+```
+
+### Example: Reading a TSV file
+
+```{r}
+df_tsv <- read_tsv("data/example.tsv")
+```
+
+---
+
+## In-Class Exercise 1 – CSV/TSV
+
+1. Download a small CSV file (e.g., from the course repository).  
+2. Read it into R using `read_csv()`.  
+3. Inspect its structure with `glimpse()` and `summary()`.  
+4. What data types were automatically detected?
+
+---
+
+# 2. Column Types and Parsing
+
+`readr` automatically guesses column types, but you can override them.
+
+### Example: Overriding column types
+
+```{r}
+df <- read_csv("data/mydata.csv", col_types = cols(
+  id = col_character(),
+  date = col_date(format = "%Y-%m-%d")
+))
+```
+
+You can parse numbers with `parse_number()`, dates with `parse_date()`, and times with `parse_time()`.
+
+---
+
+## In-Class Exercise 2 – Parsing
+
+1. Create a vector of messy numbers: `c("$100", "250%", "300")`.  
+2. Use `parse_number()` to extract numeric values.  
+3. Create a vector of dates as strings and use `parse_date()`.
+
+---
+
+# 3. Importing Excel Files
+
+The `readxl` package is used to read Excel files (`.xls`, `.xlsx`).
+
+### Example: Reading an Excel sheet
+
+```{r}
+library(readxl)
+
+excel_df <- read_excel("data/example.xlsx", sheet = "Sheet1")
+head(excel_df)
+```
+
+---
+
+## In-Class Exercise 3 – Excel Import
+
+1. Use a provided Excel file (or download one).  
+2. Read the first sheet with `read_excel()`.  
+3. Specify a different sheet and check the result.  
+
+---
+
+# 4. Handling Import Problems
+
+When column parsing fails:
+
+- Use `problems()` to diagnose
+- Use `col_types` to fix column types
+- Clean data after import using `mutate()`
+
+Example:
+
+```{r}
+bad <- read_csv("data/bad.csv")
+problems(bad)
+```
+
+---
+
+# 5. Reading Other Formats (Optional)
+
+- `read_delim()` – for custom delimiters
+- `read_table()` – for whitespace-delimited files
+- `read_lines()` – for line-by-line text
+- `jsonlite::fromJSON()` – for JSON files (optional preview)
+
+---
+
+## In-Class Challenge – Import & Clean Workflow
+
+1. Import a messy CSV file with mixed types.  
+2. Fix incorrect column parsing.  
+3. Convert a date column to proper Date format.  
+4. Summarize the data by a grouping variable.
+
+---
+
+# Homework Preview
+
+For Homework 6, you will:
+
+- Import at least **one CSV** and **one Excel** dataset
+- Fix any parsing issues (e.g., column types, dates)
+- Clean at least one column with `mutate()`
+- Provide a short summary (using `group_by()` and `summarize()`)
+- Render to PDF and submit
+
+---
+
+# Next Steps
+
+Next week, we will learn to **work with text data and regular expressions** using the `stringr` package.
