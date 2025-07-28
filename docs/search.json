@@ -560,6 +560,126 @@
     ]
   },
   {
+    "objectID": "strings.html",
+    "href": "strings.html",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "",
+    "text": "10.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#learning-objectives",
+    "href": "strings.html#learning-objectives",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "",
+    "text": "Manipulate strings using the stringr package\nDetect patterns with regular expressions (regex)\nExtract, replace, and split text\nClean messy text data for analysis",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-exercise-1-basic-string-operations",
+    "href": "strings.html#in-class-exercise-1-basic-string-operations",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n12.1 In-Class Exercise 1 – Basic String Operations",
+    "text": "12.1 In-Class Exercise 1 – Basic String Operations\n\nCreate a vector of at least 5 words.\n\nMeasure their lengths with str_length().\n\nConcatenate them with the phrase \" is cool\".",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-exercise-2-pattern-detection",
+    "href": "strings.html#in-class-exercise-2-pattern-detection",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n13.1 In-Class Exercise 2 – Pattern Detection",
+    "text": "13.1 In-Class Exercise 2 – Pattern Detection\n\nCreate a vector of email-like strings.\n\nUse str_detect() to check which contain \"@\".\n\nWrite a regex to detect strings ending in .com.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-exercise-3-extraction-and-replacement",
+    "href": "strings.html#in-class-exercise-3-extraction-and-replacement",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n14.1 In-Class Exercise 3 – Extraction and Replacement",
+    "text": "14.1 In-Class Exercise 3 – Extraction and Replacement\n\nExtract digits from a vector of alphanumeric strings.\n\nReplace the word \"dog\" with \"puppy\" in a text vector.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-challenge-text-cleaning",
+    "href": "strings.html#in-class-challenge-text-cleaning",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n15.1 In-Class Challenge – Text Cleaning",
+    "text": "15.1 In-Class Challenge – Text Cleaning\n\nCreate a vector of messy product names with extra spaces and symbols.\n\nUse str_replace_all() and str_trim() to clean them.\n\nExtract numeric prices from the strings.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html",
+    "href": "factors.html",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "",
+    "text": "11.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#learning-objectives",
+    "href": "factors.html#learning-objectives",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "",
+    "text": "Understand what factors are and why they are used\nReorder factor levels to improve plots\nRename factor levels\nCollapse multiple levels into broader categories\nUse forcats functions to manipulate categorical variables effectively",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#in-class-exercise-1-reordering",
+    "href": "factors.html#in-class-exercise-1-reordering",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "\n14.1 In-Class Exercise 1 – Reordering",
+    "text": "14.1 In-Class Exercise 1 – Reordering\n\nUse fct_reorder() to reorder car classes in the mpg dataset by highway mpg.\n\nMake a boxplot of hwy by class.\n\nWhich class has the highest median mpg?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#in-class-exercise-2-recoding",
+    "href": "factors.html#in-class-exercise-2-recoding",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "\n15.1 In-Class Exercise 2 – Recoding",
+    "text": "15.1 In-Class Exercise 2 – Recoding\n\nRecode the drv variable to use descriptive names.\n\nCount the number of cars in each drive category.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#in-class-exercise-3-collapsing-levels",
+    "href": "factors.html#in-class-exercise-3-collapsing-levels",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "\n16.1 In-Class Exercise 3 – Collapsing Levels",
+    "text": "16.1 In-Class Exercise 3 – Collapsing Levels\n\nCreate a new variable that collapses class into small vs. large.\n\nMake a bar chart of the collapsed variable.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#in-class-challenge-factor-workflow",
+    "href": "factors.html#in-class-challenge-factor-workflow",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "\n17.1 In-Class Challenge – Factor Workflow",
+    "text": "17.1 In-Class Challenge – Factor Workflow\nUsing the mpg dataset:\n\nReorder the manufacturer variable by number of cars\nCollapse classes into fewer categories\nCreate a bar plot that uses the new ordering and grouping",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
@@ -634,66 +754,6 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "strings.html",
-    "href": "strings.html",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "",
-    "text": "10.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
-    ]
-  },
-  {
-    "objectID": "strings.html#learning-objectives",
-    "href": "strings.html#learning-objectives",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "",
-    "text": "Manipulate strings using the stringr package\nDetect patterns with regular expressions (regex)\nExtract, replace, and split text\nClean messy text data for analysis",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
-    ]
-  },
-  {
-    "objectID": "strings.html#in-class-exercise-1-basic-string-operations",
-    "href": "strings.html#in-class-exercise-1-basic-string-operations",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n12.1 In-Class Exercise 1 – Basic String Operations",
-    "text": "12.1 In-Class Exercise 1 – Basic String Operations\n\nCreate a vector of at least 5 words.\n\nMeasure their lengths with str_length().\n\nConcatenate them with the phrase \" is cool\".",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
-    ]
-  },
-  {
-    "objectID": "strings.html#in-class-exercise-2-pattern-detection",
-    "href": "strings.html#in-class-exercise-2-pattern-detection",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n13.1 In-Class Exercise 2 – Pattern Detection",
-    "text": "13.1 In-Class Exercise 2 – Pattern Detection\n\nCreate a vector of email-like strings.\n\nUse str_detect() to check which contain \"@\".\n\nWrite a regex to detect strings ending in .com.",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
-    ]
-  },
-  {
-    "objectID": "strings.html#in-class-exercise-3-extraction-and-replacement",
-    "href": "strings.html#in-class-exercise-3-extraction-and-replacement",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n14.1 In-Class Exercise 3 – Extraction and Replacement",
-    "text": "14.1 In-Class Exercise 3 – Extraction and Replacement\n\nExtract digits from a vector of alphanumeric strings.\n\nReplace the word \"dog\" with \"puppy\" in a text vector.",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
-    ]
-  },
-  {
-    "objectID": "strings.html#in-class-challenge-text-cleaning",
-    "href": "strings.html#in-class-challenge-text-cleaning",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n15.1 In-Class Challenge – Text Cleaning",
-    "text": "15.1 In-Class Challenge – Text Cleaning\n\nCreate a vector of messy product names with extra spaces and symbols.\n\nUse str_replace_all() and str_trim() to clean them.\n\nExtract numeric prices from the strings.",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   }
 ]

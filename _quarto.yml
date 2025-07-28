@@ -26,6 +26,8 @@ book:
     - dataimport.qmd
     - strings.qmd
     - factors.qmd
+    - relational.qmd
+    - advanced_import.qmd
 
   appendices:
     - syllabus.qmd
