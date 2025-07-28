@@ -132,61 +132,61 @@
   {
     "objectID": "ggplot2.html",
     "href": "ggplot2.html",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "",
     "text": "3.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#learning-objectives",
     "href": "ggplot2.html#learning-objectives",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "",
     "text": "Create basic scatterplots using ggplot2\n\nMap variables to aesthetics (color, size, shape)\nUse different geoms (points, smooth lines, histograms)\nCreate facets to display subsets of data\nCustomize plots for clear communication",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#in-class-exercise-1",
     "href": "ggplot2.html#in-class-exercise-1",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "\n5.1 In-Class Exercise 1",
     "text": "5.1 In-Class Exercise 1\n\nCreate a scatterplot of cty (city mpg) vs. hwy (highway mpg).\n\nWhat relationship do you see?\n\nTry swapping x and y—does it change the interpretation?",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#in-class-exercise-2",
     "href": "ggplot2.html#in-class-exercise-2",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "\n6.1 In-Class Exercise 2",
     "text": "6.1 In-Class Exercise 2\n\nModify the plot to map size to cyl (number of cylinders).\n\nMap shape to drv (drive type).\n\nTry using both color and shape in one plot.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#in-class-exercise-3",
     "href": "ggplot2.html#in-class-exercise-3",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "\n7.1 In-Class Exercise 3",
     "text": "7.1 In-Class Exercise 3\n\nAdd a geom_smooth() line to your plot from Exercise 1.\n\nTry setting se = FALSE to remove the confidence band.\n\nChange the color of the line manually.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#in-class-exercise-4",
     "href": "ggplot2.html#in-class-exercise-4",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "\n8.1 In-Class Exercise 4",
     "text": "8.1 In-Class Exercise 4\n\nUse facet_wrap() to facet the plot by class.\n\nTry facet_grid(drv ~ cyl)—what do you observe?",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
@@ -502,61 +502,181 @@
   {
     "objectID": "dataimport.html",
     "href": "dataimport.html",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "",
     "text": "9.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#learning-objectives",
     "href": "dataimport.html#learning-objectives",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "",
     "text": "Import CSV and TSV files with readr\n\nRead Excel files with readxl\n\nUnderstand how column types are parsed\nParse dates, times, and numbers correctly\nDiagnose and fix import problems",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#in-class-exercise-1-csvtsv",
     "href": "dataimport.html#in-class-exercise-1-csvtsv",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "\n10.1 In-Class Exercise 1 – CSV/TSV",
     "text": "10.1 In-Class Exercise 1 – CSV/TSV\n\nDownload a small CSV file (e.g., from the course repository).\n\nRead it into R using read_csv().\n\nInspect its structure with glimpse() and summary().\n\nWhat data types were automatically detected?",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#in-class-exercise-2-parsing",
     "href": "dataimport.html#in-class-exercise-2-parsing",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "\n11.1 In-Class Exercise 2 – Parsing",
     "text": "11.1 In-Class Exercise 2 – Parsing\n\nCreate a vector of messy numbers: c(\"$100\", \"250%\", \"300\").\n\nUse parse_number() to extract numeric values.\n\nCreate a vector of dates as strings and use parse_date().",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#in-class-exercise-3-excel-import",
     "href": "dataimport.html#in-class-exercise-3-excel-import",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "\n12.1 In-Class Exercise 3 – Excel Import",
     "text": "12.1 In-Class Exercise 3 – Excel Import\n\nUse a provided Excel file (or download one).\n\nRead the first sheet with read_excel().\n\nSpecify a different sheet and check the result.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#in-class-challenge-import-clean-workflow",
     "href": "dataimport.html#in-class-challenge-import-clean-workflow",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "\n14.1 In-Class Challenge – Import & Clean Workflow",
     "text": "14.1 In-Class Challenge – Import & Clean Workflow\n\nImport a messy CSV file with mixed types.\n\nFix incorrect column parsing.\n\nConvert a date column to proper Date format.\n\nSummarize the data by a grouping variable.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html",
+    "href": "strings.html",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "",
+    "text": "10.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#learning-objectives",
+    "href": "strings.html#learning-objectives",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "",
+    "text": "Manipulate strings using the stringr package\nDetect patterns with regular expressions (regex)\nExtract, replace, and split text\nClean messy text data for analysis",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-exercise-1-basic-string-operations",
+    "href": "strings.html#in-class-exercise-1-basic-string-operations",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n12.1 In-Class Exercise 1 – Basic String Operations",
+    "text": "12.1 In-Class Exercise 1 – Basic String Operations\n\nCreate a vector of at least 5 words.\n\nMeasure their lengths with str_length().\n\nConcatenate them with the phrase \" is cool\".",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-exercise-2-pattern-detection",
+    "href": "strings.html#in-class-exercise-2-pattern-detection",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n13.1 In-Class Exercise 2 – Pattern Detection",
+    "text": "13.1 In-Class Exercise 2 – Pattern Detection\n\nCreate a vector of email-like strings.\n\nUse str_detect() to check which contain \"@\".\n\nWrite a regex to detect strings ending in .com.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-exercise-3-extraction-and-replacement",
+    "href": "strings.html#in-class-exercise-3-extraction-and-replacement",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n14.1 In-Class Exercise 3 – Extraction and Replacement",
+    "text": "14.1 In-Class Exercise 3 – Extraction and Replacement\n\nExtract digits from a vector of alphanumeric strings.\n\nReplace the word \"dog\" with \"puppy\" in a text vector.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-challenge-text-cleaning",
+    "href": "strings.html#in-class-challenge-text-cleaning",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n15.1 In-Class Challenge – Text Cleaning",
+    "text": "15.1 In-Class Challenge – Text Cleaning\n\nCreate a vector of messy product names with extra spaces and symbols.\n\nUse str_replace_all() and str_trim() to clean them.\n\nExtract numeric prices from the strings.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html",
+    "href": "factors.html",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "",
+    "text": "11.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#learning-objectives",
+    "href": "factors.html#learning-objectives",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "",
+    "text": "Understand what factors are and why they are used\nReorder factor levels to improve plots\nRename factor levels\nCollapse multiple levels into broader categories\nUse forcats functions to manipulate categorical variables effectively",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#in-class-exercise-1-reordering",
+    "href": "factors.html#in-class-exercise-1-reordering",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "\n14.1 In-Class Exercise 1 – Reordering",
+    "text": "14.1 In-Class Exercise 1 – Reordering\n\nUse fct_reorder() to reorder car classes in the mpg dataset by highway mpg.\n\nMake a boxplot of hwy by class.\n\nWhich class has the highest median mpg?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#in-class-exercise-2-recoding",
+    "href": "factors.html#in-class-exercise-2-recoding",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "\n15.1 In-Class Exercise 2 – Recoding",
+    "text": "15.1 In-Class Exercise 2 – Recoding\n\nRecode the drv variable to use descriptive names.\n\nCount the number of cars in each drive category.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#in-class-exercise-3-collapsing-levels",
+    "href": "factors.html#in-class-exercise-3-collapsing-levels",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "\n16.1 In-Class Exercise 3 – Collapsing Levels",
+    "text": "16.1 In-Class Exercise 3 – Collapsing Levels\n\nCreate a new variable that collapses class into small vs. large.\n\nMake a bar chart of the collapsed variable.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+    ]
+  },
+  {
+    "objectID": "factors.html#in-class-challenge-factor-workflow",
+    "href": "factors.html#in-class-challenge-factor-workflow",
+    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "section": "\n17.1 In-Class Challenge – Factor Workflow",
+    "text": "17.1 In-Class Challenge – Factor Workflow\nUsing the mpg dataset:\n\nReorder the manufacturer variable by number of cars\nCollapse classes into fewer categories\nCreate a bar plot that uses the new ordering and grouping",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
