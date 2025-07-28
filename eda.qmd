@@ -14,7 +14,7 @@ By the end of this chapter, you should be able to:
 
 ---
 
-# 1. Introduction to EDA
+## Introduction to EDA
 
 Exploratory Data Analysis (EDA) is about **looking at your data** to find patterns, spot anomalies, and guide your next steps.  
 We use `ggplot2` to visualize both **univariate** and **bivariate** relationships.
@@ -23,9 +23,9 @@ We will use the `diamonds` dataset.
 
 ---
 
-# 2. Visualizing Single Variables
+## Visualizing Single Variables
 
-## Categorical Variables
+### Categorical Variables
 
 Use a bar chart (`geom_bar()`):
 
@@ -38,7 +38,7 @@ ggplot(data = diamonds) +
 
 ---
 
-## Continuous Variables
+### Continuous Variables
 
 Use a histogram (`geom_histogram()`):
 
@@ -51,7 +51,7 @@ You can also use `geom_freqpoly()` for density curves.
 
 ---
 
-## In-Class Exercise 1 – Single Variables
+### In-Class Exercise 1 – Single Variables
 
 1. Plot the distribution of `color` using a bar chart.  
 2. Plot a histogram of `price` with a binwidth of 1000.  
@@ -59,9 +59,9 @@ You can also use `geom_freqpoly()` for density curves.
 
 ---
 
-# 3. Visualizing Relationships
+## Visualizing Relationships
 
-## Two Continuous Variables
+### Two Continuous Variables
 
 Scatterplots show relationships:
 
@@ -74,7 +74,7 @@ Use `alpha` to reduce overplotting.
 
 ---
 
-## Categorical vs. Continuous
+### Categorical vs. Continuous
 
 Boxplots work well:
 
@@ -85,7 +85,7 @@ ggplot(data = diamonds) +
 
 ---
 
-## In-Class Exercise 2 – Relationships
+### In-Class Exercise 2 – Relationships
 
 1. Create a scatterplot of `carat` vs `price`.  
 2. Color the points by `cut`.  
@@ -93,7 +93,7 @@ ggplot(data = diamonds) +
 
 ---
 
-# 4. Patterns and Outliers
+## Patterns and Outliers
 
 Look for clusters, gaps, and unusual observations.  
 You can **filter** or **highlight** outliers.
@@ -109,7 +109,7 @@ diamonds |>
 
 ---
 
-# 5. Transformations
+### Transformations
 
 Log transformations can reveal patterns in skewed data.
 
@@ -121,7 +121,7 @@ ggplot(data = diamonds) +
 
 ---
 
-## In-Class Exercise 3 – Patterns and Transformations
+### In-Class Exercise 3 – Patterns and Transformations
 
 1. Identify any outliers in the `diamonds` dataset using filters.  
 2. Apply a log transformation to `price`.  
@@ -129,7 +129,7 @@ ggplot(data = diamonds) +
 
 ---
 
-# 6. Combining EDA with dplyr
+## Combining EDA with dplyr
 
 Use `filter()`, `mutate()`, and `group_by()` to enhance your plots.
 
@@ -143,7 +143,7 @@ diamonds |>
 
 ---
 
-## In-Class Challenge – EDA Workflow
+### In-Class Challenge – EDA Workflow
 
 - Explore `diamonds` by:
   - Visualizing distributions of at least two variables
@@ -153,7 +153,7 @@ diamonds |>
 
 ---
 
-# Homework Preview
+## Homework Preview
 
 For Homework 3, you will:
 
@@ -166,6 +166,6 @@ For Homework 3, you will:
 
 ---
 
-# Next Steps
+## Next Steps
 
 Next week, we will dive into **Tidy Data** and learn how to reshape messy datasets using `tidyr`.

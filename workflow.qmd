@@ -14,7 +14,7 @@ By the end of this chapter, you should be able to:
 
 ---
 
-# 1. Why Workflow Matters
+## Why Workflow Matters
 
 Reproducible workflows:
 
@@ -25,7 +25,7 @@ Reproducible workflows:
 
 ---
 
-# 2. Organizing Projects in RStudio
+## Organizing Projects in RStudio
 
 ### RStudio Projects
 
@@ -52,7 +52,7 @@ my_project/
 
 ---
 
-## In-Class Exercise 1 – Project Setup
+### In-Class Exercise 1 – Project Setup
 
 1. Create a new RStudio Project for this course.  
 2. Make folders: `data`, `scripts`, `outputs`.  
@@ -61,7 +61,7 @@ my_project/
 
 ---
 
-# 3. Quarto for Reproducibility
+## Quarto for Reproducibility
 
 Quarto allows you to:
 
@@ -86,7 +86,7 @@ summary(data)
 
 ---
 
-## In-Class Exercise 2 – Quarto Report
+### In-Class Exercise 2 – Quarto Report
 
 1. Create a `.qmd` file that loads a dataset and runs a simple analysis.  
 2. Add at least one plot and one table.  
@@ -94,7 +94,7 @@ summary(data)
 
 ---
 
-# 4. Best Practices for Reproducibility
+## Best Practices for Reproducibility
 
 - **Use scripts and Quarto documents instead of manual steps**
 - **Keep raw data unchanged**; clean data with scripts
@@ -104,7 +104,7 @@ summary(data)
 
 ---
 
-# 5. Optional: Version Control with Git and GitHub
+## Optional: Version Control with Git and GitHub
 
 For students interested in collaboration and tracking changes:
 
@@ -116,7 +116,7 @@ For students interested in collaboration and tracking changes:
 
 ---
 
-## In-Class Challenge – Reproducible Mini-Report
+### In-Class Challenge – Reproducible Mini-Report
 
 - Set up a project with an organized folder structure
 - Create a Quarto document that:
@@ -128,7 +128,7 @@ For students interested in collaboration and tracking changes:
 
 ---
 
-# Homework Preview
+## Homework Preview
 
 For Homework 5, you will:
 
@@ -143,6 +143,6 @@ For Homework 5, you will:
 
 ---
 
-# Next Steps
+## Next Steps
 
 Next week, we will move into **Data Import** (CSV, Excel, and parsing dates) and continue to build your data wrangling workflow.

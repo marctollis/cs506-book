@@ -14,7 +14,7 @@ This appendix summarizes the **tidyverse style guide** based on [R4DS Workflow: 
 
 ------------------------------------------------------------------------
 
-# 1. File Naming
+## File Naming
 
 -   Use **lowercase**, **descriptive names**, and **hyphens** (not spaces).
 -   Good: `data-cleaning.R`, `plot-analysis.R`
@@ -22,7 +22,7 @@ This appendix summarizes the **tidyverse style guide** based on [R4DS Workflow: 
 
 ------------------------------------------------------------------------
 
-# 2. Object Naming
+## Object Naming
 
 -   Use **snake_case** for variable and function names.
 -   Be descriptive, not cryptic.
@@ -39,7 +39,7 @@ cm <- function(x) mean(x)
 
 ------------------------------------------------------------------------
 
-# 3. Spaces and Indentation
+## Spaces and Indentation
 
 -   Use **two spaces** for indentation.
 -   Always put a space **after commas** and **around operators**.
@@ -56,7 +56,7 @@ filter(mpg,cyl==4)
 
 ------------------------------------------------------------------------
 
-# 4. Long Lines
+## Long Lines
 
 -   Keep lines **under 80 characters**.
 -   Use line breaks for long function calls.
@@ -69,7 +69,7 @@ mpg |>
 
 ------------------------------------------------------------------------
 
-# 5. Function Formatting
+## Function Formatting
 
 -   Use consistent curly brace placement.
 
@@ -86,7 +86,7 @@ x+1}
 
 ------------------------------------------------------------------------
 
-# 6. Commenting Code
+## Commenting Code
 
 -   Write **comments** to explain why, not what.
 -   Use `#` for inline comments.
@@ -100,7 +100,7 @@ avg_hwy <- mpg |>
 
 ------------------------------------------------------------------------
 
-# 7. Piping
+## Piping
 
 -   Each step in a pipeline goes on a **new line**.
 -   Use the pipe `|>` to connect transformations.
@@ -114,7 +114,7 @@ mpg |>
 
 ------------------------------------------------------------------------
 
-# 8. Tidyverse Style Summary
+## Tidyverse Style Summary
 
 -   Use **`|>`** for pipelines, **snake_case** for names
 -   Indent **two spaces** per level
@@ -131,7 +131,7 @@ mpg |>
 
 ------------------------------------------------------------------------
 
-# Conclusion
+## Conclusion
 
 Good code style is not just aesthetic — it improves **reproducibility** and **collaboration**.\
 Follow these conventions for all homework and projects in this course.

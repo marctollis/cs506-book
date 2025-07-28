@@ -13,7 +13,7 @@ By the end of this chapter, you should be able to:
 
 ---
 
-# 1. Introduction to stringr
+## Introduction to stringr
 
 The `stringr` package provides consistent, simple functions for string operations.
 
@@ -25,7 +25,7 @@ library(stringr)
 
 ---
 
-# 2. Creating and Inspecting Strings
+## Creating and Inspecting Strings
 
 ```{r}
 fruit <- c("apple", "banana", "pear")
@@ -35,7 +35,7 @@ str_c(fruit, " is tasty")
 
 ---
 
-## In-Class Exercise 1 – Basic String Operations
+### In-Class Exercise 1 – Basic String Operations
 
 1. Create a vector of at least 5 words.  
 2. Measure their lengths with `str_length()`.  
@@ -43,7 +43,7 @@ str_c(fruit, " is tasty")
 
 ---
 
-# 3. Detecting Patterns with Regex
+## Detecting Patterns with Regex
 
 `str_detect()` returns TRUE if a pattern is found.
 
@@ -67,7 +67,7 @@ str_detect(animals, "^a")
 
 ---
 
-## In-Class Exercise 2 – Pattern Detection
+### In-Class Exercise 2 – Pattern Detection
 
 1. Create a vector of email-like strings.  
 2. Use `str_detect()` to check which contain `"@"`.  
@@ -75,7 +75,7 @@ str_detect(animals, "^a")
 
 ---
 
-# 4. Extracting and Replacing Text
+## Extracting and Replacing Text
 
 ### `str_extract()`
 
@@ -95,14 +95,14 @@ str_replace("apple pie", "apple", "peach")
 
 ---
 
-## In-Class Exercise 3 – Extraction and Replacement
+### In-Class Exercise 3 – Extraction and Replacement
 
 1. Extract digits from a vector of alphanumeric strings.  
 2. Replace the word `"dog"` with `"puppy"` in a text vector.
 
 ---
 
-# 5. Splitting and Cleaning Text
+## Splitting and Cleaning Text
 
 ### `str_split()`
 
@@ -123,7 +123,7 @@ str_replace_all(dirty, "[$ ]", "")
 
 ---
 
-## In-Class Challenge – Text Cleaning
+### In-Class Challenge – Text Cleaning
 
 1. Create a vector of messy product names with extra spaces and symbols.  
 2. Use `str_replace_all()` and `str_trim()` to clean them.  
@@ -131,7 +131,7 @@ str_replace_all(dirty, "[$ ]", "")
 
 ---
 
-# Homework Preview
+## Homework Preview
 
 For the next homework, you will:
 
@@ -142,6 +142,6 @@ For the next homework, you will:
 
 ---
 
-# Next Steps
+## Next Steps
 
 Next, we will learn to **work with factors and categorical data** using the `forcats` package.

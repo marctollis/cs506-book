@@ -30,8 +30,8 @@ book:
     - advanced_import.qmd
 
   appendices:
-    - codestyle.qmd
     - syllabus.qmd
+    - codestyle.qmd
   sidebar:
     style: "floating"
     collapse-level: 1

@@ -224,14 +224,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codestyle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></span></a>
+  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
+  <a href="./codestyle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></span></a>
   </div>
 </li>
       </ul>
@@ -245,32 +245,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">12.1</span> Learning Objectives</a></li>
-  <li><a href="#what-is-relational-data" id="toc-what-is-relational-data" class="nav-link" data-scroll-target="#what-is-relational-data"><span class="header-section-number">13</span> 1. What is Relational Data?</a></li>
-  <li><a href="#keys" id="toc-keys" class="nav-link" data-scroll-target="#keys"><span class="header-section-number">14</span> 2. Keys</a></li>
+  <li><a href="#what-is-relational-data" id="toc-what-is-relational-data" class="nav-link" data-scroll-target="#what-is-relational-data"><span class="header-section-number">12.2</span> What is Relational Data?</a></li>
+  <li><a href="#keys" id="toc-keys" class="nav-link" data-scroll-target="#keys"><span class="header-section-number">12.3</span> Keys</a></li>
   <li>
-<a href="#joins-with-dplyr" id="toc-joins-with-dplyr" class="nav-link" data-scroll-target="#joins-with-dplyr"><span class="header-section-number">15</span> 3. Joins with dplyr</a>
+<a href="#joins-with-dplyr" id="toc-joins-with-dplyr" class="nav-link" data-scroll-target="#joins-with-dplyr"><span class="header-section-number">12.4</span> Joins with dplyr</a>
   <ul class="collapse">
-<li><a href="#left_join" id="toc-left_join" class="nav-link" data-scroll-target="#left_join"><span class="header-section-number">15.0.1</span> <code>left_join()</code></a></li>
-  <li><a href="#inner_join" id="toc-inner_join" class="nav-link" data-scroll-target="#inner_join"><span class="header-section-number">15.0.2</span> <code>inner_join()</code></a></li>
-  <li><a href="#full_join" id="toc-full_join" class="nav-link" data-scroll-target="#full_join"><span class="header-section-number">15.0.3</span> <code>full_join()</code></a></li>
-  <li><a href="#semi_join-and-anti_join" id="toc-semi_join-and-anti_join" class="nav-link" data-scroll-target="#semi_join-and-anti_join"><span class="header-section-number">15.0.4</span> <code>semi_join()</code> and <code>anti_join()</code></a></li>
-  <li><a href="#in-class-exercise-1-basic-joins" id="toc-in-class-exercise-1-basic-joins" class="nav-link" data-scroll-target="#in-class-exercise-1-basic-joins"><span class="header-section-number">15.1</span> In-Class Exercise 1 – Basic Joins</a></li>
+<li><a href="#left_join" id="toc-left_join" class="nav-link" data-scroll-target="#left_join"><span class="header-section-number">12.4.1</span> <code>left_join()</code></a></li>
+  <li><a href="#inner_join" id="toc-inner_join" class="nav-link" data-scroll-target="#inner_join"><span class="header-section-number">12.4.2</span> <code>inner_join()</code></a></li>
+  <li><a href="#full_join" id="toc-full_join" class="nav-link" data-scroll-target="#full_join"><span class="header-section-number">12.4.3</span> <code>full_join()</code></a></li>
+  <li><a href="#semi_join-and-anti_join" id="toc-semi_join-and-anti_join" class="nav-link" data-scroll-target="#semi_join-and-anti_join"><span class="header-section-number">12.4.4</span> <code>semi_join()</code> and <code>anti_join()</code></a></li>
+  <li><a href="#in-class-exercise-1-basic-joins" id="toc-in-class-exercise-1-basic-joins" class="nav-link" data-scroll-target="#in-class-exercise-1-basic-joins"><span class="header-section-number">12.4.5</span> In-Class Exercise 1 – Basic Joins</a></li>
   </ul>
 </li>
   <li>
-<a href="#joining-multiple-tables" id="toc-joining-multiple-tables" class="nav-link" data-scroll-target="#joining-multiple-tables"><span class="header-section-number">16</span> 4. Joining Multiple Tables</a>
+<a href="#joining-multiple-tables" id="toc-joining-multiple-tables" class="nav-link" data-scroll-target="#joining-multiple-tables"><span class="header-section-number">12.5</span> Joining Multiple Tables</a>
   <ul class="collapse">
-<li><a href="#in-class-exercise-2-multi-table-joins" id="toc-in-class-exercise-2-multi-table-joins" class="nav-link" data-scroll-target="#in-class-exercise-2-multi-table-joins"><span class="header-section-number">16.1</span> In-Class Exercise 2 – Multi-Table Joins</a></li>
+<li><a href="#in-class-exercise-2-multi-table-joins" id="toc-in-class-exercise-2-multi-table-joins" class="nav-link" data-scroll-target="#in-class-exercise-2-multi-table-joins"><span class="header-section-number">12.5.1</span> In-Class Exercise 2 – Multi-Table Joins</a></li>
   </ul>
 </li>
-  <li>
-<a href="#handling-join-problems" id="toc-handling-join-problems" class="nav-link" data-scroll-target="#handling-join-problems"><span class="header-section-number">17</span> 5. Handling Join Problems</a>
-  <ul class="collapse">
-<li><a href="#in-class-challenge-join-workflow" id="toc-in-class-challenge-join-workflow" class="nav-link" data-scroll-target="#in-class-challenge-join-workflow"><span class="header-section-number">17.1</span> In-Class Challenge – Join Workflow</a></li>
-  </ul>
-</li>
-  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">18</span> Homework Preview</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">19</span> Next Steps</a></li>
+  <li><a href="#handling-join-problems" id="toc-handling-join-problems" class="nav-link" data-scroll-target="#handling-join-problems"><span class="header-section-number">12.6</span> Handling Join Problems</a></li>
+  <li><a href="#in-class-challenge-join-workflow" id="toc-in-class-challenge-join-workflow" class="nav-link" data-scroll-target="#in-class-challenge-join-workflow"><span class="header-section-number">12.7</span> In-Class Challenge – Join Workflow</a></li>
+  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">12.8</span> Homework Preview</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">12.9</span> Next Steps</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/marctollis/cs506-book/blob/main/relational.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/marctollis/cs506-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -302,8 +298,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Diagnose and handle join problems (missing keys, duplicates)</li>
 <li>Apply joins in analysis workflows</li>
 </ul>
-<hr></section><section id="what-is-relational-data" class="level1" data-number="13"><h1 data-number="13">
-<span class="header-section-number">13</span> 1. What is Relational Data?</h1>
+<hr></section><section id="what-is-relational-data" class="level2" data-number="12.2"><h2 data-number="12.2" class="anchored" data-anchor-id="what-is-relational-data">
+<span class="header-section-number">12.2</span> What is Relational Data?</h2>
 <p>Relational data consists of <strong>multiple tables</strong> that can be linked by <strong>keys</strong>.</p>
 <p>Example tables from <code>nycflights13</code>:</p>
 <ul>
@@ -318,8 +314,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <code>weather</code>: weather data</li>
 </ul>
-<hr></section><section id="keys" class="level1" data-number="14"><h1 data-number="14">
-<span class="header-section-number">14</span> 2. Keys</h1>
+<hr></section><section id="keys" class="level2" data-number="12.3"><h2 data-number="12.3" class="anchored" data-anchor-id="keys">
+<span class="header-section-number">12.3</span> Keys</h2>
 <ul>
 <li>
 <strong>Primary key</strong>: uniquely identifies each row in a table<br>
@@ -328,11 +324,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <strong>Foreign key</strong>: column that matches a primary key in another table</li>
 </ul>
 <p>Example: <code>flights$carrier</code> matches <code>airlines$carrier</code>.</p>
-<hr></section><section id="joins-with-dplyr" class="level1" data-number="15"><h1 data-number="15">
-<span class="header-section-number">15</span> 3. Joins with dplyr</h1>
+<hr></section><section id="joins-with-dplyr" class="level2" data-number="12.4"><h2 data-number="12.4" class="anchored" data-anchor-id="joins-with-dplyr">
+<span class="header-section-number">12.4</span> Joins with dplyr</h2>
 <p><code>dplyr</code> join functions merge tables by keys.</p>
-<section id="left_join" class="level3" data-number="15.0.1"><h3 data-number="15.0.1" class="anchored" data-anchor-id="left_join">
-<span class="header-section-number">15.0.1</span> <code>left_join()</code>
+<section id="left_join" class="level3" data-number="12.4.1"><h3 data-number="12.4.1" class="anchored" data-anchor-id="left_join">
+<span class="header-section-number">12.4.1</span> <code>left_join()</code>
 </h3>
 <p>Keeps all rows from the first table:</p>
 <div class="cell">
@@ -368,8 +364,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6 United Air Lines Inc.  UA        1696</code></pre>
 </div>
 </div>
-<hr></section><section id="inner_join" class="level3" data-number="15.0.2"><h3 data-number="15.0.2" class="anchored" data-anchor-id="inner_join">
-<span class="header-section-number">15.0.2</span> <code>inner_join()</code>
+<hr></section><section id="inner_join" class="level3" data-number="12.4.2"><h3 data-number="12.4.2" class="anchored" data-anchor-id="inner_join">
+<span class="header-section-number">12.4.2</span> <code>inner_join()</code>
 </h3>
 <p>Keeps only matching rows:</p>
 <div class="cell">
@@ -390,8 +386,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6 United Air Lines Inc.  UA        1696</code></pre>
 </div>
 </div>
-<hr></section><section id="full_join" class="level3" data-number="15.0.3"><h3 data-number="15.0.3" class="anchored" data-anchor-id="full_join">
-<span class="header-section-number">15.0.3</span> <code>full_join()</code>
+<hr></section><section id="full_join" class="level3" data-number="12.4.3"><h3 data-number="12.4.3" class="anchored" data-anchor-id="full_join">
+<span class="header-section-number">12.4.3</span> <code>full_join()</code>
 </h3>
 <p>Keeps all rows from both tables:</p>
 <div class="cell">
@@ -412,8 +408,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6 United Air Lines Inc.  UA        1696</code></pre>
 </div>
 </div>
-<hr></section><section id="semi_join-and-anti_join" class="level3" data-number="15.0.4"><h3 data-number="15.0.4" class="anchored" data-anchor-id="semi_join-and-anti_join">
-<span class="header-section-number">15.0.4</span> <code>semi_join()</code> and <code>anti_join()</code>
+<hr></section><section id="semi_join-and-anti_join" class="level3" data-number="12.4.4"><h3 data-number="12.4.4" class="anchored" data-anchor-id="semi_join-and-anti_join">
+<span class="header-section-number">12.4.4</span> <code>semi_join()</code> and <code>anti_join()</code>
 </h3>
 <ul>
 <li>
@@ -441,8 +437,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
 </div>
 </div>
-<hr></section><section id="in-class-exercise-1-basic-joins" class="level2" data-number="15.1"><h2 data-number="15.1" class="anchored" data-anchor-id="in-class-exercise-1-basic-joins">
-<span class="header-section-number">15.1</span> In-Class Exercise 1 – Basic Joins</h2>
+<hr></section><section id="in-class-exercise-1-basic-joins" class="level3" data-number="12.4.5"><h3 data-number="12.4.5" class="anchored" data-anchor-id="in-class-exercise-1-basic-joins">
+<span class="header-section-number">12.4.5</span> In-Class Exercise 1 – Basic Joins</h3>
 <ol type="1">
 <li>Use <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join()</a></code> to add airline names to <code>flights</code> (rename to <code>airline_name</code>).<br>
 </li>
@@ -450,8 +446,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>Use <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join()</a></code> and compare the number of rows.</li>
 </ol>
-<hr></section></section><section id="joining-multiple-tables" class="level1" data-number="16"><h1 data-number="16">
-<span class="header-section-number">16</span> 4. Joining Multiple Tables</h1>
+<hr></section></section><section id="joining-multiple-tables" class="level2" data-number="12.5"><h2 data-number="12.5" class="anchored" data-anchor-id="joining-multiple-tables">
+<span class="header-section-number">12.5</span> Joining Multiple Tables</h2>
 <p>You can chain joins to combine several datasets:</p>
 <div class="cell">
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
@@ -473,8 +469,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <hr>
-<section id="in-class-exercise-2-multi-table-joins" class="level2" data-number="16.1"><h2 data-number="16.1" class="anchored" data-anchor-id="in-class-exercise-2-multi-table-joins">
-<span class="header-section-number">16.1</span> In-Class Exercise 2 – Multi-Table Joins</h2>
+<section id="in-class-exercise-2-multi-table-joins" class="level3" data-number="12.5.1"><h3 data-number="12.5.1" class="anchored" data-anchor-id="in-class-exercise-2-multi-table-joins">
+<span class="header-section-number">12.5.1</span> In-Class Exercise 2 – Multi-Table Joins</h3>
 <ol type="1">
 <li>Join <code>flights</code> with <code>airports</code> to add destination airport names.<br>
 </li>
@@ -482,8 +478,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>Which airport has the longest average delay?</li>
 </ol>
-<hr></section></section><section id="handling-join-problems" class="level1" data-number="17"><h1 data-number="17">
-<span class="header-section-number">17</span> 5. Handling Join Problems</h1>
+<hr></section></section><section id="handling-join-problems" class="level2" data-number="12.6"><h2 data-number="12.6" class="anchored" data-anchor-id="handling-join-problems">
+<span class="header-section-number">12.6</span> Handling Join Problems</h2>
 <ul>
 <li>Missing keys → results in <code>NA</code> values<br>
 </li>
@@ -520,9 +516,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 16 YV      Mesa Airlines Inc.            601</code></pre>
 </div>
 </div>
-<hr>
-<section id="in-class-challenge-join-workflow" class="level2" data-number="17.1"><h2 data-number="17.1" class="anchored" data-anchor-id="in-class-challenge-join-workflow">
-<span class="header-section-number">17.1</span> In-Class Challenge – Join Workflow</h2>
+<hr></section><section id="in-class-challenge-join-workflow" class="level2" data-number="12.7"><h2 data-number="12.7" class="anchored" data-anchor-id="in-class-challenge-join-workflow">
+<span class="header-section-number">12.7</span> In-Class Challenge – Join Workflow</h2>
 <ul>
 <li>Join flights with airlines and airports<br>
 </li>
@@ -530,8 +525,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>Arrange by delay and identify the worst-performing routes</li>
 </ul>
-<hr></section></section><section id="homework-preview" class="level1" data-number="18"><h1 data-number="18">
-<span class="header-section-number">18</span> Homework Preview</h1>
+<hr></section><section id="homework-preview" class="level2" data-number="12.8"><h2 data-number="12.8" class="anchored" data-anchor-id="homework-preview">
+<span class="header-section-number">12.8</span> Homework Preview</h2>
 <p>For the next homework, you will:</p>
 <ul>
 <li>Combine at least two datasets using joins</li>
@@ -540,9 +535,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Produce a summary table and one visualization based on the joined data</li>
 <li>Render to PDF and submit on Canvas</li>
 </ul>
-<hr></section><section id="next-steps" class="level1" data-number="19"><h1 data-number="19">
-<span class="header-section-number">19</span> Next Steps</h1>
-<p>Next, we will introduce <strong>modeling basics</strong> to begin connecting variables through simple models.</p>
+<hr></section><section id="next-steps" class="level2" data-number="12.9"><h2 data-number="12.9" class="anchored" data-anchor-id="next-steps">
+<span class="header-section-number">12.9</span> Next Steps</h2>
+<p>Next, we will introduce <strong>accessing data</strong> using spreadsheets, SQL databases, JSON, and web scraping.</p>
 
 
 <!-- -->
@@ -1041,7 +1036,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. What is Relational Data?</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is Relational Data?</span></span>
 <span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>Relational data consists of **multiple tables** that can be linked by **keys**.</span>
 <span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
@@ -1055,7 +1050,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="fu"># 2. Keys</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Keys</span></span>
 <span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Primary key**: uniquely identifies each row in a table  </span>
 <span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Foreign key**: column that matches a primary key in another table  </span>
@@ -1064,7 +1059,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="fu"># 3. Joins with dplyr</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Joins with dplyr</span></span>
 <span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="in">`dplyr`</span> join functions merge tables by keys.</span>
 <span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a></span>
@@ -1126,7 +1121,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb15-109"><a href="#cb15-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 1 – Basic Joins</span></span>
+<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 1 – Basic Joins</span></span>
 <span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Use <span class="in">`left_join()`</span> to add airline names to <span class="in">`flights`</span> (rename to <span class="in">`airline_name`</span>).  </span>
 <span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Count the number of flights for each airline.  </span>
@@ -1134,7 +1129,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb15-117"><a href="#cb15-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a><span class="fu"># 4. Joining Multiple Tables</span></span>
+<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## Joining Multiple Tables</span></span>
 <span id="cb15-119"><a href="#cb15-119" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-120"><a href="#cb15-120" aria-hidden="true" tabindex="-1"></a>You can chain joins to combine several datasets:</span>
 <span id="cb15-121"><a href="#cb15-121" aria-hidden="true" tabindex="-1"></a></span>
@@ -1149,7 +1144,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-132"><a href="#cb15-132" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-133"><a href="#cb15-133" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb15-134"><a href="#cb15-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-135"><a href="#cb15-135" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 2 – Multi-Table Joins</span></span>
+<span id="cb15-135"><a href="#cb15-135" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 2 – Multi-Table Joins</span></span>
 <span id="cb15-136"><a href="#cb15-136" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-137"><a href="#cb15-137" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Join <span class="in">`flights`</span> with <span class="in">`airports`</span> to add destination airport names.  </span>
 <span id="cb15-138"><a href="#cb15-138" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Summarize average arrival delay by airport.  </span>
@@ -1157,7 +1152,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-140"><a href="#cb15-140" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-141"><a href="#cb15-141" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb15-142"><a href="#cb15-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-143"><a href="#cb15-143" aria-hidden="true" tabindex="-1"></a><span class="fu"># 5. Handling Join Problems</span></span>
+<span id="cb15-143"><a href="#cb15-143" aria-hidden="true" tabindex="-1"></a><span class="fu">## Handling Join Problems</span></span>
 <span id="cb15-144"><a href="#cb15-144" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-145"><a href="#cb15-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Missing keys → results in <span class="in">`NA`</span> values  </span>
 <span id="cb15-146"><a href="#cb15-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Duplicated keys → may create duplicate rows  </span>
@@ -1182,7 +1177,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-167"><a href="#cb15-167" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-168"><a href="#cb15-168" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb15-169"><a href="#cb15-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-170"><a href="#cb15-170" aria-hidden="true" tabindex="-1"></a><span class="fu"># Homework Preview</span></span>
+<span id="cb15-170"><a href="#cb15-170" aria-hidden="true" tabindex="-1"></a><span class="fu">## Homework Preview</span></span>
 <span id="cb15-171"><a href="#cb15-171" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-172"><a href="#cb15-172" aria-hidden="true" tabindex="-1"></a>For the next homework, you will:</span>
 <span id="cb15-173"><a href="#cb15-173" aria-hidden="true" tabindex="-1"></a></span>
@@ -1194,9 +1189,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-179"><a href="#cb15-179" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-180"><a href="#cb15-180" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb15-181"><a href="#cb15-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a><span class="fu"># Next Steps</span></span>
+<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
 <span id="cb15-183"><a href="#cb15-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a>Next, we will introduce **modeling basics** to begin connecting variables through simple models.</span>
+<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a>Next, we will introduce **accessing data** using spreadsheets, SQL databases, JSON, and web scraping.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

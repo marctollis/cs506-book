@@ -14,7 +14,7 @@ By the end of this chapter, you should be able to:
 
 ---
 
-# 1. What is Relational Data?
+## What is Relational Data?
 
 Relational data consists of **multiple tables** that can be linked by **keys**.
 
@@ -28,7 +28,7 @@ Example tables from `nycflights13`:
 
 ---
 
-# 2. Keys
+## Keys
 
 - **Primary key**: uniquely identifies each row in a table  
 - **Foreign key**: column that matches a primary key in another table  
@@ -37,7 +37,7 @@ Example: `flights$carrier` matches `airlines$carrier`.
 
 ---
 
-# 3. Joins with dplyr
+## Joins with dplyr
 
 `dplyr` join functions merge tables by keys.
 
@@ -99,7 +99,7 @@ flights |>
 
 ---
 
-## In-Class Exercise 1 – Basic Joins
+### In-Class Exercise 1 – Basic Joins
 
 1. Use `left_join()` to add airline names to `flights` (rename to `airline_name`).  
 2. Count the number of flights for each airline.  
@@ -107,7 +107,7 @@ flights |>
 
 ---
 
-# 4. Joining Multiple Tables
+## Joining Multiple Tables
 
 You can chain joins to combine several datasets:
 
@@ -122,7 +122,7 @@ flights |>
 
 ---
 
-## In-Class Exercise 2 – Multi-Table Joins
+### In-Class Exercise 2 – Multi-Table Joins
 
 1. Join `flights` with `airports` to add destination airport names.  
 2. Summarize average arrival delay by airport.  
@@ -130,7 +130,7 @@ flights |>
 
 ---
 
-# 5. Handling Join Problems
+## Handling Join Problems
 
 - Missing keys → results in `NA` values  
 - Duplicated keys → may create duplicate rows  
@@ -155,7 +155,7 @@ flights |>
 
 ---
 
-# Homework Preview
+## Homework Preview
 
 For the next homework, you will:
 
@@ -167,6 +167,6 @@ For the next homework, you will:
 
 ---
 
-# Next Steps
+## Next Steps
 
-Next, we will introduce **modeling basics** to begin connecting variables through simple models.
+Next, we will introduce **accessing data** using spreadsheets, SQL databases, JSON, and web scraping.

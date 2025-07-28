@@ -14,7 +14,7 @@ By the end of this lecture, you should be able to:
 
 ---
 
-# 1. Spreadsheets (R4DS Chapter 20)
+## Spreadsheets (R4DS Chapter 20)
 
 R can read Excel files with the `readxl` package and Google Sheets with `googlesheets4`.
 
@@ -37,7 +37,7 @@ gs_df <- read_sheet(sheet_url)
 
 ---
 
-## In-Class Exercise 1 – Spreadsheets
+### In-Class Exercise 1 – Spreadsheets
 
 1. Read an Excel file from the course data folder.  
 2. Load a Google Sheet you create (optional, requires authentication).  
@@ -45,7 +45,7 @@ gs_df <- read_sheet(sheet_url)
 
 ---
 
-# 2. Databases (R4DS Chapter 21)
+## Databases (R4DS Chapter 21)
 
 Use `DBI` and `RSQLite` to interact with relational databases. You can also use `dplyr` verbs to query tables.
 
@@ -68,7 +68,7 @@ tbl(con, "flights") |> filter(dep_delay > 60) |> collect() |> head()
 
 ---
 
-## In-Class Exercise 2 – Databases
+### In-Class Exercise 2 – Databases
 
 1. Connect to the provided SQLite database.  
 2. List tables with `dbListTables()`.  
@@ -76,7 +76,7 @@ tbl(con, "flights") |> filter(dep_delay > 60) |> collect() |> head()
 
 ---
 
-# 3. Arrow (R4DS Chapter 22)
+## Arrow (R4DS Chapter 22)
 
 Arrow allows you to read parquet files efficiently without loading everything into memory.
 
@@ -91,7 +91,7 @@ dataset |> filter(column_x > 10) |> collect() |> head()
 
 ---
 
-## In-Class Exercise 3 – Arrow
+### In-Class Exercise 3 – Arrow
 
 1. Open a parquet dataset using `arrow::open_dataset()`.  
 2. Run a filter and select query.  
@@ -99,7 +99,7 @@ dataset |> filter(column_x > 10) |> collect() |> head()
 
 ---
 
-# 4. Hierarchical Data (R4DS Chapter 23)
+## Hierarchical Data (R4DS Chapter 23)
 
 Hierarchical data (JSON) often contains nested lists. Use `jsonlite` to load JSON and `tidyr::unnest_wider()` to flatten it.
 
@@ -126,7 +126,7 @@ nested_df |> unnest_wider(details)
 
 ---
 
-## In-Class Exercise 4 – JSON Rectangling
+### In-Class Exercise 4 – JSON Rectangling
 
 1. Load a nested JSON file.  
 2. Use `unnest_wider()` or `unnest_longer()` to flatten it.  
@@ -134,7 +134,7 @@ nested_df |> unnest_wider(details)
 
 ---
 
-# 5. Web Scraping (R4DS Chapter 24)
+## Web Scraping (R4DS Chapter 24)
 
 Web scraping extracts data from websites. Use `rvest` to read HTML and extract tables or nodes.
 
@@ -152,7 +152,7 @@ head(gdp_table)
 
 ---
 
-## In-Class Exercise 5 – Web Scraping
+### In-Class Exercise 5 – Web Scraping
 
 1. Use `rvest` to scrape a simple table from Wikipedia.  
 2. Convert it to a tibble and clean column names.  
@@ -160,7 +160,7 @@ head(gdp_table)
 
 ---
 
-# In-Class Challenge – Multiple Data Sources
+## In-Class Challenge – Multiple Data Sources
 
 1. Import an Excel dataset, a JSON dataset, and scrape a table from the web.  
 2. Clean and join at least two sources.  
@@ -168,7 +168,7 @@ head(gdp_table)
 
 ---
 
-# Homework Preview
+## Homework Preview
 
 For the final homework:
 
@@ -180,6 +180,6 @@ For the final homework:
 
 ---
 
-# Conclusion
+## Conclusion
 
 This session completes the course by showing how to **access data from multiple modern sources**, preparing you to work with **real-world messy data** beyond flat CSV files.

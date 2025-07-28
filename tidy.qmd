@@ -14,7 +14,7 @@ By the end of this chapter, you should be able to:
 
 ---
 
-# 1. Why Tidy Data?
+## Why Tidy Data?
 
 In Week 6, you performed **EDA** on datasets that were already in a usable format.  
 Real datasets are often messy. **Tidy data** makes it easy to:
@@ -30,7 +30,7 @@ Real datasets are often messy. **Tidy data** makes it easy to:
 
 ---
 
-# 2. Pivoting: Long vs Wide
+## Pivoting: Long vs Wide
 
 ### `pivot_longer()`
 
@@ -58,7 +58,7 @@ table2 |>
 
 ---
 
-## In-Class Exercise 1 – Pivoting
+### In-Class Exercise 1 – Pivoting
 
 1. Use `pivot_longer()` to convert `table4a` to long format.  
 2. Use `pivot_wider()` on `table2` to create separate columns for `type`.  
@@ -66,7 +66,7 @@ table2 |>
 
 ---
 
-# 3. Separating and Uniting Columns
+## Separating and Uniting Columns
 
 ### `separate()`
 
@@ -90,14 +90,14 @@ table5 |>
 
 ---
 
-## In-Class Exercise 2 – Separate and Unite
+### In-Class Exercise 2 – Separate and Unite
 
 1. Use `separate()` to split the `rate` column in `table3`.  
 2. Use `unite()` to combine `century` and `year` into one column.  
 
 ---
 
-# 4. Tidying a Real Dataset
+## Tidying a Real Dataset
 
 The `who` dataset is messy: column names encode multiple variables.
 
@@ -115,7 +115,7 @@ who |>
 
 ---
 
-## In-Class Exercise 3 – WHO Dataset
+### In-Class Exercise 3 – WHO Dataset
 
 1. Pivot `who` longer to create `key` and `cases`.  
 2. Separate `key` into multiple components.  
@@ -124,7 +124,7 @@ who |>
 
 ---
 
-# 5. Tidy Data Workflow
+## Tidy Data Workflow
 
 After tidying, you can:
 
@@ -134,7 +134,7 @@ After tidying, you can:
 
 ---
 
-# Homework Preview
+## Homework Preview
 
 For Homework 4, you will:
 
@@ -146,6 +146,6 @@ For Homework 4, you will:
 
 ---
 
-# Next Steps
+## Next Steps
 
 Next week, we will focus on **Workflow and Reproducibility** using Quarto and R projects to organize your work.

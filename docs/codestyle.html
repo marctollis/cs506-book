@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.40">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Appendix A: Appendix: Coding Style Guidelines – CS506: Data Wrangling and Management</title>
+<title>Appendix B: Appendix: Coding Style Guidelines – CS506: Data Wrangling and Management</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,8 +60,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./syllabus.html" rel="next">
-<link href="./advanced_import.html" rel="prev">
+<link href="./syllabus.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -105,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./codestyle.html">Appendices</a></li><li class="breadcrumb-item"><a href="./codestyle.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./syllabus.html">Appendices</a></li><li class="breadcrumb-item"><a href="./codestyle.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -224,14 +223,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codestyle.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></span></a>
+  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
+  <a href="./codestyle.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></span></a>
   </div>
 </li>
       </ul>
@@ -244,26 +243,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#why-style-matters" id="toc-why-style-matters" class="nav-link active" data-scroll-target="#why-style-matters"><span class="header-section-number">A.1</span> Why Style Matters</a></li>
-  <li><a href="#file-naming" id="toc-file-naming" class="nav-link" data-scroll-target="#file-naming"><span class="header-section-number">B</span> 1. File Naming</a></li>
-  <li><a href="#object-naming" id="toc-object-naming" class="nav-link" data-scroll-target="#object-naming"><span class="header-section-number">C</span> 2. Object Naming</a></li>
-  <li><a href="#spaces-and-indentation" id="toc-spaces-and-indentation" class="nav-link" data-scroll-target="#spaces-and-indentation"><span class="header-section-number">D</span> 3. Spaces and Indentation</a></li>
-  <li><a href="#long-lines" id="toc-long-lines" class="nav-link" data-scroll-target="#long-lines"><span class="header-section-number">E</span> 4. Long Lines</a></li>
-  <li><a href="#function-formatting" id="toc-function-formatting" class="nav-link" data-scroll-target="#function-formatting"><span class="header-section-number">F</span> 5. Function Formatting</a></li>
-  <li><a href="#commenting-code" id="toc-commenting-code" class="nav-link" data-scroll-target="#commenting-code"><span class="header-section-number">G</span> 6. Commenting Code</a></li>
-  <li><a href="#piping" id="toc-piping" class="nav-link" data-scroll-target="#piping"><span class="header-section-number">H</span> 7. Piping</a></li>
-  <li>
-<a href="#tidyverse-style-summary" id="toc-tidyverse-style-summary" class="nav-link" data-scroll-target="#tidyverse-style-summary"><span class="header-section-number">I</span> 8. Tidyverse Style Summary</a>
-  <ul class="collapse">
-<li><a href="#in-class-exercise" id="toc-in-class-exercise" class="nav-link" data-scroll-target="#in-class-exercise"><span class="header-section-number">I.1</span> In-Class Exercise</a></li>
-  </ul>
-</li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">J</span> Conclusion</a></li>
+<li><a href="#why-style-matters" id="toc-why-style-matters" class="nav-link active" data-scroll-target="#why-style-matters"><span class="header-section-number">B.1</span> Why Style Matters</a></li>
+  <li><a href="#file-naming" id="toc-file-naming" class="nav-link" data-scroll-target="#file-naming"><span class="header-section-number">B.2</span> File Naming</a></li>
+  <li><a href="#object-naming" id="toc-object-naming" class="nav-link" data-scroll-target="#object-naming"><span class="header-section-number">B.3</span> Object Naming</a></li>
+  <li><a href="#spaces-and-indentation" id="toc-spaces-and-indentation" class="nav-link" data-scroll-target="#spaces-and-indentation"><span class="header-section-number">B.4</span> Spaces and Indentation</a></li>
+  <li><a href="#long-lines" id="toc-long-lines" class="nav-link" data-scroll-target="#long-lines"><span class="header-section-number">B.5</span> Long Lines</a></li>
+  <li><a href="#function-formatting" id="toc-function-formatting" class="nav-link" data-scroll-target="#function-formatting"><span class="header-section-number">B.6</span> Function Formatting</a></li>
+  <li><a href="#commenting-code" id="toc-commenting-code" class="nav-link" data-scroll-target="#commenting-code"><span class="header-section-number">B.7</span> Commenting Code</a></li>
+  <li><a href="#piping" id="toc-piping" class="nav-link" data-scroll-target="#piping"><span class="header-section-number">B.8</span> Piping</a></li>
+  <li><a href="#tidyverse-style-summary" id="toc-tidyverse-style-summary" class="nav-link" data-scroll-target="#tidyverse-style-summary"><span class="header-section-number">B.9</span> Tidyverse Style Summary</a></li>
+  <li><a href="#in-class-exercise" id="toc-in-class-exercise" class="nav-link" data-scroll-target="#in-class-exercise"><span class="header-section-number">B.10</span> In-Class Exercise</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">B.11</span> Conclusion</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/marctollis/cs506-book/blob/main/codestyle.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/marctollis/cs506-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./codestyle.html">Appendices</a></li><li class="breadcrumb-item"><a href="./codestyle.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></a></li></ol></nav><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Appendix A: Appendix: Coding Style Guidelines</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./syllabus.html">Appendices</a></li><li class="breadcrumb-item"><a href="./codestyle.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></a></li></ol></nav><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Appendix B: Appendix: Coding Style Guidelines</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -277,8 +272,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="why-style-matters" class="level2" data-number="A.1"><h2 data-number="A.1" class="anchored" data-anchor-id="why-style-matters">
-<span class="header-section-number">A.1</span> Why Style Matters</h2>
+</header><section id="why-style-matters" class="level2" data-number="B.1"><h2 data-number="B.1" class="anchored" data-anchor-id="why-style-matters">
+<span class="header-section-number">B.1</span> Why Style Matters</h2>
 <p>Consistent code style makes your work:</p>
 <ul>
 <li>
@@ -289,8 +284,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <strong>Easier to maintain</strong> (future you will thank present you)</li>
 </ul>
 <p>This appendix summarizes the <strong>tidyverse style guide</strong> based on <a href="https://r4ds.hadley.nz/workflow-style.html">R4DS Workflow: Style</a>.</p>
-<hr></section><section id="file-naming" class="level1" data-number="B"><h1 data-number="B">
-<span class="header-section-number">B</span> 1. File Naming</h1>
+<hr></section><section id="file-naming" class="level2" data-number="B.2"><h2 data-number="B.2" class="anchored" data-anchor-id="file-naming">
+<span class="header-section-number">B.2</span> File Naming</h2>
 <ul>
 <li>Use <strong>lowercase</strong>, <strong>descriptive names</strong>, and <strong>hyphens</strong> (not spaces).</li>
 <li>Good: <code>data-cleaning.R</code>, <code>plot-analysis.R</code>
@@ -298,8 +293,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Bad: <code>Data Cleaning.R</code>, <code>final.R</code>
 </li>
 </ul>
-<hr></section><section id="object-naming" class="level1" data-number="C"><h1 data-number="C">
-<span class="header-section-number">C</span> 2. Object Naming</h1>
+<hr></section><section id="object-naming" class="level2" data-number="B.3"><h2 data-number="B.3" class="anchored" data-anchor-id="object-naming">
+<span class="header-section-number">B.3</span> Object Naming</h2>
 <ul>
 <li>Use <strong>snake_case</strong> for variable and function names.</li>
 <li>Be descriptive, not cryptic.</li>
@@ -313,8 +308,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="va">ds</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
 <span><span class="va">cm</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="spaces-and-indentation" class="level1" data-number="D"><h1 data-number="D">
-<span class="header-section-number">D</span> 3. Spaces and Indentation</h1>
+<hr></section><section id="spaces-and-indentation" class="level2" data-number="B.4"><h2 data-number="B.4" class="anchored" data-anchor-id="spaces-and-indentation">
+<span class="header-section-number">B.4</span> Spaces and Indentation</h2>
 <ul>
 <li>Use <strong>two spaces</strong> for indentation.</li>
 <li>Always put a space <strong>after commas</strong> and <strong>around operators</strong>.</li>
@@ -328,8 +323,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="va">y</span><span class="op">&lt;-</span><span class="va">x</span><span class="op">+</span><span class="fl">1</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">mpg</span>,<span class="va">cyl</span><span class="op">==</span><span class="fl">4</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="long-lines" class="level1" data-number="E"><h1 data-number="E">
-<span class="header-section-number">E</span> 4. Long Lines</h1>
+<hr></section><section id="long-lines" class="level2" data-number="B.5"><h2 data-number="B.5" class="anchored" data-anchor-id="long-lines">
+<span class="header-section-number">B.5</span> Long Lines</h2>
 <ul>
 <li>Keep lines <strong>under 80 characters</strong>.</li>
 <li>Use line breaks for long function calls.</li>
@@ -339,8 +334,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">cyl</span> <span class="op">==</span> <span class="fl">4</span>, <span class="va">hwy</span> <span class="op">&gt;</span> <span class="fl">30</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">hwy</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="function-formatting" class="level1" data-number="F"><h1 data-number="F">
-<span class="header-section-number">F</span> 5. Function Formatting</h1>
+<hr></section><section id="function-formatting" class="level2" data-number="B.6"><h2 data-number="B.6" class="anchored" data-anchor-id="function-formatting">
+<span class="header-section-number">B.6</span> Function Formatting</h2>
 <ul>
 <li>Use consistent curly brace placement.</li>
 </ul>
@@ -354,8 +349,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="va">my_function</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">{</span></span>
 <span><span class="va">x</span><span class="op">+</span><span class="fl">1</span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="commenting-code" class="level1" data-number="G"><h1 data-number="G">
-<span class="header-section-number">G</span> 6. Commenting Code</h1>
+<hr></section><section id="commenting-code" class="level2" data-number="B.7"><h2 data-number="B.7" class="anchored" data-anchor-id="commenting-code">
+<span class="header-section-number">B.7</span> Commenting Code</h2>
 <ul>
 <li>Write <strong>comments</strong> to explain why, not what.</li>
 <li>Use <code>#</code> for inline comments.</li>
@@ -366,8 +361,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">cyl</span> <span class="op">==</span> <span class="fl">4</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span>mean_hwy <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">hwy</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="piping" class="level1" data-number="H"><h1 data-number="H">
-<span class="header-section-number">H</span> 7. Piping</h1>
+<hr></section><section id="piping" class="level2" data-number="B.8"><h2 data-number="B.8" class="anchored" data-anchor-id="piping">
+<span class="header-section-number">B.8</span> Piping</h2>
 <ul>
 <li>Each step in a pipeline goes on a <strong>new line</strong>.</li>
 <li>Use the pipe <code>|&gt;</code> to connect transformations.</li>
@@ -378,17 +373,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">manufacturer</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span>mean_hwy <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">hwy</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="tidyverse-style-summary" class="level1" data-number="I"><h1 data-number="I">
-<span class="header-section-number">I</span> 8. Tidyverse Style Summary</h1>
+<hr></section><section id="tidyverse-style-summary" class="level2" data-number="B.9"><h2 data-number="B.9" class="anchored" data-anchor-id="tidyverse-style-summary">
+<span class="header-section-number">B.9</span> Tidyverse Style Summary</h2>
 <ul>
 <li>Use <strong><code>|&gt;</code></strong> for pipelines, <strong>snake_case</strong> for names</li>
 <li>Indent <strong>two spaces</strong> per level</li>
 <li>Avoid deeply nested code — break into steps</li>
 <li>Write <strong>clear, short, and well-commented</strong> code</li>
 </ul>
-<hr>
-<section id="in-class-exercise" class="level2" data-number="I.1"><h2 data-number="I.1" class="anchored" data-anchor-id="in-class-exercise">
-<span class="header-section-number">I.1</span> In-Class Exercise</h2>
+<hr></section><section id="in-class-exercise" class="level2" data-number="B.10"><h2 data-number="B.10" class="anchored" data-anchor-id="in-class-exercise">
+<span class="header-section-number">B.10</span> In-Class Exercise</h2>
 <ol type="1">
 <li>Take a messy R script (provided in class).<br>
 </li>
@@ -396,8 +390,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>Compare before vs.&nbsp;after readability.</li>
 </ol>
-<hr></section></section><section id="conclusion" class="level1" data-number="J"><h1 data-number="J">
-<span class="header-section-number">J</span> Conclusion</h1>
+<hr></section><section id="conclusion" class="level2" data-number="B.11"><h2 data-number="B.11" class="anchored" data-anchor-id="conclusion">
+<span class="header-section-number">B.11</span> Conclusion</h2>
 <p>Good code style is not just aesthetic — it improves <strong>reproducibility</strong> and <strong>collaboration</strong>.<br>
 Follow these conventions for all homework and projects in this course.</p>
 
@@ -872,14 +866,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./advanced_import.html" class="pagination-link" aria-label="Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span></span>
+      <a href="./syllabus.html" class="pagination-link" aria-label="CS506: Data Wrangling and Management– Syllabus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./syllabus.html" class="pagination-link" aria-label="CS506: Data Wrangling and Management– Syllabus">
-        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -898,7 +889,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. File Naming</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## File Naming</span></span>
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use **lowercase**, **descriptive names**, and **hyphens** (not spaces).</span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Good: <span class="in">`data-cleaning.R`</span>, <span class="in">`plot-analysis.R`</span></span>
@@ -906,7 +897,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># 2. Object Naming</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Object Naming</span></span>
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use **snake_case** for variable and function names.</span>
 <span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Be descriptive, not cryptic.</span>
@@ -923,7 +914,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="fu"># 3. Spaces and Indentation</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Spaces and Indentation</span></span>
 <span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use **two spaces** for indentation.</span>
 <span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Always put a space **after commas** and **around operators**.</span>
@@ -940,7 +931,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a><span class="fu"># 4. Long Lines</span></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## Long Lines</span></span>
 <span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Keep lines **under 80 characters**.</span>
 <span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use line breaks for long function calls.</span>
@@ -953,7 +944,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a><span class="fu"># 5. Function Formatting</span></span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## Function Formatting</span></span>
 <span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use consistent curly brace placement.</span>
 <span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a></span>
@@ -970,7 +961,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a><span class="fu"># 6. Commenting Code</span></span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a><span class="fu">## Commenting Code</span></span>
 <span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Write **comments** to explain why, not what.</span>
 <span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use <span class="in">`#`</span> for inline comments.</span>
@@ -984,7 +975,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a><span class="fu"># 7. Piping</span></span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a><span class="fu">## Piping</span></span>
 <span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Each step in a pipeline goes on a **new line**.</span>
 <span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use the pipe <span class="in">`|&gt;`</span> to connect transformations.</span>
@@ -998,7 +989,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a><span class="fu"># 8. Tidyverse Style Summary</span></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tidyverse Style Summary</span></span>
 <span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use **`|&gt;`** for pipelines, **snake_case** for names</span>
 <span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Indent **two spaces** per level</span>
@@ -1015,7 +1006,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion</span></span>
 <span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a>Good code style is not just aesthetic — it improves **reproducibility** and **collaboration**.\</span>
 <span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a>Follow these conventions for all homework and projects in this course.</span>

@@ -14,7 +14,7 @@ By the end of this chapter, you should be able to:
 
 ---
 
-# 1. Reading CSV and TSV Files
+## Reading CSV and TSV Files
 
 The `readr` package (part of the tidyverse) provides fast and friendly functions for reading text data.
 
@@ -35,7 +35,7 @@ df_tsv <- read_tsv("data/example.tsv")
 
 ---
 
-## In-Class Exercise 1 – CSV/TSV
+### In-Class Exercise 1 – CSV/TSV
 
 1. Download a small CSV file (e.g., from the course repository).  
 2. Read it into R using `read_csv()`.  
@@ -44,7 +44,7 @@ df_tsv <- read_tsv("data/example.tsv")
 
 ---
 
-# 2. Column Types and Parsing
+## Column Types and Parsing
 
 `readr` automatically guesses column types, but you can override them.
 
@@ -61,7 +61,7 @@ You can parse numbers with `parse_number()`, dates with `parse_date()`, and time
 
 ---
 
-## In-Class Exercise 2 – Parsing
+### In-Class Exercise 2 – Parsing
 
 1. Create a vector of messy numbers: `c("$100", "250%", "300")`.  
 2. Use `parse_number()` to extract numeric values.  
@@ -69,7 +69,7 @@ You can parse numbers with `parse_number()`, dates with `parse_date()`, and time
 
 ---
 
-# 3. Importing Excel Files
+## Importing Excel Files
 
 The `readxl` package is used to read Excel files (`.xls`, `.xlsx`).
 
@@ -84,7 +84,7 @@ head(excel_df)
 
 ---
 
-## In-Class Exercise 3 – Excel Import
+### In-Class Exercise 3 – Excel Import
 
 1. Use a provided Excel file (or download one).  
 2. Read the first sheet with `read_excel()`.  
@@ -92,7 +92,7 @@ head(excel_df)
 
 ---
 
-# 4. Handling Import Problems
+## Handling Import Problems
 
 When column parsing fails:
 
@@ -109,7 +109,7 @@ problems(bad)
 
 ---
 
-# 5. Reading Other Formats (Optional)
+## Reading Other Formats (Optional)
 
 - `read_delim()` – for custom delimiters
 - `read_table()` – for whitespace-delimited files
@@ -118,7 +118,7 @@ problems(bad)
 
 ---
 
-## In-Class Challenge – Import & Clean Workflow
+### In-Class Challenge – Import & Clean Workflow
 
 1. Import a messy CSV file with mixed types.  
 2. Fix incorrect column parsing.  
@@ -127,7 +127,7 @@ problems(bad)
 
 ---
 
-# Homework Preview
+## Homework Preview
 
 For Homework 6, you will:
 
@@ -139,6 +139,6 @@ For Homework 6, you will:
 
 ---
 
-# Next Steps
+## Next Steps
 
 Next week, we will learn to **work with text data and regular expressions** using the `stringr` package.
