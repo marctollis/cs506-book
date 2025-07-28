@@ -32,31 +32,31 @@
   {
     "objectID": "Rintro.html",
     "href": "Rintro.html",
-    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "title": "\n2  Introduction to R, RStudio, and Quarto\n",
     "section": "",
-    "text": "2.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "text": "2.1 Learning Objectives\nBy the end of this week, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
     "objectID": "Rintro.html#learning-objectives",
     "href": "Rintro.html#learning-objectives",
-    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "title": "\n2  Introduction to R, RStudio, and Quarto\n",
     "section": "",
     "text": "Install and open R, RStudio, and Quarto\nNavigate the four-pane layout of RStudio\nCreate and run R scripts\nUnderstand the differences between the console, script editor, and environment\nExecute basic R operations and understand data types\nInstall and load R packages\nCreate and render a Quarto (.qmd) document to .pdf",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
     "objectID": "Rintro.html#installing-r-rstudio-and-quarto",
     "href": "Rintro.html#installing-r-rstudio-and-quarto",
-    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
-    "section": "\n3.1 Installing R, RStudio, and Quarto",
-    "text": "3.1 Installing R, RStudio, and Quarto\n\nInstall R: https://cran.r-project.org/\n\nInstall RStudio: https://posit.co/download/rstudio-desktop/\n\nInstall Quarto: https://quarto.org/docs/get-started/\n\n\nWhen you open RStudio, you’ll see four panes:\n\nConsole – runs code interactively\nSource – write and save scripts or Quarto documents\nEnvironment/History – view and manage objects\nFiles/Plots/Packages/Help/Viewer – navigation and visualization tools",
+    "title": "\n2  Introduction to R, RStudio, and Quarto\n",
+    "section": "\n2.3 Installing R, RStudio, and Quarto",
+    "text": "2.3 Installing R, RStudio, and Quarto\n\nInstall R: https://cran.r-project.org/\n\nInstall RStudio: https://posit.co/download/rstudio-desktop/\n\nInstall Quarto: https://quarto.org/docs/get-started/\n\n\nWhen you open RStudio, you’ll see four panes:\n\nConsole – runs code interactively\nSource – write and save scripts or Quarto documents\nEnvironment/History – view and manage objects\nFiles/Plots/Packages/Help/Viewer – navigation and visualization tools",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
@@ -800,83 +800,6 @@
     ]
   },
   {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "",
-    "text": "B Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#canvas-recorded-lectures",
-    "href": "syllabus.html#canvas-recorded-lectures",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "B.1 Canvas & Recorded Lectures",
-    "text": "B.1 Canvas & Recorded Lectures\nWe will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#cs506-book-website",
-    "href": "syllabus.html#cs506-book-website",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "B.2 CS506 Book Website",
-    "text": "B.2 CS506 Book Website\nI have compiled a course website that has supplemental text and coded examples that we will walk through in class. This website essentially serves as the course textbook and is required reading. There will be other required reading material.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#course-student-learning-outcomes",
-    "href": "syllabus.html#course-student-learning-outcomes",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "C.1 Course Student Learning Outcomes",
-    "text": "C.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#program-student-outcomes-supported-by-this-class",
-    "href": "syllabus.html#program-student-outcomes-supported-by-this-class",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "C.2 Program Student Outcomes supported by this class",
-    "text": "C.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#course-policies",
-    "href": "syllabus.html#course-policies",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "H.1 Course Policies",
-    "text": "H.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nCollaboration: Allowed for homeworks; problem sets and quizzes must be completed individually. - Late Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#university-policies",
-    "href": "syllabus.html#university-policies",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "H.2 University Policies",
-    "text": "H.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
     "objectID": "codestyle.html",
     "href": "codestyle.html",
     "title": "Appendix A: Appendix: Coding Style Guidelines",
@@ -907,6 +830,193 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendix: Coding Style Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "",
+    "text": "C Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#canvas-recorded-lectures",
+    "href": "syllabus.html#canvas-recorded-lectures",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "C.1 Canvas & Recorded Lectures",
+    "text": "C.1 Canvas & Recorded Lectures\nWe will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#cs506-book-website",
+    "href": "syllabus.html#cs506-book-website",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "C.2 CS506 Book Website",
+    "text": "C.2 CS506 Book Website\nI have compiled a course website that has supplemental text and coded examples that we will walk through in class. This website essentially serves as the course textbook and is required reading. There will be other required reading material.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-student-learning-outcomes",
+    "href": "syllabus.html#course-student-learning-outcomes",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "D.1 Course Student Learning Outcomes",
+    "text": "D.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#program-student-outcomes-supported-by-this-class",
+    "href": "syllabus.html#program-student-outcomes-supported-by-this-class",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "D.2 Program Student Outcomes supported by this class",
+    "text": "D.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-policies",
+    "href": "syllabus.html#course-policies",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "I.1 Course Policies",
+    "text": "I.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nCollaboration: Allowed for homeworks; problem sets and quizzes must be completed individually. - Late Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#university-policies",
+    "href": "syllabus.html#university-policies",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "I.2 University Policies",
+    "text": "I.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#getting-started",
+    "href": "Rintro.html#getting-started",
+    "title": "\n2  Introduction to R, RStudio, and Quarto\n",
+    "section": "\n2.2 Getting Started",
+    "text": "2.2 Getting Started\nR is a programming language designed for data analysis.\nRStudio is an Integrated Development Environment (IDE) that makes working with R easier.\nQuarto is a tool for creating reproducible documents that combine code and text.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#introduction-to-quarto",
+    "href": "Rintro.html#introduction-to-quarto",
+    "title": "\n2  Introduction to R, RStudio, and Quarto\n",
+    "section": "\n2.4 Introduction to Quarto",
+    "text": "2.4 Introduction to Quarto\nQuarto allows you to create documents that include both text and executable R code.\n\n2.4.1 Your First Quarto Document\n\nIn RStudio: File → New File → Quarto Document\nReplace the header with:\n\n---\ntitle: \"My First Quarto Document\"\nauthor: \"Your Name\"\nformat: pdf\n---\n\nBelow the header, add:\n\n\nx &lt;- c(1, 2, 3, 4, 5)\nmean(x)\n\n[1] 3\n\n\n\nClick Render to produce a PDF file.\n\n\n2.4.2 In-Class Quarto Exercise\n\nCreate a new Quarto document with:\n\nA title, your name, and the date\nA short paragraph of text\nA code chunk that calculates the mean and standard deviation of a numeric vector\n\n\nRender it to PDF and verify it works.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#basic-r-concepts",
+    "href": "Rintro.html#basic-r-concepts",
+    "title": "\n2  Introduction to R, RStudio, and Quarto\n",
+    "section": "\n2.5 Basic R Concepts",
+    "text": "2.5 Basic R Concepts\n\n2.5.1 Variables and Assignments\n\nx &lt;- 5\ny &lt;- 10\nz &lt;- x + y\nz\n\n[1] 15\n\n\n\n2.5.2 Vectors and Functions\n\nages &lt;- c(25, 30, 35, 40)\nmean(ages)\n\n[1] 32.5\n\nsd(ages)\n\n[1] 6.454972\n\n\n\n2.5.3 Data Frames\n\nname &lt;- c(\"Alice\", \"Bob\", \"Charlie\")\nage &lt;- c(25, 30, 35)\nstudent_data &lt;- data.frame(name, age)\nstudent_data\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35\n\n\n\n2.5.4 Inspecting Data\n\nstr(student_data)\n\n'data.frame':   3 obs. of  2 variables:\n $ name: chr  \"Alice\" \"Bob\" \"Charlie\"\n $ age : num  25 30 35\n\nsummary(student_data)\n\n     name                age      \n Length:3           Min.   :25.0  \n Class :character   1st Qu.:27.5  \n Mode  :character   Median :30.0  \n                    Mean   :30.0  \n                    3rd Qu.:32.5  \n                    Max.   :35.0  \n\nhead(student_data)\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35\n\n\n\n2.5.5 Comments and Help\n\n# This is a comment\n?mean  # Help for the mean function\n\n\n2.5.6 Using Scripts and Console\n\nWrite your code in the script editor and run lines with Ctrl+Enter (Cmd+Enter on Mac)\nSave scripts with the .R extension\nUse the Console for quick exploration\n\n\n2.5.7 Installing and Loading Packages\n\ninstall.packages(\"tidyverse\")\n\n\n2.5.8 In-Class R Exercises\n\nCreate a numeric vector of five numbers and calculate its mean, median, and standard deviation.\nCreate a data frame with three columns (name, age, and major) and print its structure.\nImport a dataset from a URL using read.csv() and summarize it using summary().\n\n\nmy_vec &lt;- c(10, 20, 30, 40, 50)\nmean(my_vec)\n\n[1] 30\n\nmedian(my_vec)\n\n[1] 30\n\nsd(my_vec)\n\n[1] 15.81139\n\ndf &lt;- data.frame(\n  name = c(\"Lily\", \"Mark\", \"Tom\"),\n  age = c(21, 22, 23),\n  major = c(\"Biology\", \"Math\", \"History\")\n)\nstr(df)\n\n'data.frame':   3 obs. of  3 variables:\n $ name : chr  \"Lily\" \"Mark\" \"Tom\"\n $ age  : num  21 22 23\n $ major: chr  \"Biology\" \"Math\" \"History\"\n\ndata &lt;- read.csv(\"https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv\")\nsummary(data)\n\n    Month               X1958           X1959           X1960      \n Length:12          Min.   :310.0   Min.   :342.0   Min.   :390.0  \n Class :character   1st Qu.:339.2   1st Qu.:387.5   1st Qu.:418.5  \n Mode  :character   Median :360.5   Median :406.5   Median :461.0  \n                    Mean   :381.0   Mean   :428.3   Mean   :476.2  \n                    3rd Qu.:411.8   3rd Qu.:465.2   3rd Qu.:514.8  \n                    Max.   :505.0   Max.   :559.0   Max.   :622.0",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#introduction-to-data-visualization",
+    "href": "ggplot2.html#introduction-to-data-visualization",
+    "title": "\n3  Data Visualization with ggplot2\n",
+    "section": "\n3.2 Introduction to Data Visualization",
+    "text": "3.2 Introduction to Data Visualization\nThis week we begin with visualization first, following R for Data Science (Ch. 2).ggplot2 is part of the tidyverse and implements the grammar of graphics.\nWe will use the built-in mpg dataset for examples.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#ggplot2-basics",
+    "href": "ggplot2.html#ggplot2-basics",
+    "title": "\n3  Data Visualization with ggplot2\n",
+    "section": "\n3.3 ggplot2 Basics",
+    "text": "3.3 ggplot2 Basics\nThe template for a ggplot is:\nggplot(data = &lt;DATA&gt;) +\n  &lt;GEOM_FUNCTION&gt;(mapping = aes(&lt;MAPPINGS&gt;))\n\n3.3.1 Example: Scatterplot of engine size vs. highway mpg\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nggplot(data = mpg) +\n  geom_point(mapping = aes(x = displ, y = hwy))\n\n\n\n\n\n\n\n\n3.3.2 In-Class Exercise 1\n\nCreate a scatterplot of cty (city mpg) vs. hwy (highway mpg).\n\nWhat relationship do you see?\n\nTry swapping x and y—does it change the interpretation?\n\n\n3.3.3 Aesthetic Mappings\nYou can map variables to visual properties: color, size, shape, alpha.\n\n3.3.4 Example: Color by class\n\nggplot(data = mpg) +\n  geom_point(mapping = aes(x = displ, y = hwy, color = class))\n\n\n\n\n\n\n\n\n3.3.5 In-Class Exercise 2\n\nModify the plot to map size to cyl (number of cylinders).\n\nMap shape to drv (drive type).\n\nTry using both color and shape in one plot.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#adding-geoms",
+    "href": "ggplot2.html#adding-geoms",
+    "title": "\n3  Data Visualization with ggplot2\n",
+    "section": "\n3.4 Adding Geoms",
+    "text": "3.4 Adding Geoms\nThe geom_point() function creates a scatterplot, but there are many geoms.\n\n3.4.1 Example: Add a smoothing line\n\nggplot(data = mpg) +\n  geom_point(mapping = aes(x = displ, y = hwy)) +\n  geom_smooth(mapping = aes(x = displ, y = hwy))\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n3.4.2 In-Class Exercise 3\n\nAdd a geom_smooth() line to your plot from Exercise 1.\n\nTry setting se = FALSE to remove the confidence band.\n\nChange the color of the line manually.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#facets",
+    "href": "ggplot2.html#facets",
+    "title": "\n3  Data Visualization with ggplot2\n",
+    "section": "\n3.5 Facets",
+    "text": "3.5 Facets\nFacets split the data into subplots based on a variable.\n\n3.5.1 Example: Facet by drive type\n\nggplot(data = mpg) +\n  geom_point(mapping = aes(x = displ, y = hwy)) +\n  facet_wrap(~ drv)\n\n\n\n\n\n\n\n\n3.5.2 In-Class Exercise 4\n\nUse facet_wrap() to facet the plot by class.\n\nTry facet_grid(drv ~ cyl)—what do you observe?",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#customizing-plots",
+    "href": "ggplot2.html#customizing-plots",
+    "title": "\n3  Data Visualization with ggplot2\n",
+    "section": "\n3.6 Customizing Plots",
+    "text": "3.6 Customizing Plots\nYou can add labels, titles, and themes to improve clarity.\n\nggplot(data = mpg) +\n  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +\n  labs(\n    title = \"Fuel Efficiency by Engine Size\",\n    x = \"Engine Displacement (L)\",\n    y = \"Highway MPG\",\n    color = \"Car Class\"\n  ) +\n  theme_minimal()",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#in-class-challenge",
+    "href": "ggplot2.html#in-class-challenge",
+    "title": "\n3  Data Visualization with ggplot2\n",
+    "section": "\n3.7 In-Class Challenge",
+    "text": "3.7 In-Class Challenge\nUsing the mpg dataset:\n\nMake a scatterplot of displ vs hwy.\n\nMap a third variable to color.\n\nAdd a smooth line and facet by drive type.\n\nAdd labels and use a clean theme.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#homework-preview",
+    "href": "ggplot2.html#homework-preview",
+    "title": "\n3  Data Visualization with ggplot2\n",
+    "section": "\n3.8 Homework Preview",
+    "text": "3.8 Homework Preview\nFor Homework 1 (Visualization), you will:\n\nUse the mpg dataset (or another dataset of your choice).\n\nCreate three plots:\n\nA scatterplot with at least one aesthetic mapping\nA faceted plot showing subsets of data\nA customized plot with titles, labels, and a theme\n\n\nRender your .qmd to PDF and submit on Canvas.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
+    ]
+  },
+  {
+    "objectID": "ggplot2.html#next-steps",
+    "href": "ggplot2.html#next-steps",
+    "title": "\n3  Data Visualization with ggplot2\n",
+    "section": "\n3.9 Next Steps",
+    "text": "3.9 Next Steps\nNext week, we begin data transformation using dplyr to manipulate data before plotting.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   }
 ]

@@ -1,10 +1,10 @@
 ---
-title: "Week 1: Introduction to R, RStudio, and Quarto"
+title: "Introduction to R, RStudio, and Quarto"
 ---
 
 ## Learning Objectives
 
-By the end of this chapter, you should be able to:
+By the end of this week, you should be able to:
 
 -   Install and open R, RStudio, and Quarto
 -   Navigate the four-pane layout of RStudio
@@ -16,7 +16,7 @@ By the end of this chapter, you should be able to:
 
 ------------------------------------------------------------------------
 
-# 1. Getting Started
+## Getting Started
 
 R is a programming language designed for data analysis.\
 RStudio is an Integrated Development Environment (IDE) that makes working with R easier.\
@@ -39,11 +39,11 @@ When you open RStudio, you’ll see four panes:
 
 ------------------------------------------------------------------------
 
-# 2. Introduction to Quarto
+## Introduction to Quarto
 
 Quarto allows you to create documents that include both text and executable R code.
 
-## Your First Quarto Document
+### Your First Quarto Document
 
 1.  In RStudio: File → New File → Quarto Document
 2.  Replace the header with:
@@ -67,7 +67,7 @@ mean(x)
 
 ------------------------------------------------------------------------
 
-## In-Class Quarto Exercise
+### In-Class Quarto Exercise
 
 -   Create a new Quarto document with:
     -   A title, your name, and the date
@@ -77,9 +77,9 @@ mean(x)
 
 ------------------------------------------------------------------------
 
-# 3. Basic R Concepts
+## Basic R Concepts
 
-## Variables and Assignments
+### Variables and Assignments
 
 ```{r}
 x <- 5
@@ -88,7 +88,7 @@ z <- x + y
 z
 ```
 
-## Vectors and Functions
+### Vectors and Functions
 
 ```{r}
 ages <- c(25, 30, 35, 40)
@@ -96,7 +96,7 @@ mean(ages)
 sd(ages)
 ```
 
-## Data Frames
+### Data Frames
 
 ```{r}
 name <- c("Alice", "Bob", "Charlie")
@@ -105,7 +105,7 @@ student_data <- data.frame(name, age)
 student_data
 ```
 
-## Inspecting Data
+### Inspecting Data
 
 ```{r}
 str(student_data)
@@ -113,7 +113,7 @@ summary(student_data)
 head(student_data)
 ```
 
-## Comments and Help
+### Comments and Help
 
 ```{r}
 # This is a comment
@@ -122,7 +122,7 @@ head(student_data)
 
 ------------------------------------------------------------------------
 
-# 4. Using Scripts and Console
+### Using Scripts and Console
 
 -   Write your code in the script editor and run lines with Ctrl+Enter (Cmd+Enter on Mac)
 -   Save scripts with the `.R` extension
@@ -130,7 +130,7 @@ head(student_data)
 
 ------------------------------------------------------------------------
 
-# 5. Installing and Loading Packages
+### Installing and Loading Packages
 
 ```{r eval=FALSE}
 install.packages("tidyverse")
@@ -138,7 +138,7 @@ install.packages("tidyverse")
 
 ------------------------------------------------------------------------
 
-# 6. In-Class R Exercises
+### In-Class R Exercises
 
 1.  Create a numeric vector of five numbers and calculate its mean, median, and standard deviation.
 2.  Create a data frame with three columns (name, age, and major) and print its structure.

@@ -14,7 +14,7 @@ By the end of this chapter, you should be able to:
 
 ------------------------------------------------------------------------
 
-# 1. Introduction to Data Visualization
+## Introduction to Data Visualization
 
 This week we begin with **visualization first**, following *R for Data Science (Ch. 2)*.\
 `ggplot2` is part of the tidyverse and implements the **grammar of graphics**.\
@@ -22,7 +22,7 @@ We will use the built-in `mpg` dataset for examples.
 
 ------------------------------------------------------------------------
 
-# 2. ggplot2 Basics
+## ggplot2 Basics
 
 The **template** for a ggplot is:
 
@@ -42,7 +42,7 @@ ggplot(data = mpg) +
 
 ------------------------------------------------------------------------
 
-## In-Class Exercise 1
+### In-Class Exercise 1
 
 1.  Create a scatterplot of `cty` (city mpg) vs. `hwy` (highway mpg).\
 2.  What relationship do you see?\
@@ -50,7 +50,7 @@ ggplot(data = mpg) +
 
 ------------------------------------------------------------------------
 
-# 3. Aesthetic Mappings
+### Aesthetic Mappings
 
 You can map variables to visual properties: color, size, shape, alpha.
 
@@ -63,7 +63,7 @@ ggplot(data = mpg) +
 
 ------------------------------------------------------------------------
 
-## In-Class Exercise 2
+### In-Class Exercise 2
 
 -   Modify the plot to map `size` to `cyl` (number of cylinders).\
 -   Map `shape` to `drv` (drive type).\
@@ -71,7 +71,7 @@ ggplot(data = mpg) +
 
 ------------------------------------------------------------------------
 
-# 4. Adding Geoms
+## Adding Geoms
 
 The `geom_point()` function creates a scatterplot, but there are many geoms.
 
@@ -85,7 +85,7 @@ ggplot(data = mpg) +
 
 ------------------------------------------------------------------------
 
-## In-Class Exercise 3
+### In-Class Exercise 3
 
 -   Add a `geom_smooth()` line to your plot from Exercise 1.\
 -   Try setting `se = FALSE` to remove the confidence band.\
@@ -93,7 +93,7 @@ ggplot(data = mpg) +
 
 ------------------------------------------------------------------------
 
-# 5. Facets
+## Facets
 
 Facets split the data into subplots based on a variable.
 
@@ -107,14 +107,14 @@ ggplot(data = mpg) +
 
 ------------------------------------------------------------------------
 
-## In-Class Exercise 4
+### In-Class Exercise 4
 
 -   Use `facet_wrap()` to facet the plot by `class`.\
 -   Try `facet_grid(drv ~ cyl)`—what do you observe?
 
 ------------------------------------------------------------------------
 
-# 6. Customizing Plots
+## Customizing Plots
 
 You can add labels, titles, and themes to improve clarity.
 
@@ -132,7 +132,7 @@ ggplot(data = mpg) +
 
 ------------------------------------------------------------------------
 
-# 7. In-Class Challenge
+## In-Class Challenge
 
 Using the `mpg` dataset:
 
@@ -143,7 +143,7 @@ Using the `mpg` dataset:
 
 ------------------------------------------------------------------------
 
-# Homework Preview
+## Homework Preview
 
 For **Homework 1 (Visualization)**, you will:
 
@@ -156,6 +156,6 @@ For **Homework 1 (Visualization)**, you will:
 
 ------------------------------------------------------------------------
 
-# Next Steps
+## Next Steps
 
 Next week, we begin **data transformation** using `dplyr` to manipulate data before plotting.

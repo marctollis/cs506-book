@@ -144,7 +144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Rintro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 1: Introduction to R, RStudio, and Quarto</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R, RStudio, and Quarto</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -224,8 +224,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./codestyle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix: Coding Style Guidelines</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">CS506: Data Wrangling and Management– Syllabus</span></span></a>
   </div>
 </li>
       </ul>
@@ -239,39 +245,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">3.1</span> Learning Objectives</a></li>
-  <li><a href="#introduction-to-data-visualization" id="toc-introduction-to-data-visualization" class="nav-link" data-scroll-target="#introduction-to-data-visualization"><span class="header-section-number">4</span> 1. Introduction to Data Visualization</a></li>
+  <li><a href="#introduction-to-data-visualization" id="toc-introduction-to-data-visualization" class="nav-link" data-scroll-target="#introduction-to-data-visualization"><span class="header-section-number">3.2</span> Introduction to Data Visualization</a></li>
   <li>
-<a href="#ggplot2-basics" id="toc-ggplot2-basics" class="nav-link" data-scroll-target="#ggplot2-basics"><span class="header-section-number">5</span> 2. ggplot2 Basics</a>
+<a href="#ggplot2-basics" id="toc-ggplot2-basics" class="nav-link" data-scroll-target="#ggplot2-basics"><span class="header-section-number">3.3</span> ggplot2 Basics</a>
   <ul class="collapse">
-<li><a href="#example-scatterplot-of-engine-size-vs.-highway-mpg" id="toc-example-scatterplot-of-engine-size-vs.-highway-mpg" class="nav-link" data-scroll-target="#example-scatterplot-of-engine-size-vs.-highway-mpg"><span class="header-section-number">5.0.1</span> Example: Scatterplot of engine size vs.&nbsp;highway mpg</a></li>
-  <li><a href="#in-class-exercise-1" id="toc-in-class-exercise-1" class="nav-link" data-scroll-target="#in-class-exercise-1"><span class="header-section-number">5.1</span> In-Class Exercise 1</a></li>
+<li><a href="#example-scatterplot-of-engine-size-vs.-highway-mpg" id="toc-example-scatterplot-of-engine-size-vs.-highway-mpg" class="nav-link" data-scroll-target="#example-scatterplot-of-engine-size-vs.-highway-mpg"><span class="header-section-number">3.3.1</span> Example: Scatterplot of engine size vs.&nbsp;highway mpg</a></li>
+  <li><a href="#in-class-exercise-1" id="toc-in-class-exercise-1" class="nav-link" data-scroll-target="#in-class-exercise-1"><span class="header-section-number">3.3.2</span> In-Class Exercise 1</a></li>
+  <li><a href="#aesthetic-mappings" id="toc-aesthetic-mappings" class="nav-link" data-scroll-target="#aesthetic-mappings"><span class="header-section-number">3.3.3</span> Aesthetic Mappings</a></li>
+  <li><a href="#example-color-by-class" id="toc-example-color-by-class" class="nav-link" data-scroll-target="#example-color-by-class"><span class="header-section-number">3.3.4</span> Example: Color by class</a></li>
+  <li><a href="#in-class-exercise-2" id="toc-in-class-exercise-2" class="nav-link" data-scroll-target="#in-class-exercise-2"><span class="header-section-number">3.3.5</span> In-Class Exercise 2</a></li>
   </ul>
 </li>
   <li>
-<a href="#aesthetic-mappings" id="toc-aesthetic-mappings" class="nav-link" data-scroll-target="#aesthetic-mappings"><span class="header-section-number">6</span> 3. Aesthetic Mappings</a>
+<a href="#adding-geoms" id="toc-adding-geoms" class="nav-link" data-scroll-target="#adding-geoms"><span class="header-section-number">3.4</span> Adding Geoms</a>
   <ul class="collapse">
-<li><a href="#example-color-by-class" id="toc-example-color-by-class" class="nav-link" data-scroll-target="#example-color-by-class"><span class="header-section-number">6.0.1</span> Example: Color by class</a></li>
-  <li><a href="#in-class-exercise-2" id="toc-in-class-exercise-2" class="nav-link" data-scroll-target="#in-class-exercise-2"><span class="header-section-number">6.1</span> In-Class Exercise 2</a></li>
+<li><a href="#example-add-a-smoothing-line" id="toc-example-add-a-smoothing-line" class="nav-link" data-scroll-target="#example-add-a-smoothing-line"><span class="header-section-number">3.4.1</span> Example: Add a smoothing line</a></li>
+  <li><a href="#in-class-exercise-3" id="toc-in-class-exercise-3" class="nav-link" data-scroll-target="#in-class-exercise-3"><span class="header-section-number">3.4.2</span> In-Class Exercise 3</a></li>
   </ul>
 </li>
   <li>
-<a href="#adding-geoms" id="toc-adding-geoms" class="nav-link" data-scroll-target="#adding-geoms"><span class="header-section-number">7</span> 4. Adding Geoms</a>
+<a href="#facets" id="toc-facets" class="nav-link" data-scroll-target="#facets"><span class="header-section-number">3.5</span> Facets</a>
   <ul class="collapse">
-<li><a href="#example-add-a-smoothing-line" id="toc-example-add-a-smoothing-line" class="nav-link" data-scroll-target="#example-add-a-smoothing-line"><span class="header-section-number">7.0.1</span> Example: Add a smoothing line</a></li>
-  <li><a href="#in-class-exercise-3" id="toc-in-class-exercise-3" class="nav-link" data-scroll-target="#in-class-exercise-3"><span class="header-section-number">7.1</span> In-Class Exercise 3</a></li>
+<li><a href="#example-facet-by-drive-type" id="toc-example-facet-by-drive-type" class="nav-link" data-scroll-target="#example-facet-by-drive-type"><span class="header-section-number">3.5.1</span> Example: Facet by drive type</a></li>
+  <li><a href="#in-class-exercise-4" id="toc-in-class-exercise-4" class="nav-link" data-scroll-target="#in-class-exercise-4"><span class="header-section-number">3.5.2</span> In-Class Exercise 4</a></li>
   </ul>
 </li>
-  <li>
-<a href="#facets" id="toc-facets" class="nav-link" data-scroll-target="#facets"><span class="header-section-number">8</span> 5. Facets</a>
-  <ul class="collapse">
-<li><a href="#example-facet-by-drive-type" id="toc-example-facet-by-drive-type" class="nav-link" data-scroll-target="#example-facet-by-drive-type"><span class="header-section-number">8.0.1</span> Example: Facet by drive type</a></li>
-  <li><a href="#in-class-exercise-4" id="toc-in-class-exercise-4" class="nav-link" data-scroll-target="#in-class-exercise-4"><span class="header-section-number">8.1</span> In-Class Exercise 4</a></li>
-  </ul>
-</li>
-  <li><a href="#customizing-plots" id="toc-customizing-plots" class="nav-link" data-scroll-target="#customizing-plots"><span class="header-section-number">9</span> 6. Customizing Plots</a></li>
-  <li><a href="#in-class-challenge" id="toc-in-class-challenge" class="nav-link" data-scroll-target="#in-class-challenge"><span class="header-section-number">10</span> 7. In-Class Challenge</a></li>
-  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">11</span> Homework Preview</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">12</span> Next Steps</a></li>
+  <li><a href="#customizing-plots" id="toc-customizing-plots" class="nav-link" data-scroll-target="#customizing-plots"><span class="header-section-number">3.6</span> Customizing Plots</a></li>
+  <li><a href="#in-class-challenge" id="toc-in-class-challenge" class="nav-link" data-scroll-target="#in-class-challenge"><span class="header-section-number">3.7</span> In-Class Challenge</a></li>
+  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">3.8</span> Homework Preview</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">3.9</span> Next Steps</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/marctollis/cs506-book/blob/main/ggplot2.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/marctollis/cs506-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -303,17 +305,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Create facets to display subsets of data</li>
 <li>Customize plots for clear communication</li>
 </ul>
-<hr></section><section id="introduction-to-data-visualization" class="level1" data-number="4"><h1 data-number="4">
-<span class="header-section-number">4</span> 1. Introduction to Data Visualization</h1>
+<hr></section><section id="introduction-to-data-visualization" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="introduction-to-data-visualization">
+<span class="header-section-number">3.2</span> Introduction to Data Visualization</h2>
 <p>This week we begin with <strong>visualization first</strong>, following <em>R for Data Science (Ch. 2)</em>.<br><code>ggplot2</code> is part of the tidyverse and implements the <strong>grammar of graphics</strong>.<br>
 We will use the built-in <code>mpg</code> dataset for examples.</p>
-<hr></section><section id="ggplot2-basics" class="level1" data-number="5"><h1 data-number="5">
-<span class="header-section-number">5</span> 2. ggplot2 Basics</h1>
+<hr></section><section id="ggplot2-basics" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="ggplot2-basics">
+<span class="header-section-number">3.3</span> ggplot2 Basics</h2>
 <p>The <strong>template</strong> for a ggplot is:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;</span>GEOM_FUNCTION<span class="sc">&gt;</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>MAPPINGS<span class="sc">&gt;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="example-scatterplot-of-engine-size-vs.-highway-mpg" class="level3" data-number="5.0.1"><h3 data-number="5.0.1" class="anchored" data-anchor-id="example-scatterplot-of-engine-size-vs.-highway-mpg">
-<span class="header-section-number">5.0.1</span> Example: Scatterplot of engine size vs.&nbsp;highway mpg</h3>
+<section id="example-scatterplot-of-engine-size-vs.-highway-mpg" class="level3" data-number="3.3.1"><h3 data-number="3.3.1" class="anchored" data-anchor-id="example-scatterplot-of-engine-size-vs.-highway-mpg">
+<span class="header-section-number">3.3.1</span> Example: Scatterplot of engine size vs.&nbsp;highway mpg</h3>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -337,8 +339,8 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </div>
 </div>
 </div>
-<hr></section><section id="in-class-exercise-1" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="in-class-exercise-1">
-<span class="header-section-number">5.1</span> In-Class Exercise 1</h2>
+<hr></section><section id="in-class-exercise-1" class="level3" data-number="3.3.2"><h3 data-number="3.3.2" class="anchored" data-anchor-id="in-class-exercise-1">
+<span class="header-section-number">3.3.2</span> In-Class Exercise 1</h3>
 <ol type="1">
 <li>Create a scatterplot of <code>cty</code> (city mpg) vs.&nbsp;<code>hwy</code> (highway mpg).<br>
 </li>
@@ -346,11 +348,11 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </li>
 <li>Try swapping x and y—does it change the interpretation?</li>
 </ol>
-<hr></section></section><section id="aesthetic-mappings" class="level1" data-number="6"><h1 data-number="6">
-<span class="header-section-number">6</span> 3. Aesthetic Mappings</h1>
+<hr></section><section id="aesthetic-mappings" class="level3" data-number="3.3.3"><h3 data-number="3.3.3" class="anchored" data-anchor-id="aesthetic-mappings">
+<span class="header-section-number">3.3.3</span> Aesthetic Mappings</h3>
 <p>You can map variables to visual properties: color, size, shape, alpha.</p>
-<section id="example-color-by-class" class="level3" data-number="6.0.1"><h3 data-number="6.0.1" class="anchored" data-anchor-id="example-color-by-class">
-<span class="header-section-number">6.0.1</span> Example: Color by class</h3>
+</section><section id="example-color-by-class" class="level3" data-number="3.3.4"><h3 data-number="3.3.4" class="anchored" data-anchor-id="example-color-by-class">
+<span class="header-section-number">3.3.4</span> Example: Color by class</h3>
 <div class="cell">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, y <span class="op">=</span> <span class="va">hwy</span>, color <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -361,8 +363,8 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </div>
 </div>
 </div>
-<hr></section><section id="in-class-exercise-2" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="in-class-exercise-2">
-<span class="header-section-number">6.1</span> In-Class Exercise 2</h2>
+<hr></section><section id="in-class-exercise-2" class="level3" data-number="3.3.5"><h3 data-number="3.3.5" class="anchored" data-anchor-id="in-class-exercise-2">
+<span class="header-section-number">3.3.5</span> In-Class Exercise 2</h3>
 <ul>
 <li>Modify the plot to map <code>size</code> to <code>cyl</code> (number of cylinders).<br>
 </li>
@@ -370,11 +372,11 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </li>
 <li>Try using both color and shape in one plot.</li>
 </ul>
-<hr></section></section><section id="adding-geoms" class="level1" data-number="7"><h1 data-number="7">
-<span class="header-section-number">7</span> 4. Adding Geoms</h1>
+<hr></section></section><section id="adding-geoms" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="adding-geoms">
+<span class="header-section-number">3.4</span> Adding Geoms</h2>
 <p>The <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> function creates a scatterplot, but there are many geoms.</p>
-<section id="example-add-a-smoothing-line" class="level3" data-number="7.0.1"><h3 data-number="7.0.1" class="anchored" data-anchor-id="example-add-a-smoothing-line">
-<span class="header-section-number">7.0.1</span> Example: Add a smoothing line</h3>
+<section id="example-add-a-smoothing-line" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="example-add-a-smoothing-line">
+<span class="header-section-number">3.4.1</span> Example: Add a smoothing line</h3>
 <div class="cell">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, y <span class="op">=</span> <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -389,8 +391,8 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </div>
 </div>
 </div>
-<hr></section><section id="in-class-exercise-3" class="level2" data-number="7.1"><h2 data-number="7.1" class="anchored" data-anchor-id="in-class-exercise-3">
-<span class="header-section-number">7.1</span> In-Class Exercise 3</h2>
+<hr></section><section id="in-class-exercise-3" class="level3" data-number="3.4.2"><h3 data-number="3.4.2" class="anchored" data-anchor-id="in-class-exercise-3">
+<span class="header-section-number">3.4.2</span> In-Class Exercise 3</h3>
 <ul>
 <li>Add a <code><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth()</a></code> line to your plot from Exercise 1.<br>
 </li>
@@ -398,11 +400,11 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </li>
 <li>Change the color of the line manually.</li>
 </ul>
-<hr></section></section><section id="facets" class="level1" data-number="8"><h1 data-number="8">
-<span class="header-section-number">8</span> 5. Facets</h1>
+<hr></section></section><section id="facets" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="facets">
+<span class="header-section-number">3.5</span> Facets</h2>
 <p>Facets split the data into subplots based on a variable.</p>
-<section id="example-facet-by-drive-type" class="level3" data-number="8.0.1"><h3 data-number="8.0.1" class="anchored" data-anchor-id="example-facet-by-drive-type">
-<span class="header-section-number">8.0.1</span> Example: Facet by drive type</h3>
+<section id="example-facet-by-drive-type" class="level3" data-number="3.5.1"><h3 data-number="3.5.1" class="anchored" data-anchor-id="example-facet-by-drive-type">
+<span class="header-section-number">3.5.1</span> Example: Facet by drive type</h3>
 <div class="cell">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, y <span class="op">=</span> <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -414,15 +416,15 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </div>
 </div>
 </div>
-<hr></section><section id="in-class-exercise-4" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="in-class-exercise-4">
-<span class="header-section-number">8.1</span> In-Class Exercise 4</h2>
+<hr></section><section id="in-class-exercise-4" class="level3" data-number="3.5.2"><h3 data-number="3.5.2" class="anchored" data-anchor-id="in-class-exercise-4">
+<span class="header-section-number">3.5.2</span> In-Class Exercise 4</h3>
 <ul>
 <li>Use <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code> to facet the plot by <code>class</code>.<br>
 </li>
 <li>Try <code>facet_grid(drv ~ cyl)</code>—what do you observe?</li>
 </ul>
-<hr></section></section><section id="customizing-plots" class="level1" data-number="9"><h1 data-number="9">
-<span class="header-section-number">9</span> 6. Customizing Plots</h1>
+<hr></section></section><section id="customizing-plots" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="customizing-plots">
+<span class="header-section-number">3.6</span> Customizing Plots</h2>
 <p>You can add labels, titles, and themes to improve clarity.</p>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
@@ -441,8 +443,8 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </div>
 </div>
 </div>
-<hr></section><section id="in-class-challenge" class="level1" data-number="10"><h1 data-number="10">
-<span class="header-section-number">10</span> 7. In-Class Challenge</h1>
+<hr></section><section id="in-class-challenge" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="in-class-challenge">
+<span class="header-section-number">3.7</span> In-Class Challenge</h2>
 <p>Using the <code>mpg</code> dataset:</p>
 <ol type="1">
 <li>Make a scatterplot of <code>displ</code> vs <code>hwy</code>.<br>
@@ -453,8 +455,8 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </li>
 <li>Add labels and use a clean theme.</li>
 </ol>
-<hr></section><section id="homework-preview" class="level1" data-number="11"><h1 data-number="11">
-<span class="header-section-number">11</span> Homework Preview</h1>
+<hr></section><section id="homework-preview" class="level2" data-number="3.8"><h2 data-number="3.8" class="anchored" data-anchor-id="homework-preview">
+<span class="header-section-number">3.8</span> Homework Preview</h2>
 <p>For <strong>Homework 1 (Visualization)</strong>, you will:</p>
 <ul>
 <li>Use the <code>mpg</code> dataset (or another dataset of your choice).<br>
@@ -468,8 +470,8 @@ We will use the built-in <code>mpg</code> dataset for examples.</p>
 </li>
 <li>Render your <code>.qmd</code> to PDF and submit on Canvas.</li>
 </ul>
-<hr></section><section id="next-steps" class="level1" data-number="12"><h1 data-number="12">
-<span class="header-section-number">12</span> Next Steps</h1>
+<hr></section><section id="next-steps" class="level2" data-number="3.9"><h2 data-number="3.9" class="anchored" data-anchor-id="next-steps">
+<span class="header-section-number">3.9</span> Next Steps</h2>
 <p>Next week, we begin <strong>data transformation</strong> using <code>dplyr</code> to manipulate data before plotting.</p>
 
 
@@ -943,8 +945,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./Rintro.html" class="pagination-link" aria-label="Week 1: Introduction to R, RStudio, and Quarto">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 1: Introduction to R, RStudio, and Quarto</span></span>
+      <a href="./Rintro.html" class="pagination-link" aria-label="Introduction to R, RStudio, and Quarto">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R, RStudio, and Quarto</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -969,7 +971,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. Introduction to Data Visualization</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction to Data Visualization</span></span>
 <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>This week we begin with **visualization first**, following *R for Data Science (Ch. 2)*.\</span>
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="in">`ggplot2`</span> is part of the tidyverse and implements the **grammar of graphics**.\</span>
@@ -977,7 +979,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># 2. ggplot2 Basics</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## ggplot2 Basics</span></span>
 <span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>The **template** for a ggplot is:</span>
 <span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
@@ -997,7 +999,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 1</span></span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 1</span></span>
 <span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Create a scatterplot of <span class="in">`cty`</span> (city mpg) vs. <span class="in">`hwy`</span> (highway mpg).\</span>
 <span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>What relationship do you see?\</span>
@@ -1005,7 +1007,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a><span class="fu"># 3. Aesthetic Mappings</span></span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a><span class="fu">### Aesthetic Mappings</span></span>
 <span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>You can map variables to visual properties: color, size, shape, alpha.</span>
 <span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a></span>
@@ -1018,7 +1020,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 2</span></span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 2</span></span>
 <span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Modify the plot to map <span class="in">`size`</span> to <span class="in">`cyl`</span> (number of cylinders).\</span>
 <span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Map <span class="in">`shape`</span> to <span class="in">`drv`</span> (drive type).\</span>
@@ -1026,7 +1028,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="fu"># 4. Adding Geoms</span></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="fu">## Adding Geoms</span></span>
 <span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a>The <span class="in">`geom_point()`</span> function creates a scatterplot, but there are many geoms.</span>
 <span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a></span>
@@ -1040,7 +1042,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 3</span></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 3</span></span>
 <span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Add a <span class="in">`geom_smooth()`</span> line to your plot from Exercise 1.\</span>
 <span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Try setting <span class="in">`se = FALSE`</span> to remove the confidence band.\</span>
@@ -1048,7 +1050,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a><span class="fu"># 5. Facets</span></span>
+<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a><span class="fu">## Facets</span></span>
 <span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a>Facets split the data into subplots based on a variable.</span>
 <span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a></span>
@@ -1062,14 +1064,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Exercise 4</span></span>
+<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 4</span></span>
 <span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use <span class="in">`facet_wrap()`</span> to facet the plot by <span class="in">`class`</span>.\</span>
 <span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Try <span class="in">`facet_grid(drv ~ cyl)`</span>—what do you observe?</span>
 <span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a><span class="fu"># 6. Customizing Plots</span></span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a><span class="fu">## Customizing Plots</span></span>
 <span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>You can add labels, titles, and themes to improve clarity.</span>
 <span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a></span>
@@ -1087,7 +1089,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a><span class="fu"># 7. In-Class Challenge</span></span>
+<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Challenge</span></span>
 <span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a>Using the <span class="in">`mpg`</span> dataset:</span>
 <span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a></span>
@@ -1098,7 +1100,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-154"><a href="#cb10-154" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-155"><a href="#cb10-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a><span class="fu"># Homework Preview</span></span>
+<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a><span class="fu">## Homework Preview</span></span>
 <span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a>For **Homework 1 (Visualization)**, you will:</span>
 <span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a></span>
@@ -1111,7 +1113,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-167"><a href="#cb10-167" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a><span class="fu"># Next Steps</span></span>
+<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
 <span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a>Next week, we begin **data transformation** using <span class="in">`dplyr`</span> to manipulate data before plotting.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
