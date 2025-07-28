@@ -1,5 +1,5 @@
 ---
-title: "Week 7: Tidy Data with tidyr"
+title: "Tidy Data with tidyr"
 ---
 
 ## Learning Objectives

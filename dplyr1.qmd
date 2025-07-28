@@ -1,5 +1,5 @@
 ---
-title: "Week 3: Data Transformation with dplyr (Part 1)"
+title: "Data Transformation with dplyr (Part 1)"
 ---
 
 ## Learning Objectives
