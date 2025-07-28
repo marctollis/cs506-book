@@ -75,7 +75,7 @@ The `readxl` package is used to read Excel files (`.xls`, `.xlsx`).
 
 ### Example: Reading an Excel sheet
 
-```{r}
+```{r, eval=FALSE}
 library(readxl)
 
 excel_df <- read_excel("data/example.xlsx", sheet = "Sheet1")
@@ -102,7 +102,7 @@ When column parsing fails:
 
 Example:
 
-```{r}
+```{r, eval=FALSE}
 bad <- read_csv("data/bad.csv")
 problems(bad)
 ```
