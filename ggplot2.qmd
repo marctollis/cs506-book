@@ -1,5 +1,5 @@
 ---
-title: "Week 2: Data Visualization with ggplot2"
+title: "Data Visualization with ggplot2"
 ---
 
 ## Learning Objectives

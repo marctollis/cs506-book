@@ -132,61 +132,61 @@
   {
     "objectID": "ggplot2.html",
     "href": "ggplot2.html",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "",
     "text": "3.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#learning-objectives",
     "href": "ggplot2.html#learning-objectives",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "",
     "text": "Create basic scatterplots using ggplot2\n\nMap variables to aesthetics (color, size, shape)\nUse different geoms (points, smooth lines, histograms)\nCreate facets to display subsets of data\nCustomize plots for clear communication",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#in-class-exercise-1",
     "href": "ggplot2.html#in-class-exercise-1",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "\n5.1 In-Class Exercise 1",
     "text": "5.1 In-Class Exercise 1\n\nCreate a scatterplot of cty (city mpg) vs. hwy (highway mpg).\n\nWhat relationship do you see?\n\nTry swapping x and y—does it change the interpretation?",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#in-class-exercise-2",
     "href": "ggplot2.html#in-class-exercise-2",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "\n6.1 In-Class Exercise 2",
     "text": "6.1 In-Class Exercise 2\n\nModify the plot to map size to cyl (number of cylinders).\n\nMap shape to drv (drive type).\n\nTry using both color and shape in one plot.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#in-class-exercise-3",
     "href": "ggplot2.html#in-class-exercise-3",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "\n7.1 In-Class Exercise 3",
     "text": "7.1 In-Class Exercise 3\n\nAdd a geom_smooth() line to your plot from Exercise 1.\n\nTry setting se = FALSE to remove the confidence band.\n\nChange the color of the line manually.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
     "objectID": "ggplot2.html#in-class-exercise-4",
     "href": "ggplot2.html#in-class-exercise-4",
-    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "title": "\n3  Data Visualization with ggplot2\n",
     "section": "\n8.1 In-Class Exercise 4",
     "text": "8.1 In-Class Exercise 4\n\nUse facet_wrap() to facet the plot by class.\n\nTry facet_grid(drv ~ cyl)—what do you observe?",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
   },
   {
@@ -242,321 +242,321 @@
   {
     "objectID": "dplyr2.html",
     "href": "dplyr2.html",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "",
     "text": "5.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#learning-objectives",
     "href": "dplyr2.html#learning-objectives",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "",
     "text": "Group data with group_by()\n\nCompute summary statistics with summarize()\n\nUse multiple summaries with grouped data\nCombine multiple datasets using join functions\nPractice chaining multiple verbs with the pipe |&gt;",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#in-class-exercise-1-grouped-summaries",
     "href": "dplyr2.html#in-class-exercise-1-grouped-summaries",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "\n6.1 In-Class Exercise 1 – Grouped Summaries",
     "text": "6.1 In-Class Exercise 1 – Grouped Summaries\nUsing flights:\n\nGroup by origin and calculate the average departure delay.\n\nGroup by carrier and find the number of flights and average arrival delay.\n\nWhich carrier has the highest average arrival delay?",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#in-class-exercise-2-multiple-grouping",
     "href": "dplyr2.html#in-class-exercise-2-multiple-grouping",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "\n7.1 In-Class Exercise 2 – Multiple Grouping",
     "text": "7.1 In-Class Exercise 2 – Multiple Grouping\n\nGroup by origin and carrier.\n\nSummarize with the average air_time.\n\nArrange results to see which origin-carrier combination has the longest average flights.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#in-class-exercise-3-joins",
     "href": "dplyr2.html#in-class-exercise-3-joins",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "\n8.1 In-Class Exercise 3 – Joins",
     "text": "8.1 In-Class Exercise 3 – Joins\n\nUse left_join() to add airline names to the flights dataset.\n\nUse count() to find how many flights each airline operates.\n\nArrange results by the number of flights.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#in-class-challenge",
     "href": "dplyr2.html#in-class-challenge",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "\n9.1 In-Class Challenge",
     "text": "9.1 In-Class Challenge\nUsing the flights dataset:\n\nJoin airline names\n\nGroup by airline name\n\nSummarize number of flights, average departure delay, and average arrival delay\n\nArrange by average arrival delay\n\nIdentify the airline with the longest delays",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "eda.html",
     "href": "eda.html",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "",
     "text": "6.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#learning-objectives",
     "href": "eda.html#learning-objectives",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "",
     "text": "Understand the purpose of exploratory data analysis (EDA)\nVisualize distributions of single variables\nExamine relationships between variables\nDetect patterns, clusters, and outliers\nUse transformations to clarify patterns",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#categorical-variables",
     "href": "eda.html#categorical-variables",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n8.1 Categorical Variables",
     "text": "8.1 Categorical Variables\nUse a bar chart (geom_bar()):\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nggplot(data = diamonds) +\n  geom_bar(mapping = aes(x = cut))",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#continuous-variables",
     "href": "eda.html#continuous-variables",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n8.2 Continuous Variables",
     "text": "8.2 Continuous Variables\nUse a histogram (geom_histogram()):\n\nggplot(data = diamonds) +\n  geom_histogram(mapping = aes(x = carat), binwidth = 0.5)\n\n\n\n\n\n\n\nYou can also use geom_freqpoly() for density curves.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#in-class-exercise-1-single-variables",
     "href": "eda.html#in-class-exercise-1-single-variables",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n8.3 In-Class Exercise 1 – Single Variables",
     "text": "8.3 In-Class Exercise 1 – Single Variables\n\nPlot the distribution of color using a bar chart.\n\nPlot a histogram of price with a binwidth of 1000.\n\nWhat patterns or anomalies do you see?",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#two-continuous-variables",
     "href": "eda.html#two-continuous-variables",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n9.1 Two Continuous Variables",
     "text": "9.1 Two Continuous Variables\nScatterplots show relationships:\n\nggplot(data = diamonds) +\n  geom_point(mapping = aes(x = carat, y = price), alpha = 0.3)\n\n\n\n\n\n\n\nUse alpha to reduce overplotting.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#categorical-vs.-continuous",
     "href": "eda.html#categorical-vs.-continuous",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n9.2 Categorical vs. Continuous",
     "text": "9.2 Categorical vs. Continuous\nBoxplots work well:\n\nggplot(data = diamonds) +\n  geom_boxplot(mapping = aes(x = cut, y = price))",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#in-class-exercise-2-relationships",
     "href": "eda.html#in-class-exercise-2-relationships",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n9.3 In-Class Exercise 2 – Relationships",
     "text": "9.3 In-Class Exercise 2 – Relationships\n\nCreate a scatterplot of carat vs price.\n\nColor the points by cut.\n\nMake a boxplot of price across diamond color categories.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#in-class-exercise-3-patterns-and-transformations",
     "href": "eda.html#in-class-exercise-3-patterns-and-transformations",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n11.1 In-Class Exercise 3 – Patterns and Transformations",
     "text": "11.1 In-Class Exercise 3 – Patterns and Transformations\n\nIdentify any outliers in the diamonds dataset using filters.\n\nApply a log transformation to price.\n\nDoes the relationship between carat and price become clearer?",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#in-class-challenge-eda-workflow",
     "href": "eda.html#in-class-challenge-eda-workflow",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n12.1 In-Class Challenge – EDA Workflow",
     "text": "12.1 In-Class Challenge – EDA Workflow\n\nExplore diamonds by:\n\nVisualizing distributions of at least two variables\nPlotting relationships between two variables\nDetecting outliers\nApplying a transformation to clarify a pattern",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "tidy.html",
     "href": "tidy.html",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "",
     "text": "7.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#learning-objectives",
     "href": "tidy.html#learning-objectives",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "",
     "text": "Explain why tidy data improves analysis and visualization\nReshape data between wide and long formats using pivot_longer() and pivot_wider()\n\nSeparate and unite columns using separate() and unite()\n\nApply tidying techniques to messy real-world datasets\nPrepare datasets for use with dplyr and ggplot2",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#in-class-exercise-1-pivoting",
     "href": "tidy.html#in-class-exercise-1-pivoting",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "\n9.1 In-Class Exercise 1 – Pivoting",
     "text": "9.1 In-Class Exercise 1 – Pivoting\n\nUse pivot_longer() to convert table4a to long format.\n\nUse pivot_wider() on table2 to create separate columns for type.\n\nWhich format is easier to use with ggplot2 and dplyr?",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#in-class-exercise-2-separate-and-unite",
     "href": "tidy.html#in-class-exercise-2-separate-and-unite",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "\n10.1 In-Class Exercise 2 – Separate and Unite",
     "text": "10.1 In-Class Exercise 2 – Separate and Unite\n\nUse separate() to split the rate column in table3.\n\nUse unite() to combine century and year into one column.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#in-class-exercise-3-who-dataset",
     "href": "tidy.html#in-class-exercise-3-who-dataset",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "\n11.1 In-Class Exercise 3 – WHO Dataset",
     "text": "11.1 In-Class Exercise 3 – WHO Dataset\n\nPivot who longer to create key and cases.\n\nSeparate key into multiple components.\n\nCount total cases by country.\n\nWhich country has the highest reported cases?",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "workflow.html",
     "href": "workflow.html",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "",
     "text": "8.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
     "objectID": "workflow.html#learning-objectives",
     "href": "workflow.html#learning-objectives",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "",
     "text": "Organize your work with R projects\nUse Quarto for reproducible documents\nFollow best practices for naming files and structuring directories\nIncorporate code, text, and output into a single reproducible report\nUse version control with GitHub (optional, for advanced students)",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
     "objectID": "workflow.html#in-class-exercise-1-project-setup",
     "href": "workflow.html#in-class-exercise-1-project-setup",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "\n10.1 In-Class Exercise 1 – Project Setup",
     "text": "10.1 In-Class Exercise 1 – Project Setup\n\nCreate a new RStudio Project for this course.\n\nMake folders: data, scripts, outputs.\n\nSave your .qmd homework file in the project root.\n\nRender your Quarto document and confirm outputs stay organized.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
     "objectID": "workflow.html#in-class-exercise-2-quarto-report",
     "href": "workflow.html#in-class-exercise-2-quarto-report",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "\n11.1 In-Class Exercise 2 – Quarto Report",
     "text": "11.1 In-Class Exercise 2 – Quarto Report\n\nCreate a .qmd file that loads a dataset and runs a simple analysis.\n\nAdd at least one plot and one table.\n\nRender to PDF and check the output.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
     "objectID": "workflow.html#in-class-challenge-reproducible-mini-report",
     "href": "workflow.html#in-class-challenge-reproducible-mini-report",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "\n13.1 In-Class Challenge – Reproducible Mini-Report",
     "text": "13.1 In-Class Challenge – Reproducible Mini-Report\n\nSet up a project with an organized folder structure\nCreate a Quarto document that:\n\nReads a dataset\nRuns a simple transformation\nCreates a plot\nSummarizes the results in text\n\n\nRender to PDF and check for a clean, reproducible output",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
     "objectID": "dataimport.html",
     "href": "dataimport.html",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "",
     "text": "9.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#learning-objectives",
     "href": "dataimport.html#learning-objectives",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "",
     "text": "Import CSV and TSV files with readr\n\nRead Excel files with readxl\n\nUnderstand how column types are parsed\nParse dates, times, and numbers correctly\nDiagnose and fix import problems",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#in-class-exercise-1-csvtsv",
     "href": "dataimport.html#in-class-exercise-1-csvtsv",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "\n10.1 In-Class Exercise 1 – CSV/TSV",
     "text": "10.1 In-Class Exercise 1 – CSV/TSV\n\nDownload a small CSV file (e.g., from the course repository).\n\nRead it into R using read_csv().\n\nInspect its structure with glimpse() and summary().\n\nWhat data types were automatically detected?",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#in-class-exercise-2-parsing",
     "href": "dataimport.html#in-class-exercise-2-parsing",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "\n11.1 In-Class Exercise 2 – Parsing",
     "text": "11.1 In-Class Exercise 2 – Parsing\n\nCreate a vector of messy numbers: c(\"$100\", \"250%\", \"300\").\n\nUse parse_number() to extract numeric values.\n\nCreate a vector of dates as strings and use parse_date().",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#in-class-exercise-3-excel-import",
     "href": "dataimport.html#in-class-exercise-3-excel-import",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "\n12.1 In-Class Exercise 3 – Excel Import",
     "text": "12.1 In-Class Exercise 3 – Excel Import\n\nUse a provided Excel file (or download one).\n\nRead the first sheet with read_excel().\n\nSpecify a different sheet and check the result.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
     "objectID": "dataimport.html#in-class-challenge-import-clean-workflow",
     "href": "dataimport.html#in-class-challenge-import-clean-workflow",
-    "title": "\n9  Week 9: Data Import with readr and readxl\n",
+    "title": "\n9  Data Import with readr and readxl\n",
     "section": "\n14.1 In-Class Challenge – Import & Clean Workflow",
     "text": "14.1 In-Class Challenge – Import & Clean Workflow\n\nImport a messy CSV file with mixed types.\n\nFix incorrect column parsing.\n\nConvert a date column to proper Date format.\n\nSummarize the data by a grouping variable.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 9: Data Import with readr and readxl</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
   },
   {
@@ -634,6 +634,66 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html",
+    "href": "strings.html",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "",
+    "text": "10.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#learning-objectives",
+    "href": "strings.html#learning-objectives",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "",
+    "text": "Manipulate strings using the stringr package\nDetect patterns with regular expressions (regex)\nExtract, replace, and split text\nClean messy text data for analysis",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-exercise-1-basic-string-operations",
+    "href": "strings.html#in-class-exercise-1-basic-string-operations",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n12.1 In-Class Exercise 1 – Basic String Operations",
+    "text": "12.1 In-Class Exercise 1 – Basic String Operations\n\nCreate a vector of at least 5 words.\n\nMeasure their lengths with str_length().\n\nConcatenate them with the phrase \" is cool\".",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-exercise-2-pattern-detection",
+    "href": "strings.html#in-class-exercise-2-pattern-detection",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n13.1 In-Class Exercise 2 – Pattern Detection",
+    "text": "13.1 In-Class Exercise 2 – Pattern Detection\n\nCreate a vector of email-like strings.\n\nUse str_detect() to check which contain \"@\".\n\nWrite a regex to detect strings ending in .com.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-exercise-3-extraction-and-replacement",
+    "href": "strings.html#in-class-exercise-3-extraction-and-replacement",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n14.1 In-Class Exercise 3 – Extraction and Replacement",
+    "text": "14.1 In-Class Exercise 3 – Extraction and Replacement\n\nExtract digits from a vector of alphanumeric strings.\n\nReplace the word \"dog\" with \"puppy\" in a text vector.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+    ]
+  },
+  {
+    "objectID": "strings.html#in-class-challenge-text-cleaning",
+    "href": "strings.html#in-class-challenge-text-cleaning",
+    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "section": "\n15.1 In-Class Challenge – Text Cleaning",
+    "text": "15.1 In-Class Challenge – Text Cleaning\n\nCreate a vector of messy product names with extra spaces and symbols.\n\nUse str_replace_all() and str_trim() to clean them.\n\nExtract numeric prices from the strings.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   }
 ]

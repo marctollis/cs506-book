@@ -24,6 +24,8 @@ book:
     - tidy.qmd
     - workflow.qmd
     - dataimport.qmd
+    - strings.qmd
+    - factors.qmd
 
   appendices:
     - syllabus.qmd
