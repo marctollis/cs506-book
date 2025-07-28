@@ -800,80 +800,113 @@
     ]
   },
   {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
+    "objectID": "codestyle.html",
+    "href": "codestyle.html",
+    "title": "Appendix A: Appendix: Coding Style Guidelines",
     "section": "",
-    "text": "B Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
+    "text": "A.1 Why Style Matters\nConsistent code style makes your work:\nThis appendix summarizes the tidyverse style guide based on R4DS Workflow: Style.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendix: Coding Style Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "codestyle.html#why-style-matters",
+    "href": "codestyle.html#why-style-matters",
+    "title": "Appendix A: Appendix: Coding Style Guidelines",
+    "section": "",
+    "text": "Easier to read (for you and collaborators)\n\nEasier to debug (clean structure reveals problems quickly)\n\nEasier to maintain (future you will thank present you)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendix: Coding Style Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "codestyle.html#in-class-exercise",
+    "href": "codestyle.html#in-class-exercise",
+    "title": "Appendix A: Appendix: Coding Style Guidelines",
+    "section": "\nI.1 In-Class Exercise",
+    "text": "I.1 In-Class Exercise\n\nTake a messy R script (provided in class).\n\nReformat it to follow these style guidelines.\n\nCompare before vs. after readability.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendix: Coding Style Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "",
+    "text": "C Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#canvas-recorded-lectures",
     "href": "syllabus.html#canvas-recorded-lectures",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "B.1 Canvas & Recorded Lectures",
-    "text": "B.1 Canvas & Recorded Lectures\nWe will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "C.1 Canvas & Recorded Lectures",
+    "text": "C.1 Canvas & Recorded Lectures\nWe will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#cs506-book-website",
     "href": "syllabus.html#cs506-book-website",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "B.2 CS506 Book Website",
-    "text": "B.2 CS506 Book Website\nI have compiled a course website that has supplemental text and coded examples that we will walk through in class. This website essentially serves as the course textbook and is required reading. There will be other required reading material.",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "C.2 CS506 Book Website",
+    "text": "C.2 CS506 Book Website\nI have compiled a course website that has supplemental text and coded examples that we will walk through in class. This website essentially serves as the course textbook and is required reading. There will be other required reading material.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#course-student-learning-outcomes",
     "href": "syllabus.html#course-student-learning-outcomes",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "C.1 Course Student Learning Outcomes",
-    "text": "C.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "D.1 Course Student Learning Outcomes",
+    "text": "D.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#program-student-outcomes-supported-by-this-class",
     "href": "syllabus.html#program-student-outcomes-supported-by-this-class",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "C.2 Program Student Outcomes supported by this class",
-    "text": "C.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "D.2 Program Student Outcomes supported by this class",
+    "text": "D.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#course-policies",
     "href": "syllabus.html#course-policies",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "H.1 Course Policies",
-    "text": "H.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nCollaboration: Allowed for homeworks; problem sets and quizzes must be completed individually. - Late Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "I.1 Course Policies",
+    "text": "I.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nCollaboration: Allowed for homeworks; problem sets and quizzes must be completed individually. - Late Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#university-policies",
     "href": "syllabus.html#university-policies",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "H.2 University Policies",
-    "text": "H.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
+    "title": "Appendix B: CS506: Data Wrangling and Management– Syllabus",
+    "section": "I.2 University Policies",
+    "text": "I.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   }
 ]
