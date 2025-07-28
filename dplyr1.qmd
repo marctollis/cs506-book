@@ -1,152 +1,132 @@
 ---
-title: "Data Manipulation with dplyr (Part 1)"
+title: "Week 3: Data Transformation with dplyr (Part 1)"
 ---
 
 ## Learning Objectives
 
 By the end of this chapter, you should be able to:
 
--   Filter rows using `filter()`\
--   Select columns using `select()`\
--   Create new columns using `mutate()`\
--   Sort rows using `arrange()`\
--   Use the pipe operator (`|>`) or `%>%` for chaining functions
+- Filter rows using `filter()`
+- Sort rows using `arrange()`
+- Select columns using `select()`
+- Create or modify columns using `mutate()`
+- Combine multiple transformations using the base R pipe `|>`
 
-------------------------------------------------------------------------
+---
 
-## Introduction to dplyr
+# 1. Introduction
 
-The `dplyr` package is the foundation of tidy data manipulation. It provides a consistent grammar of data wrangling using **verbs** that correspond to common tasks:
+This chapter follows *R for Data Science (Ch. 3)* and introduces `dplyr`, a tidyverse package for data transformation.  
+We will use the `nycflights13::flights` dataset for examples.
 
-| Verb        | Action                       |
-|-------------|------------------------------|
-| `filter()`  | Pick rows based on condition |
-| `select()`  | Pick columns                 |
-| `mutate()`  | Create or transform columns  |
-| `arrange()` | Sort rows                    |
-| `rename()`  | Rename columns               |
+---
 
-We’ll explore each of these in this chapter.
+# 2. Working with Rows
 
-------------------------------------------------------------------------
+### `filter()`
 
-## Example Dataset: nycflights13
-
-We'll use the `flights` dataset from the `nycflights13` package, which contains \~336,000 flights departing NYC in 2013.
-
-```{r install, eval=FALSE}
-# Run this in the Console if you haven't installed yet
-# install.packages("nycflights13")
-```
+`filter()` keeps rows that match given conditions.
 
 ```{r}
 library(tidyverse)
 library(nycflights13)
 
-glimpse(flights)
+flights |>
+  filter(month == 1, day == 1)
 ```
 
-## Filtering Rows: `filter()`
+### `arrange()`
 
-Use `filter()` to extract a subset of rows that match logical conditions.
+`arrange()` orders rows by a column.
 
 ```{r}
-# Flights on January 1st
-jan1 <- filter(flights, month == 1, day == 1)
-
-# Flights with arrival delay more than 2 hours
-arr_delay <- filter(flights, arr_delay > 120)
+flights |>
+  arrange(desc(dep_delay))
 ```
 
-## Selecting columns: `select()`
+---
 
-Use `select()` to pick a subset of columns.
+## In-Class Exercise 1 – Rows
+
+Using the `flights` dataset:
+
+1. Filter for flights departing from **JFK** in **July**.  
+2. Arrange by **arrival delay** (largest to smallest).  
+3. Identify the flight with the worst delay.
+
+---
+
+# 3. Working with Columns
+
+### `select()`
+
+`select()` chooses columns.
 
 ```{r}
-# Select specific columns
-select(flights, year, month, day, dep_time, arr_time)
-
-# Drop columns with minus
-select(flights, -year, -month, -day)
+flights |>
+  select(year, month, day, dep_delay, arr_delay)
 ```
 
-You can also use `starts_with()`, `contains()`, and `matches()` for flexible column selection.
+### `mutate()`
 
-## Creating New Columns: `mutate()`
-
-Use `mutate()` to add new columns or transform existing ones.
+`mutate()` creates or modifies columns.
 
 ```{r}
-# Compute speed in miles per hour
-flights <- mutate(flights, speed = distance / air_time * 60)
-
-# Create multiple new columns
-flights <- mutate(flights,
-  gain = arr_delay - dep_delay,
-  hours = air_time / 60
-)
+flights |>
+  mutate(speed = distance / air_time * 60) |>
+  select(tailnum, distance, air_time, speed)
 ```
 
-## Sorting Rows: `arrange()`
+---
+
+## In-Class Exercise 2 – Columns
+
+1. Select `carrier`, `flight`, `dep_delay`, and `arr_delay`.  
+2. Create a column `gain = arr_delay - dep_delay`.  
+3. Display the first 10 rows.
+
+---
+
+# 4. Using Pipes to Combine Steps
+
+The base R pipe `|>` passes results from one function to the next, making code easier to read.
 
 ```{r}
-# Sort by arrival delay
-arrange(flights, arr_delay)
-
-# Sort in descending order
-arrange(flights, desc(arr_delay))
+flights |>
+  filter(month == 6, origin == "JFK") |>
+  select(carrier, flight, dep_delay, arr_delay) |>
+  mutate(gain = arr_delay - dep_delay) |>
+  arrange(desc(gain)) |>
+  head()
 ```
 
-## Piping Commands" `%>%` or `|>`
+---
 
-Use `%>%` (magrittr pipe) or `|>`(base R pipe) to chain commands and improve readability.
+## In-Class Exercise 3 – Pipes
 
-```{r}
-# Calculate speed for JFK departures in June
-flights |> 
-  filter(origin == "JFK", month == 6) |> 
-  mutate(speed = distance / air_time * 60) |> 
-  select(tailnum, speed, distance, air_time) |> 
-  arrange(desc(speed)) |> 
-  head(5)
-```
+Chain these steps using `|>`:
 
-Piping allows you to read your code top-to-bottom, like a recipe.
+1. Filter flights from JFK in June.  
+2. Select `carrier`, `flight`, `dep_delay`, `arr_delay`.  
+3. Create a column `gain`.  
+4. Arrange by largest gain and show the top 5.
 
-## Practice Exercises
+---
 
--   Filter all flights that departed in July and had a departure delay \> 60 minutes.
+# Homework Preview
 
--   Select only carrier, flight, and dep_delay, and sort by longest delay first.
+For Homework 2, you will:
 
--   Create a new column gain defined as arr_delay - dep_delay, and sort by biggest gain.
+- Use `flights` or another dataset.  
+- Filter for a subset of interest.  
+- Create at least two new variables with `mutate()`.  
+- Sort using `arrange()`.  
+- Save the transformed dataset and inspect it with `glimpse()` and `summary()`.  
 
--   Chain together at least 3 dplyr verbs using %\>% or \|\>.
+Render to PDF and submit on Canvas.
 
-```{r}
-# 1
-july_delays <- filter(flights, month == 7, dep_delay > 60)
+---
 
-# 2
-select(july_delays, carrier, flight, dep_delay) |> arrange(desc(dep_delay))
+# Next Steps
 
-# 3
-mutate(flights, gain = arr_delay - dep_delay) |> arrange(desc(gain))
-
-# 4
-flights %>%
-  filter(month == 1, day == 1) %>%
-  mutate(speed = distance / air_time * 60) %>%
-  arrange(desc(speed))
-```
-
-## Summary
-
--   `filter()` extracts rows by condition
--   `select()` picks columns
--   `mutate()` adds new variables
--   `arrange()` reorders rows
-
-## Next Steps
-
-In the next chapter, we’ll learn how to group data using `group_by()` and summarize it using `summarize()` — foundational tools for aggregating and analyzing grouped data. {r} Copy Edit
+Next week, we will extend these skills with `group_by()` and `summarize()` to calculate grouped summaries.

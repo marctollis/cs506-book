@@ -32,21 +32,21 @@
   {
     "objectID": "Rintro.html",
     "href": "Rintro.html",
-    "title": "\n2  Introduction to R and RStudio\n",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
     "section": "",
-    "text": "2.1 Learning Objectives\nBy the end of this chapter, you should be able to:\nR is a programming language designed for data analysis.RStudio is an Integrated Development Environment (IDE) that makes working with R easier.",
+    "text": "2.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
     "objectID": "Rintro.html#learning-objectives",
     "href": "Rintro.html#learning-objectives",
-    "title": "\n2  Introduction to R and RStudio\n",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
     "section": "",
-    "text": "Install and open R and RStudio\n\nNavigate the four-pane layout of RStudio\n\nCreate and run R scripts\n\nUnderstand the differences between the console, script editor, and environment\n\nExecute basic R operations and understand data types\n\nInstall and load R packages\n## Getting Started\n\n\n\n2.1.1 Installing R and RStudio\n\nInstall R: https://cran.r-project.org/\n\nInstall RStudio: https://posit.co/download/rstudio-desktop/\n\n\nOnce you open RStudio, you’ll see four panes:\n\n\nConsole – for running code interactively\n\n\nSource – to write and save scripts\n\n\nEnvironment/History – to view and manage objects\n\n\nFiles/Plots/Packages/Help/Viewer – navigation and visualization tools",
+    "text": "Install and open R, RStudio, and Quarto\nNavigate the four-pane layout of RStudio\nCreate and run R scripts\nUnderstand the differences between the console, script editor, and environment\nExecute basic R operations and understand data types\nInstall and load R packages\nCreate and render a Quarto (.qmd) document to .pdf",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
@@ -842,78 +842,158 @@
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "",
     "text": "B Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#canvas-recorded-lectures",
     "href": "syllabus.html#canvas-recorded-lectures",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "B.1 Canvas & Recorded Lectures",
     "text": "B.1 Canvas & Recorded Lectures\nWe will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#cs506-book-website",
     "href": "syllabus.html#cs506-book-website",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "B.2 CS506 Book Website",
     "text": "B.2 CS506 Book Website\nI have compiled a course website that has supplemental text and coded examples that we will walk through in class. This website essentially serves as the course textbook and is required reading. There will be other required reading material.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#course-student-learning-outcomes",
     "href": "syllabus.html#course-student-learning-outcomes",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "C.1 Course Student Learning Outcomes",
     "text": "C.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#program-student-outcomes-supported-by-this-class",
     "href": "syllabus.html#program-student-outcomes-supported-by-this-class",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "C.2 Program Student Outcomes supported by this class",
     "text": "C.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#course-policies",
     "href": "syllabus.html#course-policies",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "G.1 Course Policies",
-    "text": "G.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nCollaboration: Allowed for homeworks; problem sets and quizzes must be completed individually. - Late Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
+    "section": "H.1 Course Policies",
+    "text": "H.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nCollaboration: Allowed for homeworks; problem sets and quizzes must be completed individually. - Late Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#university-policies",
     "href": "syllabus.html#university-policies",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "G.2 University Policies",
-    "text": "G.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
+    "section": "H.2 University Policies",
+    "text": "H.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#installing-r-rstudio-and-quarto",
+    "href": "Rintro.html#installing-r-rstudio-and-quarto",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n3.1 Installing R, RStudio, and Quarto",
+    "text": "3.1 Installing R, RStudio, and Quarto\n\nInstall R: https://cran.r-project.org/\n\nInstall RStudio: https://posit.co/download/rstudio-desktop/\n\nInstall Quarto: https://quarto.org/docs/get-started/\n\n\nWhen you open RStudio, you’ll see four panes:\n\nConsole – runs code interactively\nSource – write and save scripts or Quarto documents\nEnvironment/History – view and manage objects\nFiles/Plots/Packages/Help/Viewer – navigation and visualization tools",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#your-first-quarto-document",
+    "href": "Rintro.html#your-first-quarto-document",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n4.1 Your First Quarto Document",
+    "text": "4.1 Your First Quarto Document\n\nIn RStudio: File → New File → Quarto Document\nReplace the header with:\n\n---\ntitle: \"My First Quarto Document\"\nauthor: \"Your Name\"\nformat: pdf\n---\n\nBelow the header, add:\n\n\nx &lt;- c(1, 2, 3, 4, 5)\nmean(x)\n\n[1] 3\n\n\n\nClick Render to produce a PDF file.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#in-class-quarto-exercise",
+    "href": "Rintro.html#in-class-quarto-exercise",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n4.2 In-Class Quarto Exercise",
+    "text": "4.2 In-Class Quarto Exercise\n\nCreate a new Quarto document with:\n\nA title, your name, and the date\nA short paragraph of text\nA code chunk that calculates the mean and standard deviation of a numeric vector\n\n\nRender it to PDF and verify it works.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#variables-and-assignments",
+    "href": "Rintro.html#variables-and-assignments",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.1 Variables and Assignments",
+    "text": "5.1 Variables and Assignments\n\nx &lt;- 5\ny &lt;- 10\nz &lt;- x + y\nz\n\n[1] 15",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#vectors-and-functions",
+    "href": "Rintro.html#vectors-and-functions",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.2 Vectors and Functions",
+    "text": "5.2 Vectors and Functions\n\nages &lt;- c(25, 30, 35, 40)\nmean(ages)\n\n[1] 32.5\n\nsd(ages)\n\n[1] 6.454972",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#data-frames",
+    "href": "Rintro.html#data-frames",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.3 Data Frames",
+    "text": "5.3 Data Frames\n\nname &lt;- c(\"Alice\", \"Bob\", \"Charlie\")\nage &lt;- c(25, 30, 35)\nstudent_data &lt;- data.frame(name, age)\nstudent_data\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#inspecting-data",
+    "href": "Rintro.html#inspecting-data",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.4 Inspecting Data",
+    "text": "5.4 Inspecting Data\n\nstr(student_data)\n\n'data.frame':   3 obs. of  2 variables:\n $ name: chr  \"Alice\" \"Bob\" \"Charlie\"\n $ age : num  25 30 35\n\nsummary(student_data)\n\n     name                age      \n Length:3           Min.   :25.0  \n Class :character   1st Qu.:27.5  \n Mode  :character   Median :30.0  \n                    Mean   :30.0  \n                    3rd Qu.:32.5  \n                    Max.   :35.0  \n\nhead(student_data)\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#comments-and-help",
+    "href": "Rintro.html#comments-and-help",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.5 Comments and Help",
+    "text": "5.5 Comments and Help\n\n# This is a comment\n?mean  # Help for the mean function",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   }
 ]
