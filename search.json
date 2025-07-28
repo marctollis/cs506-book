@@ -192,311 +192,311 @@
   {
     "objectID": "dplyr1.html",
     "href": "dplyr1.html",
-    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
+    "title": "\n4  Data Transformation with dplyr (Part 1)\n",
     "section": "",
     "text": "4.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
     "objectID": "dplyr1.html#learning-objectives",
     "href": "dplyr1.html#learning-objectives",
-    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
+    "title": "\n4  Data Transformation with dplyr (Part 1)\n",
     "section": "",
     "text": "Filter rows using filter()\n\nSort rows using arrange()\n\nSelect columns using select()\n\nCreate or modify columns using mutate()\n\nCombine multiple transformations using the base R pipe |&gt;",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
     "objectID": "dplyr1.html#in-class-exercise-1-rows",
     "href": "dplyr1.html#in-class-exercise-1-rows",
-    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
+    "title": "\n4  Data Transformation with dplyr (Part 1)\n",
     "section": "\n6.1 In-Class Exercise 1 – Rows",
     "text": "6.1 In-Class Exercise 1 – Rows\nUsing the flights dataset:\n\nFilter for flights departing from JFK in July.\n\nArrange by arrival delay (largest to smallest).\n\nIdentify the flight with the worst delay.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
     "objectID": "dplyr1.html#in-class-exercise-2-columns",
     "href": "dplyr1.html#in-class-exercise-2-columns",
-    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
+    "title": "\n4  Data Transformation with dplyr (Part 1)\n",
     "section": "\n7.1 In-Class Exercise 2 – Columns",
     "text": "7.1 In-Class Exercise 2 – Columns\n\nSelect carrier, flight, dep_delay, and arr_delay.\n\nCreate a column gain = arr_delay - dep_delay.\n\nDisplay the first 10 rows.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
     "objectID": "dplyr1.html#in-class-exercise-3-pipes",
     "href": "dplyr1.html#in-class-exercise-3-pipes",
-    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
+    "title": "\n4  Data Transformation with dplyr (Part 1)\n",
     "section": "\n8.1 In-Class Exercise 3 – Pipes",
     "text": "8.1 In-Class Exercise 3 – Pipes\nChain these steps using |&gt;:\n\nFilter flights from JFK in June.\n\nSelect carrier, flight, dep_delay, arr_delay.\n\nCreate a column gain.\n\nArrange by largest gain and show the top 5.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html",
     "href": "dplyr2.html",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "",
     "text": "5.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#learning-objectives",
     "href": "dplyr2.html#learning-objectives",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "",
     "text": "Group data with group_by()\n\nCompute summary statistics with summarize()\n\nUse multiple summaries with grouped data\nCombine multiple datasets using join functions\nPractice chaining multiple verbs with the pipe |&gt;",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#in-class-exercise-1-grouped-summaries",
     "href": "dplyr2.html#in-class-exercise-1-grouped-summaries",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "\n6.1 In-Class Exercise 1 – Grouped Summaries",
     "text": "6.1 In-Class Exercise 1 – Grouped Summaries\nUsing flights:\n\nGroup by origin and calculate the average departure delay.\n\nGroup by carrier and find the number of flights and average arrival delay.\n\nWhich carrier has the highest average arrival delay?",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#in-class-exercise-2-multiple-grouping",
     "href": "dplyr2.html#in-class-exercise-2-multiple-grouping",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "\n7.1 In-Class Exercise 2 – Multiple Grouping",
     "text": "7.1 In-Class Exercise 2 – Multiple Grouping\n\nGroup by origin and carrier.\n\nSummarize with the average air_time.\n\nArrange results to see which origin-carrier combination has the longest average flights.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#in-class-exercise-3-joins",
     "href": "dplyr2.html#in-class-exercise-3-joins",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "\n8.1 In-Class Exercise 3 – Joins",
     "text": "8.1 In-Class Exercise 3 – Joins\n\nUse left_join() to add airline names to the flights dataset.\n\nUse count() to find how many flights each airline operates.\n\nArrange results by the number of flights.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "dplyr2.html#in-class-challenge",
     "href": "dplyr2.html#in-class-challenge",
-    "title": "\n5  Week 4: Data Transformation with dplyr (Part 2)\n",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "\n9.1 In-Class Challenge",
     "text": "9.1 In-Class Challenge\nUsing the flights dataset:\n\nJoin airline names\n\nGroup by airline name\n\nSummarize number of flights, average departure delay, and average arrival delay\n\nArrange by average arrival delay\n\nIdentify the airline with the longest delays",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 4: Data Transformation with dplyr (Part 2)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
     "objectID": "eda.html",
     "href": "eda.html",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "",
     "text": "6.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#learning-objectives",
     "href": "eda.html#learning-objectives",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "",
     "text": "Understand the purpose of exploratory data analysis (EDA)\nVisualize distributions of single variables\nExamine relationships between variables\nDetect patterns, clusters, and outliers\nUse transformations to clarify patterns",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#categorical-variables",
     "href": "eda.html#categorical-variables",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n8.1 Categorical Variables",
     "text": "8.1 Categorical Variables\nUse a bar chart (geom_bar()):\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nggplot(data = diamonds) +\n  geom_bar(mapping = aes(x = cut))",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#continuous-variables",
     "href": "eda.html#continuous-variables",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n8.2 Continuous Variables",
     "text": "8.2 Continuous Variables\nUse a histogram (geom_histogram()):\n\nggplot(data = diamonds) +\n  geom_histogram(mapping = aes(x = carat), binwidth = 0.5)\n\n\n\n\n\n\n\nYou can also use geom_freqpoly() for density curves.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#in-class-exercise-1-single-variables",
     "href": "eda.html#in-class-exercise-1-single-variables",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n8.3 In-Class Exercise 1 – Single Variables",
     "text": "8.3 In-Class Exercise 1 – Single Variables\n\nPlot the distribution of color using a bar chart.\n\nPlot a histogram of price with a binwidth of 1000.\n\nWhat patterns or anomalies do you see?",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#two-continuous-variables",
     "href": "eda.html#two-continuous-variables",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n9.1 Two Continuous Variables",
     "text": "9.1 Two Continuous Variables\nScatterplots show relationships:\n\nggplot(data = diamonds) +\n  geom_point(mapping = aes(x = carat, y = price), alpha = 0.3)\n\n\n\n\n\n\n\nUse alpha to reduce overplotting.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#categorical-vs.-continuous",
     "href": "eda.html#categorical-vs.-continuous",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n9.2 Categorical vs. Continuous",
     "text": "9.2 Categorical vs. Continuous\nBoxplots work well:\n\nggplot(data = diamonds) +\n  geom_boxplot(mapping = aes(x = cut, y = price))",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#in-class-exercise-2-relationships",
     "href": "eda.html#in-class-exercise-2-relationships",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n9.3 In-Class Exercise 2 – Relationships",
     "text": "9.3 In-Class Exercise 2 – Relationships\n\nCreate a scatterplot of carat vs price.\n\nColor the points by cut.\n\nMake a boxplot of price across diamond color categories.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#in-class-exercise-3-patterns-and-transformations",
     "href": "eda.html#in-class-exercise-3-patterns-and-transformations",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n11.1 In-Class Exercise 3 – Patterns and Transformations",
     "text": "11.1 In-Class Exercise 3 – Patterns and Transformations\n\nIdentify any outliers in the diamonds dataset using filters.\n\nApply a log transformation to price.\n\nDoes the relationship between carat and price become clearer?",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#in-class-challenge-eda-workflow",
     "href": "eda.html#in-class-challenge-eda-workflow",
-    "title": "\n6  Week 5: Exploratory Data Analysis (EDA)\n",
+    "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n12.1 In-Class Challenge – EDA Workflow",
     "text": "12.1 In-Class Challenge – EDA Workflow\n\nExplore diamonds by:\n\nVisualizing distributions of at least two variables\nPlotting relationships between two variables\nDetecting outliers\nApplying a transformation to clarify a pattern",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 5: Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "tidy.html",
     "href": "tidy.html",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "",
     "text": "7.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#learning-objectives",
     "href": "tidy.html#learning-objectives",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "",
     "text": "Explain why tidy data improves analysis and visualization\nReshape data between wide and long formats using pivot_longer() and pivot_wider()\n\nSeparate and unite columns using separate() and unite()\n\nApply tidying techniques to messy real-world datasets\nPrepare datasets for use with dplyr and ggplot2",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#in-class-exercise-1-pivoting",
     "href": "tidy.html#in-class-exercise-1-pivoting",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "\n9.1 In-Class Exercise 1 – Pivoting",
     "text": "9.1 In-Class Exercise 1 – Pivoting\n\nUse pivot_longer() to convert table4a to long format.\n\nUse pivot_wider() on table2 to create separate columns for type.\n\nWhich format is easier to use with ggplot2 and dplyr?",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#in-class-exercise-2-separate-and-unite",
     "href": "tidy.html#in-class-exercise-2-separate-and-unite",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "\n10.1 In-Class Exercise 2 – Separate and Unite",
     "text": "10.1 In-Class Exercise 2 – Separate and Unite\n\nUse separate() to split the rate column in table3.\n\nUse unite() to combine century and year into one column.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#in-class-exercise-3-who-dataset",
     "href": "tidy.html#in-class-exercise-3-who-dataset",
-    "title": "\n7  Week 7: Tidy Data with tidyr\n",
+    "title": "\n7  Tidy Data with tidyr\n",
     "section": "\n11.1 In-Class Exercise 3 – WHO Dataset",
     "text": "11.1 In-Class Exercise 3 – WHO Dataset\n\nPivot who longer to create key and cases.\n\nSeparate key into multiple components.\n\nCount total cases by country.\n\nWhich country has the highest reported cases?",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 7: Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "workflow.html",
     "href": "workflow.html",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "",
     "text": "8.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
     "objectID": "workflow.html#learning-objectives",
     "href": "workflow.html#learning-objectives",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "",
     "text": "Organize your work with R projects\nUse Quarto for reproducible documents\nFollow best practices for naming files and structuring directories\nIncorporate code, text, and output into a single reproducible report\nUse version control with GitHub (optional, for advanced students)",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
     "objectID": "workflow.html#in-class-exercise-1-project-setup",
     "href": "workflow.html#in-class-exercise-1-project-setup",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "\n10.1 In-Class Exercise 1 – Project Setup",
     "text": "10.1 In-Class Exercise 1 – Project Setup\n\nCreate a new RStudio Project for this course.\n\nMake folders: data, scripts, outputs.\n\nSave your .qmd homework file in the project root.\n\nRender your Quarto document and confirm outputs stay organized.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
     "objectID": "workflow.html#in-class-exercise-2-quarto-report",
     "href": "workflow.html#in-class-exercise-2-quarto-report",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "\n11.1 In-Class Exercise 2 – Quarto Report",
     "text": "11.1 In-Class Exercise 2 – Quarto Report\n\nCreate a .qmd file that loads a dataset and runs a simple analysis.\n\nAdd at least one plot and one table.\n\nRender to PDF and check the output.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
     "objectID": "workflow.html#in-class-challenge-reproducible-mini-report",
     "href": "workflow.html#in-class-challenge-reproducible-mini-report",
-    "title": "\n8  Week 8: Workflow and Reproducibility\n",
+    "title": "\n8  Workflow and Reproducibility\n",
     "section": "\n13.1 In-Class Challenge – Reproducible Mini-Report",
     "text": "13.1 In-Class Challenge – Reproducible Mini-Report\n\nSet up a project with an organized folder structure\nCreate a Quarto document that:\n\nReads a dataset\nRuns a simple transformation\nCreates a plot\nSummarizes the results in text\n\n\nRender to PDF and check for a clean, reproducible output",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 8: Workflow and Reproducibility</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
   },
   {
