@@ -20,7 +20,7 @@ R can read Excel files with the `readxl` package and Google Sheets with `googles
 
 ### Importing Excel
 
-```{r}
+```{r, eval=FALSE}
 library(readxl)
 
 excel_df <- read_excel("data/example.xlsx", sheet = "Sheet1")
@@ -51,7 +51,7 @@ Use `DBI` and `RSQLite` to interact with relational databases. You can also use 
 
 ### Example: Connecting to SQLite
 
-```{r}
+```{r, eval=FALSE}
 library(DBI)
 con <- dbConnect(RSQLite::SQLite(), "data/mydb.sqlite")
 
@@ -82,7 +82,7 @@ Arrow allows you to read parquet files efficiently without loading everything in
 
 ### Example: Reading Parquet
 
-```{r}
+```{r, eval=FALSE}
 library(arrow)
 
 dataset <- open_dataset("data/large.parquet")
@@ -105,7 +105,7 @@ Hierarchical data (JSON) often contains nested lists. Use `jsonlite` to load JSO
 
 ### Example: Reading JSON
 
-```{r}
+```{r, eval=FALSE}
 library(jsonlite)
 
 json_data <- fromJSON("data/example.json")
