@@ -78,7 +78,7 @@ format: pdf
 ---
 ```
 
-```{r}
+```{r, eval=FALSE}
 library(tidyverse)
 data <- read_csv("data/mydata.csv")
 summary(data)

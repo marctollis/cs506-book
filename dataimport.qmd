@@ -29,7 +29,7 @@ glimpse(df)
 
 ### Example: Reading a TSV file
 
-```{r}
+```{r, eval=FALSE}
 df_tsv <- read_tsv("data/example.tsv")
 ```
 
