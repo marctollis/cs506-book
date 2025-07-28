@@ -50,7 +50,7 @@ df_tsv <- read_tsv("data/example.tsv")
 
 ### Example: Overriding column types
 
-```{r}
+```{r, eval=FALSE}
 df <- read_csv("data/mydata.csv", col_types = cols(
   id = col_character(),
   date = col_date(format = "%Y-%m-%d")
