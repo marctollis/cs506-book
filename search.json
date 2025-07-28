@@ -32,888 +32,288 @@
   {
     "objectID": "Rintro.html",
     "href": "Rintro.html",
-    "title": "\n2  Introduction to R and RStudio\n",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
     "section": "",
-    "text": "2.1 Learning Objectives\nBy the end of this chapter, you should be able to:\nR is a programming language designed for data analysis.RStudio is an Integrated Development Environment (IDE) that makes working with R easier.",
+    "text": "2.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
     "objectID": "Rintro.html#learning-objectives",
     "href": "Rintro.html#learning-objectives",
-    "title": "\n2  Introduction to R and RStudio\n",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
     "section": "",
-    "text": "Install and open R and RStudio\n\nNavigate the four-pane layout of RStudio\n\nCreate and run R scripts\n\nUnderstand the differences between the console, script editor, and environment\n\nExecute basic R operations and understand data types\n\nInstall and load R packages\n## Getting Started\n\n\n\n2.1.1 Installing R and RStudio\n\nInstall R: https://cran.r-project.org/\n\nInstall RStudio: https://posit.co/download/rstudio-desktop/\n\n\nOnce you open RStudio, you’ll see four panes:\n\n\nConsole – for running code interactively\n\n\nSource – to write and save scripts\n\n\nEnvironment/History – to view and manage objects\n\n\nFiles/Plots/Packages/Help/Viewer – navigation and visualization tools",
+    "text": "Install and open R, RStudio, and Quarto\nNavigate the four-pane layout of RStudio\nCreate and run R scripts\nUnderstand the differences between the console, script editor, and environment\nExecute basic R operations and understand data types\nInstall and load R packages\nCreate and render a Quarto (.qmd) document to .pdf",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
-    "objectID": "Rintro.html#basic-r-concepts",
-    "href": "Rintro.html#basic-r-concepts",
-    "title": "\n2  Introduction to R and RStudio\n",
-    "section": "\n2.2 Basic R Concepts",
-    "text": "2.2 Basic R Concepts\n\n2.2.1 Variables and Assignments\n\nx &lt;- 5\ny &lt;- 10\nz &lt;- x + y\nz\n\n[1] 15\n\n\n\n2.2.2 Vectors and Functions\n\nages &lt;- c(25, 30, 35, 40)\nmean(ages)\n\n[1] 32.5\n\nsd(ages)\n\n[1] 6.454972\n\n\n\n2.2.3 Data Frames\n\nname &lt;- c(\"Alice\", \"Bob\", \"Charlie\")\nage &lt;- c(25, 30, 35)\nstudent_data &lt;- data.frame(name, age)\nstudent_data\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35\n\n\n\n2.2.4 Inspecting Data\n\nstr(student_data)\n\n'data.frame':   3 obs. of  2 variables:\n $ name: chr  \"Alice\" \"Bob\" \"Charlie\"\n $ age : num  25 30 35\n\nsummary(student_data)\n\n     name                age      \n Length:3           Min.   :25.0  \n Class :character   1st Qu.:27.5  \n Mode  :character   Median :30.0  \n                    Mean   :30.0  \n                    3rd Qu.:32.5  \n                    Max.   :35.0  \n\nhead(student_data)\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35\n\n\n\n2.2.5 Comments and Help\n\n# This is a comment\n?mean  # Help for the mean function\n\n\n2.2.6 Using Scripts and Console\n\nWrite your code in the script editor and run lines with Ctrl+Enter (Cmd+Enter on Mac)\nSave your work with .R extensions\nUse the Console for quick exploration\n\n2.2.7 Installing and Loading Packages\n\n# Run this in the Console if you haven't installed yet\n# install.packages(\"tidyverse\")",
+    "objectID": "Rintro.html#installing-r-rstudio-and-quarto",
+    "href": "Rintro.html#installing-r-rstudio-and-quarto",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n3.1 Installing R, RStudio, and Quarto",
+    "text": "3.1 Installing R, RStudio, and Quarto\n\nInstall R: https://cran.r-project.org/\n\nInstall RStudio: https://posit.co/download/rstudio-desktop/\n\nInstall Quarto: https://quarto.org/docs/get-started/\n\n\nWhen you open RStudio, you’ll see four panes:\n\nConsole – runs code interactively\nSource – write and save scripts or Quarto documents\nEnvironment/History – view and manage objects\nFiles/Plots/Packages/Help/Viewer – navigation and visualization tools",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
-    "objectID": "Rintro.html#practice-exercises",
-    "href": "Rintro.html#practice-exercises",
-    "title": "\n2  Introduction to R and RStudio\n",
-    "section": "\n2.3 Practice Exercises",
-    "text": "2.3 Practice Exercises\n\nCreate a script that assigns two numbers and prints their sum\nCreate a vector of Celsius temperatures and convert to Fahrenheit\nCreate a data frame with columns: name, age, major\n\n\n# Exercise 1\na &lt;- 15\nb &lt;- 20\na + b\n\n[1] 35\n\n# Exercise 2\ncelsius &lt;- c(0, 10, 20)\nfahrenheit &lt;- celsius * 9/5 + 32\nfahrenheit\n\n[1] 32 50 68\n\n# Exercise 3\nstudents &lt;- data.frame(\n  name = c(\"Lily\", \"Mark\", \"Tom\"),\n  age = c(21, 22, 23),\n  major = c(\"Biology\", \"Math\", \"History\")\n)\nstr(students)\n\n'data.frame':   3 obs. of  3 variables:\n $ name : chr  \"Lily\" \"Mark\" \"Tom\"\n $ age  : num  21 22 23\n $ major: chr  \"Biology\" \"Math\" \"History\"",
+    "objectID": "Rintro.html#your-first-quarto-document",
+    "href": "Rintro.html#your-first-quarto-document",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n4.1 Your First Quarto Document",
+    "text": "4.1 Your First Quarto Document\n\nIn RStudio: File → New File → Quarto Document\nReplace the header with:\n\n---\ntitle: \"My First Quarto Document\"\nauthor: \"Your Name\"\nformat: pdf\n---\n\nBelow the header, add:\n\n\nx &lt;- c(1, 2, 3, 4, 5)\nmean(x)\n\n[1] 3\n\n\n\nClick Render to produce a PDF file.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
-    "objectID": "Rintro.html#more-in-class-exercises",
-    "href": "Rintro.html#more-in-class-exercises",
-    "title": "\n2  Introduction to R and RStudio\n",
-    "section": "\n2.4 More In-Class Exercises",
-    "text": "2.4 More In-Class Exercises\n\nCreate a vector of 5 numbers and calculate the mean, median, and standard deviation.\nCreate a data frame with three columns (e.g., name, age, and major) and print its structure.\nImport a dataset using read.csv() from a URL and summarize it using summary().\n\n\nmy_vec &lt;- c(10, 20, 30, 40, 50)\nmean(my_vec)\n\n[1] 30\n\nmedian(my_vec)\n\n[1] 30\n\nsd(my_vec)\n\n[1] 15.81139\n\ndf &lt;- data.frame(\n  name = c(\"Lily\", \"Mark\", \"Tom\"),\n  age = c(21, 22, 23),\n  major = c(\"Biology\", \"Math\", \"History\")\n)\nstr(df)\n\n'data.frame':   3 obs. of  3 variables:\n $ name : chr  \"Lily\" \"Mark\" \"Tom\"\n $ age  : num  21 22 23\n $ major: chr  \"Biology\" \"Math\" \"History\"\n\ndata &lt;- read.csv(\"https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv\")\nsummary(data)\n\n    Month               X1958           X1959           X1960      \n Length:12          Min.   :310.0   Min.   :342.0   Min.   :390.0  \n Class :character   1st Qu.:339.2   1st Qu.:387.5   1st Qu.:418.5  \n Mode  :character   Median :360.5   Median :406.5   Median :461.0  \n                    Mean   :381.0   Mean   :428.3   Mean   :476.2  \n                    3rd Qu.:411.8   3rd Qu.:465.2   3rd Qu.:514.8  \n                    Max.   :505.0   Max.   :559.0   Max.   :622.0",
+    "objectID": "Rintro.html#in-class-quarto-exercise",
+    "href": "Rintro.html#in-class-quarto-exercise",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n4.2 In-Class Quarto Exercise",
+    "text": "4.2 In-Class Quarto Exercise\n\nCreate a new Quarto document with:\n\nA title, your name, and the date\nA short paragraph of text\nA code chunk that calculates the mean and standard deviation of a numeric vector\n\n\nRender it to PDF and verify it works.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
-    "objectID": "Rintro.html#homework-preview",
-    "href": "Rintro.html#homework-preview",
-    "title": "\n2  Introduction to R and RStudio\n",
-    "section": "\n2.5 Homework Preview",
-    "text": "2.5 Homework Preview\n\nWrite a script to create three different vectors and compute descriptive statistics.\nImport a CSV dataset of your choice, explore it with str() and summary(), and write one paragraph about what you’ve learned.",
+    "objectID": "Rintro.html#variables-and-assignments",
+    "href": "Rintro.html#variables-and-assignments",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.1 Variables and Assignments",
+    "text": "5.1 Variables and Assignments\n\nx &lt;- 5\ny &lt;- 10\nz &lt;- x + y\nz\n\n[1] 15",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
-    "objectID": "Rintro.html#next-steps",
-    "href": "Rintro.html#next-steps",
-    "title": "\n2  Introduction to R and RStudio\n",
-    "section": "\n2.6 Next Steps",
-    "text": "2.6 Next Steps\nNow that you can run R scripts and explore objects, you’ll learn how to load and reshape real data using the tidyverse in the next chapter.",
+    "objectID": "Rintro.html#vectors-and-functions",
+    "href": "Rintro.html#vectors-and-functions",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.2 Vectors and Functions",
+    "text": "5.2 Vectors and Functions\n\nages &lt;- c(25, 30, 35, 40)\nmean(ages)\n\n[1] 32.5\n\nsd(ages)\n\n[1] 6.454972",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
-    "objectID": "tidyverse.html",
-    "href": "tidyverse.html",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "",
-    "text": "3.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "objectID": "Rintro.html#data-frames",
+    "href": "Rintro.html#data-frames",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.3 Data Frames",
+    "text": "5.3 Data Frames\n\nname &lt;- c(\"Alice\", \"Bob\", \"Charlie\")\nage &lt;- c(25, 30, 35)\nstudent_data &lt;- data.frame(name, age)\nstudent_data\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
-    "objectID": "tidyverse.html#learning-objectives",
-    "href": "tidyverse.html#learning-objectives",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "",
-    "text": "Define “tidy data” and explain why it’s important\n\nLoad the Tidyverse and understand the role of its core packages\n\nImport a dataset using readr::read_csv()\n\nUse glimpse(), str(), and summary() to explore data",
+    "objectID": "Rintro.html#inspecting-data",
+    "href": "Rintro.html#inspecting-data",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.4 Inspecting Data",
+    "text": "5.4 Inspecting Data\n\nstr(student_data)\n\n'data.frame':   3 obs. of  2 variables:\n $ name: chr  \"Alice\" \"Bob\" \"Charlie\"\n $ age : num  25 30 35\n\nsummary(student_data)\n\n     name                age      \n Length:3           Min.   :25.0  \n Class :character   1st Qu.:27.5  \n Mode  :character   Median :30.0  \n                    Mean   :30.0  \n                    3rd Qu.:32.5  \n                    Max.   :35.0  \n\nhead(student_data)\n\n     name age\n1   Alice  25\n2     Bob  30\n3 Charlie  35",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
-    "objectID": "tidyverse.html#what-is-tidy-data",
-    "href": "tidyverse.html#what-is-tidy-data",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.2 What is Tidy Data?",
-    "text": "3.2 What is Tidy Data?\nTidy data follows three key principles (from R for Data Science):\n\nEach variable forms a column\n\nEach observation forms a row\n\nEach type of observational unit forms a table\n\nTidy data makes it easier to manipulate, visualize, and model data using consistent, reproducible tools.",
+    "objectID": "Rintro.html#comments-and-help",
+    "href": "Rintro.html#comments-and-help",
+    "title": "\n2  Week 1: Introduction to R, RStudio, and Quarto\n",
+    "section": "\n5.5 Comments and Help",
+    "text": "5.5 Comments and Help\n\n# This is a comment\n?mean  # Help for the mean function",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#what-is-the-tidyverse",
-    "href": "tidyverse.html#what-is-the-tidyverse",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.3 What is the Tidyverse?",
-    "text": "3.3 What is the Tidyverse?\nThe Tidyverse is a collection of R packages designed for data science. It includes:\n\n\nPackage\nPurpose\n\n\n\nggplot2\nData visualization\n\n\ndplyr\nData manipulation\n\n\ntidyr\nData reshaping\n\n\nreadr\nReading data\n\n\npurrr\nFunctional programming\n\n\ntibble\nModern data frames\n\n\nstringr\nString manipulation\n\n\nforcats\nFactor handling\n\n\n\nInstall and load the full tidyverse:\n\n# Run this in the Console if you haven't installed yet\n# install.packages(\"tidyverse\")\n# install.packages(\"reader\")\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#example-reading-in-data-with-readr",
-    "href": "tidyverse.html#example-reading-in-data-with-readr",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.4 Example: Reading in Data with readr\n",
-    "text": "3.4 Example: Reading in Data with readr\n\n\n# Built-in example from the readr package\nlibrary(readr)\n\nheights &lt;- read_csv(\"https://raw.githubusercontent.com/hadley/r4ds/refs/heads/main/data/heights.csv\")\n\nRows: 1192 Columns: 6\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): sex, race\ndbl (4): earn, height, ed, age\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglimpse(heights)\n\nRows: 1,192\nColumns: 6\n$ earn   &lt;dbl&gt; 50000, 60000, 30000, 50000, 51000, 9000, 29000, 32000, 2000, 27…\n$ height &lt;dbl&gt; 74.42444, 65.53754, 63.62920, 63.10856, 63.40248, 64.39951, 61.…\n$ sex    &lt;chr&gt; \"male\", \"female\", \"female\", \"female\", \"female\", \"female\", \"fema…\n$ ed     &lt;dbl&gt; 16, 16, 16, 16, 17, 15, 12, 17, 15, 12, 16, 11, 12, 12, 16, 12,…\n$ age    &lt;dbl&gt; 45, 58, 29, 91, 39, 26, 49, 46, 21, 26, 65, 34, 27, 51, 35, 58,…\n$ race   &lt;chr&gt; \"white\", \"white\", \"white\", \"other\", \"white\", \"white\", \"white\", …\n\n\nread_csv() is faster and more predictable than base R’s read.csv(). It does not convert strings to factors and returns a tibble by default.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#exploring-a-dataset",
-    "href": "tidyverse.html#exploring-a-dataset",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.5 Exploring a Dataset",
-    "text": "3.5 Exploring a Dataset\n\n# Inspecting data structure\nhead(heights)\n\n# A tibble: 6 × 6\n   earn height sex       ed   age race \n  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;\n1 50000   74.4 male      16    45 white\n2 60000   65.5 female    16    58 white\n3 30000   63.6 female    16    29 white\n4 50000   63.1 female    16    91 other\n5 51000   63.4 female    17    39 white\n6  9000   64.4 female    15    26 white\n\nstr(heights)\n\nspc_tbl_ [1,192 × 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ earn  : num [1:1192] 50000 60000 30000 50000 51000 9000 29000 32000 2000 27000 ...\n $ height: num [1:1192] 74.4 65.5 63.6 63.1 63.4 ...\n $ sex   : chr [1:1192] \"male\" \"female\" \"female\" \"female\" ...\n $ ed    : num [1:1192] 16 16 16 16 17 15 12 17 15 12 ...\n $ age   : num [1:1192] 45 58 29 91 39 26 49 46 21 26 ...\n $ race  : chr [1:1192] \"white\" \"white\" \"white\" \"other\" ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   earn = col_double(),\n  ..   height = col_double(),\n  ..   sex = col_character(),\n  ..   ed = col_double(),\n  ..   age = col_double(),\n  ..   race = col_character()\n  .. )\n - attr(*, \"problems\")=&lt;externalptr&gt; \n\nsummary(heights)\n\n      earn            height          sex                  ed      \n Min.   :   200   Min.   :57.50   Length:1192        Min.   : 3.0  \n 1st Qu.: 10000   1st Qu.:64.01   Class :character   1st Qu.:12.0  \n Median : 20000   Median :66.45   Mode  :character   Median :13.0  \n Mean   : 23155   Mean   :66.92                      Mean   :13.5  \n 3rd Qu.: 30000   3rd Qu.:69.85                      3rd Qu.:16.0  \n Max.   :200000   Max.   :77.05                      Max.   :18.0  \n      age            race          \n Min.   :18.00   Length:1192       \n 1st Qu.:29.00   Class :character  \n Median :38.00   Mode  :character  \n Mean   :41.38                     \n 3rd Qu.:51.00                     \n Max.   :91.00                     \n\n\nYou can also use View(heights) to open a spreadsheet-like viewer in RStudio (note: this won’t work when rendering a book).",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#tibbles-versus-data-frames",
-    "href": "tidyverse.html#tibbles-versus-data-frames",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.6 Tibbles versus Data Frames",
-    "text": "3.6 Tibbles versus Data Frames\nTibbles are a modern version of data frames that:\n\nDo not convert strings to factors\nHave cleaner printing behavior\nWork better with tidyverse functions\n\n\ndf_base &lt;- data.frame(x = 1:3, y = letters[1:3])\ndf_tibble &lt;- tibble(x = 1:3, y = letters[1:3])\n\ndf_base\n\n  x y\n1 1 a\n2 2 b\n3 3 c\n\ndf_tibble\n\n# A tibble: 3 × 2\n      x y    \n  &lt;int&gt; &lt;chr&gt;\n1     1 a    \n2     2 b    \n3     3 c",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#practice-exercises",
-    "href": "tidyverse.html#practice-exercises",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.7 Practice Exercises",
-    "text": "3.7 Practice Exercises\n\nUse read_csv() to import the Palmer Penguins dataset:\n\n\nURL: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv\n\n\nUse glimpse() to inspect the structure of the data.\nWhat do you notice about the column types? Which ones are characters, doubles, or factors?\n\n\npenguins &lt;- read_csv(\"https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv\")\n\nRows: 344 Columns: 8\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): species, island, sex\ndbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;chr&gt; \"Adelie\", \"Adelie\", \"Adelie\", \"Adelie\", \"Adelie\", \"A…\n$ island            &lt;chr&gt; \"Torgersen\", \"Torgersen\", \"Torgersen\", \"Torgersen\", …\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;dbl&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;dbl&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;chr&gt; \"male\", \"female\", \"female\", NA, \"female\", \"male\", \"f…\n$ year              &lt;dbl&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\n\n# Explore dataset\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;chr&gt;   &lt;chr&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;chr&gt;, year &lt;dbl&gt;\n\n# Check structure\nstr(penguins)\n\nspc_tbl_ [344 × 8] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ species          : chr [1:344] \"Adelie\" \"Adelie\" \"Adelie\" \"Adelie\" ...\n $ island           : chr [1:344] \"Torgersen\" \"Torgersen\" \"Torgersen\" \"Torgersen\" ...\n $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_length_mm: num [1:344] 181 186 195 NA 193 190 181 195 193 190 ...\n $ body_mass_g      : num [1:344] 3750 3800 3250 NA 3450 ...\n $ sex              : chr [1:344] \"male\" \"female\" \"female\" NA ...\n $ year             : num [1:344] 2007 2007 2007 2007 2007 ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   species = col_character(),\n  ..   island = col_character(),\n  ..   bill_length_mm = col_double(),\n  ..   bill_depth_mm = col_double(),\n  ..   flipper_length_mm = col_double(),\n  ..   body_mass_g = col_double(),\n  ..   sex = col_character(),\n  ..   year = col_double()\n  .. )\n - attr(*, \"problems\")=&lt;externalptr&gt; \n\n# Add a calculated column\npenguins &lt;- penguins |&gt; mutate(body_mass_kg = body_mass_g / 1000)\nhead(penguins)\n\n# A tibble: 6 × 9\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;chr&gt;   &lt;chr&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 3 more variables: sex &lt;chr&gt;, year &lt;dbl&gt;, body_mass_kg &lt;dbl&gt;",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#in-class-exercises",
-    "href": "tidyverse.html#in-class-exercises",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.8 In-Class Exercises",
-    "text": "3.8 In-Class Exercises\nWork with the penguins dataset (or another dataset provided in class):\n1. Import the dataset using read_csv()\n2. Use glimpse() to inspect the dataset’s structure\n3. Identify any missing (NA) values and count them\n4. Use mutate() to add a new column:\n- Convert flipper_length_mm to centimeters (divide by 10)\n5. Challenge: Create a new tibble from scratch with at least three columns (different data types) and print its structure\n\n# Count missing values\nsum(is.na(penguins$bill_length_mm))\n\n[1] 2\n\n# Add a calculated column\npenguins &lt;- penguins |&gt; \n  mutate(flipper_length_cm = flipper_length_mm / 10)\n\n# Create a tibble manually\nmy_tbl &lt;- tibble(\n  name = c(\"Alice\", \"Bob\"),\n  age = c(25, 30),\n  pass = c(TRUE, FALSE)\n)\nglimpse(my_tbl)\n\nRows: 2\nColumns: 3\n$ name &lt;chr&gt; \"Alice\", \"Bob\"\n$ age  &lt;dbl&gt; 25, 30\n$ pass &lt;lgl&gt; TRUE, FALSE",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#homework-preview",
-    "href": "tidyverse.html#homework-preview",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.9 Homework Preview",
-    "text": "3.9 Homework Preview\n\nImport two different CSV datasets (e.g., penguins, flights) using read_csv()\n\nInspect them with glimpse(), str(), and summary()\n\nIdentify untidy aspects (if any) and make at least one change to improve tidiness\nUse mutate() to add at least two new calculated columns (e.g., unit conversions or derived metrics)",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#summary",
-    "href": "tidyverse.html#summary",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.10 Summary",
-    "text": "3.10 Summary\n\nTidy data format is foundational for data science in R\nThe tidyverse packages are designed to work together\n\nread_csv() from readr is you go-to function for reading flat files\nAlways explore dat awith glimpse(), str(), and summary()",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "tidyverse.html#next-steps",
-    "href": "tidyverse.html#next-steps",
-    "title": "\n3  Tidy Data and the Tidyverse\n",
-    "section": "\n3.11 Next Steps",
-    "text": "3.11 Next Steps\nIn the next chapter, we’ll learn how to filter, select, and transform data using dplyr — the primary grammar of data manipulation in the tidyverse.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidy Data and the Tidyverse</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html",
-    "href": "dplyr1.html",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "",
-    "text": "4.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#learning-objectives",
-    "href": "dplyr1.html#learning-objectives",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "",
-    "text": "Filter rows using filter()\n\nSelect columns using select()\n\nCreate new columns using mutate()\n\nSort rows using arrange()\n\nUse the pipe operator (|&gt;) or %&gt;% for chaining functions",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#introduction-to-dplyr",
-    "href": "dplyr1.html#introduction-to-dplyr",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.2 Introduction to dplyr",
-    "text": "4.2 Introduction to dplyr\nThe dplyr package is the foundation of tidy data manipulation. It provides a consistent grammar of data wrangling using verbs that correspond to common tasks:\n\n\nVerb\nAction\n\n\n\nfilter()\nPick rows based on condition\n\n\nselect()\nPick columns\n\n\nmutate()\nCreate or transform columns\n\n\narrange()\nSort rows\n\n\nrename()\nRename columns\n\n\n\nWe’ll explore each of these in this chapter.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#example-dataset-nycflights13",
-    "href": "dplyr1.html#example-dataset-nycflights13",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.3 Example Dataset: nycflights13",
-    "text": "4.3 Example Dataset: nycflights13\nWe’ll use the flights dataset from the nycflights13 package, which contains ~336,000 flights departing NYC in 2013.\n\n# Run this in the Console if you haven't installed yet\n# install.packages(\"nycflights13\")\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(nycflights13)\n\nglimpse(flights)\n\nRows: 336,776\nColumns: 19\n$ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2…\n$ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 558, …\n$ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 600, …\n$ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2, -1…\n$ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 849,…\n$ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 851,…\n$ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7, -1…\n$ carrier        &lt;chr&gt; \"UA\", \"UA\", \"AA\", \"B6\", \"DL\", \"UA\", \"B6\", \"EV\", \"B6\", \"…\n$ flight         &lt;int&gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79, 301, 4…\n$ tailnum        &lt;chr&gt; \"N14228\", \"N24211\", \"N619AA\", \"N804JB\", \"N668DN\", \"N394…\n$ origin         &lt;chr&gt; \"EWR\", \"LGA\", \"JFK\", \"JFK\", \"LGA\", \"EWR\", \"EWR\", \"LGA\",…\n$ dest           &lt;chr&gt; \"IAH\", \"IAH\", \"MIA\", \"BQN\", \"ATL\", \"ORD\", \"FLL\", \"IAD\",…\n$ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149, 1…\n$ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 733, …\n$ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6, 6…\n$ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 0…\n$ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-01 0…",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#filtering-rows-filter",
-    "href": "dplyr1.html#filtering-rows-filter",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.4 Filtering Rows: filter()\n",
-    "text": "4.4 Filtering Rows: filter()\n\nUse filter() to extract a subset of rows that match logical conditions.\n\n# Flights on January 1st\njan1 &lt;- filter(flights, month == 1, day == 1)\n\n# Flights with arrival delay more than 2 hours\narr_delay &lt;- filter(flights, arr_delay &gt; 120)",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#selecting-columns-select",
-    "href": "dplyr1.html#selecting-columns-select",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.5 Selecting columns: select()\n",
-    "text": "4.5 Selecting columns: select()\n\nUse select() to pick a subset of columns.\n\n# Select specific columns\nselect(flights, year, month, day, dep_time, arr_time)\n\n# A tibble: 336,776 × 5\n    year month   day dep_time arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;    &lt;int&gt;\n 1  2013     1     1      517      830\n 2  2013     1     1      533      850\n 3  2013     1     1      542      923\n 4  2013     1     1      544     1004\n 5  2013     1     1      554      812\n 6  2013     1     1      554      740\n 7  2013     1     1      555      913\n 8  2013     1     1      557      709\n 9  2013     1     1      557      838\n10  2013     1     1      558      753\n# ℹ 336,766 more rows\n\n# Drop columns with minus\nselect(flights, -year, -month, -day)\n\n# A tibble: 336,776 × 16\n   dep_time sched_dep_time dep_delay arr_time sched_arr_time arr_delay carrier\n      &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;  \n 1      517            515         2      830            819        11 UA     \n 2      533            529         4      850            830        20 UA     \n 3      542            540         2      923            850        33 AA     \n 4      544            545        -1     1004           1022       -18 B6     \n 5      554            600        -6      812            837       -25 DL     \n 6      554            558        -4      740            728        12 UA     \n 7      555            600        -5      913            854        19 B6     \n 8      557            600        -3      709            723       -14 EV     \n 9      557            600        -3      838            846        -8 B6     \n10      558            600        -2      753            745         8 AA     \n# ℹ 336,766 more rows\n# ℹ 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,\n#   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;\n\n\nYou can also use starts_with(), contains(), and matches() for flexible column selection.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#creating-new-columns-mutate",
-    "href": "dplyr1.html#creating-new-columns-mutate",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.6 Creating New Columns: mutate()\n",
-    "text": "4.6 Creating New Columns: mutate()\n\nUse mutate() to add new columns or transform existing ones.\n\n# Compute speed in miles per hour\nflights &lt;- mutate(flights, speed = distance / air_time * 60)\n\n# Create multiple new columns\nflights &lt;- mutate(flights,\n  gain = arr_delay - dep_delay,\n  hours = air_time / 60\n)",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#sorting-rows-arrange",
-    "href": "dplyr1.html#sorting-rows-arrange",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.7 Sorting Rows: arrange()\n",
-    "text": "4.7 Sorting Rows: arrange()\n\n\n# Sort by arrival delay\narrange(flights, arr_delay)\n\n# A tibble: 336,776 × 22\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     5     7     1715           1729       -14     1944           2110\n 2  2013     5    20      719            735       -16      951           1110\n 3  2013     5     2     1947           1949        -2     2209           2324\n 4  2013     5     6     1826           1830        -4     2045           2200\n 5  2013     5     4     1816           1820        -4     2017           2131\n 6  2013     5     2     1926           1929        -3     2157           2310\n 7  2013     5     6     1753           1755        -2     2004           2115\n 8  2013     5     7     2054           2055        -1     2317             28\n 9  2013     5    13      657            700        -3      908           1019\n10  2013     1     4     1026           1030        -4     1305           1415\n# ℹ 336,766 more rows\n# ℹ 14 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, speed &lt;dbl&gt;, gain &lt;dbl&gt;,\n#   hours &lt;dbl&gt;\n\n# Sort in descending order\narrange(flights, desc(arr_delay))\n\n# A tibble: 336,776 × 22\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     9      641            900      1301     1242           1530\n 2  2013     6    15     1432           1935      1137     1607           2120\n 3  2013     1    10     1121           1635      1126     1239           1810\n 4  2013     9    20     1139           1845      1014     1457           2210\n 5  2013     7    22      845           1600      1005     1044           1815\n 6  2013     4    10     1100           1900       960     1342           2211\n 7  2013     3    17     2321            810       911      135           1020\n 8  2013     7    22     2257            759       898      121           1026\n 9  2013    12     5      756           1700       896     1058           2020\n10  2013     5     3     1133           2055       878     1250           2215\n# ℹ 336,766 more rows\n# ℹ 14 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, speed &lt;dbl&gt;, gain &lt;dbl&gt;,\n#   hours &lt;dbl&gt;",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#piping-commands-or",
-    "href": "dplyr1.html#piping-commands-or",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.8 Piping Commands” %>% or |>\n",
-    "text": "4.8 Piping Commands” %&gt;% or |&gt;\n\nUse %&gt;% (magrittr pipe) or |&gt;(base R pipe) to chain commands and improve readability.\n\n# Calculate speed for JFK departures in June\nflights |&gt; \n  filter(origin == \"JFK\", month == 6) |&gt; \n  mutate(speed = distance / air_time * 60) |&gt; \n  select(tailnum, speed, distance, air_time) |&gt; \n  arrange(desc(speed)) |&gt; \n  head(5)\n\n# A tibble: 5 × 4\n  tailnum speed distance air_time\n  &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 N3759    524.     1598      183\n2 N659JB   522.     1576      181\n3 N641JB   521.     1598      184\n4 N5EXAA   519.     1089      126\n5 N627JB   518.     1598      185\n\n\nPiping allows you to read your code top-to-bottom, like a recipe.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#practice-exercises",
-    "href": "dplyr1.html#practice-exercises",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.9 Practice Exercises",
-    "text": "4.9 Practice Exercises\n\nFilter all flights that departed in July and had a departure delay &gt; 60 minutes.\nSelect only carrier, flight, and dep_delay, and sort by longest delay first.\nCreate a new column gain defined as arr_delay - dep_delay, and sort by biggest gain.\nChain together at least 3 dplyr verbs using %&gt;% or |&gt;.\n\n\n# 1\njuly_delays &lt;- filter(flights, month == 7, dep_delay &gt; 60)\n\n# 2\nselect(july_delays, carrier, flight, dep_delay) |&gt; arrange(desc(dep_delay))\n\n# A tibble: 3,820 × 3\n   carrier flight dep_delay\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 MQ        3075      1005\n 2 DL        2047       898\n 3 VX         187       653\n 4 VX         411       634\n 5 VX          23       629\n 6 DL         141       589\n 7 AA        1895       580\n 8 FL         349       576\n 9 EV        5716       536\n10 MQ        3075       486\n# ℹ 3,810 more rows\n\n# 3\nmutate(flights, gain = arr_delay - dep_delay) |&gt; arrange(desc(gain))\n\n# A tibble: 336,776 × 22\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013    11     1      658            700        -2     1329           1015\n 2  2013     4    18      558            600        -2     1149            850\n 3  2013     8     8     1819           1519       180        5           1820\n 4  2013     7    10     1916           1900        16      137           2240\n 5  2013     6    27     1608           1525        43     2045           1725\n 6  2013     7    22     1606           1615        -9     2056           1831\n 7  2013     7     1      811            800        11     1344           1100\n 8  2013     7    10     2011           1520       291     2357           1636\n 9  2013     7    22     1626           1545        41     2051           1740\n10  2013     4    18      655            700        -5     1213            950\n# ℹ 336,766 more rows\n# ℹ 14 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, speed &lt;dbl&gt;, gain &lt;dbl&gt;,\n#   hours &lt;dbl&gt;\n\n# 4\nflights %&gt;%\n  filter(month == 1, day == 1) %&gt;%\n  mutate(speed = distance / air_time * 60) %&gt;%\n  arrange(desc(speed))\n\n# A tibble: 842 × 22\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      909            810        59     1331           1315\n 2  2013     1     1      615            615         0     1039           1100\n 3  2013     1     1      820            820         0     1249           1329\n 4  2013     1     1     1716           1545        91     2140           2039\n 5  2013     1     1      913            918        -5     1346           1416\n 6  2013     1     1     2353           2359        -6      418            442\n 7  2013     1     1      544            545        -1     1004           1022\n 8  2013     1     1     1202           1159         3     1645           1653\n 9  2013     1     1      701            700         1     1123           1154\n10  2013     1     1      840            845        -5     1311           1350\n# ℹ 832 more rows\n# ℹ 14 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, speed &lt;dbl&gt;, gain &lt;dbl&gt;,\n#   hours &lt;dbl&gt;",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#summary",
-    "href": "dplyr1.html#summary",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.10 Summary",
-    "text": "4.10 Summary\n\n\nfilter() extracts rows by condition\n\nselect() picks columns\n\nmutate() adds new variables\n\narrange() reorders rows",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr1.html#next-steps",
-    "href": "dplyr1.html#next-steps",
-    "title": "\n4  Data Manipulation with dplyr (Part 1)\n",
-    "section": "\n4.11 Next Steps",
-    "text": "4.11 Next Steps\nIn the next chapter, we’ll learn how to group data using group_by() and summarize it using summarize() — foundational tools for aggregating and analyzing grouped data. {r} Copy Edit",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 1)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr2.html",
-    "href": "dplyr2.html",
-    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
-    "section": "",
-    "text": "5.1 Overview\nThis chapter covers the following:",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr2.html#overview",
-    "href": "dplyr2.html#overview",
-    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
-    "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr2.html#key-concepts",
-    "href": "dplyr2.html#key-concepts",
-    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
-    "section": "\n5.2 Key Concepts",
-    "text": "5.2 Key Concepts\nWrite your lecture content here.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr2.html#example",
-    "href": "dplyr2.html#example",
-    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
-    "section": "\n5.3 Example",
-    "text": "5.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
-    ]
-  },
-  {
-    "objectID": "dplyr2.html#practice-exercises",
-    "href": "dplyr2.html#practice-exercises",
-    "title": "\n5  Data Manipulation with dplyr (Part 2)\n",
-    "section": "\n5.4 Practice Exercises",
-    "text": "5.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Manipulation with dplyr (Part 2)</span>"
-    ]
-  },
-  {
-    "objectID": "cleaning.html",
-    "href": "cleaning.html",
-    "title": "\n6  Data Cleaning and Handling Missing Values\n",
-    "section": "",
-    "text": "6.1 Overview\nThis chapter covers the following:",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
-    ]
-  },
-  {
-    "objectID": "cleaning.html#overview",
-    "href": "cleaning.html#overview",
-    "title": "\n6  Data Cleaning and Handling Missing Values\n",
-    "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
-    ]
-  },
-  {
-    "objectID": "cleaning.html#key-concepts",
-    "href": "cleaning.html#key-concepts",
-    "title": "\n6  Data Cleaning and Handling Missing Values\n",
-    "section": "\n6.2 Key Concepts",
-    "text": "6.2 Key Concepts\nWrite your lecture content here.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
-    ]
-  },
-  {
-    "objectID": "cleaning.html#example",
-    "href": "cleaning.html#example",
-    "title": "\n6  Data Cleaning and Handling Missing Values\n",
-    "section": "\n6.3 Example",
-    "text": "6.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
-    ]
-  },
-  {
-    "objectID": "cleaning.html#practice-exercises",
-    "href": "cleaning.html#practice-exercises",
-    "title": "\n6  Data Cleaning and Handling Missing Values\n",
-    "section": "\n6.4 Practice Exercises",
-    "text": "6.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Cleaning and Handling Missing Values</span>"
-    ]
-  },
-  {
-    "objectID": "tidyr.html",
-    "href": "tidyr.html",
-    "title": "\n7  Data Reshaping with tidyr\n",
-    "section": "",
-    "text": "7.1 Overview\nThis chapter covers the following:",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidyr.html#overview",
-    "href": "tidyr.html#overview",
-    "title": "\n7  Data Reshaping with tidyr\n",
-    "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidyr.html#key-concepts",
-    "href": "tidyr.html#key-concepts",
-    "title": "\n7  Data Reshaping with tidyr\n",
-    "section": "\n7.2 Key Concepts",
-    "text": "7.2 Key Concepts\nWrite your lecture content here.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidyr.html#example",
-    "href": "tidyr.html#example",
-    "title": "\n7  Data Reshaping with tidyr\n",
-    "section": "\n7.3 Example",
-    "text": "7.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidyr.html#practice-exercises",
-    "href": "tidyr.html#practice-exercises",
-    "title": "\n7  Data Reshaping with tidyr\n",
-    "section": "\n7.4 Practice Exercises",
-    "text": "7.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data Reshaping with tidyr</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1: Introduction to R, RStudio, and Quarto</span>"
     ]
   },
   {
     "objectID": "ggplot2.html",
     "href": "ggplot2.html",
-    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
+    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
     "section": "",
-    "text": "8.1 Overview\nThis chapter covers the following:",
+    "text": "3.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
     ]
   },
   {
-    "objectID": "ggplot2.html#overview",
-    "href": "ggplot2.html#overview",
-    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
+    "objectID": "ggplot2.html#learning-objectives",
+    "href": "ggplot2.html#learning-objectives",
+    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
     "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
+    "text": "Create basic scatterplots using ggplot2\n\nMap variables to aesthetics (color, size, shape)\nUse different geoms (points, smooth lines, histograms)\nCreate facets to display subsets of data\nCustomize plots for clear communication",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
     ]
   },
   {
-    "objectID": "ggplot2.html#key-concepts",
-    "href": "ggplot2.html#key-concepts",
-    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
-    "section": "\n8.2 Key Concepts",
-    "text": "8.2 Key Concepts\nWrite your lecture content here.",
+    "objectID": "ggplot2.html#in-class-exercise-1",
+    "href": "ggplot2.html#in-class-exercise-1",
+    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "section": "\n5.1 In-Class Exercise 1",
+    "text": "5.1 In-Class Exercise 1\n\nCreate a scatterplot of cty (city mpg) vs. hwy (highway mpg).\n\nWhat relationship do you see?\n\nTry swapping x and y—does it change the interpretation?",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
     ]
   },
   {
-    "objectID": "ggplot2.html#example",
-    "href": "ggplot2.html#example",
-    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
-    "section": "\n8.3 Example",
-    "text": "8.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "objectID": "ggplot2.html#in-class-exercise-2",
+    "href": "ggplot2.html#in-class-exercise-2",
+    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "section": "\n6.1 In-Class Exercise 2",
+    "text": "6.1 In-Class Exercise 2\n\nModify the plot to map size to cyl (number of cylinders).\n\nMap shape to drv (drive type).\n\nTry using both color and shape in one plot.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
     ]
   },
   {
-    "objectID": "ggplot2.html#practice-exercises",
-    "href": "ggplot2.html#practice-exercises",
-    "title": "\n8  Data Visualization with ggplot2 (Part 1)\n",
-    "section": "\n8.4 Practice Exercises",
-    "text": "8.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "objectID": "ggplot2.html#in-class-exercise-3",
+    "href": "ggplot2.html#in-class-exercise-3",
+    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "section": "\n7.1 In-Class Exercise 3",
+    "text": "7.1 In-Class Exercise 3\n\nAdd a geom_smooth() line to your plot from Exercise 1.\n\nTry setting se = FALSE to remove the confidence band.\n\nChange the color of the line manually.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 1)</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
     ]
   },
   {
-    "objectID": "dataviz2.html",
-    "href": "dataviz2.html",
-    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
+    "objectID": "ggplot2.html#in-class-exercise-4",
+    "href": "ggplot2.html#in-class-exercise-4",
+    "title": "\n3  Week 2: Data Visualization with ggplot2\n",
+    "section": "\n8.1 In-Class Exercise 4",
+    "text": "8.1 In-Class Exercise 4\n\nUse facet_wrap() to facet the plot by class.\n\nTry facet_grid(drv ~ cyl)—what do you observe?",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 2: Data Visualization with ggplot2</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html",
+    "href": "dplyr1.html",
+    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
     "section": "",
-    "text": "9.1 Overview\nThis chapter covers the following:",
+    "text": "4.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
-    "objectID": "dataviz2.html#overview",
-    "href": "dataviz2.html#overview",
-    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
+    "objectID": "dplyr1.html#learning-objectives",
+    "href": "dplyr1.html#learning-objectives",
+    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
     "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
+    "text": "Filter rows using filter()\n\nSort rows using arrange()\n\nSelect columns using select()\n\nCreate or modify columns using mutate()\n\nCombine multiple transformations using the base R pipe |&gt;",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
-    "objectID": "dataviz2.html#key-concepts",
-    "href": "dataviz2.html#key-concepts",
-    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
-    "section": "\n9.2 Key Concepts",
-    "text": "9.2 Key Concepts\nWrite your lecture content here.",
+    "objectID": "dplyr1.html#in-class-exercise-1-rows",
+    "href": "dplyr1.html#in-class-exercise-1-rows",
+    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
+    "section": "\n6.1 In-Class Exercise 1 – Rows",
+    "text": "6.1 In-Class Exercise 1 – Rows\nUsing the flights dataset:\n\nFilter for flights departing from JFK in July.\n\nArrange by arrival delay (largest to smallest).\n\nIdentify the flight with the worst delay.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
-    "objectID": "dataviz2.html#example",
-    "href": "dataviz2.html#example",
-    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
-    "section": "\n9.3 Example",
-    "text": "9.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "objectID": "dplyr1.html#in-class-exercise-2-columns",
+    "href": "dplyr1.html#in-class-exercise-2-columns",
+    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
+    "section": "\n7.1 In-Class Exercise 2 – Columns",
+    "text": "7.1 In-Class Exercise 2 – Columns\n\nSelect carrier, flight, dep_delay, and arr_delay.\n\nCreate a column gain = arr_delay - dep_delay.\n\nDisplay the first 10 rows.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
-    "objectID": "dataviz2.html#practice-exercises",
-    "href": "dataviz2.html#practice-exercises",
-    "title": "\n9  Data Visualization with ggplot2 (Part 2)\n",
-    "section": "\n9.4 Practice Exercises",
-    "text": "9.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
+    "objectID": "dplyr1.html#in-class-exercise-3-pipes",
+    "href": "dplyr1.html#in-class-exercise-3-pipes",
+    "title": "\n4  Week 3: Data Transformation with dplyr (Part 1)\n",
+    "section": "\n8.1 In-Class Exercise 3 – Pipes",
+    "text": "8.1 In-Class Exercise 3 – Pipes\nChain these steps using |&gt;:\n\nFilter flights from JFK in June.\n\nSelect carrier, flight, dep_delay, arr_delay.\n\nCreate a column gain.\n\nArrange by largest gain and show the top 5.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Visualization with ggplot2 (Part 2)</span>"
-    ]
-  },
-  {
-    "objectID": "regex.html",
-    "href": "regex.html",
-    "title": "\n10  String Processing and Regular Expressions\n",
-    "section": "",
-    "text": "10.1 Overview\nThis chapter covers the following:",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
-    ]
-  },
-  {
-    "objectID": "regex.html#overview",
-    "href": "regex.html#overview",
-    "title": "\n10  String Processing and Regular Expressions\n",
-    "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
-    ]
-  },
-  {
-    "objectID": "regex.html#key-concepts",
-    "href": "regex.html#key-concepts",
-    "title": "\n10  String Processing and Regular Expressions\n",
-    "section": "\n10.2 Key Concepts",
-    "text": "10.2 Key Concepts\nWrite your lecture content here.",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
-    ]
-  },
-  {
-    "objectID": "regex.html#example",
-    "href": "regex.html#example",
-    "title": "\n10  String Processing and Regular Expressions\n",
-    "section": "\n10.3 Example",
-    "text": "10.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
-    ]
-  },
-  {
-    "objectID": "regex.html#practice-exercises",
-    "href": "regex.html#practice-exercises",
-    "title": "\n10  String Processing and Regular Expressions\n",
-    "section": "\n10.4 Practice Exercises",
-    "text": "10.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>String Processing and Regular Expressions</span>"
-    ]
-  },
-  {
-    "objectID": "merging.html",
-    "href": "merging.html",
-    "title": "\n11  Merging and Joining Data\n",
-    "section": "",
-    "text": "11.1 Overview\nThis chapter covers the following:",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
-    ]
-  },
-  {
-    "objectID": "merging.html#overview",
-    "href": "merging.html#overview",
-    "title": "\n11  Merging and Joining Data\n",
-    "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
-    ]
-  },
-  {
-    "objectID": "merging.html#key-concepts",
-    "href": "merging.html#key-concepts",
-    "title": "\n11  Merging and Joining Data\n",
-    "section": "\n11.2 Key Concepts",
-    "text": "11.2 Key Concepts\nWrite your lecture content here.",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
-    ]
-  },
-  {
-    "objectID": "merging.html#example",
-    "href": "merging.html#example",
-    "title": "\n11  Merging and Joining Data\n",
-    "section": "\n11.3 Example",
-    "text": "11.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
-    ]
-  },
-  {
-    "objectID": "merging.html#practice-exercises",
-    "href": "merging.html#practice-exercises",
-    "title": "\n11  Merging and Joining Data\n",
-    "section": "\n11.4 Practice Exercises",
-    "text": "11.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Merging and Joining Data</span>"
-    ]
-  },
-  {
-    "objectID": "web.html",
-    "href": "web.html",
-    "title": "\n12  Web Scraping in R\n",
-    "section": "",
-    "text": "12.1 Overview\nThis chapter covers the following:",
-    "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
-    ]
-  },
-  {
-    "objectID": "web.html#overview",
-    "href": "web.html#overview",
-    "title": "\n12  Web Scraping in R\n",
-    "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
-    "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
-    ]
-  },
-  {
-    "objectID": "web.html#key-concepts",
-    "href": "web.html#key-concepts",
-    "title": "\n12  Web Scraping in R\n",
-    "section": "\n12.2 Key Concepts",
-    "text": "12.2 Key Concepts\nWrite your lecture content here.",
-    "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
-    ]
-  },
-  {
-    "objectID": "web.html#example",
-    "href": "web.html#example",
-    "title": "\n12  Web Scraping in R\n",
-    "section": "\n12.3 Example",
-    "text": "12.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
-    ]
-  },
-  {
-    "objectID": "web.html#practice-exercises",
-    "href": "web.html#practice-exercises",
-    "title": "\n12  Web Scraping in R\n",
-    "section": "\n12.4 Practice Exercises",
-    "text": "12.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
-    "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping in R</span>"
-    ]
-  },
-  {
-    "objectID": "databases.html",
-    "href": "databases.html",
-    "title": "\n13  Using Databases and SQL in R\n",
-    "section": "",
-    "text": "13.1 Overview\nThis chapter covers the following:",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
-    ]
-  },
-  {
-    "objectID": "databases.html#overview",
-    "href": "databases.html#overview",
-    "title": "\n13  Using Databases and SQL in R\n",
-    "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
-    ]
-  },
-  {
-    "objectID": "databases.html#key-concepts",
-    "href": "databases.html#key-concepts",
-    "title": "\n13  Using Databases and SQL in R\n",
-    "section": "\n13.2 Key Concepts",
-    "text": "13.2 Key Concepts\nWrite your lecture content here.",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
-    ]
-  },
-  {
-    "objectID": "databases.html#example",
-    "href": "databases.html#example",
-    "title": "\n13  Using Databases and SQL in R\n",
-    "section": "\n13.3 Example",
-    "text": "13.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
-    ]
-  },
-  {
-    "objectID": "databases.html#practice-exercises",
-    "href": "databases.html#practice-exercises",
-    "title": "\n13  Using Databases and SQL in R\n",
-    "section": "\n13.4 Practice Exercises",
-    "text": "13.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Using Databases and SQL in R</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "\n14  References\n",
-    "section": "",
-    "text": "14.1 Overview\nThis chapter covers the following:",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
-    ]
-  },
-  {
-    "objectID": "references.html#overview",
-    "href": "references.html#overview",
-    "title": "\n14  References\n",
-    "section": "",
-    "text": "Key concepts\nExamples\nPractice Exercises",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
-    ]
-  },
-  {
-    "objectID": "references.html#key-concepts",
-    "href": "references.html#key-concepts",
-    "title": "\n14  References\n",
-    "section": "\n14.2 Key Concepts",
-    "text": "14.2 Key Concepts\nWrite your lecture content here.",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
-    ]
-  },
-  {
-    "objectID": "references.html#example",
-    "href": "references.html#example",
-    "title": "\n14  References\n",
-    "section": "\n14.3 Example",
-    "text": "14.3 Example\n\n# Example R code\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
-    ]
-  },
-  {
-    "objectID": "references.html#practice-exercises",
-    "href": "references.html#practice-exercises",
-    "title": "\n14  References\n",
-    "section": "\n14.4 Practice Exercises",
-    "text": "14.4 Practice Exercises\n\nDescribe the task\nLoad and analyze a dataset",
-    "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>References</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 3: Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "",
     "text": "B Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#canvas-recorded-lectures",
     "href": "syllabus.html#canvas-recorded-lectures",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "B.1 Canvas & Recorded Lectures",
     "text": "B.1 Canvas & Recorded Lectures\nWe will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#cs506-book-website",
     "href": "syllabus.html#cs506-book-website",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "B.2 CS506 Book Website",
     "text": "B.2 CS506 Book Website\nI have compiled a course website that has supplemental text and coded examples that we will walk through in class. This website essentially serves as the course textbook and is required reading. There will be other required reading material.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#course-student-learning-outcomes",
     "href": "syllabus.html#course-student-learning-outcomes",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "C.1 Course Student Learning Outcomes",
     "text": "C.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#program-student-outcomes-supported-by-this-class",
     "href": "syllabus.html#program-student-outcomes-supported-by-this-class",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "C.2 Program Student Outcomes supported by this class",
     "text": "C.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#course-policies",
     "href": "syllabus.html#course-policies",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "G.1 Course Policies",
-    "text": "G.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nCollaboration: Allowed for homeworks; problem sets and quizzes must be completed individually. - Late Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
+    "section": "H.1 Course Policies",
+    "text": "H.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nCollaboration: Allowed for homeworks; problem sets and quizzes must be completed individually. - Late Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
     "objectID": "syllabus.html#university-policies",
     "href": "syllabus.html#university-policies",
-    "title": "Appendix A: CS506: Data Management and Wrangling – Syllabus",
-    "section": "G.2 University Policies",
-    "text": "G.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
+    "section": "H.2 University Policies",
+    "text": "H.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Management and Wrangling – Syllabus</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   }
 ]
