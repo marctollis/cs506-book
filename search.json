@@ -90,6 +90,26 @@
     ]
   },
   {
+    "objectID": "Rintro.html#homework-preview",
+    "href": "Rintro.html#homework-preview",
+    "title": "\n2  Introduction to R, RStudio, and Quarto\n",
+    "section": "\n2.6 Homework Preview",
+    "text": "2.6 Homework Preview\n\nCreate a .qmd document that:\n\nIncludes a title and your name\nDemonstrates at least three code chunks\nShows basic statistics on a numeric vector\nImports a dataset, inspects it with str() and summary(), and writes one paragraph summarizing your findings\n\n\nRender to PDF and submit to Canvas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Rintro.html#next-steps",
+    "href": "Rintro.html#next-steps",
+    "title": "\n2  Introduction to R, RStudio, and Quarto\n",
+    "section": "\n2.7 Next Steps",
+    "text": "2.7 Next Steps\nYou now know how to run R scripts and render Quarto documents.\nNext week, you’ll learn how to create data visualizations using ggplot2.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to R, RStudio, and Quarto</span>"
+    ]
+  },
+  {
     "objectID": "ggplot2.html",
     "href": "ggplot2.html",
     "title": "\n3  Data Visualization with ggplot2\n",
@@ -210,31 +230,61 @@
     ]
   },
   {
-    "objectID": "dplyr1.html#in-class-exercise-1-rows",
-    "href": "dplyr1.html#in-class-exercise-1-rows",
+    "objectID": "dplyr1.html#introduction",
+    "href": "dplyr1.html#introduction",
     "title": "\n4  Data Transformation with dplyr (Part 1)\n",
-    "section": "\n6.1 In-Class Exercise 1 – Rows",
-    "text": "6.1 In-Class Exercise 1 – Rows\nUsing the flights dataset:\n\nFilter for flights departing from JFK in July.\n\nArrange by arrival delay (largest to smallest).\n\nIdentify the flight with the worst delay.",
+    "section": "\n4.2 Introduction",
+    "text": "4.2 Introduction\nThis chapter follows R for Data Science (Ch. 3) and introduces dplyr, a tidyverse package for data transformation.\nWe will use the nycflights13::flights dataset for examples.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
-    "objectID": "dplyr1.html#in-class-exercise-2-columns",
-    "href": "dplyr1.html#in-class-exercise-2-columns",
+    "objectID": "dplyr1.html#working-with-rows",
+    "href": "dplyr1.html#working-with-rows",
     "title": "\n4  Data Transformation with dplyr (Part 1)\n",
-    "section": "\n7.1 In-Class Exercise 2 – Columns",
-    "text": "7.1 In-Class Exercise 2 – Columns\n\nSelect carrier, flight, dep_delay, and arr_delay.\n\nCreate a column gain = arr_delay - dep_delay.\n\nDisplay the first 10 rows.",
+    "section": "\n4.3 Working with Rows",
+    "text": "4.3 Working with Rows\n\n4.3.1 filter()\n\nfilter() keeps rows that match given conditions.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(nycflights13)\n\nflights |&gt;\n  filter(month == 1, day == 1)\n\n# A tibble: 842 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n# ℹ 832 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;\n\n\n\n4.3.2 arrange()\n\narrange() orders rows by a column.\n\nflights |&gt;\n  arrange(desc(dep_delay))\n\n# A tibble: 336,776 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     9      641            900      1301     1242           1530\n 2  2013     6    15     1432           1935      1137     1607           2120\n 3  2013     1    10     1121           1635      1126     1239           1810\n 4  2013     9    20     1139           1845      1014     1457           2210\n 5  2013     7    22      845           1600      1005     1044           1815\n 6  2013     4    10     1100           1900       960     1342           2211\n 7  2013     3    17     2321            810       911      135           1020\n 8  2013     6    27      959           1900       899     1236           2226\n 9  2013     7    22     2257            759       898      121           1026\n10  2013    12     5      756           1700       896     1058           2020\n# ℹ 336,766 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;\n\n\n\n4.3.3 In-Class Exercise 1 – Rows\nUsing the flights dataset:\n\nFilter for flights departing from JFK in July.\n\nArrange by arrival delay (largest to smallest).\n\nIdentify the flight with the worst delay.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
     ]
   },
   {
-    "objectID": "dplyr1.html#in-class-exercise-3-pipes",
-    "href": "dplyr1.html#in-class-exercise-3-pipes",
+    "objectID": "dplyr1.html#working-with-columns",
+    "href": "dplyr1.html#working-with-columns",
     "title": "\n4  Data Transformation with dplyr (Part 1)\n",
-    "section": "\n8.1 In-Class Exercise 3 – Pipes",
-    "text": "8.1 In-Class Exercise 3 – Pipes\nChain these steps using |&gt;:\n\nFilter flights from JFK in June.\n\nSelect carrier, flight, dep_delay, arr_delay.\n\nCreate a column gain.\n\nArrange by largest gain and show the top 5.",
+    "section": "\n4.4 Working with Columns",
+    "text": "4.4 Working with Columns\n\n4.4.1 select()\n\nselect() chooses columns.\n\nflights |&gt;\n  select(year, month, day, dep_delay, arr_delay)\n\n# A tibble: 336,776 × 5\n    year month   day dep_delay arr_delay\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1  2013     1     1         2        11\n 2  2013     1     1         4        20\n 3  2013     1     1         2        33\n 4  2013     1     1        -1       -18\n 5  2013     1     1        -6       -25\n 6  2013     1     1        -4        12\n 7  2013     1     1        -5        19\n 8  2013     1     1        -3       -14\n 9  2013     1     1        -3        -8\n10  2013     1     1        -2         8\n# ℹ 336,766 more rows\n\n\n\n4.4.2 mutate()\n\nmutate() creates or modifies columns.\n\nflights |&gt;\n  mutate(speed = distance / air_time * 60) |&gt;\n  select(tailnum, distance, air_time, speed)\n\n# A tibble: 336,776 × 4\n   tailnum distance air_time speed\n   &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;\n 1 N14228      1400      227  370.\n 2 N24211      1416      227  374.\n 3 N619AA      1089      160  408.\n 4 N804JB      1576      183  517.\n 5 N668DN       762      116  394.\n 6 N39463       719      150  288.\n 7 N516JB      1065      158  404.\n 8 N829AS       229       53  259.\n 9 N593JB       944      140  405.\n10 N3ALAA       733      138  319.\n# ℹ 336,766 more rows\n\n\n\n4.4.3 In-Class Exercise 2 – Columns\n\nSelect carrier, flight, dep_delay, and arr_delay.\n\nCreate a column gain = arr_delay - dep_delay.\n\nDisplay the first 10 rows.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#using-pipes-to-combine-steps",
+    "href": "dplyr1.html#using-pipes-to-combine-steps",
+    "title": "\n4  Data Transformation with dplyr (Part 1)\n",
+    "section": "\n4.5 Using Pipes to Combine Steps",
+    "text": "4.5 Using Pipes to Combine Steps\nThe base R pipe |&gt; passes results from one function to the next, making code easier to read.\n\nflights |&gt;\n  filter(month == 6, origin == \"JFK\") |&gt;\n  select(carrier, flight, dep_delay, arr_delay) |&gt;\n  mutate(gain = arr_delay - dep_delay) |&gt;\n  arrange(desc(gain)) |&gt;\n  head()\n\n# A tibble: 6 × 5\n  carrier flight dep_delay arr_delay  gain\n  &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1 B6        2402        -2       142   144\n2 DL         706        -3       138   141\n3 AA         181        -2       132   134\n4 DL        1394       224       350   126\n5 B6          83        36       160   124\n6 DL         161       278       400   122\n\n\n\n\n4.5.1 In-Class Exercise 3 – Pipes\nChain these steps using |&gt;:\n\nFilter flights from JFK in June.\n\nSelect carrier, flight, dep_delay, arr_delay.\n\nCreate a column gain.\n\nArrange by largest gain and show the top 5.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#homework-preview",
+    "href": "dplyr1.html#homework-preview",
+    "title": "\n4  Data Transformation with dplyr (Part 1)\n",
+    "section": "\n4.6 Homework Preview",
+    "text": "4.6 Homework Preview\nFor Homework 2, you will:\n\nUse flights or another dataset.\n\nFilter for a subset of interest.\n\nCreate at least two new variables with mutate().\n\nSort using arrange().\n\nSave the transformed dataset and inspect it with glimpse() and summary().\n\nRender to PDF and submit on Canvas.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr1.html#next-steps",
+    "href": "dplyr1.html#next-steps",
+    "title": "\n4  Data Transformation with dplyr (Part 1)\n",
+    "section": "\n4.7 Next Steps",
+    "text": "4.7 Next Steps\nNext week, we will extend these skills with group_by() and summarize() to calculate grouped summaries.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
     ]
@@ -260,31 +310,51 @@
     ]
   },
   {
-    "objectID": "dplyr2.html#in-class-exercise-1-grouped-summaries",
-    "href": "dplyr2.html#in-class-exercise-1-grouped-summaries",
+    "objectID": "dplyr2.html#grouped-summaries",
+    "href": "dplyr2.html#grouped-summaries",
     "title": "\n5  Data Transformation with dplyr (Part 2)\n",
-    "section": "\n6.1 In-Class Exercise 1 – Grouped Summaries",
-    "text": "6.1 In-Class Exercise 1 – Grouped Summaries\nUsing flights:\n\nGroup by origin and calculate the average departure delay.\n\nGroup by carrier and find the number of flights and average arrival delay.\n\nWhich carrier has the highest average arrival delay?",
+    "section": "\n5.2 Grouped Summaries",
+    "text": "5.2 Grouped Summaries\nGrouping allows you to calculate statistics per group.\nWe will use the nycflights13::flights dataset.\n\n5.2.1 group_by() and summarize()\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(nycflights13)\n\nflights |&gt;\n  group_by(carrier) |&gt;\n  summarize(\n    delay = mean(dep_delay, na.rm = TRUE)\n  )\n\n# A tibble: 16 × 2\n   carrier delay\n   &lt;chr&gt;   &lt;dbl&gt;\n 1 9E      16.7 \n 2 AA       8.59\n 3 AS       5.80\n 4 B6      13.0 \n 5 DL       9.26\n 6 EV      20.0 \n 7 F9      20.2 \n 8 FL      18.7 \n 9 HA       4.90\n10 MQ      10.6 \n11 OO      12.6 \n12 UA      12.1 \n13 US       3.78\n14 VX      12.9 \n15 WN      17.7 \n16 YV      19.0",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
-    "objectID": "dplyr2.html#in-class-exercise-2-multiple-grouping",
-    "href": "dplyr2.html#in-class-exercise-2-multiple-grouping",
+    "objectID": "dplyr2.html#multiple-summaries",
+    "href": "dplyr2.html#multiple-summaries",
     "title": "\n5  Data Transformation with dplyr (Part 2)\n",
-    "section": "\n7.1 In-Class Exercise 2 – Multiple Grouping",
-    "text": "7.1 In-Class Exercise 2 – Multiple Grouping\n\nGroup by origin and carrier.\n\nSummarize with the average air_time.\n\nArrange results to see which origin-carrier combination has the longest average flights.",
+    "section": "\n5.3 Multiple Summaries",
+    "text": "5.3 Multiple Summaries\n\nflights |&gt;\n  group_by(dest) |&gt;\n  summarize(\n    count = n(),\n    avg_delay = mean(arr_delay, na.rm = TRUE),\n    .groups = \"drop\"\n  )\n\n# A tibble: 105 × 3\n   dest  count avg_delay\n   &lt;chr&gt; &lt;int&gt;     &lt;dbl&gt;\n 1 ABQ     254      4.38\n 2 ACK     265      4.85\n 3 ALB     439     14.4 \n 4 ANC       8     -2.5 \n 5 ATL   17215     11.3 \n 6 AUS    2439      6.02\n 7 AVL     275      8.00\n 8 BDL     443      7.05\n 9 BGR     375      8.03\n10 BHM     297     16.9 \n# ℹ 95 more rows\n\n\n\n\n5.3.1 In-Class Exercise 1 – Grouped Summaries\nUsing flights:\n\nGroup by origin and calculate the average departure delay.\n\nGroup by carrier and find the number of flights and average arrival delay.\n\nWhich carrier has the highest average arrival delay?",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
   },
   {
-    "objectID": "dplyr2.html#in-class-exercise-3-joins",
-    "href": "dplyr2.html#in-class-exercise-3-joins",
+    "objectID": "dplyr2.html#grouping-with-multiple-variables",
+    "href": "dplyr2.html#grouping-with-multiple-variables",
     "title": "\n5  Data Transformation with dplyr (Part 2)\n",
-    "section": "\n8.1 In-Class Exercise 3 – Joins",
-    "text": "8.1 In-Class Exercise 3 – Joins\n\nUse left_join() to add airline names to the flights dataset.\n\nUse count() to find how many flights each airline operates.\n\nArrange results by the number of flights.",
+    "section": "\n5.4 Grouping with Multiple Variables",
+    "text": "5.4 Grouping with Multiple Variables\nYou can group by multiple columns at once.\n\nflights |&gt;\n  group_by(origin, month) |&gt;\n  summarize(\n    avg_delay = mean(dep_delay, na.rm = TRUE),\n    .groups = \"drop_last\"\n  )\n\n# A tibble: 36 × 3\n# Groups:   origin [3]\n   origin month avg_delay\n   &lt;chr&gt;  &lt;int&gt;     &lt;dbl&gt;\n 1 EWR        1     14.9 \n 2 EWR        2     13.1 \n 3 EWR        3     18.1 \n 4 EWR        4     17.4 \n 5 EWR        5     15.4 \n 6 EWR        6     22.5 \n 7 EWR        7     22.0 \n 8 EWR        8     13.5 \n 9 EWR        9      7.29\n10 EWR       10      8.64\n# ℹ 26 more rows\n\n\n\n\n5.4.1 In-Class Exercise 2 – Multiple Grouping\n\nGroup by origin and carrier.\n\nSummarize with the average air_time.\n\nArrange results to see which origin-carrier combination has the longest average flights.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr2.html#joining-datasets",
+    "href": "dplyr2.html#joining-datasets",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
+    "section": "\n5.5 Joining Datasets",
+    "text": "5.5 Joining Datasets\ndplyr provides functions to join tables by a common key:\n\n\nleft_join()\n\n\ninner_join()\n\n\nright_join()\n\nfull_join()\n\nExample using flights and airlines:\n\nflights |&gt;\n  left_join(airlines, by = \"carrier\") |&gt;\n  select(name, carrier, flight) |&gt;\n  head()\n\n# A tibble: 6 × 3\n  name                   carrier flight\n  &lt;chr&gt;                  &lt;chr&gt;    &lt;int&gt;\n1 United Air Lines Inc.  UA        1545\n2 United Air Lines Inc.  UA        1714\n3 American Airlines Inc. AA        1141\n4 JetBlue Airways        B6         725\n5 Delta Air Lines Inc.   DL         461\n6 United Air Lines Inc.  UA        1696\n\n\n\n\n5.5.1 In-Class Exercise 3 – Joins\n\nUse left_join() to add airline names to the flights dataset.\n\nUse count() to find how many flights each airline operates.\n\nArrange results by the number of flights.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr2.html#chaining-with-pipes",
+    "href": "dplyr2.html#chaining-with-pipes",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
+    "section": "\n5.6 Chaining with Pipes",
+    "text": "5.6 Chaining with Pipes\nWe can combine group_by(), summarize(), and joins in a single pipeline.\n\nflights |&gt;\n  left_join(airlines, by = \"carrier\") |&gt;\n  group_by(name) |&gt;\n  summarize(\n    flights = n(),\n    avg_delay = mean(dep_delay, na.rm = TRUE),\n    .groups = \"drop\"\n  ) |&gt;\n  arrange(desc(avg_delay))\n\n# A tibble: 16 × 3\n   name                        flights avg_delay\n   &lt;chr&gt;                         &lt;int&gt;     &lt;dbl&gt;\n 1 Frontier Airlines Inc.          685     20.2 \n 2 ExpressJet Airlines Inc.      54173     20.0 \n 3 Mesa Airlines Inc.              601     19.0 \n 4 AirTran Airways Corporation    3260     18.7 \n 5 Southwest Airlines Co.        12275     17.7 \n 6 Endeavor Air Inc.             18460     16.7 \n 7 JetBlue Airways               54635     13.0 \n 8 Virgin America                 5162     12.9 \n 9 SkyWest Airlines Inc.            32     12.6 \n10 United Air Lines Inc.         58665     12.1 \n11 Envoy Air                     26397     10.6 \n12 Delta Air Lines Inc.          48110      9.26\n13 American Airlines Inc.        32729      8.59\n14 Alaska Airlines Inc.            714      5.80\n15 Hawaiian Airlines Inc.          342      4.90\n16 US Airways Inc.               20536      3.78",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
@@ -293,8 +363,28 @@
     "objectID": "dplyr2.html#in-class-challenge",
     "href": "dplyr2.html#in-class-challenge",
     "title": "\n5  Data Transformation with dplyr (Part 2)\n",
-    "section": "\n9.1 In-Class Challenge",
-    "text": "9.1 In-Class Challenge\nUsing the flights dataset:\n\nJoin airline names\n\nGroup by airline name\n\nSummarize number of flights, average departure delay, and average arrival delay\n\nArrange by average arrival delay\n\nIdentify the airline with the longest delays",
+    "section": "\n5.7 In-Class Challenge",
+    "text": "5.7 In-Class Challenge\nUsing the flights dataset:\n\nJoin airline names\n\nGroup by airline name\n\nSummarize number of flights, average departure delay, and average arrival delay\n\nArrange by average arrival delay\n\nIdentify the airline with the longest delays",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr2.html#homework-preview",
+    "href": "dplyr2.html#homework-preview",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
+    "section": "\n5.8 Homework Preview",
+    "text": "5.8 Homework Preview\nFor Homework 2 (continued), extend your data transformation by:\n\nGrouping data by at least one variable\n\nCalculating at least two summary statistics\n\nJoining an additional dataset (e.g., airlines, airports)\n\nRendering your results as a table in your PDF",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
+    ]
+  },
+  {
+    "objectID": "dplyr2.html#next-steps",
+    "href": "dplyr2.html#next-steps",
+    "title": "\n5  Data Transformation with dplyr (Part 2)\n",
+    "section": "\n5.9 Next Steps",
+    "text": "5.9 Next Steps\nNext week, we will explore tidy data principles and learn how to reshape datasets using tidyr.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
