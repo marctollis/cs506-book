@@ -163,7 +163,7 @@ summary(data)
 
 ------------------------------------------------------------------------
 
-# Homework Preview
+## Homework Preview
 
 -   Create a `.qmd` document that:
     -   Includes a title and your name
@@ -174,7 +174,7 @@ summary(data)
 
 ------------------------------------------------------------------------
 
-# Next Steps
+## Next Steps
 
 You now know how to run R scripts and render Quarto documents.\
 Next week, you’ll learn how to create data visualizations using `ggplot2`.
