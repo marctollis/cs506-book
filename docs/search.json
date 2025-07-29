@@ -1457,5 +1457,85 @@
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
+  },
+  {
+    "objectID": "transform.html",
+    "href": "transform.html",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "",
+    "text": "10.1 Learning Objectives\nWhat are the types of variables we see in data frames, and what are the different tools we can use to work with them?\nBy the end of this chapter, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#learning-objectives",
+    "href": "transform.html#learning-objectives",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "",
+    "text": "Understand how logical vectors work in R\nUse logical conditions to filter and manipulate data\nConvert between logical, numeric, and character types\nParse numbers from messy strings",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#logical-vectors",
+    "href": "transform.html#logical-vectors",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.2 Logical Vectors",
+    "text": "10.2 Logical Vectors\nLogical vectors contain only TRUE, FALSE, or NA.\n\nx &lt;- c(TRUE, FALSE, TRUE, NA)\nx\n\n[1]  TRUE FALSE  TRUE    NA\n\n\n\n10.2.1 Logical comparisons create logical vectors:\n\nnums &lt;- c(2, 5, 8, 1)\nnums &gt; 4\n\n[1] FALSE  TRUE  TRUE FALSE\n\n\nYou can use these directly with functions like sum() and mean():\n\nsum(nums &gt; 4)   # Count how many values are &gt; 4\n\n[1] 2\n\nmean(nums &gt; 4)  # Proportion of values &gt; 4\n\n[1] 0.5\n\n\n\n10.2.2 In-Class Exercise 1 – Logical Conditions\n\nCreate a numeric vector with 10 random values.\n\nWhich values are greater than the mean?\n\nWhat proportion is above the mean?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#logical-operations",
+    "href": "transform.html#logical-operations",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.3 Logical Operations",
+    "text": "10.3 Logical Operations\nCombine logical vectors with & (and), | (or), and ! (not):\n\na &lt;- c(TRUE, FALSE, TRUE)\nb &lt;- c(TRUE, TRUE, FALSE)\n\na & b\n\n[1]  TRUE FALSE FALSE\n\na | b\n\n[1] TRUE TRUE TRUE\n\n!a\n\n[1] FALSE  TRUE FALSE\n\n\n\n\n10.3.1 In-Class Exercise 2 – Combining Conditions\n\nUsing the mpg dataset, create a logical condition for cars with hwy &gt; 30 and cyl == 4.\n\nHow many such cars exist?\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nmpg |&gt;\n  filter(hwy &gt; 30 & cyl == 4) |&gt;\n  nrow()\n\n[1] 22",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#numbers-and-coercion",
+    "href": "transform.html#numbers-and-coercion",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.4 Numbers and Coercion",
+    "text": "10.4 Numbers and Coercion\nLogical values behave like numbers: TRUE = 1, FALSE = 0.\n\nas.numeric(c(TRUE, FALSE, TRUE))\n\n[1] 1 0 1\n\n\nThis makes calculations on logical vectors easy.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#parsing-numbers",
+    "href": "transform.html#parsing-numbers",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.5 Parsing Numbers",
+    "text": "10.5 Parsing Numbers\nReal-world data often stores numbers as text with extra symbols.\nUse readr::parse_number() to extract numeric values.\n\nlibrary(readr)\n\nx &lt;- c(\"$100\", \"200%\", \"300kg\")\nparse_number(x)\n\n[1] 100 200 300\n\n\n\n\n10.5.1 In-Class Exercise 3 – Parsing\n\nCreate a character vector: c(\"10 kg\", \"$50\", \"30%\").\n\nUse parse_number() to convert it to numeric.\n\nWhat happens if there are unexpected characters?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#dealing-with-missing-values",
+    "href": "transform.html#dealing-with-missing-values",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.6 Dealing with Missing Values",
+    "text": "10.6 Dealing with Missing Values\nLogical and numeric vectors can contain NA.\nHandle them with na.rm = TRUE or functions like replace_na().\n\nnums &lt;- c(1, 2, NA, 4)\nmean(nums, na.rm = TRUE)\n\n[1] 2.333333",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#in-class-challenge-logical-filtering",
+    "href": "transform.html#in-class-challenge-logical-filtering",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.7 In-Class Challenge – Logical Filtering",
+    "text": "10.7 In-Class Challenge – Logical Filtering\n\nUsing flights from nycflights13, calculate the proportion of flights that departed late (dep_delay &gt; 0) and arrived on time (arr_delay &lt;= 0).\n\n\nlibrary(nycflights13)\n\nflights |&gt;\n  summarize(on_time = mean(dep_delay &gt; 0 & arr_delay &lt;= 0, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  on_time\n    &lt;dbl&gt;\n1   0.108",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
   }
 ]
