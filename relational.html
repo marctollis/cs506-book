@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.40">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>12&nbsp; Relational Data with dplyr Joins – CS506: Data Wrangling and Management</title>
+<title>13&nbsp; Relational Data with dplyr Joins – CS506: Data Wrangling and Management</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./relational.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Relational Data with dplyr Joins</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./relational.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Relational Data with dplyr Joins</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -167,14 +167,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis (EDA)</span></span></a>
+  <a href="./tidy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Tidy Data with tidyr</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tidy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Tidy Data with tidyr</span></span></a>
+  <a href="./eda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis (EDA)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -191,26 +191,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./transform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Transform: Logical Vectors and Numbers</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Strings and Regular Expressions with stringr</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Strings and Regular Expressions with stringr</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./factors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Factors and Categorical Data with forcats</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Factors and Categorical Data with forcats</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./relational.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Relational Data with dplyr Joins</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Relational Data with dplyr Joins</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./advanced_import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -250,35 +256,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">12.1</span> Learning Objectives</a></li>
-  <li><a href="#what-is-relational-data" id="toc-what-is-relational-data" class="nav-link" data-scroll-target="#what-is-relational-data"><span class="header-section-number">12.2</span> What is Relational Data?</a></li>
-  <li><a href="#keys" id="toc-keys" class="nav-link" data-scroll-target="#keys"><span class="header-section-number">12.3</span> Keys</a></li>
+<li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">13.1</span> Learning Objectives</a></li>
+  <li><a href="#what-is-relational-data" id="toc-what-is-relational-data" class="nav-link" data-scroll-target="#what-is-relational-data"><span class="header-section-number">13.2</span> What is Relational Data?</a></li>
+  <li><a href="#keys" id="toc-keys" class="nav-link" data-scroll-target="#keys"><span class="header-section-number">13.3</span> Keys</a></li>
   <li>
-<a href="#joins-with-dplyr" id="toc-joins-with-dplyr" class="nav-link" data-scroll-target="#joins-with-dplyr"><span class="header-section-number">12.4</span> Joins with dplyr</a>
+<a href="#joins-with-dplyr" id="toc-joins-with-dplyr" class="nav-link" data-scroll-target="#joins-with-dplyr"><span class="header-section-number">13.4</span> Joins with dplyr</a>
   <ul class="collapse">
-<li><a href="#left_join" id="toc-left_join" class="nav-link" data-scroll-target="#left_join"><span class="header-section-number">12.4.1</span> <code>left_join()</code></a></li>
-  <li><a href="#inner_join" id="toc-inner_join" class="nav-link" data-scroll-target="#inner_join"><span class="header-section-number">12.4.2</span> <code>inner_join()</code></a></li>
-  <li><a href="#full_join" id="toc-full_join" class="nav-link" data-scroll-target="#full_join"><span class="header-section-number">12.4.3</span> <code>full_join()</code></a></li>
-  <li><a href="#semi_join-and-anti_join" id="toc-semi_join-and-anti_join" class="nav-link" data-scroll-target="#semi_join-and-anti_join"><span class="header-section-number">12.4.4</span> <code>semi_join()</code> and <code>anti_join()</code></a></li>
-  <li><a href="#in-class-exercise-1-basic-joins" id="toc-in-class-exercise-1-basic-joins" class="nav-link" data-scroll-target="#in-class-exercise-1-basic-joins"><span class="header-section-number">12.4.5</span> In-Class Exercise 1 – Basic Joins</a></li>
+<li><a href="#left_join" id="toc-left_join" class="nav-link" data-scroll-target="#left_join"><span class="header-section-number">13.4.1</span> <code>left_join()</code></a></li>
+  <li><a href="#inner_join" id="toc-inner_join" class="nav-link" data-scroll-target="#inner_join"><span class="header-section-number">13.4.2</span> <code>inner_join()</code></a></li>
+  <li><a href="#full_join" id="toc-full_join" class="nav-link" data-scroll-target="#full_join"><span class="header-section-number">13.4.3</span> <code>full_join()</code></a></li>
+  <li><a href="#semi_join-and-anti_join" id="toc-semi_join-and-anti_join" class="nav-link" data-scroll-target="#semi_join-and-anti_join"><span class="header-section-number">13.4.4</span> <code>semi_join()</code> and <code>anti_join()</code></a></li>
+  <li><a href="#in-class-exercise-1-basic-joins" id="toc-in-class-exercise-1-basic-joins" class="nav-link" data-scroll-target="#in-class-exercise-1-basic-joins"><span class="header-section-number">13.4.5</span> In-Class Exercise 1 – Basic Joins</a></li>
   </ul>
 </li>
   <li>
-<a href="#joining-multiple-tables" id="toc-joining-multiple-tables" class="nav-link" data-scroll-target="#joining-multiple-tables"><span class="header-section-number">12.5</span> Joining Multiple Tables</a>
+<a href="#joining-multiple-tables" id="toc-joining-multiple-tables" class="nav-link" data-scroll-target="#joining-multiple-tables"><span class="header-section-number">13.5</span> Joining Multiple Tables</a>
   <ul class="collapse">
-<li><a href="#in-class-exercise-2-multi-table-joins" id="toc-in-class-exercise-2-multi-table-joins" class="nav-link" data-scroll-target="#in-class-exercise-2-multi-table-joins"><span class="header-section-number">12.5.1</span> In-Class Exercise 2 – Multi-Table Joins</a></li>
+<li><a href="#in-class-exercise-2-multi-table-joins" id="toc-in-class-exercise-2-multi-table-joins" class="nav-link" data-scroll-target="#in-class-exercise-2-multi-table-joins"><span class="header-section-number">13.5.1</span> In-Class Exercise 2 – Multi-Table Joins</a></li>
   </ul>
 </li>
-  <li><a href="#handling-join-problems" id="toc-handling-join-problems" class="nav-link" data-scroll-target="#handling-join-problems"><span class="header-section-number">12.6</span> Handling Join Problems</a></li>
-  <li><a href="#in-class-challenge-join-workflow" id="toc-in-class-challenge-join-workflow" class="nav-link" data-scroll-target="#in-class-challenge-join-workflow"><span class="header-section-number">12.7</span> In-Class Challenge – Join Workflow</a></li>
-  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">12.8</span> Homework Preview</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">12.9</span> Next Steps</a></li>
+  <li><a href="#handling-join-problems" id="toc-handling-join-problems" class="nav-link" data-scroll-target="#handling-join-problems"><span class="header-section-number">13.6</span> Handling Join Problems</a></li>
+  <li><a href="#in-class-challenge-join-workflow" id="toc-in-class-challenge-join-workflow" class="nav-link" data-scroll-target="#in-class-challenge-join-workflow"><span class="header-section-number">13.7</span> In-Class Challenge – Join Workflow</a></li>
+  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">13.8</span> Homework Preview</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">13.9</span> Next Steps</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/marctollis/cs506-book/blob/main/relational.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/marctollis/cs506-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Relational Data with dplyr Joins</span>
+<span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Relational Data with dplyr Joins</span>
 </h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -293,8 +299,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="learning-objectives" class="level2" data-number="12.1"><h2 data-number="12.1" class="anchored" data-anchor-id="learning-objectives">
-<span class="header-section-number">12.1</span> Learning Objectives</h2>
+</header><section id="learning-objectives" class="level2" data-number="13.1"><h2 data-number="13.1" class="anchored" data-anchor-id="learning-objectives">
+<span class="header-section-number">13.1</span> Learning Objectives</h2>
 <p>By the end of this chapter, you should be able to:</p>
 <ul>
 <li>Understand the concept of relational data and keys</li>
@@ -304,8 +310,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Diagnose and handle join problems (missing keys, duplicates)</li>
 <li>Apply joins in analysis workflows</li>
 </ul>
-<hr></section><section id="what-is-relational-data" class="level2" data-number="12.2"><h2 data-number="12.2" class="anchored" data-anchor-id="what-is-relational-data">
-<span class="header-section-number">12.2</span> What is Relational Data?</h2>
+<hr></section><section id="what-is-relational-data" class="level2" data-number="13.2"><h2 data-number="13.2" class="anchored" data-anchor-id="what-is-relational-data">
+<span class="header-section-number">13.2</span> What is Relational Data?</h2>
 <p>Relational data consists of <strong>multiple tables</strong> that can be linked by <strong>keys</strong>.</p>
 <p>Example tables from <code>nycflights13</code>:</p>
 <ul>
@@ -320,8 +326,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <code>weather</code>: weather data</li>
 </ul>
-<hr></section><section id="keys" class="level2" data-number="12.3"><h2 data-number="12.3" class="anchored" data-anchor-id="keys">
-<span class="header-section-number">12.3</span> Keys</h2>
+<hr></section><section id="keys" class="level2" data-number="13.3"><h2 data-number="13.3" class="anchored" data-anchor-id="keys">
+<span class="header-section-number">13.3</span> Keys</h2>
 <ul>
 <li>
 <strong>Primary key</strong>: uniquely identifies each row in a table<br>
@@ -330,11 +336,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <strong>Foreign key</strong>: column that matches a primary key in another table</li>
 </ul>
 <p>Example: <code>flights$carrier</code> matches <code>airlines$carrier</code>.</p>
-<hr></section><section id="joins-with-dplyr" class="level2" data-number="12.4"><h2 data-number="12.4" class="anchored" data-anchor-id="joins-with-dplyr">
-<span class="header-section-number">12.4</span> Joins with dplyr</h2>
+<hr></section><section id="joins-with-dplyr" class="level2" data-number="13.4"><h2 data-number="13.4" class="anchored" data-anchor-id="joins-with-dplyr">
+<span class="header-section-number">13.4</span> Joins with dplyr</h2>
 <p><code>dplyr</code> join functions merge tables by keys.</p>
-<section id="left_join" class="level3" data-number="12.4.1"><h3 data-number="12.4.1" class="anchored" data-anchor-id="left_join">
-<span class="header-section-number">12.4.1</span> <code>left_join()</code>
+<section id="left_join" class="level3" data-number="13.4.1"><h3 data-number="13.4.1" class="anchored" data-anchor-id="left_join">
+<span class="header-section-number">13.4.1</span> <code>left_join()</code>
 </h3>
 <p>Keeps all rows from the first table:</p>
 <div class="cell">
@@ -370,8 +376,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6 United Air Lines Inc.  UA        1696</code></pre>
 </div>
 </div>
-<hr></section><section id="inner_join" class="level3" data-number="12.4.2"><h3 data-number="12.4.2" class="anchored" data-anchor-id="inner_join">
-<span class="header-section-number">12.4.2</span> <code>inner_join()</code>
+<hr></section><section id="inner_join" class="level3" data-number="13.4.2"><h3 data-number="13.4.2" class="anchored" data-anchor-id="inner_join">
+<span class="header-section-number">13.4.2</span> <code>inner_join()</code>
 </h3>
 <p>Keeps only matching rows:</p>
 <div class="cell">
@@ -392,8 +398,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6 United Air Lines Inc.  UA        1696</code></pre>
 </div>
 </div>
-<hr></section><section id="full_join" class="level3" data-number="12.4.3"><h3 data-number="12.4.3" class="anchored" data-anchor-id="full_join">
-<span class="header-section-number">12.4.3</span> <code>full_join()</code>
+<hr></section><section id="full_join" class="level3" data-number="13.4.3"><h3 data-number="13.4.3" class="anchored" data-anchor-id="full_join">
+<span class="header-section-number">13.4.3</span> <code>full_join()</code>
 </h3>
 <p>Keeps all rows from both tables:</p>
 <div class="cell">
@@ -414,8 +420,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6 United Air Lines Inc.  UA        1696</code></pre>
 </div>
 </div>
-<hr></section><section id="semi_join-and-anti_join" class="level3" data-number="12.4.4"><h3 data-number="12.4.4" class="anchored" data-anchor-id="semi_join-and-anti_join">
-<span class="header-section-number">12.4.4</span> <code>semi_join()</code> and <code>anti_join()</code>
+<hr></section><section id="semi_join-and-anti_join" class="level3" data-number="13.4.4"><h3 data-number="13.4.4" class="anchored" data-anchor-id="semi_join-and-anti_join">
+<span class="header-section-number">13.4.4</span> <code>semi_join()</code> and <code>anti_join()</code>
 </h3>
 <ul>
 <li>
@@ -443,8 +449,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
 </div>
 </div>
-<hr></section><section id="in-class-exercise-1-basic-joins" class="level3" data-number="12.4.5"><h3 data-number="12.4.5" class="anchored" data-anchor-id="in-class-exercise-1-basic-joins">
-<span class="header-section-number">12.4.5</span> In-Class Exercise 1 – Basic Joins</h3>
+<hr></section><section id="in-class-exercise-1-basic-joins" class="level3" data-number="13.4.5"><h3 data-number="13.4.5" class="anchored" data-anchor-id="in-class-exercise-1-basic-joins">
+<span class="header-section-number">13.4.5</span> In-Class Exercise 1 – Basic Joins</h3>
 <ol type="1">
 <li>Use <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join()</a></code> to add airline names to <code>flights</code> (rename to <code>airline_name</code>).<br>
 </li>
@@ -452,8 +458,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>Use <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join()</a></code> and compare the number of rows.</li>
 </ol>
-<hr></section></section><section id="joining-multiple-tables" class="level2" data-number="12.5"><h2 data-number="12.5" class="anchored" data-anchor-id="joining-multiple-tables">
-<span class="header-section-number">12.5</span> Joining Multiple Tables</h2>
+<hr></section></section><section id="joining-multiple-tables" class="level2" data-number="13.5"><h2 data-number="13.5" class="anchored" data-anchor-id="joining-multiple-tables">
+<span class="header-section-number">13.5</span> Joining Multiple Tables</h2>
 <p>You can chain joins to combine several datasets:</p>
 <div class="cell">
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
@@ -475,8 +481,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <hr>
-<section id="in-class-exercise-2-multi-table-joins" class="level3" data-number="12.5.1"><h3 data-number="12.5.1" class="anchored" data-anchor-id="in-class-exercise-2-multi-table-joins">
-<span class="header-section-number">12.5.1</span> In-Class Exercise 2 – Multi-Table Joins</h3>
+<section id="in-class-exercise-2-multi-table-joins" class="level3" data-number="13.5.1"><h3 data-number="13.5.1" class="anchored" data-anchor-id="in-class-exercise-2-multi-table-joins">
+<span class="header-section-number">13.5.1</span> In-Class Exercise 2 – Multi-Table Joins</h3>
 <ol type="1">
 <li>Join <code>flights</code> with <code>airports</code> to add destination airport names.<br>
 </li>
@@ -484,8 +490,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>Which airport has the longest average delay?</li>
 </ol>
-<hr></section></section><section id="handling-join-problems" class="level2" data-number="12.6"><h2 data-number="12.6" class="anchored" data-anchor-id="handling-join-problems">
-<span class="header-section-number">12.6</span> Handling Join Problems</h2>
+<hr></section></section><section id="handling-join-problems" class="level2" data-number="13.6"><h2 data-number="13.6" class="anchored" data-anchor-id="handling-join-problems">
+<span class="header-section-number">13.6</span> Handling Join Problems</h2>
 <ul>
 <li>Missing keys → results in <code>NA</code> values<br>
 </li>
@@ -522,8 +528,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 16 YV      Mesa Airlines Inc.            601</code></pre>
 </div>
 </div>
-<hr></section><section id="in-class-challenge-join-workflow" class="level2" data-number="12.7"><h2 data-number="12.7" class="anchored" data-anchor-id="in-class-challenge-join-workflow">
-<span class="header-section-number">12.7</span> In-Class Challenge – Join Workflow</h2>
+<hr></section><section id="in-class-challenge-join-workflow" class="level2" data-number="13.7"><h2 data-number="13.7" class="anchored" data-anchor-id="in-class-challenge-join-workflow">
+<span class="header-section-number">13.7</span> In-Class Challenge – Join Workflow</h2>
 <ul>
 <li>Join flights with airlines and airports<br>
 </li>
@@ -531,8 +537,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>Arrange by delay and identify the worst-performing routes</li>
 </ul>
-<hr></section><section id="homework-preview" class="level2" data-number="12.8"><h2 data-number="12.8" class="anchored" data-anchor-id="homework-preview">
-<span class="header-section-number">12.8</span> Homework Preview</h2>
+<hr></section><section id="homework-preview" class="level2" data-number="13.8"><h2 data-number="13.8" class="anchored" data-anchor-id="homework-preview">
+<span class="header-section-number">13.8</span> Homework Preview</h2>
 <p>For the next homework, you will:</p>
 <ul>
 <li>Combine at least two datasets using joins</li>
@@ -541,8 +547,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Produce a summary table and one visualization based on the joined data</li>
 <li>Render to PDF and submit on Canvas</li>
 </ul>
-<hr></section><section id="next-steps" class="level2" data-number="12.9"><h2 data-number="12.9" class="anchored" data-anchor-id="next-steps">
-<span class="header-section-number">12.9</span> Next Steps</h2>
+<hr></section><section id="next-steps" class="level2" data-number="13.9"><h2 data-number="13.9" class="anchored" data-anchor-id="next-steps">
+<span class="header-section-number">13.9</span> Next Steps</h2>
 <p>Next, we will introduce <strong>accessing data</strong> using spreadsheets, SQL databases, JSON, and web scraping.</p>
 
 
@@ -1017,12 +1023,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./factors.html" class="pagination-link" aria-label="Factors and Categorical Data with forcats">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Factors and Categorical Data with forcats</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Factors and Categorical Data with forcats</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./advanced_import.html" class="pagination-link" aria-label="Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
