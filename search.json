@@ -1347,5 +1347,27 @@
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Appendix: Coding Style Guidelines</span>"
     ]
+  },
+  {
+    "objectID": "tibbles.html",
+    "href": "tibbles.html",
+    "title": "Appendix C: Appendix: Tidyverse and Tibbles",
+    "section": "",
+    "text": "C.1 Overview\nThe Tidyverse is a collection of R packages designed for data science.\nThey share a common design philosophy and work seamlessly together.\nCore packages include:\n- ggplot2: data visualization\n- dplyr: data manipulation\n- tidyr: data tidying\n- readr: data import\n- purrr: functional programming\n- tibble: modern data frames\n- stringr: string manipulation\n- forcats: working with factors\nYou load them all with:\nlibrary(tidyverse)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Appendix: Tidyverse and Tibbles</span>"
+    ]
+  },
+  {
+    "objectID": "tibbles.html#in-class-exercise",
+    "href": "tibbles.html#in-class-exercise",
+    "title": "Appendix C: Appendix: Tidyverse and Tibbles",
+    "section": "\nI.1 In-Class Exercise",
+    "text": "I.1 In-Class Exercise\n\nCreate a tibble with three columns: name, age, and score.\n\nUse mutate() to add a new column grade based on score.\n\nGroup by grade and calculate the average age.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Appendix: Tidyverse and Tibbles</span>"
+    ]
   }
 ]
