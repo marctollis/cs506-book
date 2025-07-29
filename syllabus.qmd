@@ -107,21 +107,21 @@ This course directly supports the following program student outcomes in the Mast
 
 | **Week** | **Dates (T/Th)** | **R4DS Chapters** | **Topics** | **Assignments** | **Quiz** |
 |------------|------------|------------|------------|------------|------------|
-| 1 | Aug 26 / 28 | [Ch. 1 – Welcome](https://r4ds.hadley.nz/introduction.html) + Supplement | **Intro to R, RStudio, and Quarto**: Projects, rendering `.qmd` to `.pdf` | PS1 |  |
-| 2 | Sept 2 / 4 | [Ch. 2 – Data Visualization](https://r4ds.hadley.nz/data-visualize.html) | **Data Visualization with ggplot2**: Aesthetics, geoms, facets | PS2, HW1 |  |
-| 3 | Sept 9 / 11 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | **Data Transformation (Rows)**: `filter()`, `arrange()` | PS3 | Quiz 1 |
-| 4 | Sept 16 / 18 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | **Data Transformation (Columns + Pipes)**: `select()`, `mutate()`, `|>` | HW2 |  |
-| 5 | Sept 23 / 25 | [Ch. 5 – Grouped Summaries](https://r4ds.hadley.nz/grouped-summaries.html) | **Grouping & Summarization**: `group_by()`, `summarize()` | PS4 | Quiz 2 |
-| 6 | Sept 30 / Oct 2 | [Ch. 6 – Exploratory Data Analysis](https://r4ds.hadley.nz/eda.html) | **EDA**: distributions, patterns, relationships | HW3 |  |
-| 7 | Oct 7 / 9 | [Ch. 7 – Tidy Data](https://r4ds.hadley.nz/tidy-data.html) | **Tidy Data**: `pivot_longer()`, `pivot_wider()` | PS5 | Quiz 3 |
-| 8 | Oct 14 / 16 | [Ch. 8 – Workflow: Scripts](https://r4ds.hadley.nz/workflow-scripts.html) | **Workflow & Reproducibility**: projects, scripts, Quarto best practices | HW4 |  |
-| 9 | Oct 21 / 23 | [Ch. 11 – Data Import](https://r4ds.hadley.nz/data-import.html) | **Data Import**: `readr`, parsing dates, Excel | PS6 | Quiz 4 |
-| 10 | Oct 28 / 30 | [Ch. 14 – Strings](https://r4ds.hadley.nz/strings.html) | **Strings & Regular Expressions**: `stringr` | HW5 |  |
-| 11 | Nov 4 / 6 | [Ch. 15 – Factors](https://r4ds.hadley.nz/factors.html) | **Factors & Categorical Data**: `forcats` | PS7 | Quiz 5 |
-| 12 | Nov 11\* / 13 | [Ch. 13 – Relational Data](https://r4ds.hadley.nz/relational-data.html) | **Relational Data**: joining tables (`left_join`, etc.) | HW6 |  |
-| 13 | Nov 18 / 20 | [Ch. 21 – Model Basics](https://r4ds.hadley.nz/model-basics.html) | **Intro to Modeling (Optional Overview)** or extended review | — |  |
+| 1 | Aug 26 / 28 | [Ch. 1](https://r4ds.hadley.nz/intro.html) | [**Intro to R, RStudio, and Quarto**](https://marctollis.github.io/cs506-book/Rintro.html): Projects, rendering `.qmd` to `.pdf` | PS1 |  |
+| 2 | Sept 2 / 4 | [Ch. 2 – Data Visualization](https://r4ds.hadley.nz/data-visualize.html) | [**Data Visualization with ggplot2**](https://marctollis.github.io/cs506-book/ggplot2.html): Aesthetics, geoms, facets | PS2 |  |
+| 3 | Sept 9 / 11 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | [**Data Transformation (Rows)**](https://marctollis.github.io/cs506-book/dplyr1.html): `filter()`, `arrange()` | PS3 | Quiz 1 |
+| 4 | Sept 16 / 18 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | [**Data Transformation (Columns + Pipes)**](https://marctollis.github.io/cs506-book/dplyr1.html): `select()`, `mutate()`, `|>` | PS4 |  |
+| 5 | Sept 23 / 25 | [Ch. 5 – Grouped Summaries](https://r4ds.hadley.nz/grouped-summaries.html) | [**Grouping & Summarization**](https://marctollis.github.io/cs506-book/dplyr2.html): `group_by()`, `summarize()` | PS5 | Quiz 2 |
+| 6 | Sept 30 / Oct 2 | [Ch. 6 – Exploratory Data Analysis](https://r4ds.hadley.nz/eda.html) | [**EDA**: distributions, patterns, relationships](https://marctollis.github.io/cs506-book/eda.html) | PS6 |  |
+| 7 | Oct 7 / 9 | [Ch. 7 – Tidy Data](https://r4ds.hadley.nz/tidy-data.html) | [**Tidy Data**](https://marctollis.github.io/cs506-book/tidy.html): `pivot_longer()`, `pivot_wider()` | PS7 | Quiz 3 |
+| 8 | Oct 14 / 16 | [Ch. 8 – Workflow: Scripts](https://r4ds.hadley.nz/workflow-scripts.html) | [**Workflow & Reproducibility**](https://marctollis.github.io/cs506-book/workflow.html): projects, scripts, Quarto best practices | PS8 |  |
+| 9 | Oct 21 / 23 | [Ch. 11 – Data Import](https://r4ds.hadley.nz/data-import.html) | [**Data Import**](https://marctollis.github.io/cs506-book/dataimport.html): `readr`, parsing dates, Excel | PS9 | Quiz 4 |
+| 10 | Oct 28 / 30 | [Ch. 14 – Strings](https://r4ds.hadley.nz/strings.html) | [**Strings & Regular Expressions**](https://marctollis.github.io/cs506-book/strings.html): `stringr` | PS10 |  |
+| 11 | Nov 4 / 6 | [Ch. 15 – Factors](https://r4ds.hadley.nz/factors.html) | [**Factors & Categorical Data**](https://marctollis.github.io/cs506-book/strings.html): `forcats` | PS11 | Quiz 5 |
+| 12 | Nov 11\* / 13 | [Ch. 13 – Relational Data](https://r4ds.hadley.nz/relational-data.html) | [**Relational Data**](https://marctollis.github.io/cs506-book/relational.html): joining tables (`left_join`, etc.) | PS12 |  |
+| 13 | Nov 18 / 20 | [Ch. 20-24 – Advanced Import](https://r4ds.hadley.nz/model-basics.html) | [**Advanced Import**](https://marctollis.github.io/cs506-book/advanced_import.html), databases, web scraping | PS13 |  |
 | 14 | Nov 25 / 27 | — | **Nov 25:** Catch-Up, Q&A, In-Class Coding Practice <br> **Nov 27:** Thanksgiving – No Class | — | — |
-| 15 | Dec 2 / 4 | — | Course Wrap-up & Final Quiz | PS8 | Quiz 6 |
+| 15 | Dec 2 / 4 | — | Course Wrap-up & Final Quiz | PS14 | Quiz 6 |
 
 > \* **Nov 11 (Veterans Day)** – no class that Tuesday.
 
