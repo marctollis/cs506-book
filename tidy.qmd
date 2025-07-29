@@ -146,6 +146,3 @@ For homework, you will:
 
 ------------------------------------------------------------------------
 
-## Next Steps
-
-Next week, we will focus on **Workflow and Reproducibility** using Quarto and R projects to organize your work.

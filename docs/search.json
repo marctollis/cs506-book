@@ -392,171 +392,171 @@
   {
     "objectID": "eda.html",
     "href": "eda.html",
-    "title": "\n6  Exploratory Data Analysis (EDA)\n",
+    "title": "\n7  Exploratory Data Analysis (EDA)\n",
     "section": "",
-    "text": "6.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "text": "7.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#learning-objectives",
     "href": "eda.html#learning-objectives",
-    "title": "\n6  Exploratory Data Analysis (EDA)\n",
+    "title": "\n7  Exploratory Data Analysis (EDA)\n",
     "section": "",
     "text": "Understand the purpose of exploratory data analysis (EDA)\nVisualize distributions of single variables\nExamine relationships between variables\nDetect patterns, clusters, and outliers\nUse transformations to clarify patterns",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#introduction-to-eda",
     "href": "eda.html#introduction-to-eda",
-    "title": "\n6  Exploratory Data Analysis (EDA)\n",
-    "section": "\n6.2 Introduction to EDA",
-    "text": "6.2 Introduction to EDA\nExploratory Data Analysis (EDA) is about looking at your data to find patterns, spot anomalies, and guide your next steps.\nWe use ggplot2 to visualize both univariate and bivariate relationships.\nWe will use the diamonds dataset.",
+    "title": "\n7  Exploratory Data Analysis (EDA)\n",
+    "section": "\n7.2 Introduction to EDA",
+    "text": "7.2 Introduction to EDA\nExploratory Data Analysis (EDA) is about looking at your data to find patterns, spot anomalies, and guide your next steps.\nWe use ggplot2 to visualize both univariate and bivariate relationships.\nWe will use the diamonds dataset.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#visualizing-single-variables",
     "href": "eda.html#visualizing-single-variables",
-    "title": "\n6  Exploratory Data Analysis (EDA)\n",
-    "section": "\n6.3 Visualizing Single Variables",
-    "text": "6.3 Visualizing Single Variables\n\n6.3.1 Categorical Variables\nUse a bar chart (geom_bar()):\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nggplot(data = diamonds) +\n  geom_bar(mapping = aes(x = cut))\n\n\n\n\n\n\n\n\n6.3.2 Continuous Variables\nUse a histogram (geom_histogram()):\n\nggplot(data = diamonds) +\n  geom_histogram(mapping = aes(x = carat), binwidth = 0.5)\n\n\n\n\n\n\n\nYou can also use geom_freqpoly() for density curves.\n\n6.3.3 In-Class Exercise 1 – Single Variables\n\nPlot the distribution of color using a bar chart.\n\nPlot a histogram of price with a binwidth of 1000.\n\nWhat patterns or anomalies do you see?",
+    "title": "\n7  Exploratory Data Analysis (EDA)\n",
+    "section": "\n7.3 Visualizing Single Variables",
+    "text": "7.3 Visualizing Single Variables\n\n7.3.1 Categorical Variables\nUse a bar chart (geom_bar()):\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nggplot(data = diamonds) +\n  geom_bar(mapping = aes(x = cut))\n\n\n\n\n\n\n\n\n7.3.2 Continuous Variables\nUse a histogram (geom_histogram()):\n\nggplot(data = diamonds) +\n  geom_histogram(mapping = aes(x = carat), binwidth = 0.5)\n\n\n\n\n\n\n\nYou can also use geom_freqpoly() for density curves.\n\n7.3.3 In-Class Exercise 1 – Single Variables\n\nPlot the distribution of color using a bar chart.\n\nPlot a histogram of price with a binwidth of 1000.\n\nWhat patterns or anomalies do you see?",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#visualizing-relationships",
     "href": "eda.html#visualizing-relationships",
-    "title": "\n6  Exploratory Data Analysis (EDA)\n",
-    "section": "\n6.4 Visualizing Relationships",
-    "text": "6.4 Visualizing Relationships\n\n6.4.1 Two Continuous Variables\nScatterplots show relationships:\n\nggplot(data = diamonds) +\n  geom_point(mapping = aes(x = carat, y = price), alpha = 0.3)\n\n\n\n\n\n\n\nUse alpha to reduce overplotting.\n\n6.4.2 Categorical vs. Continuous\nBoxplots work well:\n\nggplot(data = diamonds) +\n  geom_boxplot(mapping = aes(x = cut, y = price))\n\n\n\n\n\n\n\n\n6.4.3 In-Class Exercise 2 – Relationships\n\nCreate a scatterplot of carat vs price.\n\nColor the points by cut.\n\nMake a boxplot of price across diamond color categories.",
+    "title": "\n7  Exploratory Data Analysis (EDA)\n",
+    "section": "\n7.4 Visualizing Relationships",
+    "text": "7.4 Visualizing Relationships\n\n7.4.1 Two Continuous Variables\nScatterplots show relationships:\n\nggplot(data = diamonds) +\n  geom_point(mapping = aes(x = carat, y = price), alpha = 0.3)\n\n\n\n\n\n\n\nUse alpha to reduce overplotting.\n\n7.4.2 Categorical vs. Continuous\nBoxplots work well:\n\nggplot(data = diamonds) +\n  geom_boxplot(mapping = aes(x = cut, y = price))\n\n\n\n\n\n\n\n\n7.4.3 In-Class Exercise 2 – Relationships\n\nCreate a scatterplot of carat vs price.\n\nColor the points by cut.\n\nMake a boxplot of price across diamond color categories.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#patterns-and-outliers",
     "href": "eda.html#patterns-and-outliers",
-    "title": "\n6  Exploratory Data Analysis (EDA)\n",
-    "section": "\n6.5 Patterns and Outliers",
-    "text": "6.5 Patterns and Outliers\nLook for clusters, gaps, and unusual observations.\nYou can filter or highlight outliers.\nExample: filter diamonds with unusually high price:\n\ndiamonds |&gt;\n  filter(price &gt; 15000) |&gt;\n  arrange(desc(price)) |&gt;\n  head()\n\n# A tibble: 6 × 10\n  carat cut       color clarity depth table price     x     y     z\n  &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1  2.29 Premium   I     VS2      60.8    60 18823  8.5   8.47  5.16\n2  2    Very Good G     SI1      63.5    56 18818  7.9   7.97  5.04\n3  1.51 Ideal     G     IF       61.7    55 18806  7.37  7.41  4.56\n4  2.07 Ideal     G     SI2      62.5    55 18804  8.2   8.13  5.11\n5  2    Very Good H     SI1      62.8    57 18803  7.95  8     5.01\n6  2.29 Premium   I     SI1      61.8    59 18797  8.52  8.45  5.24\n\n\n\n\n6.5.1 Transformations\nLog transformations can reveal patterns in skewed data.\n\nggplot(data = diamonds) +\n  geom_point(mapping = aes(x = carat, y = price)) +\n  scale_y_log10()\n\n\n\n\n\n\n\n\n6.5.2 In-Class Exercise 3 – Patterns and Transformations\n\nIdentify any outliers in the diamonds dataset using filters.\n\nApply a log transformation to price.\n\nDoes the relationship between carat and price become clearer?",
+    "title": "\n7  Exploratory Data Analysis (EDA)\n",
+    "section": "\n7.5 Patterns and Outliers",
+    "text": "7.5 Patterns and Outliers\nLook for clusters, gaps, and unusual observations.\nYou can filter or highlight outliers.\nExample: filter diamonds with unusually high price:\n\ndiamonds |&gt;\n  filter(price &gt; 15000) |&gt;\n  arrange(desc(price)) |&gt;\n  head()\n\n# A tibble: 6 × 10\n  carat cut       color clarity depth table price     x     y     z\n  &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1  2.29 Premium   I     VS2      60.8    60 18823  8.5   8.47  5.16\n2  2    Very Good G     SI1      63.5    56 18818  7.9   7.97  5.04\n3  1.51 Ideal     G     IF       61.7    55 18806  7.37  7.41  4.56\n4  2.07 Ideal     G     SI2      62.5    55 18804  8.2   8.13  5.11\n5  2    Very Good H     SI1      62.8    57 18803  7.95  8     5.01\n6  2.29 Premium   I     SI1      61.8    59 18797  8.52  8.45  5.24\n\n\n\n\n7.5.1 Transformations\nLog transformations can reveal patterns in skewed data.\n\nggplot(data = diamonds) +\n  geom_point(mapping = aes(x = carat, y = price)) +\n  scale_y_log10()\n\n\n\n\n\n\n\n\n7.5.2 In-Class Exercise 3 – Patterns and Transformations\n\nIdentify any outliers in the diamonds dataset using filters.\n\nApply a log transformation to price.\n\nDoes the relationship between carat and price become clearer?",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#combining-eda-with-dplyr",
     "href": "eda.html#combining-eda-with-dplyr",
-    "title": "\n6  Exploratory Data Analysis (EDA)\n",
-    "section": "\n6.6 Combining EDA with dplyr",
-    "text": "6.6 Combining EDA with dplyr\nUse filter(), mutate(), and group_by() to enhance your plots.\nExample: average price per cut:\n\ndiamonds |&gt;\n  group_by(cut) |&gt;\n  summarize(mean_price = mean(price))\n\n# A tibble: 5 × 2\n  cut       mean_price\n  &lt;ord&gt;          &lt;dbl&gt;\n1 Fair           4359.\n2 Good           3929.\n3 Very Good      3982.\n4 Premium        4584.\n5 Ideal          3458.\n\n\n\n\n6.6.1 In-Class Challenge – EDA Workflow\n\nExplore diamonds by:\n\nVisualizing distributions of at least two variables\nPlotting relationships between two variables\nDetecting outliers\nApplying a transformation to clarify a pattern",
+    "title": "\n7  Exploratory Data Analysis (EDA)\n",
+    "section": "\n7.6 Combining EDA with dplyr",
+    "text": "7.6 Combining EDA with dplyr\nUse filter(), mutate(), and group_by() to enhance your plots.\nExample: average price per cut:\n\ndiamonds |&gt;\n  group_by(cut) |&gt;\n  summarize(mean_price = mean(price))\n\n# A tibble: 5 × 2\n  cut       mean_price\n  &lt;ord&gt;          &lt;dbl&gt;\n1 Fair           4359.\n2 Good           3929.\n3 Very Good      3982.\n4 Premium        4584.\n5 Ideal          3458.\n\n\n\n\n7.6.1 In-Class Challenge – EDA Workflow\n\nExplore diamonds by:\n\nVisualizing distributions of at least two variables\nPlotting relationships between two variables\nDetecting outliers\nApplying a transformation to clarify a pattern",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#homework-preview",
     "href": "eda.html#homework-preview",
-    "title": "\n6  Exploratory Data Analysis (EDA)\n",
-    "section": "\n6.7 Homework Preview",
-    "text": "6.7 Homework Preview\nFor homework, you will:\n\nChoose a dataset (e.g., diamonds or your own)\n\nCreate at least two univariate visualizations (bar chart, histogram)\n\nCreate at least two bivariate visualizations (scatterplot, boxplot)\n\nIdentify any patterns or outliers and describe them in text\n\nApply at least one transformation to improve visualization\n\nRender to PDF and submit",
+    "title": "\n7  Exploratory Data Analysis (EDA)\n",
+    "section": "\n7.7 Homework Preview",
+    "text": "7.7 Homework Preview\nFor homework, you will:\n\nChoose a dataset (e.g., diamonds or your own)\n\nCreate at least two univariate visualizations (bar chart, histogram)\n\nCreate at least two bivariate visualizations (scatterplot, boxplot)\n\nIdentify any patterns or outliers and describe them in text\n\nApply at least one transformation to improve visualization\n\nRender to PDF and submit",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "eda.html#next-steps",
     "href": "eda.html#next-steps",
-    "title": "\n6  Exploratory Data Analysis (EDA)\n",
-    "section": "\n6.8 Next Steps",
-    "text": "6.8 Next Steps\nNext week, we will dive into Tidy Data and learn how to reshape messy datasets using tidyr.",
+    "title": "\n7  Exploratory Data Analysis (EDA)\n",
+    "section": "\n7.8 Next Steps",
+    "text": "7.8 Next Steps\nNext week, we will dive into Tidy Data and learn how to reshape messy datasets using tidyr.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
   },
   {
     "objectID": "tidy.html",
     "href": "tidy.html",
-    "title": "\n7  Tidy Data with tidyr\n",
+    "title": "\n6  Tidy Data with tidyr\n",
     "section": "",
-    "text": "7.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "text": "6.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#learning-objectives",
     "href": "tidy.html#learning-objectives",
-    "title": "\n7  Tidy Data with tidyr\n",
+    "title": "\n6  Tidy Data with tidyr\n",
     "section": "",
     "text": "Explain why tidy data improves analysis and visualization\nReshape data between wide and long formats using pivot_longer() and pivot_wider()\n\nSeparate and unite columns using separate() and unite()\n\nApply tidying techniques to messy real-world datasets\nPrepare datasets for use with dplyr and ggplot2",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#why-tidy-data",
     "href": "tidy.html#why-tidy-data",
-    "title": "\n7  Tidy Data with tidyr\n",
-    "section": "\n7.2 Why Tidy Data?",
-    "text": "7.2 Why Tidy Data?\nIn Week 6, you performed EDA on datasets that were already in a usable format.\nReal datasets are often messy. Tidy data makes it easy to:\n\nUse ggplot2 for visualization\n\nUse dplyr for summaries and transformations\n\nCombine datasets with joins\n\nPrinciples of Tidy Data (Hadley Wickham):\n1. Each variable is a column\n2. Each observation is a row\n3. Each value is a cell",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.2 Why Tidy Data?",
+    "text": "6.2 Why Tidy Data?\nIn Week 6, you performed EDA on datasets that were already in a usable format.\nReal datasets are often messy. Tidy data makes it easy to:\n\nUse ggplot2 for visualization\n\nUse dplyr for summaries and transformations\n\nCombine datasets with joins\n\nPrinciples of Tidy Data (Hadley Wickham):\n1. Each variable is a column\n2. Each observation is a row\n3. Each value is a cell",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#pivoting-long-vs-wide",
     "href": "tidy.html#pivoting-long-vs-wide",
-    "title": "\n7  Tidy Data with tidyr\n",
-    "section": "\n7.3 Pivoting: Long vs Wide",
-    "text": "7.3 Pivoting: Long vs Wide\n\n7.3.1 pivot_longer()\n\nConverts wide data into long (tidy) format.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntable4a |&gt;\n  pivot_longer(cols = c(`1999`, `2000`),\n               names_to = \"year\",\n               values_to = \"cases\")\n\n# A tibble: 6 × 3\n  country     year   cases\n  &lt;chr&gt;       &lt;chr&gt;  &lt;dbl&gt;\n1 Afghanistan 1999     745\n2 Afghanistan 2000    2666\n3 Brazil      1999   37737\n4 Brazil      2000   80488\n5 China       1999  212258\n6 China       2000  213766\n\n\n\n7.3.2 pivot_wider()\n\nConverts long data back into wide format.\n\ntable2 |&gt;\n  pivot_wider(names_from = type, values_from = count)\n\n# A tibble: 6 × 4\n  country      year  cases population\n  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;\n1 Afghanistan  1999    745   19987071\n2 Afghanistan  2000   2666   20595360\n3 Brazil       1999  37737  172006362\n4 Brazil       2000  80488  174504898\n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583\n\n\n\n7.3.3 In-Class Exercise 1 – Pivoting\n\nUse pivot_longer() to convert table4a to long format.\n\nUse pivot_wider() on table2 to create separate columns for type.\n\nWhich format is easier to use with ggplot2 and dplyr?",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.3 Pivoting: Long vs Wide",
+    "text": "6.3 Pivoting: Long vs Wide\n\n6.3.1 pivot_longer()\n\nConverts wide data into long (tidy) format.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntable4a |&gt;\n  pivot_longer(cols = c(`1999`, `2000`),\n               names_to = \"year\",\n               values_to = \"cases\")\n\n# A tibble: 6 × 3\n  country     year   cases\n  &lt;chr&gt;       &lt;chr&gt;  &lt;dbl&gt;\n1 Afghanistan 1999     745\n2 Afghanistan 2000    2666\n3 Brazil      1999   37737\n4 Brazil      2000   80488\n5 China       1999  212258\n6 China       2000  213766\n\n\n\n6.3.2 pivot_wider()\n\nConverts long data back into wide format.\n\ntable2 |&gt;\n  pivot_wider(names_from = type, values_from = count)\n\n# A tibble: 6 × 4\n  country      year  cases population\n  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;\n1 Afghanistan  1999    745   19987071\n2 Afghanistan  2000   2666   20595360\n3 Brazil       1999  37737  172006362\n4 Brazil       2000  80488  174504898\n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583\n\n\n\n6.3.3 In-Class Exercise 1 – Pivoting\n\nUse pivot_longer() to convert table4a to long format.\n\nUse pivot_wider() on table2 to create separate columns for type.\n\nWhich format is easier to use with ggplot2 and dplyr?",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#separating-and-uniting-columns",
     "href": "tidy.html#separating-and-uniting-columns",
-    "title": "\n7  Tidy Data with tidyr\n",
-    "section": "\n7.4 Separating and Uniting Columns",
-    "text": "7.4 Separating and Uniting Columns\n\n7.4.1 separate()\n\nSplits a column into multiple columns.\n\ntable3 |&gt;\n  separate(rate, into = c(\"cases\", \"population\"), sep = \"/\")\n\n# A tibble: 6 × 4\n  country      year cases  population\n  &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n1 Afghanistan  1999 745    19987071  \n2 Afghanistan  2000 2666   20595360  \n3 Brazil       1999 37737  172006362 \n4 Brazil       2000 80488  174504898 \n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583\n\n\n\n7.4.2 unite()\n\nCombines multiple columns into one.\n\ntable5 |&gt;\n  unite(new, century, year, sep = \"\")\n\n# A tibble: 6 × 3\n  country     new   rate             \n  &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;            \n1 Afghanistan 1999  745/19987071     \n2 Afghanistan 2000  2666/20595360    \n3 Brazil      1999  37737/172006362  \n4 Brazil      2000  80488/174504898  \n5 China       1999  212258/1272915272\n6 China       2000  213766/1280428583\n\n\n\n7.4.3 In-Class Exercise 2 – Separate and Unite\n\nUse separate() to split the rate column in table3.\n\nUse unite() to combine century and year into one column.",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.4 Separating and Uniting Columns",
+    "text": "6.4 Separating and Uniting Columns\n\n6.4.1 separate()\n\nSplits a column into multiple columns.\n\ntable3 |&gt;\n  separate(rate, into = c(\"cases\", \"population\"), sep = \"/\")\n\n# A tibble: 6 × 4\n  country      year cases  population\n  &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n1 Afghanistan  1999 745    19987071  \n2 Afghanistan  2000 2666   20595360  \n3 Brazil       1999 37737  172006362 \n4 Brazil       2000 80488  174504898 \n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583\n\n\n\n6.4.2 unite()\n\nCombines multiple columns into one.\n\ntable5 |&gt;\n  unite(new, century, year, sep = \"\")\n\n# A tibble: 6 × 3\n  country     new   rate             \n  &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;            \n1 Afghanistan 1999  745/19987071     \n2 Afghanistan 2000  2666/20595360    \n3 Brazil      1999  37737/172006362  \n4 Brazil      2000  80488/174504898  \n5 China       1999  212258/1272915272\n6 China       2000  213766/1280428583\n\n\n\n6.4.3 In-Class Exercise 2 – Separate and Unite\n\nUse separate() to split the rate column in table3.\n\nUse unite() to combine century and year into one column.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#tidying-a-real-dataset",
     "href": "tidy.html#tidying-a-real-dataset",
-    "title": "\n7  Tidy Data with tidyr\n",
-    "section": "\n7.5 Tidying a Real Dataset",
-    "text": "7.5 Tidying a Real Dataset\nThe who dataset is messy: column names encode multiple variables.\nExample tidying workflow:\n\nwho |&gt;\n  pivot_longer(cols = starts_with(\"new\"),\n               names_to = \"key\",\n               values_to = \"cases\",\n               values_drop_na = TRUE) |&gt;\n  separate(key, into = c(\"type\", \"sex_age\"), sep = \"_\") |&gt;\n  separate(sex_age, into = c(\"sex\", \"age\"), sep = 1)\n\nWarning: Expected 2 pieces. Additional pieces discarded in 73466 rows [1, 2, 3, 4, 5, 6,\n7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...].\n\n\n# A tibble: 76,046 × 8\n   country     iso2  iso3   year type  sex   age   cases\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1997 new   s     p         0\n 2 Afghanistan AF    AFG    1997 new   s     p        10\n 3 Afghanistan AF    AFG    1997 new   s     p         6\n 4 Afghanistan AF    AFG    1997 new   s     p         3\n 5 Afghanistan AF    AFG    1997 new   s     p         5\n 6 Afghanistan AF    AFG    1997 new   s     p         2\n 7 Afghanistan AF    AFG    1997 new   s     p         0\n 8 Afghanistan AF    AFG    1997 new   s     p         5\n 9 Afghanistan AF    AFG    1997 new   s     p        38\n10 Afghanistan AF    AFG    1997 new   s     p        36\n# ℹ 76,036 more rows\n\n\n\n\n7.5.1 In-Class Exercise 3 – WHO Dataset\n\nPivot who longer to create key and cases.\n\nSeparate key into multiple components.\n\nCount total cases by country.\n\nWhich country has the highest reported cases?",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.5 Tidying a Real Dataset",
+    "text": "6.5 Tidying a Real Dataset\nThe who dataset is messy: column names encode multiple variables.\nExample tidying workflow:\n\nwho |&gt;\n  pivot_longer(cols = starts_with(\"new\"),\n               names_to = \"key\",\n               values_to = \"cases\",\n               values_drop_na = TRUE) |&gt;\n  separate(key, into = c(\"type\", \"sex_age\"), sep = \"_\") |&gt;\n  separate(sex_age, into = c(\"sex\", \"age\"), sep = 1)\n\nWarning: Expected 2 pieces. Additional pieces discarded in 73466 rows [1, 2, 3, 4, 5, 6,\n7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...].\n\n\n# A tibble: 76,046 × 8\n   country     iso2  iso3   year type  sex   age   cases\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1997 new   s     p         0\n 2 Afghanistan AF    AFG    1997 new   s     p        10\n 3 Afghanistan AF    AFG    1997 new   s     p         6\n 4 Afghanistan AF    AFG    1997 new   s     p         3\n 5 Afghanistan AF    AFG    1997 new   s     p         5\n 6 Afghanistan AF    AFG    1997 new   s     p         2\n 7 Afghanistan AF    AFG    1997 new   s     p         0\n 8 Afghanistan AF    AFG    1997 new   s     p         5\n 9 Afghanistan AF    AFG    1997 new   s     p        38\n10 Afghanistan AF    AFG    1997 new   s     p        36\n# ℹ 76,036 more rows\n\n\n\n\n6.5.1 In-Class Exercise 3 – WHO Dataset\n\nPivot who longer to create key and cases.\n\nSeparate key into multiple components.\n\nCount total cases by country.\n\nWhich country has the highest reported cases?",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#tidy-data-workflow",
     "href": "tidy.html#tidy-data-workflow",
-    "title": "\n7  Tidy Data with tidyr\n",
-    "section": "\n7.6 Tidy Data Workflow",
-    "text": "7.6 Tidy Data Workflow\nAfter tidying, you can:\n\nUse ggplot2 for visualizations\n\nUse group_by() and summarize() for summaries\n\nJoin with other datasets",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.6 Tidy Data Workflow",
+    "text": "6.6 Tidy Data Workflow\nAfter tidying, you can:\n\nUse ggplot2 for visualizations\n\nUse group_by() and summarize() for summaries\n\nJoin with other datasets",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
     "objectID": "tidy.html#homework-preview",
     "href": "tidy.html#homework-preview",
-    "title": "\n7  Tidy Data with tidyr\n",
-    "section": "\n7.7 Homework Preview",
-    "text": "7.7 Homework Preview\nFor homework, you will:\n\nTake a messy dataset (e.g., table4a, table5, or your own)\nUse pivot_longer() and/or pivot_wider() to reshape it\nUse separate() and unite() as needed\nProduce a tidy dataset and create one visualization and one grouped summary\n\nRender to PDF and submit on Canvas",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.7 Homework Preview",
+    "text": "6.7 Homework Preview\nFor homework, you will:\n\nTake a messy dataset (e.g., table4a, table5, or your own)\nUse pivot_longer() and/or pivot_wider() to reshape it\nUse separate() and unite() as needed\nProduce a tidy dataset and create one visualization and one grouped summary\n\nRender to PDF and submit on Canvas",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
