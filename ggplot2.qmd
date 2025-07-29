@@ -145,7 +145,7 @@ Using the `mpg` dataset:
 
 ## Homework Preview
 
-For **Homework 1 (Visualization)**, you will:
+For **Homework**, you will:
 
 -   Use the `mpg` dataset (or another dataset of your choice).\
 -   Create **three plots**:

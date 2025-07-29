@@ -6,12 +6,12 @@ title: "Strings and Regular Expressions with stringr"
 
 By the end of this chapter, you should be able to:
 
-- Manipulate strings using the `stringr` package
-- Detect patterns with regular expressions (regex)
-- Extract, replace, and split text
-- Clean messy text data for analysis
+-   Manipulate strings using the `stringr` package
+-   Detect patterns with regular expressions (regex)
+-   Extract, replace, and split text
+-   Clean messy text data for analysis
 
----
+------------------------------------------------------------------------
 
 ## Introduction to stringr
 
@@ -23,7 +23,7 @@ Load the library:
 library(stringr)
 ```
 
----
+------------------------------------------------------------------------
 
 ## Creating and Inspecting Strings
 
@@ -33,15 +33,15 @@ str_length(fruit)
 str_c(fruit, " is tasty")
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 1 – Basic String Operations
 
-1. Create a vector of at least 5 words.  
-2. Measure their lengths with `str_length()`.  
-3. Concatenate them with the phrase `" is cool"`.
+1.  Create a vector of at least 5 words.\
+2.  Measure their lengths with `str_length()`.\
+3.  Concatenate them with the phrase `" is cool"`.
 
----
+------------------------------------------------------------------------
 
 ## Detecting Patterns with Regex
 
@@ -56,24 +56,24 @@ You can use **regular expressions** for more complex patterns.
 
 Examples:
 
-- `^a` – starts with “a”  
-- `ing$` – ends with “ing”  
-- `[0-9]+` – one or more digits
+-   `^a` – starts with “a”\
+-   `ing$` – ends with “ing”\
+-   `[0-9]+` – one or more digits
 
 ```{r}
 animals <- c("ant", "bat", "cat", "dog")
 str_detect(animals, "^a")
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 2 – Pattern Detection
 
-1. Create a vector of email-like strings.  
-2. Use `str_detect()` to check which contain `"@"`.  
-3. Write a regex to detect strings ending in `.com`.
+1.  Create a vector of email-like strings.\
+2.  Use `str_detect()` to check which contain `"@"`.\
+3.  Write a regex to detect strings ending in `.com`.
 
----
+------------------------------------------------------------------------
 
 ## Extracting and Replacing Text
 
@@ -93,14 +93,14 @@ Replaces matching patterns:
 str_replace("apple pie", "apple", "peach")
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 3 – Extraction and Replacement
 
-1. Extract digits from a vector of alphanumeric strings.  
-2. Replace the word `"dog"` with `"puppy"` in a text vector.
+1.  Extract digits from a vector of alphanumeric strings.\
+2.  Replace the word `"dog"` with `"puppy"` in a text vector.
 
----
+------------------------------------------------------------------------
 
 ## Splitting and Cleaning Text
 
@@ -121,26 +121,26 @@ dirty <- c(" price:$100 ", " cost:$200 ")
 str_replace_all(dirty, "[$ ]", "")
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Challenge – Text Cleaning
 
-1. Create a vector of messy product names with extra spaces and symbols.  
-2. Use `str_replace_all()` and `str_trim()` to clean them.  
-3. Extract numeric prices from the strings.
+1.  Create a vector of messy product names with extra spaces and symbols.\
+2.  Use `str_replace_all()` and `str_trim()` to clean them.\
+3.  Extract numeric prices from the strings.
 
----
+------------------------------------------------------------------------
 
 ## Homework Preview
 
 For the next homework, you will:
 
-- Work with a text dataset (e.g., movie titles, email logs, or messy product names)
-- Use at least three `stringr` functions to clean or extract information
-- Write one regex pattern to detect a specific feature in the data
-- Render a short report (with code and results) to PDF and submit
+-   Work with a text dataset (e.g., movie titles, email logs, or messy product names)
+-   Use at least three `stringr` functions to clean or extract information
+-   Write one regex pattern to detect a specific feature in the data
+-   Render a short report (with code and results) to PDF and submit
 
----
+------------------------------------------------------------------------
 
 ## Next Steps
 

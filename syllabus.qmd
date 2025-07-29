@@ -98,9 +98,9 @@ This course directly supports the following program student outcomes in the Mast
 
 -   Grades will be assigned using the weighted sum described above using this scale: **A** ≥ 90%, **B** ≥ 80%, **C** ≥ 70%, **D** ≥ 60%, **F** \< 60%.
 
--   **Problem sets** and **homeworks** are marked as **complete** or **incomplete**.
+-   **Problem sets** are marked as **complete** or **incomplete**.
 
--   **Problem sets** are simpler assignments and will be completed on your own, while **homeworks** can be done in groups.
+-   **Problem sets** are simple assignments and will be completed on your own.
 
 # Course Schedule (Fall 2025)
 
@@ -144,7 +144,7 @@ This course directly supports the following program student outcomes in the Mast
 
 -   **Attendance:** Active participation in coding activities is expected. Repeated, unexcused absences may affect the student's grade.
 
--   **Collaboration:** Allowed for **homeworks**; **problem sets** and **quizzes** must be completed individually. - **Late Work:** Accepted only with prior arrangement.
+- **Late Work:** Accepted only with prior arrangement.
 
 -   **Academic Integrity:** Students must adhere to NAU’s academic integrity policy.\
 
@@ -156,7 +156,7 @@ This course directly supports the following program student outcomes in the Mast
 
 # Grading and Submission
 
--   **Problem Sets** and **homeworks** will be submitted via Canvas.
+-   **Problem Sets** will be submitted via Canvas.
 -   **Quizzes** are written and completed in-class.
 -   All **assignments are due Sunday 11:59PM** the week they are assigned.
 

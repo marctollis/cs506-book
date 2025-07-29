@@ -135,7 +135,7 @@ After tidying, you can:
 
 ## Homework Preview
 
-For Homework 4, you will:
+For homework, you will:
 
 -   Take a messy dataset (e.g., `table4a`, `table5`, or your own)
 -   Use `pivot_longer()` and/or `pivot_wider()` to reshape it

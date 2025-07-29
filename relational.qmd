@@ -6,13 +6,13 @@ title: "Relational Data with dplyr Joins"
 
 By the end of this chapter, you should be able to:
 
-- Understand the concept of relational data and keys
-- Combine multiple datasets using different join functions
-- Use `left_join()`, `inner_join()`, `full_join()`, and `semi_join()`
-- Diagnose and handle join problems (missing keys, duplicates)
-- Apply joins in analysis workflows
+-   Understand the concept of relational data and keys
+-   Combine multiple datasets using different join functions
+-   Use `left_join()`, `inner_join()`, `full_join()`, and `semi_join()`
+-   Diagnose and handle join problems (missing keys, duplicates)
+-   Apply joins in analysis workflows
 
----
+------------------------------------------------------------------------
 
 ## What is Relational Data?
 
@@ -20,22 +20,22 @@ Relational data consists of **multiple tables** that can be linked by **keys**.
 
 Example tables from `nycflights13`:
 
-- `flights`: flight information
-- `airlines`: airline names
-- `airports`: airport locations
-- `planes`: plane details
-- `weather`: weather data
+-   `flights`: flight information
+-   `airlines`: airline names
+-   `airports`: airport locations
+-   `planes`: plane details
+-   `weather`: weather data
 
----
+------------------------------------------------------------------------
 
 ## Keys
 
-- **Primary key**: uniquely identifies each row in a table  
-- **Foreign key**: column that matches a primary key in another table  
+-   **Primary key**: uniquely identifies each row in a table\
+-   **Foreign key**: column that matches a primary key in another table
 
 Example: `flights$carrier` matches `airlines$carrier`.
 
----
+------------------------------------------------------------------------
 
 ## Joins with dplyr
 
@@ -56,7 +56,7 @@ flights |>
   head()
 ```
 
----
+------------------------------------------------------------------------
 
 ### `inner_join()`
 
@@ -70,7 +70,7 @@ flights |>
   head()
 ```
 
----
+------------------------------------------------------------------------
 
 ### `full_join()`
 
@@ -84,12 +84,12 @@ flights |>
   head()
 ```
 
----
+------------------------------------------------------------------------
 
 ### `semi_join()` and `anti_join()`
 
-- `semi_join()`: keeps rows in first table with matches in second  
-- `anti_join()`: keeps rows with no matches
+-   `semi_join()`: keeps rows in first table with matches in second\
+-   `anti_join()`: keeps rows with no matches
 
 ```{r}
 flights |>
@@ -97,15 +97,15 @@ flights |>
   head()
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 1 – Basic Joins
 
-1. Use `left_join()` to add airline names to `flights` (rename to `airline_name`).  
-2. Count the number of flights for each airline.  
-3. Use `inner_join()` and compare the number of rows.
+1.  Use `left_join()` to add airline names to `flights` (rename to `airline_name`).\
+2.  Count the number of flights for each airline.\
+3.  Use `inner_join()` and compare the number of rows.
 
----
+------------------------------------------------------------------------
 
 ## Joining Multiple Tables
 
@@ -120,21 +120,21 @@ flights |>
   head()
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 2 – Multi-Table Joins
 
-1. Join `flights` with `airports` to add destination airport names.  
-2. Summarize average arrival delay by airport.  
-3. Which airport has the longest average delay?
+1.  Join `flights` with `airports` to add destination airport names.\
+2.  Summarize average arrival delay by airport.\
+3.  Which airport has the longest average delay?
 
----
+------------------------------------------------------------------------
 
 ## Handling Join Problems
 
-- Missing keys → results in `NA` values  
-- Duplicated keys → may create duplicate rows  
-- Always check results with `count()` or `distinct()`
+-   Missing keys → results in `NA` values\
+-   Duplicated keys → may create duplicate rows\
+-   Always check results with `count()` or `distinct()`
 
 Example:
 
@@ -145,27 +145,27 @@ flights |>
   count(carrier, airline_name)
 ```
 
----
+------------------------------------------------------------------------
 
 ## In-Class Challenge – Join Workflow
 
-- Join flights with airlines and airports  
-- Calculate average arrival delay by airline and destination  
-- Arrange by delay and identify the worst-performing routes
+-   Join flights with airlines and airports\
+-   Calculate average arrival delay by airline and destination\
+-   Arrange by delay and identify the worst-performing routes
 
----
+------------------------------------------------------------------------
 
 ## Homework Preview
 
 For the next homework, you will:
 
-- Combine at least two datasets using joins
-- Use at least two different join types (`left_join()`, `inner_join()`, etc.)
-- Handle missing data or duplicates appropriately
-- Produce a summary table and one visualization based on the joined data
-- Render to PDF and submit on Canvas
+-   Combine at least two datasets using joins
+-   Use at least two different join types (`left_join()`, `inner_join()`, etc.)
+-   Handle missing data or duplicates appropriately
+-   Produce a summary table and one visualization based on the joined data
+-   Render to PDF and submit on Canvas
 
----
+------------------------------------------------------------------------
 
 ## Next Steps
 

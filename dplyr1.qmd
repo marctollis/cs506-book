@@ -115,7 +115,7 @@ Chain these steps using `|>`:
 
 ## Homework Preview
 
-For Homework 2, you will:
+For Homework, you will:
 
 -   Use `flights` or another dataset.\
 -   Filter for a subset of interest.\

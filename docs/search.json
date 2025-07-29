@@ -194,7 +194,7 @@
     "href": "ggplot2.html#homework-preview",
     "title": "\n3  Data Visualization with ggplot2\n",
     "section": "\n3.8 Homework Preview",
-    "text": "3.8 Homework Preview\nFor Homework 1 (Visualization), you will:\n\nUse the mpg dataset (or another dataset of your choice).\n\nCreate three plots:\n\nA scatterplot with at least one aesthetic mapping\nA faceted plot showing subsets of data\nA customized plot with titles, labels, and a theme\n\n\nRender your .qmd to PDF and submit on Canvas.",
+    "text": "3.8 Homework Preview\nFor Homework, you will:\n\nUse the mpg dataset (or another dataset of your choice).\n\nCreate three plots:\n\nA scatterplot with at least one aesthetic mapping\nA faceted plot showing subsets of data\nA customized plot with titles, labels, and a theme\n\n\nRender your .qmd to PDF and submit on Canvas.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Visualization with ggplot2</span>"
     ]
@@ -274,7 +274,7 @@
     "href": "dplyr1.html#homework-preview",
     "title": "\n4  Data Transformation with dplyr (Part 1)\n",
     "section": "\n4.6 Homework Preview",
-    "text": "4.6 Homework Preview\nFor Homework 2, you will:\n\nUse flights or another dataset.\n\nFilter for a subset of interest.\n\nCreate at least two new variables with mutate().\n\nSort using arrange().\n\nSave the transformed dataset and inspect it with glimpse() and summary().\n\nRender to PDF and submit on Canvas.",
+    "text": "4.6 Homework Preview\nFor Homework, you will:\n\nUse flights or another dataset.\n\nFilter for a subset of interest.\n\nCreate at least two new variables with mutate().\n\nSort using arrange().\n\nSave the transformed dataset and inspect it with glimpse() and summary().\n\nRender to PDF and submit on Canvas.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 1)</span>"
     ]
@@ -374,7 +374,7 @@
     "href": "dplyr2.html#homework-preview",
     "title": "\n5  Data Transformation with dplyr (Part 2)\n",
     "section": "\n5.8 Homework Preview",
-    "text": "5.8 Homework Preview\nFor Homework 2 (continued), extend your data transformation by:\n\nGrouping data by at least one variable\n\nCalculating at least two summary statistics\n\nJoining an additional dataset (e.g., airlines, airports)\n\nRendering your results as a table in your PDF",
+    "text": "5.8 Homework Preview\nFor homework, extend your data transformation by:\n\nGrouping data by at least one variable\n\nCalculating at least two summary statistics\n\nJoining an additional dataset (e.g., airlines, airports)\n\nRendering your results as a table in your PDF",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Data Transformation with dplyr (Part 2)</span>"
     ]
@@ -464,7 +464,7 @@
     "href": "eda.html#homework-preview",
     "title": "\n6  Exploratory Data Analysis (EDA)\n",
     "section": "\n6.7 Homework Preview",
-    "text": "6.7 Homework Preview\nFor Homework 3, you will:\n\nChoose a dataset (e.g., diamonds or your own)\n\nCreate at least two univariate visualizations (bar chart, histogram)\n\nCreate at least two bivariate visualizations (scatterplot, boxplot)\n\nIdentify any patterns or outliers and describe them in text\n\nApply at least one transformation to improve visualization\n\nRender to PDF and submit",
+    "text": "6.7 Homework Preview\nFor homework, you will:\n\nChoose a dataset (e.g., diamonds or your own)\n\nCreate at least two univariate visualizations (bar chart, histogram)\n\nCreate at least two bivariate visualizations (scatterplot, boxplot)\n\nIdentify any patterns or outliers and describe them in text\n\nApply at least one transformation to improve visualization\n\nRender to PDF and submit",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
     ]
@@ -554,7 +554,7 @@
     "href": "tidy.html#homework-preview",
     "title": "\n7  Tidy Data with tidyr\n",
     "section": "\n7.7 Homework Preview",
-    "text": "7.7 Homework Preview\nFor Homework 4, you will:\n\nTake a messy dataset (e.g., table4a, table5, or your own)\nUse pivot_longer() and/or pivot_wider() to reshape it\nUse separate() and unite() as needed\nProduce a tidy dataset and create one visualization and one grouped summary\n\nRender to PDF and submit on Canvas",
+    "text": "7.7 Homework Preview\nFor homework, you will:\n\nTake a messy dataset (e.g., table4a, table5, or your own)\nUse pivot_longer() and/or pivot_wider() to reshape it\nUse separate() and unite() as needed\nProduce a tidy dataset and create one visualization and one grouped summary\n\nRender to PDF and submit on Canvas",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
@@ -644,7 +644,7 @@
     "href": "workflow.html#homework-preview",
     "title": "\n8  Workflow and Reproducibility\n",
     "section": "\n8.7 Homework Preview",
-    "text": "8.7 Homework Preview\nFor Homework 5, you will:\n\nOrganize your project folder (data, scripts, outputs)\nCreate a Quarto report with:\n\nOne dataset\nAt least one data cleaning step\nOne visualization\nOne table of summary statistics\n\n\nEnsure all file paths are relative (not absolute)\nRender to PDF and submit on Canvas",
+    "text": "8.7 Homework Preview\nFor homework, you will:\n\nOrganize your project folder (data, scripts, outputs)\nCreate a Quarto report with:\n\nOne dataset\nAt least one data cleaning step\nOne visualization\nOne table of summary statistics\n\n\nEnsure all file paths are relative (not absolute)\nRender to PDF and submit on Canvas",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Workflow and Reproducibility</span>"
     ]
@@ -734,7 +734,7 @@
     "href": "dataimport.html#homework-preview",
     "title": "\n9  Data Import with readr and readxl\n",
     "section": "\n9.7 Homework Preview",
-    "text": "9.7 Homework Preview\nFor Homework 6, you will:\n\nImport at least one CSV and one Excel dataset\nFix any parsing issues (e.g., column types, dates)\nClean at least one column with mutate()\n\nProvide a short summary (using group_by() and summarize())\nRender to PDF and submit",
+    "text": "9.7 Homework Preview\nFor homework, you will:\n\nImport at least one CSV and one Excel dataset\nFix any parsing issues (e.g., column types, dates)\nClean at least one column with mutate()\n\nProvide a short summary (using group_by() and summarize())\nRender to PDF and submit",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Data Import with readr and readxl</span>"
     ]
@@ -1199,7 +1199,7 @@
     "href": "syllabus.html#course-policies",
     "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "G.1 Course Policies",
-    "text": "G.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nCollaboration: Allowed for homeworks; problem sets and quizzes must be completed individually. - Late Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
+    "text": "G.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nLate Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"

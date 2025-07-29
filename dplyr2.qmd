@@ -6,17 +6,17 @@ title: "Data Transformation with dplyr (Part 2)"
 
 By the end of this chapter, you should be able to:
 
-- Group data with `group_by()`
-- Compute summary statistics with `summarize()`
-- Use multiple summaries with grouped data
-- Combine multiple datasets using `join` functions
-- Practice chaining multiple verbs with the pipe `|>`
+-   Group data with `group_by()`
+-   Compute summary statistics with `summarize()`
+-   Use multiple summaries with grouped data
+-   Combine multiple datasets using `join` functions
+-   Practice chaining multiple verbs with the pipe `|>`
 
----
+------------------------------------------------------------------------
 
 ## Grouped Summaries
 
-Grouping allows you to calculate statistics **per group**.  
+Grouping allows you to calculate statistics **per group**.\
 We will use the `nycflights13::flights` dataset.
 
 ### `group_by()` and `summarize()`
@@ -44,17 +44,17 @@ flights |>
   )
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 1 – Grouped Summaries
 
 Using `flights`:
 
-1. Group by `origin` and calculate the average departure delay.  
-2. Group by `carrier` and find the number of flights and average arrival delay.  
-3. Which carrier has the highest average arrival delay?
+1.  Group by `origin` and calculate the average departure delay.\
+2.  Group by `carrier` and find the number of flights and average arrival delay.\
+3.  Which carrier has the highest average arrival delay?
 
----
+------------------------------------------------------------------------
 
 ## Grouping with Multiple Variables
 
@@ -69,24 +69,24 @@ flights |>
   )
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 2 – Multiple Grouping
 
-1. Group by `origin` and `carrier`.  
-2. Summarize with the average `air_time`.  
-3. Arrange results to see which origin-carrier combination has the longest average flights.
+1.  Group by `origin` and `carrier`.\
+2.  Summarize with the average `air_time`.\
+3.  Arrange results to see which origin-carrier combination has the longest average flights.
 
----
+------------------------------------------------------------------------
 
 ## Joining Datasets
 
 `dplyr` provides functions to join tables by a common key:
 
-- `left_join()`  
-- `inner_join()`  
-- `right_join()`  
-- `full_join()`
+-   `left_join()`\
+-   `inner_join()`\
+-   `right_join()`\
+-   `full_join()`
 
 Example using `flights` and `airlines`:
 
@@ -97,15 +97,15 @@ flights |>
   head()
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 3 – Joins
 
-1. Use `left_join()` to add airline names to the flights dataset.  
-2. Use `count()` to find how many flights each airline operates.  
-3. Arrange results by the number of flights.
+1.  Use `left_join()` to add airline names to the flights dataset.\
+2.  Use `count()` to find how many flights each airline operates.\
+3.  Arrange results by the number of flights.
 
----
+------------------------------------------------------------------------
 
 ## Chaining with Pipes
 
@@ -123,30 +123,30 @@ flights |>
   arrange(desc(avg_delay))
 ```
 
----
+------------------------------------------------------------------------
 
 ## In-Class Challenge
 
 Using the flights dataset:
 
-- Join airline names  
-- Group by airline name  
-- Summarize number of flights, average departure delay, and average arrival delay  
-- Arrange by average arrival delay  
-- Identify the airline with the longest delays
+-   Join airline names\
+-   Group by airline name\
+-   Summarize number of flights, average departure delay, and average arrival delay\
+-   Arrange by average arrival delay\
+-   Identify the airline with the longest delays
 
----
+------------------------------------------------------------------------
 
 ## Homework Preview
 
-For Homework 2 (continued), extend your data transformation by:
+For homework, extend your data transformation by:
 
-- Grouping data by at least one variable  
-- Calculating at least two summary statistics  
-- Joining an additional dataset (e.g., airlines, airports)  
-- Rendering your results as a table in your PDF
+-   Grouping data by at least one variable\
+-   Calculating at least two summary statistics\
+-   Joining an additional dataset (e.g., airlines, airports)\
+-   Rendering your results as a table in your PDF
 
----
+------------------------------------------------------------------------
 
 ## Next Steps
 
