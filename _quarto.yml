@@ -32,6 +32,7 @@ book:
   appendices:
     - syllabus.qmd
     - codestyle.qmd
+    - tibbles.qmd
   sidebar:
     style: "floating"
     collapse-level: 1

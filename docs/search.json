@@ -1124,7 +1124,7 @@
     "href": "advanced_import.html#homework-preview",
     "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
     "section": "\n13.8 Homework Preview",
-    "text": "13.8 Homework Preview\nFor the final homework:\n\nChoose two different data sources (Excel, database, parquet, JSON, web)\nImport and tidy them\nJoin or compare across sources\nRender a short report with one plot and one table\nSubmit the rendered PDF",
+    "text": "13.8 Homework Preview\nFor the next homework:\n\nChoose two different data sources (Excel, database, parquet, JSON, web)\nImport and tidy them\nJoin or compare across sources\nRender a short report with one plot and one table\nSubmit the rendered PDF",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
