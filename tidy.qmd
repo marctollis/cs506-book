@@ -23,7 +23,8 @@ Real datasets are often messy. **Tidy data** makes it easy to:
 -   Use `dplyr` for summaries and transformations\
 -   Combine datasets with joins
 
-**Principles of Tidy Data** (Hadley Wickham): 1. Each variable is a column\
+**Principles of Tidy Data** (Hadley Wickham):\
+1. Each variable is a column\
 2. Each observation is a row\
 3. Each value is a cell
 

@@ -3,11 +3,11 @@ title: "CS506: Data Wrangling and Management– Syllabus"
 format: html
 ---
 
-![](nau_siccs_logo.png){fig-align="center"}\
+![](nau_siccs_logo.png){fig-align="center"}
 
 # Course Overview
 
-**INF506: Data Wrangling and** **Management** introduces graduate students to data wrangling and management using **R** and the **Tidyverse** ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.
+**INF506: Data Wrangling and Management** introduces graduate students to data wrangling and management using **R** and the **Tidyverse** ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.
 
 -   CS 506, Fall 2025, 3 units
 -   Section 001: TuTh 9:35AM-10:50AM, Learning Resource Ctr Rm 106C
@@ -144,7 +144,7 @@ This course directly supports the following program student outcomes in the Mast
 
 -   **Attendance:** Active participation in coding activities is expected. Repeated, unexcused absences may affect the student's grade.
 
-- **Late Work:** Accepted only with prior arrangement.
+-   **Late Work:** Accepted only with prior arrangement.
 
 -   **Academic Integrity:** Students must adhere to NAU’s academic integrity policy.\
 

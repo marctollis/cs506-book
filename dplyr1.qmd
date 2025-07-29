@@ -35,6 +35,8 @@ flights |>
   filter(month == 1, day == 1)
 ```
 
+> What's a **tibble**? See [Appendix C: Tidyverse and Tibbles](https://marctollis.github.io/cs506-book/tibbles.html)
+
 ### `arrange()`
 
 `arrange()` orders rows by a column.
