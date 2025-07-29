@@ -92,8 +92,7 @@ This course directly supports the following program student outcomes in the Mast
 
 | Component                         | Weight |
 |-----------------------------------|--------|
-| Problem Sets (8 total)            | 22.5%  |
-| Homeworks (6 total)               | 22.5%  |
+| Problem Sets (14 total)           | 45%    |
 | Quizzes (6 total, lowest dropped) | 50%    |
 | Attendance                        | 5%     |
 
