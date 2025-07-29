@@ -390,6 +390,86 @@
     ]
   },
   {
+    "objectID": "tidy.html",
+    "href": "tidy.html",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "",
+    "text": "6.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidy.html#learning-objectives",
+    "href": "tidy.html#learning-objectives",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "",
+    "text": "Explain why tidy data improves analysis and visualization\nReshape data between wide and long formats using pivot_longer() and pivot_wider()\n\nSeparate and unite columns using separate() and unite()\n\nApply tidying techniques to messy real-world datasets\nPrepare datasets for use with dplyr and ggplot2",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidy.html#why-tidy-data",
+    "href": "tidy.html#why-tidy-data",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.2 Why Tidy Data?",
+    "text": "6.2 Why Tidy Data?\nIn Week 6, you performed EDA on datasets that were already in a usable format.\nReal datasets are often messy. Tidy data makes it easy to:\n\nUse ggplot2 for visualization\n\nUse dplyr for summaries and transformations\n\nCombine datasets with joins\n\nPrinciples of Tidy Data (Hadley Wickham):\n1. Each variable is a column\n2. Each observation is a row\n3. Each value is a cell",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidy.html#pivoting-long-vs-wide",
+    "href": "tidy.html#pivoting-long-vs-wide",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.3 Pivoting: Long vs Wide",
+    "text": "6.3 Pivoting: Long vs Wide\n\n6.3.1 pivot_longer()\n\nConverts wide data into long (tidy) format.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntable4a |&gt;\n  pivot_longer(cols = c(`1999`, `2000`),\n               names_to = \"year\",\n               values_to = \"cases\")\n\n# A tibble: 6 × 3\n  country     year   cases\n  &lt;chr&gt;       &lt;chr&gt;  &lt;dbl&gt;\n1 Afghanistan 1999     745\n2 Afghanistan 2000    2666\n3 Brazil      1999   37737\n4 Brazil      2000   80488\n5 China       1999  212258\n6 China       2000  213766\n\n\n\n6.3.2 pivot_wider()\n\nConverts long data back into wide format.\n\ntable2 |&gt;\n  pivot_wider(names_from = type, values_from = count)\n\n# A tibble: 6 × 4\n  country      year  cases population\n  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;\n1 Afghanistan  1999    745   19987071\n2 Afghanistan  2000   2666   20595360\n3 Brazil       1999  37737  172006362\n4 Brazil       2000  80488  174504898\n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583\n\n\n\n6.3.3 In-Class Exercise 1 – Pivoting\n\nUse pivot_longer() to convert table4a to long format.\n\nUse pivot_wider() on table2 to create separate columns for type.\n\nWhich format is easier to use with ggplot2 and dplyr?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidy.html#separating-and-uniting-columns",
+    "href": "tidy.html#separating-and-uniting-columns",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.4 Separating and Uniting Columns",
+    "text": "6.4 Separating and Uniting Columns\n\n6.4.1 separate()\n\nSplits a column into multiple columns.\n\ntable3 |&gt;\n  separate(rate, into = c(\"cases\", \"population\"), sep = \"/\")\n\n# A tibble: 6 × 4\n  country      year cases  population\n  &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n1 Afghanistan  1999 745    19987071  \n2 Afghanistan  2000 2666   20595360  \n3 Brazil       1999 37737  172006362 \n4 Brazil       2000 80488  174504898 \n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583\n\n\n\n6.4.2 unite()\n\nCombines multiple columns into one.\n\ntable5 |&gt;\n  unite(new, century, year, sep = \"\")\n\n# A tibble: 6 × 3\n  country     new   rate             \n  &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;            \n1 Afghanistan 1999  745/19987071     \n2 Afghanistan 2000  2666/20595360    \n3 Brazil      1999  37737/172006362  \n4 Brazil      2000  80488/174504898  \n5 China       1999  212258/1272915272\n6 China       2000  213766/1280428583\n\n\n\n6.4.3 In-Class Exercise 2 – Separate and Unite\n\nUse separate() to split the rate column in table3.\n\nUse unite() to combine century and year into one column.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidy.html#tidying-a-real-dataset",
+    "href": "tidy.html#tidying-a-real-dataset",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.5 Tidying a Real Dataset",
+    "text": "6.5 Tidying a Real Dataset\nThe who dataset is messy: column names encode multiple variables.\nExample tidying workflow:\n\nwho |&gt;\n  pivot_longer(cols = starts_with(\"new\"),\n               names_to = \"key\",\n               values_to = \"cases\",\n               values_drop_na = TRUE) |&gt;\n  separate(key, into = c(\"type\", \"sex_age\"), sep = \"_\") |&gt;\n  separate(sex_age, into = c(\"sex\", \"age\"), sep = 1)\n\nWarning: Expected 2 pieces. Additional pieces discarded in 73466 rows [1, 2, 3, 4, 5, 6,\n7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...].\n\n\n# A tibble: 76,046 × 8\n   country     iso2  iso3   year type  sex   age   cases\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1997 new   s     p         0\n 2 Afghanistan AF    AFG    1997 new   s     p        10\n 3 Afghanistan AF    AFG    1997 new   s     p         6\n 4 Afghanistan AF    AFG    1997 new   s     p         3\n 5 Afghanistan AF    AFG    1997 new   s     p         5\n 6 Afghanistan AF    AFG    1997 new   s     p         2\n 7 Afghanistan AF    AFG    1997 new   s     p         0\n 8 Afghanistan AF    AFG    1997 new   s     p         5\n 9 Afghanistan AF    AFG    1997 new   s     p        38\n10 Afghanistan AF    AFG    1997 new   s     p        36\n# ℹ 76,036 more rows\n\n\n\n\n6.5.1 In-Class Exercise 3 – WHO Dataset\n\nPivot who longer to create key and cases.\n\nSeparate key into multiple components.\n\nCount total cases by country.\n\nWhich country has the highest reported cases?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidy.html#tidy-data-workflow",
+    "href": "tidy.html#tidy-data-workflow",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.6 Tidy Data Workflow",
+    "text": "6.6 Tidy Data Workflow\nAfter tidying, you can:\n\nUse ggplot2 for visualizations\n\nUse group_by() and summarize() for summaries\n\nJoin with other datasets",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+    ]
+  },
+  {
+    "objectID": "tidy.html#homework-preview",
+    "href": "tidy.html#homework-preview",
+    "title": "\n6  Tidy Data with tidyr\n",
+    "section": "\n6.7 Homework Preview",
+    "text": "6.7 Homework Preview\nFor homework, you will:\n\nTake a messy dataset (e.g., table4a, table5, or your own)\nUse pivot_longer() and/or pivot_wider() to reshape it\nUse separate() and unite() as needed\nProduce a tidy dataset and create one visualization and one grouped summary\n\nRender to PDF and submit on Canvas",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
+    ]
+  },
+  {
     "objectID": "eda.html",
     "href": "eda.html",
     "title": "\n7  Exploratory Data Analysis (EDA)\n",
@@ -477,96 +557,6 @@
     "text": "7.8 Next Steps\nNext week, we will dive into Tidy Data and learn how to reshape messy datasets using tidyr.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploratory Data Analysis (EDA)</span>"
-    ]
-  },
-  {
-    "objectID": "tidy.html",
-    "href": "tidy.html",
-    "title": "\n6  Tidy Data with tidyr\n",
-    "section": "",
-    "text": "6.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidy.html#learning-objectives",
-    "href": "tidy.html#learning-objectives",
-    "title": "\n6  Tidy Data with tidyr\n",
-    "section": "",
-    "text": "Explain why tidy data improves analysis and visualization\nReshape data between wide and long formats using pivot_longer() and pivot_wider()\n\nSeparate and unite columns using separate() and unite()\n\nApply tidying techniques to messy real-world datasets\nPrepare datasets for use with dplyr and ggplot2",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidy.html#why-tidy-data",
-    "href": "tidy.html#why-tidy-data",
-    "title": "\n6  Tidy Data with tidyr\n",
-    "section": "\n6.2 Why Tidy Data?",
-    "text": "6.2 Why Tidy Data?\nIn Week 6, you performed EDA on datasets that were already in a usable format.\nReal datasets are often messy. Tidy data makes it easy to:\n\nUse ggplot2 for visualization\n\nUse dplyr for summaries and transformations\n\nCombine datasets with joins\n\nPrinciples of Tidy Data (Hadley Wickham):\n1. Each variable is a column\n2. Each observation is a row\n3. Each value is a cell",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidy.html#pivoting-long-vs-wide",
-    "href": "tidy.html#pivoting-long-vs-wide",
-    "title": "\n6  Tidy Data with tidyr\n",
-    "section": "\n6.3 Pivoting: Long vs Wide",
-    "text": "6.3 Pivoting: Long vs Wide\n\n6.3.1 pivot_longer()\n\nConverts wide data into long (tidy) format.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ntable4a |&gt;\n  pivot_longer(cols = c(`1999`, `2000`),\n               names_to = \"year\",\n               values_to = \"cases\")\n\n# A tibble: 6 × 3\n  country     year   cases\n  &lt;chr&gt;       &lt;chr&gt;  &lt;dbl&gt;\n1 Afghanistan 1999     745\n2 Afghanistan 2000    2666\n3 Brazil      1999   37737\n4 Brazil      2000   80488\n5 China       1999  212258\n6 China       2000  213766\n\n\n\n6.3.2 pivot_wider()\n\nConverts long data back into wide format.\n\ntable2 |&gt;\n  pivot_wider(names_from = type, values_from = count)\n\n# A tibble: 6 × 4\n  country      year  cases population\n  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;\n1 Afghanistan  1999    745   19987071\n2 Afghanistan  2000   2666   20595360\n3 Brazil       1999  37737  172006362\n4 Brazil       2000  80488  174504898\n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583\n\n\n\n6.3.3 In-Class Exercise 1 – Pivoting\n\nUse pivot_longer() to convert table4a to long format.\n\nUse pivot_wider() on table2 to create separate columns for type.\n\nWhich format is easier to use with ggplot2 and dplyr?",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidy.html#separating-and-uniting-columns",
-    "href": "tidy.html#separating-and-uniting-columns",
-    "title": "\n6  Tidy Data with tidyr\n",
-    "section": "\n6.4 Separating and Uniting Columns",
-    "text": "6.4 Separating and Uniting Columns\n\n6.4.1 separate()\n\nSplits a column into multiple columns.\n\ntable3 |&gt;\n  separate(rate, into = c(\"cases\", \"population\"), sep = \"/\")\n\n# A tibble: 6 × 4\n  country      year cases  population\n  &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n1 Afghanistan  1999 745    19987071  \n2 Afghanistan  2000 2666   20595360  \n3 Brazil       1999 37737  172006362 \n4 Brazil       2000 80488  174504898 \n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583\n\n\n\n6.4.2 unite()\n\nCombines multiple columns into one.\n\ntable5 |&gt;\n  unite(new, century, year, sep = \"\")\n\n# A tibble: 6 × 3\n  country     new   rate             \n  &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;            \n1 Afghanistan 1999  745/19987071     \n2 Afghanistan 2000  2666/20595360    \n3 Brazil      1999  37737/172006362  \n4 Brazil      2000  80488/174504898  \n5 China       1999  212258/1272915272\n6 China       2000  213766/1280428583\n\n\n\n6.4.3 In-Class Exercise 2 – Separate and Unite\n\nUse separate() to split the rate column in table3.\n\nUse unite() to combine century and year into one column.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidy.html#tidying-a-real-dataset",
-    "href": "tidy.html#tidying-a-real-dataset",
-    "title": "\n6  Tidy Data with tidyr\n",
-    "section": "\n6.5 Tidying a Real Dataset",
-    "text": "6.5 Tidying a Real Dataset\nThe who dataset is messy: column names encode multiple variables.\nExample tidying workflow:\n\nwho |&gt;\n  pivot_longer(cols = starts_with(\"new\"),\n               names_to = \"key\",\n               values_to = \"cases\",\n               values_drop_na = TRUE) |&gt;\n  separate(key, into = c(\"type\", \"sex_age\"), sep = \"_\") |&gt;\n  separate(sex_age, into = c(\"sex\", \"age\"), sep = 1)\n\nWarning: Expected 2 pieces. Additional pieces discarded in 73466 rows [1, 2, 3, 4, 5, 6,\n7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...].\n\n\n# A tibble: 76,046 × 8\n   country     iso2  iso3   year type  sex   age   cases\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1997 new   s     p         0\n 2 Afghanistan AF    AFG    1997 new   s     p        10\n 3 Afghanistan AF    AFG    1997 new   s     p         6\n 4 Afghanistan AF    AFG    1997 new   s     p         3\n 5 Afghanistan AF    AFG    1997 new   s     p         5\n 6 Afghanistan AF    AFG    1997 new   s     p         2\n 7 Afghanistan AF    AFG    1997 new   s     p         0\n 8 Afghanistan AF    AFG    1997 new   s     p         5\n 9 Afghanistan AF    AFG    1997 new   s     p        38\n10 Afghanistan AF    AFG    1997 new   s     p        36\n# ℹ 76,036 more rows\n\n\n\n\n6.5.1 In-Class Exercise 3 – WHO Dataset\n\nPivot who longer to create key and cases.\n\nSeparate key into multiple components.\n\nCount total cases by country.\n\nWhich country has the highest reported cases?",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidy.html#tidy-data-workflow",
-    "href": "tidy.html#tidy-data-workflow",
-    "title": "\n6  Tidy Data with tidyr\n",
-    "section": "\n6.6 Tidy Data Workflow",
-    "text": "6.6 Tidy Data Workflow\nAfter tidying, you can:\n\nUse ggplot2 for visualizations\n\nUse group_by() and summarize() for summaries\n\nJoin with other datasets",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidy.html#homework-preview",
-    "href": "tidy.html#homework-preview",
-    "title": "\n6  Tidy Data with tidyr\n",
-    "section": "\n6.7 Homework Preview",
-    "text": "6.7 Homework Preview\nFor homework, you will:\n\nTake a messy dataset (e.g., table4a, table5, or your own)\nUse pivot_longer() and/or pivot_wider() to reshape it\nUse separate() and unite() as needed\nProduce a tidy dataset and create one visualization and one grouped summary\n\nRender to PDF and submit on Canvas",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
-    ]
-  },
-  {
-    "objectID": "tidy.html#next-steps",
-    "href": "tidy.html#next-steps",
-    "title": "\n7  Tidy Data with tidyr\n",
-    "section": "\n7.8 Next Steps",
-    "text": "7.8 Next Steps\nNext week, we will focus on Workflow and Reproducibility using Quarto and R projects to organize your work.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tidy Data with tidyr</span>"
     ]
   },
   {
@@ -750,393 +740,473 @@
     ]
   },
   {
+    "objectID": "transform.html",
+    "href": "transform.html",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "",
+    "text": "10.1 Learning Objectives\nWhat are the types of variables we see in data frames, and what are the different tools we can use to work with them?\nBy the end of this chapter, you should be able to:",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#learning-objectives",
+    "href": "transform.html#learning-objectives",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "",
+    "text": "Understand how logical vectors work in R\nUse logical conditions to filter and manipulate data\nConvert between logical, numeric, and character types\nParse numbers from messy strings",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#logical-vectors",
+    "href": "transform.html#logical-vectors",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.2 Logical Vectors",
+    "text": "10.2 Logical Vectors\nLogical vectors contain only TRUE, FALSE, or NA.\n\nx &lt;- c(TRUE, FALSE, TRUE, NA)\nx\n\n[1]  TRUE FALSE  TRUE    NA\n\n\n\n10.2.1 Logical comparisons create logical vectors:\n\nnums &lt;- c(2, 5, 8, 1)\nnums &gt; 4\n\n[1] FALSE  TRUE  TRUE FALSE\n\n\nYou can use these directly with functions like sum() and mean():\n\nsum(nums &gt; 4)   # Count how many values are &gt; 4\n\n[1] 2\n\nmean(nums &gt; 4)  # Proportion of values &gt; 4\n\n[1] 0.5\n\n\n\n10.2.2 In-Class Exercise 1 – Logical Conditions\n\nCreate a numeric vector with 10 random values.\n\nWhich values are greater than the mean?\n\nWhat proportion is above the mean?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#logical-operations",
+    "href": "transform.html#logical-operations",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.3 Logical Operations",
+    "text": "10.3 Logical Operations\nCombine logical vectors with & (and), | (or), and ! (not):\n\na &lt;- c(TRUE, FALSE, TRUE)\nb &lt;- c(TRUE, TRUE, FALSE)\n\na & b\n\n[1]  TRUE FALSE FALSE\n\na | b\n\n[1] TRUE TRUE TRUE\n\n!a\n\n[1] FALSE  TRUE FALSE\n\n\n\n\n10.3.1 In-Class Exercise 2 – Combining Conditions\n\nUsing the mpg dataset, create a logical condition for cars with hwy &gt; 30 and cyl == 4.\n\nHow many such cars exist?\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nmpg |&gt;\n  filter(hwy &gt; 30 & cyl == 4) |&gt;\n  nrow()\n\n[1] 22",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#numbers-and-coercion",
+    "href": "transform.html#numbers-and-coercion",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.4 Numbers and Coercion",
+    "text": "10.4 Numbers and Coercion\nLogical values behave like numbers: TRUE = 1, FALSE = 0.\n\nas.numeric(c(TRUE, FALSE, TRUE))\n\n[1] 1 0 1\n\n\nThis makes calculations on logical vectors easy.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#parsing-numbers",
+    "href": "transform.html#parsing-numbers",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.5 Parsing Numbers",
+    "text": "10.5 Parsing Numbers\nReal-world data often stores numbers as text with extra symbols.\nUse readr::parse_number() to extract numeric values.\n\nlibrary(readr)\n\nx &lt;- c(\"$100\", \"200%\", \"300kg\")\nparse_number(x)\n\n[1] 100 200 300\n\n\n\n\n10.5.1 In-Class Exercise 3 – Parsing\n\nCreate a character vector: c(\"10 kg\", \"$50\", \"30%\").\n\nUse parse_number() to convert it to numeric.\n\nWhat happens if there are unexpected characters?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#dealing-with-missing-values",
+    "href": "transform.html#dealing-with-missing-values",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.6 Dealing with Missing Values",
+    "text": "10.6 Dealing with Missing Values\nLogical and numeric vectors can contain NA.\nHandle them with na.rm = TRUE or functions like replace_na().\n\nnums &lt;- c(1, 2, NA, 4)\nmean(nums, na.rm = TRUE)\n\n[1] 2.333333",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
+    "objectID": "transform.html#in-class-challenge-logical-filtering",
+    "href": "transform.html#in-class-challenge-logical-filtering",
+    "title": "\n10  Transform: Logical Vectors and Numbers\n",
+    "section": "\n10.7 In-Class Challenge – Logical Filtering",
+    "text": "10.7 In-Class Challenge – Logical Filtering\n\nUsing flights from nycflights13, calculate the proportion of flights that departed late (dep_delay &gt; 0) and arrived on time (arr_delay &lt;= 0).\n\n\nlibrary(nycflights13)\n\nflights |&gt;\n  summarize(on_time = mean(dep_delay &gt; 0 & arr_delay &lt;= 0, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  on_time\n    &lt;dbl&gt;\n1   0.108",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
+    ]
+  },
+  {
     "objectID": "strings.html",
     "href": "strings.html",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "title": "\n11  Strings and Regular Expressions with stringr\n",
     "section": "",
-    "text": "10.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "text": "11.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   },
   {
     "objectID": "strings.html#learning-objectives",
     "href": "strings.html#learning-objectives",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
+    "title": "\n11  Strings and Regular Expressions with stringr\n",
     "section": "",
     "text": "Manipulate strings using the stringr package\nDetect patterns with regular expressions (regex)\nExtract, replace, and split text\nClean messy text data for analysis",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   },
   {
     "objectID": "strings.html#introduction-to-stringr",
     "href": "strings.html#introduction-to-stringr",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n10.2 Introduction to stringr",
-    "text": "10.2 Introduction to stringr\nThe stringr package provides consistent, simple functions for string operations.\nLoad the library:\n\nlibrary(stringr)",
+    "title": "\n11  Strings and Regular Expressions with stringr\n",
+    "section": "\n11.2 Introduction to stringr",
+    "text": "11.2 Introduction to stringr\nThe stringr package provides consistent, simple functions for string operations.\nLoad the library:\n\nlibrary(stringr)",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   },
   {
     "objectID": "strings.html#creating-and-inspecting-strings",
     "href": "strings.html#creating-and-inspecting-strings",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n10.3 Creating and Inspecting Strings",
-    "text": "10.3 Creating and Inspecting Strings\n\nfruit &lt;- c(\"apple\", \"banana\", \"pear\")\nstr_length(fruit)\n\n[1] 5 6 4\n\nstr_c(fruit, \" is tasty\")\n\n[1] \"apple is tasty\"  \"banana is tasty\" \"pear is tasty\"  \n\n\n\n\n10.3.1 In-Class Exercise 1 – Basic String Operations\n\nCreate a vector of at least 5 words.\n\nMeasure their lengths with str_length().\n\nConcatenate them with the phrase \" is cool\".",
+    "title": "\n11  Strings and Regular Expressions with stringr\n",
+    "section": "\n11.3 Creating and Inspecting Strings",
+    "text": "11.3 Creating and Inspecting Strings\n\nfruit &lt;- c(\"apple\", \"banana\", \"pear\")\nstr_length(fruit)\n\n[1] 5 6 4\n\nstr_c(fruit, \" is tasty\")\n\n[1] \"apple is tasty\"  \"banana is tasty\" \"pear is tasty\"  \n\n\n\n\n11.3.1 In-Class Exercise 1 – Basic String Operations\n\nCreate a vector of at least 5 words.\n\nMeasure their lengths with str_length().\n\nConcatenate them with the phrase \" is cool\".",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   },
   {
     "objectID": "strings.html#detecting-patterns-with-regex",
     "href": "strings.html#detecting-patterns-with-regex",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n10.4 Detecting Patterns with Regex",
-    "text": "10.4 Detecting Patterns with Regex\nstr_detect() returns TRUE if a pattern is found.\n\nwords &lt;- c(\"dog\", \"cat\", \"parrot\", \"cow\")\nstr_detect(words, \"o\")\n\n[1]  TRUE FALSE  TRUE  TRUE\n\n\nYou can use regular expressions for more complex patterns.\nExamples:\n\n\n^a – starts with “a”\n\n\ning$ – ends with “ing”\n\n\n[0-9]+ – one or more digits\n\n\nanimals &lt;- c(\"ant\", \"bat\", \"cat\", \"dog\")\nstr_detect(animals, \"^a\")\n\n[1]  TRUE FALSE FALSE FALSE\n\n\n\n\n10.4.1 In-Class Exercise 2 – Pattern Detection\n\nCreate a vector of email-like strings.\n\nUse str_detect() to check which contain \"@\".\n\nWrite a regex to detect strings ending in .com.",
+    "title": "\n11  Strings and Regular Expressions with stringr\n",
+    "section": "\n11.4 Detecting Patterns with Regex",
+    "text": "11.4 Detecting Patterns with Regex\nstr_detect() returns TRUE if a pattern is found.\n\nwords &lt;- c(\"dog\", \"cat\", \"parrot\", \"cow\")\nstr_detect(words, \"o\")\n\n[1]  TRUE FALSE  TRUE  TRUE\n\n\nYou can use regular expressions for more complex patterns.\nExamples:\n\n\n^a – starts with “a”\n\n\ning$ – ends with “ing”\n\n\n[0-9]+ – one or more digits\n\n\nanimals &lt;- c(\"ant\", \"bat\", \"cat\", \"dog\")\nstr_detect(animals, \"^a\")\n\n[1]  TRUE FALSE FALSE FALSE\n\n\n\n\n11.4.1 In-Class Exercise 2 – Pattern Detection\n\nCreate a vector of email-like strings.\n\nUse str_detect() to check which contain \"@\".\n\nWrite a regex to detect strings ending in .com.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   },
   {
     "objectID": "strings.html#extracting-and-replacing-text",
     "href": "strings.html#extracting-and-replacing-text",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n10.5 Extracting and Replacing Text",
-    "text": "10.5 Extracting and Replacing Text\n\n10.5.1 str_extract()\n\nExtracts the first match:\n\nstr_extract(c(\"abc123\", \"xyz789\"), \"[0-9]+\")\n\n[1] \"123\" \"789\"\n\n\n\n10.5.2 str_replace()\n\nReplaces matching patterns:\n\nstr_replace(\"apple pie\", \"apple\", \"peach\")\n\n[1] \"peach pie\"\n\n\n\n10.5.3 In-Class Exercise 3 – Extraction and Replacement\n\nExtract digits from a vector of alphanumeric strings.\n\nReplace the word \"dog\" with \"puppy\" in a text vector.",
+    "title": "\n11  Strings and Regular Expressions with stringr\n",
+    "section": "\n11.5 Extracting and Replacing Text",
+    "text": "11.5 Extracting and Replacing Text\n\n11.5.1 str_extract()\n\nExtracts the first match:\n\nstr_extract(c(\"abc123\", \"xyz789\"), \"[0-9]+\")\n\n[1] \"123\" \"789\"\n\n\n\n11.5.2 str_replace()\n\nReplaces matching patterns:\n\nstr_replace(\"apple pie\", \"apple\", \"peach\")\n\n[1] \"peach pie\"\n\n\n\n11.5.3 In-Class Exercise 3 – Extraction and Replacement\n\nExtract digits from a vector of alphanumeric strings.\n\nReplace the word \"dog\" with \"puppy\" in a text vector.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   },
   {
     "objectID": "strings.html#splitting-and-cleaning-text",
     "href": "strings.html#splitting-and-cleaning-text",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n10.6 Splitting and Cleaning Text",
-    "text": "10.6 Splitting and Cleaning Text\n\n10.6.1 str_split()\n\nSplits text into pieces:\n\nstr_split(\"a,b,c\", \",\")\n\n[[1]]\n[1] \"a\" \"b\" \"c\"\n\n\n\n10.6.2 Cleaning with regex\nYou can remove unwanted characters:\n\ndirty &lt;- c(\" price:$100 \", \" cost:$200 \")\nstr_replace_all(dirty, \"[$ ]\", \"\")\n\n[1] \"price:100\" \"cost:200\" \n\n\n\n10.6.3 In-Class Challenge – Text Cleaning\n\nCreate a vector of messy product names with extra spaces and symbols.\n\nUse str_replace_all() and str_trim() to clean them.\n\nExtract numeric prices from the strings.",
+    "title": "\n11  Strings and Regular Expressions with stringr\n",
+    "section": "\n11.6 Splitting and Cleaning Text",
+    "text": "11.6 Splitting and Cleaning Text\n\n11.6.1 str_split()\n\nSplits text into pieces:\n\nstr_split(\"a,b,c\", \",\")\n\n[[1]]\n[1] \"a\" \"b\" \"c\"\n\n\n\n11.6.2 Cleaning with regex\nYou can remove unwanted characters:\n\ndirty &lt;- c(\" price:$100 \", \" cost:$200 \")\nstr_replace_all(dirty, \"[$ ]\", \"\")\n\n[1] \"price:100\" \"cost:200\" \n\n\n\n11.6.3 In-Class Challenge – Text Cleaning\n\nCreate a vector of messy product names with extra spaces and symbols.\n\nUse str_replace_all() and str_trim() to clean them.\n\nExtract numeric prices from the strings.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   },
   {
     "objectID": "strings.html#homework-preview",
     "href": "strings.html#homework-preview",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n10.7 Homework Preview",
-    "text": "10.7 Homework Preview\nFor the next homework, you will:\n\nWork with a text dataset (e.g., movie titles, email logs, or messy product names)\nUse at least three stringr functions to clean or extract information\nWrite one regex pattern to detect a specific feature in the data\nRender a short report (with code and results) to PDF and submit",
+    "title": "\n11  Strings and Regular Expressions with stringr\n",
+    "section": "\n11.7 Homework Preview",
+    "text": "11.7 Homework Preview\nFor the next homework, you will:\n\nWork with a text dataset (e.g., movie titles, email logs, or messy product names)\nUse at least three stringr functions to clean or extract information\nWrite one regex pattern to detect a specific feature in the data\nRender a short report (with code and results) to PDF and submit",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   },
   {
     "objectID": "strings.html#next-steps",
     "href": "strings.html#next-steps",
-    "title": "\n10  Strings and Regular Expressions with stringr\n",
-    "section": "\n10.8 Next Steps",
-    "text": "10.8 Next Steps\nNext, we will learn to work with factors and categorical data using the forcats package.",
+    "title": "\n11  Strings and Regular Expressions with stringr\n",
+    "section": "\n11.8 Next Steps",
+    "text": "11.8 Next Steps\nNext, we will learn to work with factors and categorical data using the forcats package.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Strings and Regular Expressions with stringr</span>"
     ]
   },
   {
     "objectID": "factors.html",
     "href": "factors.html",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
     "section": "",
-    "text": "11.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "text": "12.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "factors.html#learning-objectives",
     "href": "factors.html#learning-objectives",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
     "section": "",
     "text": "Understand what factors are and why they are used\nReorder factor levels to improve plots\nRename factor levels\nCollapse multiple levels into broader categories\nUse forcats functions to manipulate categorical variables effectively",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "factors.html#introduction-to-factors",
     "href": "factors.html#introduction-to-factors",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
-    "section": "\n11.2 Introduction to Factors",
-    "text": "11.2 Introduction to Factors\nFactors are used to work with categorical data (variables with a fixed set of possible values).\nR uses factors to control ordering in plots and summaries.\nExample:\n\nx &lt;- factor(c(\"low\", \"medium\", \"high\", \"medium\", \"low\"))\nlevels(x)\n\n[1] \"high\"   \"low\"    \"medium\"",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
+    "section": "\n12.2 Introduction to Factors",
+    "text": "12.2 Introduction to Factors\nFactors are used to work with categorical data (variables with a fixed set of possible values).\nR uses factors to control ordering in plots and summaries.\nExample:\n\nx &lt;- factor(c(\"low\", \"medium\", \"high\", \"medium\", \"low\"))\nlevels(x)\n\n[1] \"high\"   \"low\"    \"medium\"",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "factors.html#using-forcats",
     "href": "factors.html#using-forcats",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
-    "section": "\n11.3 Using forcats",
-    "text": "11.3 Using forcats\nThe forcats package provides helper functions for factors.\n\nlibrary(forcats)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ ggplot2   3.5.2     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
+    "section": "\n12.3 Using forcats",
+    "text": "12.3 Using forcats\nThe forcats package provides helper functions for factors.\n\nlibrary(forcats)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ ggplot2   3.5.2     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "factors.html#reordering-factor-levels",
     "href": "factors.html#reordering-factor-levels",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
-    "section": "\n11.4 Reordering Factor Levels",
-    "text": "11.4 Reordering Factor Levels\n\n11.4.1 fct_reorder()\n\nReorders factor levels by another variable (e.g., mean of a numeric variable):\n\nggplot(mpg, aes(x = fct_reorder(class, hwy), y = hwy)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n11.4.2 In-Class Exercise 1 – Reordering\n\nUse fct_reorder() to reorder car classes in the mpg dataset by highway mpg.\n\nMake a boxplot of hwy by class.\n\nWhich class has the highest median mpg?",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
+    "section": "\n12.4 Reordering Factor Levels",
+    "text": "12.4 Reordering Factor Levels\n\n12.4.1 fct_reorder()\n\nReorders factor levels by another variable (e.g., mean of a numeric variable):\n\nggplot(mpg, aes(x = fct_reorder(class, hwy), y = hwy)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n12.4.2 In-Class Exercise 1 – Reordering\n\nUse fct_reorder() to reorder car classes in the mpg dataset by highway mpg.\n\nMake a boxplot of hwy by class.\n\nWhich class has the highest median mpg?",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "factors.html#changing-factor-labels",
     "href": "factors.html#changing-factor-labels",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
-    "section": "\n11.5 Changing Factor Labels",
-    "text": "11.5 Changing Factor Labels\n\n11.5.1 fct_recode()\n\nRenames levels:\n\nmpg |&gt;\n  mutate(drv = fct_recode(drv,\n    \"front-wheel\" = \"f\",\n    \"rear-wheel\"  = \"r\",\n    \"4-wheel\"     = \"4\"\n  )) |&gt;\n  count(drv)\n\n# A tibble: 3 × 2\n  drv             n\n  &lt;fct&gt;       &lt;int&gt;\n1 4-wheel       103\n2 front-wheel   106\n3 rear-wheel     25\n\n\n\n11.5.2 In-Class Exercise 2 – Recoding\n\nRecode the drv variable to use descriptive names.\n\nCount the number of cars in each drive category.",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
+    "section": "\n12.5 Changing Factor Labels",
+    "text": "12.5 Changing Factor Labels\n\n12.5.1 fct_recode()\n\nRenames levels:\n\nmpg |&gt;\n  mutate(drv = fct_recode(drv,\n    \"front-wheel\" = \"f\",\n    \"rear-wheel\"  = \"r\",\n    \"4-wheel\"     = \"4\"\n  )) |&gt;\n  count(drv)\n\n# A tibble: 3 × 2\n  drv             n\n  &lt;fct&gt;       &lt;int&gt;\n1 4-wheel       103\n2 front-wheel   106\n3 rear-wheel     25\n\n\n\n12.5.2 In-Class Exercise 2 – Recoding\n\nRecode the drv variable to use descriptive names.\n\nCount the number of cars in each drive category.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "factors.html#collapsing-levels",
     "href": "factors.html#collapsing-levels",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
-    "section": "\n11.6 Collapsing Levels",
-    "text": "11.6 Collapsing Levels\n\n11.6.1 fct_collapse()\n\nCombines multiple levels into broader categories.\n\nmpg |&gt;\n  mutate(class_grouped = fct_collapse(class,\n    small = c(\"2seater\", \"compact\", \"subcompact\"),\n    large = c(\"suv\", \"pickup\", \"minivan\")\n  )) |&gt;\n  count(class_grouped)\n\n# A tibble: 3 × 2\n  class_grouped     n\n  &lt;fct&gt;         &lt;int&gt;\n1 small            87\n2 midsize          41\n3 large           106\n\n\n\n11.6.2 In-Class Exercise 3 – Collapsing Levels\n\nCreate a new variable that collapses class into small vs. large.\n\nMake a bar chart of the collapsed variable.",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
+    "section": "\n12.6 Collapsing Levels",
+    "text": "12.6 Collapsing Levels\n\n12.6.1 fct_collapse()\n\nCombines multiple levels into broader categories.\n\nmpg |&gt;\n  mutate(class_grouped = fct_collapse(class,\n    small = c(\"2seater\", \"compact\", \"subcompact\"),\n    large = c(\"suv\", \"pickup\", \"minivan\")\n  )) |&gt;\n  count(class_grouped)\n\n# A tibble: 3 × 2\n  class_grouped     n\n  &lt;fct&gt;         &lt;int&gt;\n1 small            87\n2 midsize          41\n3 large           106\n\n\n\n12.6.2 In-Class Exercise 3 – Collapsing Levels\n\nCreate a new variable that collapses class into small vs. large.\n\nMake a bar chart of the collapsed variable.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "factors.html#reordering-factors-for-plots",
     "href": "factors.html#reordering-factors-for-plots",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
-    "section": "\n11.7 Reordering Factors for Plots",
-    "text": "11.7 Reordering Factors for Plots\n\n11.7.1 fct_infreq()\n\nOrders factors by frequency:\n\nmpg |&gt;\n  mutate(class = fct_infreq(class)) |&gt;\n  ggplot(aes(x = class)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n11.7.2 In-Class Challenge – Factor Workflow\nUsing the mpg dataset:\n\nReorder the manufacturer variable by number of cars\nCollapse classes into fewer categories\nCreate a bar plot that uses the new ordering and grouping",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
+    "section": "\n12.7 Reordering Factors for Plots",
+    "text": "12.7 Reordering Factors for Plots\n\n12.7.1 fct_infreq()\n\nOrders factors by frequency:\n\nmpg |&gt;\n  mutate(class = fct_infreq(class)) |&gt;\n  ggplot(aes(x = class)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n12.7.2 In-Class Challenge – Factor Workflow\nUsing the mpg dataset:\n\nReorder the manufacturer variable by number of cars\nCollapse classes into fewer categories\nCreate a bar plot that uses the new ordering and grouping",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "factors.html#homework-preview",
     "href": "factors.html#homework-preview",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
-    "section": "\n11.8 Homework Preview",
-    "text": "11.8 Homework Preview\nFor the next homework, you will:\n\nChoose a dataset with at least one categorical variable\nUse forcats functions to:\n\nReorder levels\nRecode labels\nCollapse levels where appropriate\n\n\nProduce at least one visualization that uses your factor manipulations\nRender to PDF and submit on Canvas",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
+    "section": "\n12.8 Homework Preview",
+    "text": "12.8 Homework Preview\nFor the next homework, you will:\n\nChoose a dataset with at least one categorical variable\nUse forcats functions to:\n\nReorder levels\nRecode labels\nCollapse levels where appropriate\n\n\nProduce at least one visualization that uses your factor manipulations\nRender to PDF and submit on Canvas",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "factors.html#next-steps",
     "href": "factors.html#next-steps",
-    "title": "\n11  Factors and Categorical Data with forcats\n",
-    "section": "\n11.9 Next Steps",
-    "text": "11.9 Next Steps\nNext, we will learn how to work with relational data using dplyr join functions to combine multiple datasets.",
+    "title": "\n12  Factors and Categorical Data with forcats\n",
+    "section": "\n12.9 Next Steps",
+    "text": "12.9 Next Steps\nNext, we will learn how to work with relational data using dplyr join functions to combine multiple datasets.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Factors and Categorical Data with forcats</span>"
     ]
   },
   {
     "objectID": "relational.html",
     "href": "relational.html",
-    "title": "\n12  Relational Data with dplyr Joins\n",
+    "title": "\n13  Relational Data with dplyr Joins\n",
     "section": "",
-    "text": "12.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
+    "text": "13.1 Learning Objectives\nBy the end of this chapter, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "relational.html#learning-objectives",
     "href": "relational.html#learning-objectives",
-    "title": "\n12  Relational Data with dplyr Joins\n",
+    "title": "\n13  Relational Data with dplyr Joins\n",
     "section": "",
     "text": "Understand the concept of relational data and keys\nCombine multiple datasets using different join functions\nUse left_join(), inner_join(), full_join(), and semi_join()\n\nDiagnose and handle join problems (missing keys, duplicates)\nApply joins in analysis workflows",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "relational.html#what-is-relational-data",
     "href": "relational.html#what-is-relational-data",
-    "title": "\n12  Relational Data with dplyr Joins\n",
-    "section": "\n12.2 What is Relational Data?",
-    "text": "12.2 What is Relational Data?\nRelational data consists of multiple tables that can be linked by keys.\nExample tables from nycflights13:\n\n\nflights: flight information\n\nairlines: airline names\n\nairports: airport locations\n\nplanes: plane details\n\nweather: weather data",
+    "title": "\n13  Relational Data with dplyr Joins\n",
+    "section": "\n13.2 What is Relational Data?",
+    "text": "13.2 What is Relational Data?\nRelational data consists of multiple tables that can be linked by keys.\nExample tables from nycflights13:\n\n\nflights: flight information\n\nairlines: airline names\n\nairports: airport locations\n\nplanes: plane details\n\nweather: weather data",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "relational.html#keys",
     "href": "relational.html#keys",
-    "title": "\n12  Relational Data with dplyr Joins\n",
-    "section": "\n12.3 Keys",
-    "text": "12.3 Keys\n\n\nPrimary key: uniquely identifies each row in a table\n\n\nForeign key: column that matches a primary key in another table\n\nExample: flights$carrier matches airlines$carrier.",
+    "title": "\n13  Relational Data with dplyr Joins\n",
+    "section": "\n13.3 Keys",
+    "text": "13.3 Keys\n\n\nPrimary key: uniquely identifies each row in a table\n\n\nForeign key: column that matches a primary key in another table\n\nExample: flights$carrier matches airlines$carrier.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "relational.html#joins-with-dplyr",
     "href": "relational.html#joins-with-dplyr",
-    "title": "\n12  Relational Data with dplyr Joins\n",
-    "section": "\n12.4 Joins with dplyr",
-    "text": "12.4 Joins with dplyr\ndplyr join functions merge tables by keys.\n\n12.4.1 left_join()\n\nKeeps all rows from the first table:\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(nycflights13)\n\nflights |&gt;\n  left_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  select(airline_name, carrier, flight) |&gt;\n  head()\n\n# A tibble: 6 × 3\n  airline_name           carrier flight\n  &lt;chr&gt;                  &lt;chr&gt;    &lt;int&gt;\n1 United Air Lines Inc.  UA        1545\n2 United Air Lines Inc.  UA        1714\n3 American Airlines Inc. AA        1141\n4 JetBlue Airways        B6         725\n5 Delta Air Lines Inc.   DL         461\n6 United Air Lines Inc.  UA        1696\n\n\n\n12.4.2 inner_join()\n\nKeeps only matching rows:\n\nflights |&gt;\n  inner_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  select(airline_name, carrier, flight) |&gt;\n  head()\n\n# A tibble: 6 × 3\n  airline_name           carrier flight\n  &lt;chr&gt;                  &lt;chr&gt;    &lt;int&gt;\n1 United Air Lines Inc.  UA        1545\n2 United Air Lines Inc.  UA        1714\n3 American Airlines Inc. AA        1141\n4 JetBlue Airways        B6         725\n5 Delta Air Lines Inc.   DL         461\n6 United Air Lines Inc.  UA        1696\n\n\n\n12.4.3 full_join()\n\nKeeps all rows from both tables:\n\nflights |&gt;\n  full_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  select(airline_name, carrier, flight) |&gt;\n  head()\n\n# A tibble: 6 × 3\n  airline_name           carrier flight\n  &lt;chr&gt;                  &lt;chr&gt;    &lt;int&gt;\n1 United Air Lines Inc.  UA        1545\n2 United Air Lines Inc.  UA        1714\n3 American Airlines Inc. AA        1141\n4 JetBlue Airways        B6         725\n5 Delta Air Lines Inc.   DL         461\n6 United Air Lines Inc.  UA        1696\n\n\n\n12.4.4 semi_join() and anti_join()\n\n\n\nsemi_join(): keeps rows in first table with matches in second\n\n\nanti_join(): keeps rows with no matches\n\n\nflights |&gt;\n  semi_join(airlines, by = \"carrier\") |&gt;\n  head()\n\n# A tibble: 6 × 19\n   year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n  &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n1  2013     1     1      517            515         2      830            819\n2  2013     1     1      533            529         4      850            830\n3  2013     1     1      542            540         2      923            850\n4  2013     1     1      544            545        -1     1004           1022\n5  2013     1     1      554            600        -6      812            837\n6  2013     1     1      554            558        -4      740            728\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;\n\n\n\n12.4.5 In-Class Exercise 1 – Basic Joins\n\nUse left_join() to add airline names to flights (rename to airline_name).\n\nCount the number of flights for each airline.\n\nUse inner_join() and compare the number of rows.",
+    "title": "\n13  Relational Data with dplyr Joins\n",
+    "section": "\n13.4 Joins with dplyr",
+    "text": "13.4 Joins with dplyr\ndplyr join functions merge tables by keys.\n\n13.4.1 left_join()\n\nKeeps all rows from the first table:\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(nycflights13)\n\nflights |&gt;\n  left_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  select(airline_name, carrier, flight) |&gt;\n  head()\n\n# A tibble: 6 × 3\n  airline_name           carrier flight\n  &lt;chr&gt;                  &lt;chr&gt;    &lt;int&gt;\n1 United Air Lines Inc.  UA        1545\n2 United Air Lines Inc.  UA        1714\n3 American Airlines Inc. AA        1141\n4 JetBlue Airways        B6         725\n5 Delta Air Lines Inc.   DL         461\n6 United Air Lines Inc.  UA        1696\n\n\n\n13.4.2 inner_join()\n\nKeeps only matching rows:\n\nflights |&gt;\n  inner_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  select(airline_name, carrier, flight) |&gt;\n  head()\n\n# A tibble: 6 × 3\n  airline_name           carrier flight\n  &lt;chr&gt;                  &lt;chr&gt;    &lt;int&gt;\n1 United Air Lines Inc.  UA        1545\n2 United Air Lines Inc.  UA        1714\n3 American Airlines Inc. AA        1141\n4 JetBlue Airways        B6         725\n5 Delta Air Lines Inc.   DL         461\n6 United Air Lines Inc.  UA        1696\n\n\n\n13.4.3 full_join()\n\nKeeps all rows from both tables:\n\nflights |&gt;\n  full_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  select(airline_name, carrier, flight) |&gt;\n  head()\n\n# A tibble: 6 × 3\n  airline_name           carrier flight\n  &lt;chr&gt;                  &lt;chr&gt;    &lt;int&gt;\n1 United Air Lines Inc.  UA        1545\n2 United Air Lines Inc.  UA        1714\n3 American Airlines Inc. AA        1141\n4 JetBlue Airways        B6         725\n5 Delta Air Lines Inc.   DL         461\n6 United Air Lines Inc.  UA        1696\n\n\n\n13.4.4 semi_join() and anti_join()\n\n\n\nsemi_join(): keeps rows in first table with matches in second\n\n\nanti_join(): keeps rows with no matches\n\n\nflights |&gt;\n  semi_join(airlines, by = \"carrier\") |&gt;\n  head()\n\n# A tibble: 6 × 19\n   year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n  &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n1  2013     1     1      517            515         2      830            819\n2  2013     1     1      533            529         4      850            830\n3  2013     1     1      542            540         2      923            850\n4  2013     1     1      544            545        -1     1004           1022\n5  2013     1     1      554            600        -6      812            837\n6  2013     1     1      554            558        -4      740            728\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;\n\n\n\n13.4.5 In-Class Exercise 1 – Basic Joins\n\nUse left_join() to add airline names to flights (rename to airline_name).\n\nCount the number of flights for each airline.\n\nUse inner_join() and compare the number of rows.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "relational.html#joining-multiple-tables",
     "href": "relational.html#joining-multiple-tables",
-    "title": "\n12  Relational Data with dplyr Joins\n",
-    "section": "\n12.5 Joining Multiple Tables",
-    "text": "12.5 Joining Multiple Tables\nYou can chain joins to combine several datasets:\n\nflights |&gt;\n  left_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  left_join(airports, by = c(\"dest\" = \"faa\")) |&gt;\n  select(airline_name, dest, arr_delay) |&gt;\n  head()\n\n# A tibble: 6 × 3\n  airline_name           dest  arr_delay\n  &lt;chr&gt;                  &lt;chr&gt;     &lt;dbl&gt;\n1 United Air Lines Inc.  IAH          11\n2 United Air Lines Inc.  IAH          20\n3 American Airlines Inc. MIA          33\n4 JetBlue Airways        BQN         -18\n5 Delta Air Lines Inc.   ATL         -25\n6 United Air Lines Inc.  ORD          12\n\n\n\n\n12.5.1 In-Class Exercise 2 – Multi-Table Joins\n\nJoin flights with airports to add destination airport names.\n\nSummarize average arrival delay by airport.\n\nWhich airport has the longest average delay?",
+    "title": "\n13  Relational Data with dplyr Joins\n",
+    "section": "\n13.5 Joining Multiple Tables",
+    "text": "13.5 Joining Multiple Tables\nYou can chain joins to combine several datasets:\n\nflights |&gt;\n  left_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  left_join(airports, by = c(\"dest\" = \"faa\")) |&gt;\n  select(airline_name, dest, arr_delay) |&gt;\n  head()\n\n# A tibble: 6 × 3\n  airline_name           dest  arr_delay\n  &lt;chr&gt;                  &lt;chr&gt;     &lt;dbl&gt;\n1 United Air Lines Inc.  IAH          11\n2 United Air Lines Inc.  IAH          20\n3 American Airlines Inc. MIA          33\n4 JetBlue Airways        BQN         -18\n5 Delta Air Lines Inc.   ATL         -25\n6 United Air Lines Inc.  ORD          12\n\n\n\n\n13.5.1 In-Class Exercise 2 – Multi-Table Joins\n\nJoin flights with airports to add destination airport names.\n\nSummarize average arrival delay by airport.\n\nWhich airport has the longest average delay?",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "relational.html#handling-join-problems",
     "href": "relational.html#handling-join-problems",
-    "title": "\n12  Relational Data with dplyr Joins\n",
-    "section": "\n12.6 Handling Join Problems",
-    "text": "12.6 Handling Join Problems\n\nMissing keys → results in NA values\n\nDuplicated keys → may create duplicate rows\n\nAlways check results with count() or distinct()\n\n\nExample:\n\nflights |&gt;\n  left_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  count(carrier, airline_name)\n\n# A tibble: 16 × 3\n   carrier airline_name                    n\n   &lt;chr&gt;   &lt;chr&gt;                       &lt;int&gt;\n 1 9E      Endeavor Air Inc.           18460\n 2 AA      American Airlines Inc.      32729\n 3 AS      Alaska Airlines Inc.          714\n 4 B6      JetBlue Airways             54635\n 5 DL      Delta Air Lines Inc.        48110\n 6 EV      ExpressJet Airlines Inc.    54173\n 7 F9      Frontier Airlines Inc.        685\n 8 FL      AirTran Airways Corporation  3260\n 9 HA      Hawaiian Airlines Inc.        342\n10 MQ      Envoy Air                   26397\n11 OO      SkyWest Airlines Inc.          32\n12 UA      United Air Lines Inc.       58665\n13 US      US Airways Inc.             20536\n14 VX      Virgin America               5162\n15 WN      Southwest Airlines Co.      12275\n16 YV      Mesa Airlines Inc.            601",
+    "title": "\n13  Relational Data with dplyr Joins\n",
+    "section": "\n13.6 Handling Join Problems",
+    "text": "13.6 Handling Join Problems\n\nMissing keys → results in NA values\n\nDuplicated keys → may create duplicate rows\n\nAlways check results with count() or distinct()\n\n\nExample:\n\nflights |&gt;\n  left_join(airlines, by = \"carrier\") |&gt;\n  rename(airline_name = name) |&gt;\n  count(carrier, airline_name)\n\n# A tibble: 16 × 3\n   carrier airline_name                    n\n   &lt;chr&gt;   &lt;chr&gt;                       &lt;int&gt;\n 1 9E      Endeavor Air Inc.           18460\n 2 AA      American Airlines Inc.      32729\n 3 AS      Alaska Airlines Inc.          714\n 4 B6      JetBlue Airways             54635\n 5 DL      Delta Air Lines Inc.        48110\n 6 EV      ExpressJet Airlines Inc.    54173\n 7 F9      Frontier Airlines Inc.        685\n 8 FL      AirTran Airways Corporation  3260\n 9 HA      Hawaiian Airlines Inc.        342\n10 MQ      Envoy Air                   26397\n11 OO      SkyWest Airlines Inc.          32\n12 UA      United Air Lines Inc.       58665\n13 US      US Airways Inc.             20536\n14 VX      Virgin America               5162\n15 WN      Southwest Airlines Co.      12275\n16 YV      Mesa Airlines Inc.            601",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "relational.html#in-class-challenge-join-workflow",
     "href": "relational.html#in-class-challenge-join-workflow",
-    "title": "\n12  Relational Data with dplyr Joins\n",
-    "section": "\n12.7 In-Class Challenge – Join Workflow",
-    "text": "12.7 In-Class Challenge – Join Workflow\n\nJoin flights with airlines and airports\n\nCalculate average arrival delay by airline and destination\n\nArrange by delay and identify the worst-performing routes",
+    "title": "\n13  Relational Data with dplyr Joins\n",
+    "section": "\n13.7 In-Class Challenge – Join Workflow",
+    "text": "13.7 In-Class Challenge – Join Workflow\n\nJoin flights with airlines and airports\n\nCalculate average arrival delay by airline and destination\n\nArrange by delay and identify the worst-performing routes",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "relational.html#homework-preview",
     "href": "relational.html#homework-preview",
-    "title": "\n12  Relational Data with dplyr Joins\n",
-    "section": "\n12.8 Homework Preview",
-    "text": "12.8 Homework Preview\nFor the next homework, you will:\n\nCombine at least two datasets using joins\nUse at least two different join types (left_join(), inner_join(), etc.)\nHandle missing data or duplicates appropriately\nProduce a summary table and one visualization based on the joined data\nRender to PDF and submit on Canvas",
+    "title": "\n13  Relational Data with dplyr Joins\n",
+    "section": "\n13.8 Homework Preview",
+    "text": "13.8 Homework Preview\nFor the next homework, you will:\n\nCombine at least two datasets using joins\nUse at least two different join types (left_join(), inner_join(), etc.)\nHandle missing data or duplicates appropriately\nProduce a summary table and one visualization based on the joined data\nRender to PDF and submit on Canvas",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "relational.html#next-steps",
     "href": "relational.html#next-steps",
-    "title": "\n12  Relational Data with dplyr Joins\n",
-    "section": "\n12.9 Next Steps",
-    "text": "12.9 Next Steps\nNext, we will introduce accessing data using spreadsheets, SQL databases, JSON, and web scraping.",
+    "title": "\n13  Relational Data with dplyr Joins\n",
+    "section": "\n13.9 Next Steps",
+    "text": "13.9 Next Steps\nNext, we will introduce accessing data using spreadsheets, SQL databases, JSON, and web scraping.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relational Data with dplyr Joins</span>"
     ]
   },
   {
     "objectID": "advanced_import.html",
     "href": "advanced_import.html",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
     "section": "",
-    "text": "13.1 Learning Objectives\nBy the end of this lecture, you should be able to:",
+    "text": "14.1 Learning Objectives\nBy the end of this lecture, you should be able to:",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
     "objectID": "advanced_import.html#learning-objectives",
     "href": "advanced_import.html#learning-objectives",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
     "section": "",
     "text": "Import and work with data from Excel and Google Sheets\nConnect to and query relational databases from R\nUse Arrow to work efficiently with parquet files and large datasets\nAccess and tidy hierarchical JSON data\nPerform basic web scraping to extract data from web pages",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
     "objectID": "advanced_import.html#spreadsheets-r4ds-chapter-20",
     "href": "advanced_import.html#spreadsheets-r4ds-chapter-20",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
-    "section": "\n13.2 Spreadsheets (R4DS Chapter 20)",
-    "text": "13.2 Spreadsheets (R4DS Chapter 20)\nR can read Excel files with the readxl package and Google Sheets with googlesheets4.\n\n13.2.1 Importing Excel\n\nlibrary(readxl)\n\nexcel_df &lt;- read_excel(\"data/example.xlsx\", sheet = \"Sheet1\")\nhead(excel_df)\n\n\n13.2.2 Importing Google Sheets\n\nlibrary(googlesheets4)\nsheet_url &lt;- \"https://docs.google.com/spreadsheets/d/your-sheet-id/edit#gid=0\"\ngs_df &lt;- read_sheet(sheet_url)\n\n\n13.2.3 In-Class Exercise 1 – Spreadsheets\n\nRead an Excel file from the course data folder.\n\nLoad a Google Sheet you create (optional, requires authentication).\n\nSummarize one numeric column.",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n14.2 Spreadsheets (R4DS Chapter 20)",
+    "text": "14.2 Spreadsheets (R4DS Chapter 20)\nR can read Excel files with the readxl package and Google Sheets with googlesheets4.\n\n14.2.1 Importing Excel\n\nlibrary(readxl)\n\nexcel_df &lt;- read_excel(\"data/example.xlsx\", sheet = \"Sheet1\")\nhead(excel_df)\n\n\n14.2.2 Importing Google Sheets\n\nlibrary(googlesheets4)\nsheet_url &lt;- \"https://docs.google.com/spreadsheets/d/your-sheet-id/edit#gid=0\"\ngs_df &lt;- read_sheet(sheet_url)\n\n\n14.2.3 In-Class Exercise 1 – Spreadsheets\n\nRead an Excel file from the course data folder.\n\nLoad a Google Sheet you create (optional, requires authentication).\n\nSummarize one numeric column.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
     "objectID": "advanced_import.html#databases-r4ds-chapter-21",
     "href": "advanced_import.html#databases-r4ds-chapter-21",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
-    "section": "\n13.3 Databases (R4DS Chapter 21)",
-    "text": "13.3 Databases (R4DS Chapter 21)\nUse DBI and RSQLite to interact with relational databases. You can also use dplyr verbs to query tables.\n\n13.3.1 Example: Connecting to SQLite\n\nlibrary(DBI)\ncon &lt;- dbConnect(RSQLite::SQLite(), \"data/mydb.sqlite\")\n\n# List tables\ndbListTables(con)\n\n# Read a table into R\nflights_db &lt;- dbReadTable(con, \"flights\")\n\n# Or use dplyr to query lazily\nlibrary(dplyr)\ntbl(con, \"flights\") |&gt; filter(dep_delay &gt; 60) |&gt; collect() |&gt; head()\n\n\n13.3.2 In-Class Exercise 2 – Databases\n\nConnect to the provided SQLite database.\n\nList tables with dbListTables().\n\nQuery the flights table for flights delayed more than 2 hours.",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n14.3 Databases (R4DS Chapter 21)",
+    "text": "14.3 Databases (R4DS Chapter 21)\nUse DBI and RSQLite to interact with relational databases. You can also use dplyr verbs to query tables.\n\n14.3.1 Example: Connecting to SQLite\n\nlibrary(DBI)\ncon &lt;- dbConnect(RSQLite::SQLite(), \"data/mydb.sqlite\")\n\n# List tables\ndbListTables(con)\n\n# Read a table into R\nflights_db &lt;- dbReadTable(con, \"flights\")\n\n# Or use dplyr to query lazily\nlibrary(dplyr)\ntbl(con, \"flights\") |&gt; filter(dep_delay &gt; 60) |&gt; collect() |&gt; head()\n\n\n14.3.2 In-Class Exercise 2 – Databases\n\nConnect to the provided SQLite database.\n\nList tables with dbListTables().\n\nQuery the flights table for flights delayed more than 2 hours.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
     "objectID": "advanced_import.html#arrow-r4ds-chapter-22",
     "href": "advanced_import.html#arrow-r4ds-chapter-22",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
-    "section": "\n13.4 Arrow (R4DS Chapter 22)",
-    "text": "13.4 Arrow (R4DS Chapter 22)\nArrow allows you to read parquet files efficiently without loading everything into memory.\n\n13.4.1 Example: Reading Parquet\n\nlibrary(arrow)\n\ndataset &lt;- open_dataset(\"data/large.parquet\")\ndataset |&gt; filter(column_x &gt; 10) |&gt; collect() |&gt; head()\n\n\n13.4.2 In-Class Exercise 3 – Arrow\n\nOpen a parquet dataset using arrow::open_dataset().\n\nRun a filter and select query.\n\nCompare performance to reading the equivalent CSV.",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n14.4 Arrow (R4DS Chapter 22)",
+    "text": "14.4 Arrow (R4DS Chapter 22)\nArrow allows you to read parquet files efficiently without loading everything into memory.\n\n14.4.1 Example: Reading Parquet\n\nlibrary(arrow)\n\ndataset &lt;- open_dataset(\"data/large.parquet\")\ndataset |&gt; filter(column_x &gt; 10) |&gt; collect() |&gt; head()\n\n\n14.4.2 In-Class Exercise 3 – Arrow\n\nOpen a parquet dataset using arrow::open_dataset().\n\nRun a filter and select query.\n\nCompare performance to reading the equivalent CSV.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
     "objectID": "advanced_import.html#hierarchical-data-r4ds-chapter-23",
     "href": "advanced_import.html#hierarchical-data-r4ds-chapter-23",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
-    "section": "\n13.5 Hierarchical Data (R4DS Chapter 23)",
-    "text": "13.5 Hierarchical Data (R4DS Chapter 23)\nHierarchical data (JSON) often contains nested lists. Use jsonlite to load JSON and tidyr::unnest_wider() to flatten it.\n\n13.5.1 Example: Reading JSON\n\nlibrary(jsonlite)\n\njson_data &lt;- fromJSON(\"data/example.json\")\nstr(json_data)\n\n\n13.5.2 Flattening Nested Data\n\nlibrary(tidyr)\nnested_df &lt;- tibble(\n  id = 1,\n  details = list(tibble(city = \"NYC\", temp = 75))\n)\n\nnested_df |&gt; unnest_wider(details)\n\n# A tibble: 1 × 3\n     id city   temp\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 NYC      75\n\n\n\n13.5.3 In-Class Exercise 4 – JSON Rectangling\n\nLoad a nested JSON file.\n\nUse unnest_wider() or unnest_longer() to flatten it.\n\nCreate a tidy table with one row per observation.",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n14.5 Hierarchical Data (R4DS Chapter 23)",
+    "text": "14.5 Hierarchical Data (R4DS Chapter 23)\nHierarchical data (JSON) often contains nested lists. Use jsonlite to load JSON and tidyr::unnest_wider() to flatten it.\n\n14.5.1 Example: Reading JSON\n\nlibrary(jsonlite)\n\njson_data &lt;- fromJSON(\"data/example.json\")\nstr(json_data)\n\n\n14.5.2 Flattening Nested Data\n\nlibrary(tidyr)\nnested_df &lt;- tibble(\n  id = 1,\n  details = list(tibble(city = \"NYC\", temp = 75))\n)\n\nnested_df |&gt; unnest_wider(details)\n\n# A tibble: 1 × 3\n     id city   temp\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 NYC      75\n\n\n\n14.5.3 In-Class Exercise 4 – JSON Rectangling\n\nLoad a nested JSON file.\n\nUse unnest_wider() or unnest_longer() to flatten it.\n\nCreate a tidy table with one row per observation.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
     "objectID": "advanced_import.html#web-scraping-r4ds-chapter-24",
     "href": "advanced_import.html#web-scraping-r4ds-chapter-24",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
-    "section": "\n13.6 Web Scraping (R4DS Chapter 24)",
-    "text": "13.6 Web Scraping (R4DS Chapter 24)\nWeb scraping extracts data from websites. Use rvest to read HTML and extract tables or nodes.\n\n13.6.1 Example: Scraping a Table\n\nlibrary(rvest)\n\nurl &lt;- \"https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)\"\npage &lt;- read_html(url)\n\ngdp_table &lt;- page |&gt; html_element(\"table\") |&gt; html_table()\nhead(gdp_table)\n\n# A tibble: 2 × 1\n  X1                                                                            \n  &lt;chr&gt;                                                                         \n1 \"\"                                                                            \n2 \"Largest economies in the world by GDP (nominal) in 2025according to Internat…\n\n\n\n13.6.2 In-Class Exercise 5 – Web Scraping\n\nUse rvest to scrape a simple table from Wikipedia.\n\nConvert it to a tibble and clean column names.\n\nCreate a plot of GDP vs. rank.",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n14.6 Web Scraping (R4DS Chapter 24)",
+    "text": "14.6 Web Scraping (R4DS Chapter 24)\nWeb scraping extracts data from websites. Use rvest to read HTML and extract tables or nodes.\n\n14.6.1 Example: Scraping a Table\n\nlibrary(rvest)\n\nurl &lt;- \"https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)\"\npage &lt;- read_html(url)\n\ngdp_table &lt;- page |&gt; html_element(\"table\") |&gt; html_table()\nhead(gdp_table)\n\n# A tibble: 2 × 1\n  X1                                                                            \n  &lt;chr&gt;                                                                         \n1 \"\"                                                                            \n2 \"Largest economies in the world by GDP (nominal) in 2025according to Internat…\n\n\n\n14.6.2 In-Class Exercise 5 – Web Scraping\n\nUse rvest to scrape a simple table from Wikipedia.\n\nConvert it to a tibble and clean column names.\n\nCreate a plot of GDP vs. rank.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
     "objectID": "advanced_import.html#in-class-challenge-multiple-data-sources",
     "href": "advanced_import.html#in-class-challenge-multiple-data-sources",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
-    "section": "\n13.7 In-Class Challenge – Multiple Data Sources",
-    "text": "13.7 In-Class Challenge – Multiple Data Sources\n\nImport an Excel dataset, a JSON dataset, and scrape a table from the web.\n\nClean and join at least two sources.\n\nCreate one visualization combining information.",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n14.7 In-Class Challenge – Multiple Data Sources",
+    "text": "14.7 In-Class Challenge – Multiple Data Sources\n\nImport an Excel dataset, a JSON dataset, and scrape a table from the web.\n\nClean and join at least two sources.\n\nCreate one visualization combining information.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
     "objectID": "advanced_import.html#homework-preview",
     "href": "advanced_import.html#homework-preview",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
-    "section": "\n13.8 Homework Preview",
-    "text": "13.8 Homework Preview\nFor the next homework:\n\nChoose two different data sources (Excel, database, parquet, JSON, web)\nImport and tidy them\nJoin or compare across sources\nRender a short report with one plot and one table\nSubmit the rendered PDF",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n14.8 Homework Preview",
+    "text": "14.8 Homework Preview\nFor the next homework:\n\nChoose two different data sources (Excel, database, parquet, JSON, web)\nImport and tidy them\nJoin or compare across sources\nRender a short report with one plot and one table\nSubmit the rendered PDF",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
     "objectID": "advanced_import.html#conclusion",
     "href": "advanced_import.html#conclusion",
-    "title": "\n13  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
-    "section": "\n13.9 Conclusion",
-    "text": "13.9 Conclusion\nThis session completes the course by showing how to access data from multiple modern sources, preparing you to work with real-world messy data beyond flat CSV files.",
+    "title": "\n14  Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping\n",
+    "section": "\n14.9 Conclusion",
+    "text": "14.9 Conclusion\nThis session completes the course by showing how to access data from multiple modern sources, preparing you to work with real-world messy data beyond flat CSV files.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Accessing Data: Spreadsheets, Databases, Arrow, JSON, and Web Scraping</span>"
     ]
   },
   {
@@ -1145,6 +1215,17 @@
     "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
     "section": "",
     "text": "A.1 Course Overview\nINF506: Data Wrangling and Management introduces graduate students to data wrangling and management using R and the Tidyverse ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-overview",
+    "href": "syllabus.html#course-overview",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
+    "section": "",
+    "text": "CS 506, Fall 2025, 3 units\nSection 001: TuTh 9:35AM-10:50AM, Learning Resource Ctr Rm 106C\nPrerequisite: Graduate status\nMode of Instruction: Face-to-face (in person)\nInstructor’s Name & Contact:\n\nMarc Tollis (marc.tollis@nau.edu)\n\nRoom 209, SICCS (Building 90, second floor)\nOffice Hours: Tue 11AM-12PM\n928-523-3406",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
@@ -1173,44 +1254,77 @@
     ]
   },
   {
-    "objectID": "syllabus.html#course-student-learning-outcomes",
-    "href": "syllabus.html#course-student-learning-outcomes",
+    "objectID": "syllabus.html#course-objectives",
+    "href": "syllabus.html#course-objectives",
     "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "C.1 Course Student Learning Outcomes",
-    "text": "C.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R",
+    "section": "A.4 Course Objectives",
+    "text": "A.4 Course Objectives\nBy the end of the course, students will be able to:\n\nUse R and RStudio for data analysis\nImport structured and unstructured data\nClean and transform data using dplyr, tidyr, and other Tidyverse packages\nCreate effective visualizations using ggplot2\nPerform exploratory data analysis (EDA)\nApply data wrangling techniques to real datasets\n\n\nA.4.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R\n\n\nA.4.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
-    "objectID": "syllabus.html#program-student-outcomes-supported-by-this-class",
-    "href": "syllabus.html#program-student-outcomes-supported-by-this-class",
+    "objectID": "syllabus.html#required-materials",
+    "href": "syllabus.html#required-materials",
     "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "C.2 Program Student Outcomes supported by this class",
-    "text": "C.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
+    "section": "A.5 Required Materials",
+    "text": "A.5 Required Materials\n\nTextbook: R for Data Science (free online)\nSoftware:\n\nR\nRStudio",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
-    "objectID": "syllabus.html#course-policies",
-    "href": "syllabus.html#course-policies",
+    "objectID": "syllabus.html#assessments",
+    "href": "syllabus.html#assessments",
     "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "G.1 Course Policies",
-    "text": "G.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nLate Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.",
+    "section": "A.6 Assessments",
+    "text": "A.6 Assessments\n\n\n\nComponent\nWeight\n\n\n\n\nProblem Sets (14 total)\n45%\n\n\nQuizzes (6 total, lowest dropped)\n50%\n\n\nAttendance\n5%\n\n\n\n\nGrades will be assigned using the weighted sum described above using this scale: A ≥ 90%, B ≥ 80%, C ≥ 70%, D ≥ 60%, F &lt; 60%.\nProblem sets are marked as complete or incomplete.\nProblem sets are simple assignments and will be completed on your own.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
     ]
   },
   {
-    "objectID": "syllabus.html#university-policies",
-    "href": "syllabus.html#university-policies",
+    "objectID": "syllabus.html#course-schedule-fall-2025",
+    "href": "syllabus.html#course-schedule-fall-2025",
     "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "G.2 University Policies",
-    "text": "G.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
+    "section": "A.7 Course Schedule (Fall 2025)",
+    "text": "A.7 Course Schedule (Fall 2025)\n\n\n\nWeek\nDates (T/Th)\nR4DS Chapters\nTopics\nAssignments\nQuiz\n\n\n\n\n1\nAug 26 / 28\nCh. 1\nIntro to R, RStudio, and Quarto: Projects, rendering .qmd to .pdf\nPS1\n\n\n\n2\nSept 2 / 4\nCh. 2 – Data Visualization\nData Visualization with ggplot2: Aesthetics, geoms, facets\nPS2\n\n\n\n3\nSept 9 / 11\nCh. 3 – Data Transformation\nData Transformation (Rows): filter(), arrange()\nPS3\nQuiz 1\n\n\n4\nSept 16 / 18\nCh. 3 – Data Transformation\nData Transformation (Columns + Pipes): select(), mutate(), |&gt;\nPS4\n\n\n\n5\nSept 23 / 25\nCh. 3 – Data Transformation\nGrouping & Summarization: group_by(), summarize()\nPS5\nQuiz 2\n\n\n6\nSept 30 / Oct 2\nCh. 5 – Tidy Data\nTidy Data\nPS6\n\n\n\n7\nOct 7 / 9\nCh. 6 – Workflow: Scripts\nWorkflow & Reproducibility: projects, scripts, Quarto best practices\nPS7\nQuiz 3\n\n\n8\nOct 14 / 16\nCh. 7 - Data Import\nData Import: readr, parsing dates, Excel\nPS8\n\n\n\n9\nOct 21 / 23\nCh. 10 – Exploratory Data Analysis\nEDA: distributions, patterns, relationships\nPS9\nQuiz 4\n\n\n10\nOct 28 / 30\nCh. 12 through 18 – Transform; Ch. 14 – Strings\nLogical Vectors and Numbers; Strings & Regular Expressions: stringr\nPS10\n\n\n\n11\nNov 4 / 6\nCh. 12 through 18 – Transform (continued); Ch. 14 – Strings\nFactors & Categorical Data: forcats\nPS11\nQuiz 5\n\n\n12\nNov 11* / 13\nCh. 19 – Joins\nRelational Data: joining tables (left_join, etc.)\nPS12\n\n\n\n13\nNov 18 / 20\nCh. 20-24 – Advanced Importing\nAdvanced Importing, databases, web scraping\nPS13\n\n\n\n14\nNov 25 / 27\n—\nNov 25: Catch-Up, Q&A, In-Class Coding Practice  Nov 27: Thanksgiving – No Class\n—\n—\n\n\n15\nDec 2 / 4\n—\nCourse Wrap-up & Final Quiz\nPS14\nQuiz 6\n\n\n\n\n* Nov 11 (Veterans Day) – no class that Tuesday.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#policies",
+    "href": "syllabus.html#policies",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
+    "section": "A.8 Policies",
+    "text": "A.8 Policies\n\nA.8.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nLate Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.\n\n\n\n\nA.8.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#grading-and-submission",
+    "href": "syllabus.html#grading-and-submission",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
+    "section": "A.9 Grading and Submission",
+    "text": "A.9 Grading and Submission\n\nProblem Sets will be submitted via Canvas.\nQuizzes are written and completed in-class.\nAll assignments are due Sunday 11:59PM the week they are assigned.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#resources",
+    "href": "syllabus.html#resources",
+    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
+    "section": "A.10 Resources",
+    "text": "A.10 Resources\n\nRStudio Cheatsheets\nDataCamp & Coursera tutorials for extra practice\nOffice hours for additional help\n\n\n\nThis syllabus is subject to minor adjustments. Updates will be announced in class and posted on Canvas.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
@@ -1368,174 +1482,6 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>Appendix: Tidyverse and Tibbles</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#course-overview",
-    "href": "syllabus.html#course-overview",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "",
-    "text": "CS 506, Fall 2025, 3 units\nSection 001: TuTh 9:35AM-10:50AM, Learning Resource Ctr Rm 106C\nPrerequisite: Graduate status\nMode of Instruction: Face-to-face (in person)\nInstructor’s Name & Contact:\n\nMarc Tollis (marc.tollis@nau.edu)\n\nRoom 209, SICCS (Building 90, second floor)\nOffice Hours: Tue 11AM-12PM\n928-523-3406",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#course-objectives",
-    "href": "syllabus.html#course-objectives",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "A.4 Course Objectives",
-    "text": "A.4 Course Objectives\nBy the end of the course, students will be able to:\n\nUse R and RStudio for data analysis\nImport structured and unstructured data\nClean and transform data using dplyr, tidyr, and other Tidyverse packages\nCreate effective visualizations using ggplot2\nPerform exploratory data analysis (EDA)\nApply data wrangling techniques to real datasets\n\n\nA.4.1 Course Student Learning Outcomes\nLO1. Compare and contrast major classes of and techniques for data handling (synthesis).\n\nStudents will be able to:\n1. Identify various sources of data\n2. Identify and utilize tool chains appropriate for accessing data\n\nLO2. Design and enact data manipulation, analysis, and visualization workflows for large, heterogenous datasets (application).\nStudents will be able to:\n1. Aggregate data from multiple sources\n2. Reshape data for further analysis\n3. Validate data\n4. Generate meaningful statistics summarizing the data\n5. Visualize trends in data\n\nLO3. Reason about advantages, preferred use cases, and weaknesses of various data manipulation techniques (application)\nLO4. Develop a conceptual understanding of how the field of data management is evolving (knowledge).\n\nStudents will be able to:\n1. Find and employ data management tools in R\n2. Find and employ data visualization tools in R\n\n\nA.4.2 Program Student Outcomes supported by this class\nThis course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:\nSO2. Build the practical skills to explore, analyze, manage, and visualize large data sets using the latest technologies.\nSO3. Evaluate and use well accepted methods to obtain, clean, pre-process, and transform data for further processing.\nSO4. Apply data science and cutting-edge analytical methods to address data-rich problems from a variety of fields, think critically about data, and drive decision making.\nSO7. Identify, appraise, and investigate ethical issues surrounding data collection, use, and data-driven decision making and to act in an informed and conscientious ethical manner.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#required-materials",
-    "href": "syllabus.html#required-materials",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "A.5 Required Materials",
-    "text": "A.5 Required Materials\n\nTextbook: R for Data Science (free online)\nSoftware:\n\nR\nRStudio",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#assessments",
-    "href": "syllabus.html#assessments",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "A.6 Assessments",
-    "text": "A.6 Assessments\n\n\n\nComponent\nWeight\n\n\n\n\nProblem Sets (14 total)\n45%\n\n\nQuizzes (6 total, lowest dropped)\n50%\n\n\nAttendance\n5%\n\n\n\n\nGrades will be assigned using the weighted sum described above using this scale: A ≥ 90%, B ≥ 80%, C ≥ 70%, D ≥ 60%, F &lt; 60%.\nProblem sets are marked as complete or incomplete.\nProblem sets are simple assignments and will be completed on your own.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#course-schedule-fall-2025",
-    "href": "syllabus.html#course-schedule-fall-2025",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "A.7 Course Schedule (Fall 2025)",
-    "text": "A.7 Course Schedule (Fall 2025)\n\n\n\nWeek\nDates (T/Th)\nR4DS Chapters\nTopics\nAssignments\nQuiz\n\n\n\n\n1\nAug 26 / 28\nCh. 1\nIntro to R, RStudio, and Quarto: Projects, rendering .qmd to .pdf\nPS1\n\n\n\n2\nSept 2 / 4\nCh. 2 – Data Visualization\nData Visualization with ggplot2: Aesthetics, geoms, facets\nPS2\n\n\n\n3\nSept 9 / 11\nCh. 3 – Data Transformation\nData Transformation (Rows): filter(), arrange()\nPS3\nQuiz 1\n\n\n4\nSept 16 / 18\nCh. 3 – Data Transformation\nData Transformation (Columns + Pipes): select(), mutate(), |&gt;\nPS4\n\n\n\n5\nSept 23 / 25\nCh. 3 – Data Transformation\nGrouping & Summarization: group_by(), summarize()\nPS5\nQuiz 2\n\n\n6\nSept 30 / Oct 2\nCh. 5 – Tidy Data\nTidy Data\nPS6\n\n\n\n7\nOct 7 / 9\nCh. 6 – Workflow: Scripts\nWorkflow & Reproducibility: projects, scripts, Quarto best practices\nPS7\nQuiz 3\n\n\n8\nOct 14 / 16\nCh. 7 - Data Import\nData Import: readr, parsing dates, Excel\nPS8\n\n\n\n9\nOct 21 / 23\nCh. 10 – Exploratory Data Analysis\nEDA: distributions, patterns, relationships\nPS9\nQuiz 4\n\n\n10\nOct 28 / 30\nCh. 12 and 13 – Transform; Ch. 14 – Strings\nLogical Vectors and Numbers; Strings & Regular Expressions: stringr\nPS10\n\n\n\n11\nNov 4 / 6\nCh. 15 – Factors\nFactors & Categorical Data: forcats\nPS11\nQuiz 5\n\n\n12\nNov 11* / 13\nCh. 13 – Relational Data\nRelational Data: joining tables (left_join, etc.)\nPS12\n\n\n\n13\nNov 18 / 20\nCh. 20-24 – Advanced Import\nAdvanced Import, databases, web scraping\nPS13\n\n\n\n14\nNov 25 / 27\n—\nNov 25: Catch-Up, Q&A, In-Class Coding Practice  Nov 27: Thanksgiving – No Class\n—\n—\n\n\n15\nDec 2 / 4\n—\nCourse Wrap-up & Final Quiz\nPS14\nQuiz 6\n\n\n\n\n* Nov 11 (Veterans Day) – no class that Tuesday.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#policies",
-    "href": "syllabus.html#policies",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "A.8 Policies",
-    "text": "A.8 Policies\n\nA.8.1 Course Policies\n\nStudents are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.\nEmails addressed to the instructor must be respectful and professional. The instructor will respond to emails promptly, within 2 business days. The instructor will generally not respond to emails on weekends or after working hours (i.e., in the evenings), so please plan accordingly.\nCheating, including plagiarism of writing or computer code, will not be tolerated. All academic integrity violations are treated seriously. Academic integrity violations will result in penalties including, but not limited to, a zero on the assignment, a failing grade in the class, or expulsion from NAU. The University’s Academic Integrity policies will be strictly enforced. |\nEach student is required to demonstrate respect towards their peers and the instructor. The instructor is held to the same standard. - The instructor will not provide copies of course notes. These materials should be sought from the students’ peers or by watching the recorded lectures.\nElectronic device usage must support learning in the class. All cell phones, PDAs, music players and other entertainment devices must be turned off (or put on silent) during lecture.\nGrades will be entered in Canvas and . Please check LOUIE for your final grade.\nAttendance: Active participation in coding activities is expected. Repeated, unexcused absences may affect the student’s grade.\nLate Work: Accepted only with prior arrangement.\nAcademic Integrity: Students must adhere to NAU’s academic integrity policy.\n\n\n\n\nA.8.2 University Policies\n\nPlease see this document for all of the required Syllabus Policy Statements that equally apply to this course.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#grading-and-submission",
-    "href": "syllabus.html#grading-and-submission",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "A.9 Grading and Submission",
-    "text": "A.9 Grading and Submission\n\nProblem Sets will be submitted via Canvas.\nQuizzes are written and completed in-class.\nAll assignments are due Sunday 11:59PM the week they are assigned.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#resources",
-    "href": "syllabus.html#resources",
-    "title": "Appendix A: CS506: Data Wrangling and Management– Syllabus",
-    "section": "A.10 Resources",
-    "text": "A.10 Resources\n\nRStudio Cheatsheets\nDataCamp & Coursera tutorials for extra practice\nOffice hours for additional help\n\n\n\nThis syllabus is subject to minor adjustments. Updates will be announced in class and posted on Canvas.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>CS506: Data Wrangling and Management– Syllabus</span>"
-    ]
-  },
-  {
-    "objectID": "transform.html",
-    "href": "transform.html",
-    "title": "\n10  Transform: Logical Vectors and Numbers\n",
-    "section": "",
-    "text": "10.1 Learning Objectives\nWhat are the types of variables we see in data frames, and what are the different tools we can use to work with them?\nBy the end of this chapter, you should be able to:",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
-    ]
-  },
-  {
-    "objectID": "transform.html#learning-objectives",
-    "href": "transform.html#learning-objectives",
-    "title": "\n10  Transform: Logical Vectors and Numbers\n",
-    "section": "",
-    "text": "Understand how logical vectors work in R\nUse logical conditions to filter and manipulate data\nConvert between logical, numeric, and character types\nParse numbers from messy strings",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
-    ]
-  },
-  {
-    "objectID": "transform.html#logical-vectors",
-    "href": "transform.html#logical-vectors",
-    "title": "\n10  Transform: Logical Vectors and Numbers\n",
-    "section": "\n10.2 Logical Vectors",
-    "text": "10.2 Logical Vectors\nLogical vectors contain only TRUE, FALSE, or NA.\n\nx &lt;- c(TRUE, FALSE, TRUE, NA)\nx\n\n[1]  TRUE FALSE  TRUE    NA\n\n\n\n10.2.1 Logical comparisons create logical vectors:\n\nnums &lt;- c(2, 5, 8, 1)\nnums &gt; 4\n\n[1] FALSE  TRUE  TRUE FALSE\n\n\nYou can use these directly with functions like sum() and mean():\n\nsum(nums &gt; 4)   # Count how many values are &gt; 4\n\n[1] 2\n\nmean(nums &gt; 4)  # Proportion of values &gt; 4\n\n[1] 0.5\n\n\n\n10.2.2 In-Class Exercise 1 – Logical Conditions\n\nCreate a numeric vector with 10 random values.\n\nWhich values are greater than the mean?\n\nWhat proportion is above the mean?",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
-    ]
-  },
-  {
-    "objectID": "transform.html#logical-operations",
-    "href": "transform.html#logical-operations",
-    "title": "\n10  Transform: Logical Vectors and Numbers\n",
-    "section": "\n10.3 Logical Operations",
-    "text": "10.3 Logical Operations\nCombine logical vectors with & (and), | (or), and ! (not):\n\na &lt;- c(TRUE, FALSE, TRUE)\nb &lt;- c(TRUE, TRUE, FALSE)\n\na & b\n\n[1]  TRUE FALSE FALSE\n\na | b\n\n[1] TRUE TRUE TRUE\n\n!a\n\n[1] FALSE  TRUE FALSE\n\n\n\n\n10.3.1 In-Class Exercise 2 – Combining Conditions\n\nUsing the mpg dataset, create a logical condition for cars with hwy &gt; 30 and cyl == 4.\n\nHow many such cars exist?\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nmpg |&gt;\n  filter(hwy &gt; 30 & cyl == 4) |&gt;\n  nrow()\n\n[1] 22",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
-    ]
-  },
-  {
-    "objectID": "transform.html#numbers-and-coercion",
-    "href": "transform.html#numbers-and-coercion",
-    "title": "\n10  Transform: Logical Vectors and Numbers\n",
-    "section": "\n10.4 Numbers and Coercion",
-    "text": "10.4 Numbers and Coercion\nLogical values behave like numbers: TRUE = 1, FALSE = 0.\n\nas.numeric(c(TRUE, FALSE, TRUE))\n\n[1] 1 0 1\n\n\nThis makes calculations on logical vectors easy.",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
-    ]
-  },
-  {
-    "objectID": "transform.html#parsing-numbers",
-    "href": "transform.html#parsing-numbers",
-    "title": "\n10  Transform: Logical Vectors and Numbers\n",
-    "section": "\n10.5 Parsing Numbers",
-    "text": "10.5 Parsing Numbers\nReal-world data often stores numbers as text with extra symbols.\nUse readr::parse_number() to extract numeric values.\n\nlibrary(readr)\n\nx &lt;- c(\"$100\", \"200%\", \"300kg\")\nparse_number(x)\n\n[1] 100 200 300\n\n\n\n\n10.5.1 In-Class Exercise 3 – Parsing\n\nCreate a character vector: c(\"10 kg\", \"$50\", \"30%\").\n\nUse parse_number() to convert it to numeric.\n\nWhat happens if there are unexpected characters?",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
-    ]
-  },
-  {
-    "objectID": "transform.html#dealing-with-missing-values",
-    "href": "transform.html#dealing-with-missing-values",
-    "title": "\n10  Transform: Logical Vectors and Numbers\n",
-    "section": "\n10.6 Dealing with Missing Values",
-    "text": "10.6 Dealing with Missing Values\nLogical and numeric vectors can contain NA.\nHandle them with na.rm = TRUE or functions like replace_na().\n\nnums &lt;- c(1, 2, NA, 4)\nmean(nums, na.rm = TRUE)\n\n[1] 2.333333",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
-    ]
-  },
-  {
-    "objectID": "transform.html#in-class-challenge-logical-filtering",
-    "href": "transform.html#in-class-challenge-logical-filtering",
-    "title": "\n10  Transform: Logical Vectors and Numbers\n",
-    "section": "\n10.7 In-Class Challenge – Logical Filtering",
-    "text": "10.7 In-Class Challenge – Logical Filtering\n\nUsing flights from nycflights13, calculate the proportion of flights that departed late (dep_delay &gt; 0) and arrived on time (arr_delay &lt;= 0).\n\n\nlibrary(nycflights13)\n\nflights |&gt;\n  summarize(on_time = mean(dep_delay &gt; 0 & arr_delay &lt;= 0, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  on_time\n    &lt;dbl&gt;\n1   0.108",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Transform: Logical Vectors and Numbers</span>"
     ]
   }
 ]
