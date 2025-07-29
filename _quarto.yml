@@ -20,10 +20,11 @@ book:
     - ggplot2.qmd
     - dplyr1.qmd
     - dplyr2.qmd
-    - eda.qmd
     - tidy.qmd
+    - eda.qmd
     - workflow.qmd
     - dataimport.qmd
+    - transform.qmd
     - strings.qmd
     - factors.qmd
     - relational.qmd

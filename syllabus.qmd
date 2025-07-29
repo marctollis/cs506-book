@@ -5,7 +5,7 @@ format: html
 
 ![](nau_siccs_logo.png){fig-align="center"}
 
-# Course Overview
+## Course Overview
 
 **INF506: Data Wrangling and Management** introduces graduate students to data wrangling and management using **R** and the **Tidyverse** ecosystem. Students will learn to import, manipulate, clean, and visualize data with a strong emphasis on practical applications and reproducible workflows.
 
@@ -29,7 +29,7 @@ I have compiled a [course website](https://marctollis.github.io/cs506-book/) tha
 
 ------------------------------------------------------------------------
 
-# Course Objectives
+## Course Objectives
 
 By the end of the course, students will be able to:
 
@@ -40,7 +40,7 @@ By the end of the course, students will be able to:
 -   Perform exploratory data analysis (EDA)
 -   Apply data wrangling techniques to real datasets
 
-## Course Student Learning Outcomes
+### Course Student Learning Outcomes
 
 **LO1.** Compare and contrast major classes of and techniques for data handling (synthesis).\
 
@@ -65,7 +65,7 @@ Students will be able to:\
 1. Find and employ data management tools in **R**\
 2. Find and employ data visualization tools in **R**
 
-## Program Student Outcomes supported by this class
+### Program Student Outcomes supported by this class
 
 This course directly supports the following program student outcomes in the Masters of Science in Computational and Applied Data Science program assessment and improvement plan:
 
@@ -79,7 +79,7 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-# Required Materials
+## Required Materials
 
 -   **Textbook:** [*R for Data Science*](https://r4ds.hadley.nz/) (free online)
 -   **Software:**
@@ -88,7 +88,7 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-# Assessments
+## Assessments
 
 | Component                         | Weight |
 |-----------------------------------|--------|
@@ -102,7 +102,7 @@ This course directly supports the following program student outcomes in the Mast
 
 -   **Problem sets** are simple assignments and will be completed on your own.
 
-# Course Schedule (Fall 2025)
+## Course Schedule (Fall 2025)
 
 | **Week** | **Dates (T/Th)** | **R4DS Chapters** | **Topics** | **Assignments** | **Quiz** |
 |------------|------------|------------|------------|------------|------------|
@@ -110,12 +110,12 @@ This course directly supports the following program student outcomes in the Mast
 | 2 | Sept 2 / 4 | [Ch. 2 – Data Visualization](https://r4ds.hadley.nz/data-visualize.html) | [**Data Visualization with ggplot2**](https://marctollis.github.io/cs506-book/ggplot2.html): Aesthetics, geoms, facets | PS2 |  |
 | 3 | Sept 9 / 11 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | [**Data Transformation (Rows)**](https://marctollis.github.io/cs506-book/dplyr1.html): `filter()`, `arrange()` | PS3 | Quiz 1 |
 | 4 | Sept 16 / 18 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | [**Data Transformation (Columns + Pipes)**](https://marctollis.github.io/cs506-book/dplyr1.html): `select()`, `mutate()`, `|>` | PS4 |  |
-| 5 | Sept 23 / 25 | [Ch. 5 – Grouped Summaries](https://r4ds.hadley.nz/grouped-summaries.html) | [**Grouping & Summarization**](https://marctollis.github.io/cs506-book/dplyr2.html): `group_by()`, `summarize()` | PS5 | Quiz 2 |
-| 6 | Sept 30 / Oct 2 | [Ch. 6 – Exploratory Data Analysis](https://r4ds.hadley.nz/eda.html) | [**EDA**: distributions, patterns, relationships](https://marctollis.github.io/cs506-book/eda.html) | PS6 |  |
-| 7 | Oct 7 / 9 | [Ch. 7 – Tidy Data](https://r4ds.hadley.nz/tidy-data.html) | [**Tidy Data**](https://marctollis.github.io/cs506-book/tidy.html): `pivot_longer()`, `pivot_wider()` | PS7 | Quiz 3 |
-| 8 | Oct 14 / 16 | [Ch. 8 – Workflow: Scripts](https://r4ds.hadley.nz/workflow-scripts.html) | [**Workflow & Reproducibility**](https://marctollis.github.io/cs506-book/workflow.html): projects, scripts, Quarto best practices | PS8 |  |
-| 9 | Oct 21 / 23 | [Ch. 11 – Data Import](https://r4ds.hadley.nz/data-import.html) | [**Data Import**](https://marctollis.github.io/cs506-book/dataimport.html): `readr`, parsing dates, Excel | PS9 | Quiz 4 |
-| 10 | Oct 28 / 30 | [Ch. 14 – Strings](https://r4ds.hadley.nz/strings.html) | [**Strings & Regular Expressions**](https://marctollis.github.io/cs506-book/strings.html): `stringr` | PS10 |  |
+| 5 | Sept 23 / 25 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | [**Grouping & Summarization**](https://marctollis.github.io/cs506-book/dplyr2.html): `group_by()`, `summarize()` | PS5 | Quiz 2 |
+| 6 | Sept 30 / Oct 2 | [Ch. 5 – Tidy Data](https://r4ds.hadley.nz/data-tidy.html) | [**Tidy Data**](https://marctollis.github.io/cs506-book/tidy.html) | PS6 |  |
+| 7 | Oct 7 / 9 |  [Ch. 6 – Workflow: Scripts](https://r4ds.hadley.nz/workflow-scripts.html) | [**Workflow & Reproducibility**](https://marctollis.github.io/cs506-book/workflow.html): projects, scripts, Quarto best practices| PS7 | Quiz 3 |
+| 8 | Oct 14 / 16 | [Ch. 7 - Data Import](https://r4ds.hadley.nz/data-import.html) | [**Data Import**](https://marctollis.github.io/cs506-book/dataimport.html): `readr`, parsing dates, Excel | PS8 |  |
+| 9 | Oct 21 / 23 | [Ch. 10 – Exploratory Data Analysis](https://r4ds.hadley.nz/EDA.html) | [**EDA: distributions, patterns, relationships**](https://marctollis.github.io/cs506-book/eda.html)| PS9 | Quiz 4 |
+| 10 | Oct 28 / 30 |  [Ch. 12 and 13 – Transform](https://r4ds.hadley.nz/transform.html); [Ch. 14 – Strings](https://r4ds.hadley.nz/strings.html) | [**Logical Vectors and Numbers**](https://marctollis.github.io/cs506-book/transform.html); [**Strings & Regular Expressions**](https://marctollis.github.io/cs506-book/strings.html): `stringr` | PS10 |  |
 | 11 | Nov 4 / 6 | [Ch. 15 – Factors](https://r4ds.hadley.nz/factors.html) | [**Factors & Categorical Data**](https://marctollis.github.io/cs506-book/strings.html): `forcats` | PS11 | Quiz 5 |
 | 12 | Nov 11\* / 13 | [Ch. 13 – Relational Data](https://r4ds.hadley.nz/relational-data.html) | [**Relational Data**](https://marctollis.github.io/cs506-book/relational.html): joining tables (`left_join`, etc.) | PS12 |  |
 | 13 | Nov 18 / 20 | [Ch. 20-24 – Advanced Import](https://r4ds.hadley.nz/model-basics.html) | [**Advanced Import**](https://marctollis.github.io/cs506-book/advanced_import.html), databases, web scraping | PS13 |  |
@@ -126,9 +126,9 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-# Policies
+## Policies
 
-## Course Policies
+### Course Policies
 
 -   Students are encouraged to attend the office hours of the instructor. If a student cannot attend regular office hours with the instructor, an appointment may be considered if made via email with sufficient advanced notice.
 
@@ -148,13 +148,13 @@ This course directly supports the following program student outcomes in the Mast
 
 -   **Academic Integrity:** Students must adhere to NAU’s academic integrity policy.\
 
-## University Policies
+### University Policies
 
 -   Please see this [document](https://nau.edu/wp-content/uploads/sites/26/Syllabus-Policy-Statements-Nov-28-2023.pdf) for all of the required Syllabus Policy Statements that equally apply to this course.\
 
 ------------------------------------------------------------------------
 
-# Grading and Submission
+## Grading and Submission
 
 -   **Problem Sets** will be submitted via Canvas.
 -   **Quizzes** are written and completed in-class.
@@ -162,7 +162,7 @@ This course directly supports the following program student outcomes in the Mast
 
 ------------------------------------------------------------------------
 
-# Resources
+## Resources
 
 -   [RStudio Cheatsheets](https://posit.co/resources/cheatsheets/)
 -   DataCamp & Coursera tutorials for extra practice

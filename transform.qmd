@@ -1,0 +1,154 @@
+---
+title: "Transform: Logical Vectors and Numbers"
+---
+
+What are the types of variables we see in data frames, and what are the different tools we can use to work with them?
+
+## Learning Objectives
+
+By the end of this chapter, you should be able to:
+
+- Understand how logical vectors work in R
+- Use logical conditions to filter and manipulate data
+- Convert between logical, numeric, and character types
+- Parse numbers from messy strings
+
+---
+
+## Logical Vectors
+
+Logical vectors contain only `TRUE`, `FALSE`, or `NA`.
+
+```{r}
+x <- c(TRUE, FALSE, TRUE, NA)
+x
+```
+
+### Logical comparisons create logical vectors:
+
+```{r}
+nums <- c(2, 5, 8, 1)
+nums > 4
+```
+
+You can use these directly with functions like `sum()` and `mean()`:
+
+```{r}
+sum(nums > 4)   # Count how many values are > 4
+mean(nums > 4)  # Proportion of values > 4
+```
+
+---
+
+### In-Class Exercise 1 – Logical Conditions
+
+1. Create a numeric vector with 10 random values.  
+2. Which values are greater than the mean?  
+3. What proportion is above the mean?
+
+---
+
+## Logical Operations
+
+Combine logical vectors with `&` (and), `|` (or), and `!` (not):
+
+```{r}
+a <- c(TRUE, FALSE, TRUE)
+b <- c(TRUE, TRUE, FALSE)
+
+a & b
+a | b
+!a
+```
+
+---
+
+### In-Class Exercise 2 – Combining Conditions
+
+1. Using the `mpg` dataset, create a logical condition for cars with `hwy > 30` **and** `cyl == 4`.  
+2. How many such cars exist?
+
+```{r}
+library(tidyverse)
+
+mpg |>
+  filter(hwy > 30 & cyl == 4) |>
+  nrow()
+```
+
+---
+
+## Numbers and Coercion
+
+Logical values behave like numbers: `TRUE` = 1, `FALSE` = 0.
+
+```{r}
+as.numeric(c(TRUE, FALSE, TRUE))
+```
+
+This makes calculations on logical vectors easy.
+
+---
+
+## Parsing Numbers
+
+Real-world data often stores numbers as text with extra symbols.  
+Use `readr::parse_number()` to extract numeric values.
+
+```{r}
+library(readr)
+
+x <- c("$100", "200%", "300kg")
+parse_number(x)
+```
+
+---
+
+### In-Class Exercise 3 – Parsing
+
+1. Create a character vector: `c("10 kg", "$50", "30%")`.  
+2. Use `parse_number()` to convert it to numeric.  
+3. What happens if there are unexpected characters?
+
+---
+
+## Dealing with Missing Values
+
+Logical and numeric vectors can contain `NA`.  
+Handle them with `na.rm = TRUE` or functions like `replace_na()`.
+
+```{r}
+nums <- c(1, 2, NA, 4)
+mean(nums, na.rm = TRUE)
+```
+
+---
+
+## In-Class Challenge – Logical Filtering
+
+- Using `flights` from `nycflights13`, calculate the proportion of flights that departed late (`dep_delay > 0`) **and** arrived on time (`arr_delay <= 0`).
+
+```{r}
+library(nycflights13)
+
+flights |>
+  summarize(on_time = mean(dep_delay > 0 & arr_delay <= 0, na.rm = TRUE))
+```
+
+---
+
+# Homework Preview
+
+For the next homework, you will:
+
+- Create a numeric vector and use logical comparisons to summarize it
+- Filter a dataset using a logical condition
+- Parse a messy character column into numeric
+- Render to PDF and submit on Canvas
+
+---
+
+# Next Steps
+
+Next, you’ll learn how to manipulate and clean **strings** using the `stringr` package.
+
