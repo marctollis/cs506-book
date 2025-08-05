@@ -1,5 +1,5 @@
 ---
-title: "CS506: Data Wrangling and Management– Syllabus"
+title: "CS506: Data Wrangling and Management – Syllabus"
 format: html
 ---
 
@@ -107,7 +107,7 @@ This course directly supports the following program student outcomes in the Mast
 -   **The final quiz** is a case study project starting in class and due during finals week.
 -   **Workshops** will take up class time and attendance is required for the workshop grade.
 -   **Workshop** assignments will be submitted via Canvas.
--   All **Canvas-based assignments are due Sunday 11:59PM** the week they are assigned.
+-   All **Canvas-based assignments are due Sunday 11:59PM** the week they are assigned (except the Mini Hackathon).
 
 ------------------------------------------------------------------------
 
