@@ -21,7 +21,7 @@ format: html
 
 ## Canvas & Recorded Lectures
 
-We will use the learning management system, Canvas, to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.
+We will use the learning management system, [Canvas](https://legacy.nau.edu/lms/), to conduct some course business, including assignment disbursement and submitting. I will use Canvas to record lectures for future viewing.
 
 ## CS506 Book Website
 
@@ -92,9 +92,9 @@ This course directly supports the following program student outcomes in the Mast
 
 | Component                         | Weight |
 |-----------------------------------|--------|
-| Problem Sets (14 total)           | 35%    |
+| Problem Sets (14 total)           | 30%    |
 | Quizzes (6 total, lowest dropped) | 50%    |
-| Workshops (2)                     | 10%    |
+| Workshops (2)                     | 15%    |
 | Attendance                        | 5%     |
 
 -   Grades will be assigned using the weighted sum described above using this scale: **A** ≥ 90%, **B** ≥ 80%, **C** ≥ 70%, **D** ≥ 60%, **F** \< 60%.
