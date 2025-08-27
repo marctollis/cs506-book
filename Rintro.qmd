@@ -48,7 +48,7 @@ Quarto allows you to create documents that include both text and executable R co
 1.  In RStudio: File → New File → Quarto Document
 2.  Replace the header with:
 
-``` yaml
+```         
 ---
 title: "My First Quarto Document"
 author: "Your Name"
