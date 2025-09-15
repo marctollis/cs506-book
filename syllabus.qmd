@@ -114,14 +114,14 @@ This course directly supports the following program student outcomes in the Mast
 ## Course Schedule (Fall 2025)
 
 | **Week** | **Dates (T/Th)** | **R4DS Chapters** | **Topics** | **Assignments** | **Quiz** |
-|---------|---------|---------|----------------------------|---------|---------|
+|----|----|----|----|----|----|
 | 1 | Aug 26 / 28 | [Ch. 1](https://r4ds.hadley.nz/intro.html) | [**Intro to R, RStudio, and Quarto**](https://marctollis.github.io/cs506-book/Rintro.html): Projects, rendering `.qmd` to `.pdf` | PS1 |  |
 | 2 | Sept 2 / 4 | [Ch. 2 – Data Visualization](https://r4ds.hadley.nz/data-visualize.html) | [**Data Visualization with ggplot2**](https://marctollis.github.io/cs506-book/ggplot2.html): Aesthetics, geoms, facets | PS2 |  |
 | 3 | Sept 9 / 11 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | [**Data Transformation (Rows)**](https://marctollis.github.io/cs506-book/dplyr1.html): `filter()`, `arrange()` | PS3 | Quiz 1 |
-| 4 | Sept 16 / 18 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | [**Data Transformation (Columns + Pipes)**](https://marctollis.github.io/cs506-book/dplyr1.html): `select()`, `mutate()`, `|>` | PS4 |  |
-| 5 | Sept 23 / 25 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | [**Grouping & Summarization**](https://marctollis.github.io/cs506-book/dplyr2.html): `group_by()`, `summarize()` | PS5 | Quiz 2 |
-| 6 | Sept 30 / Oct 2 | [Ch. 5 – Tidy Data](https://r4ds.hadley.nz/data-tidy.html) | [**Tidy Data**](https://marctollis.github.io/cs506-book/tidy.html) | PS6 |  |
-| 7 | Oct 7 / 9 | [Ch. 6 – Workflow: Scripts](https://r4ds.hadley.nz/workflow-scripts.html) | [**Workflow & Reproducibility**](https://marctollis.github.io/cs506-book/workflow.html): projects, scripts, Quarto best practices | PS7; Mini Hackathon | Quiz 3 |
+| 4 | Sept 16 / 18 | [Ch. 3 – Data Transformation](https://r4ds.hadley.nz/data-transform.html) | [**Grouping & Summarization**](https://marctollis.github.io/cs506-book/dplyr2.html): `group_by()`, `summarize()` | PS4 |  |
+| 5 | Sept 23 / 25 | [Ch. 5 – Tidy Data](https://r4ds.hadley.nz/data-tidy.html) | [**Tidy Data**](https://marctollis.github.io/cs506-book/tidy.html) | PS5 | Quiz 2 |
+| 6 | Sept 30 / Oct 2 | [Ch. 6 – Workflow: Scripts](https://r4ds.hadley.nz/workflow-scripts.html) | [**Workflow & Reproducibility**](https://marctollis.github.io/cs506-book/workflow.html): projects, scripts, Quarto best practices | PS6 |  |
+| 7 | Oct 7 / 9 |  | Mini Hackathon (Tuesday) | PS7; Mini Hackathon | Quiz 3 (Thursday) |
 | 8 | Oct 14 / 16 | [Ch. 7 - Data Import](https://r4ds.hadley.nz/data-import.html) | [**Data Import**](https://marctollis.github.io/cs506-book/dataimport.html): `readr`, parsing dates, Excel | PS8 |  |
 | 9 | Oct 21 / 23 | [Ch. 10 – Exploratory Data Analysis](https://r4ds.hadley.nz/EDA.html) | [**EDA: distributions, patterns, relationships**](https://marctollis.github.io/cs506-book/eda.html) | PS9 | Quiz 4 |
 | 10 | Oct 28 / 30 | [Ch. 12 through 18 – Transform](https://r4ds.hadley.nz/transform.html) | [**Logical Vectors and Numbers**](https://marctollis.github.io/cs506-book/transform.html); [**Strings & Regular Expressions**](https://marctollis.github.io/cs506-book/strings.html): `stringr` | PS10 |  |
