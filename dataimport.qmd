@@ -197,7 +197,13 @@ write_csv(students, "students.csv")
 
 1.  Write a CSV (i.e. `students`) to a file `students-2.csv`\
 2.  Read that file in again with `read_csv`.\
+3. Notice the data types of the columns didn't pass through.\
+4. Use `write_rds()` and `read_rds` to maintain those changes in R binary format.
 
+```{r}
+write_rds(students, "students.rds")
+read_rds("students.rds")
+```
 
 ## Data Entry
 You can do basic data entry in your R script.
