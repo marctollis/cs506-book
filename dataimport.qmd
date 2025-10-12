@@ -183,7 +183,7 @@ You can parse numbers with `parse_number()`, dates with `parse_date()`, and time
 ### In-Class Challenge
 
 1.  Read a TSV file from PanTHERIA: "https://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt"\
-2.  Use `na =` to change all `999.00`s to missing data.\
+2.  Use `na =` to change all `-999.00`s to missing data.\
 
 ## Writing to a file
 
@@ -198,11 +198,34 @@ write_csv(students, "students.csv")
 1.  Write a CSV (i.e. `students`) to a file `students-2.csv`\
 2.  Read that file in again with `read_csv`.\
 
+
+## Data Entry
+You can do basic data entry in your R script.
+
+By column with `tibble()`:
+``` {r}
+tibble(
+  x = c(1, 2, 5), 
+  y = c("h", "m", "g"),
+  z = c(0.08, 0.83, 0.60)
+)
+```
+By row with `tribble()` (a **tr**ansformed t**ibble**):
+
+```{r}
+tribble(
+  ~x, ~y, ~z,
+  1, "h", 0.08,
+  2, "m", 0.83,
+  5, "g", 0.60
+)
+```
+
 ## Homework Preview
 
 For homework, you will:
 
--   Import at least **one CSV** and **one Excel** dataset
+-   Import at least **one CSV** dataset
 -   Fix any parsing issues (e.g., column types, dates)
 -   Clean at least one column with `mutate()`
 -   Provide a short summary (using `group_by()` and `summarize()`)
