@@ -122,7 +122,7 @@ This course directly supports the following program student outcomes in the Mast
 | 5 | Sept 23 / 25 | [Ch. 5 – Tidy Data](https://r4ds.hadley.nz/data-tidy.html) | [**Tidy Data**](https://marctollis.github.io/cs506-book/tidy.html) | PS5 | Quiz 2 |
 | 6 | Sept 30 / Oct 2 | [Ch. 10 – Exploratory Data Analysis](https://r4ds.hadley.nz/EDA.html) | [**Exploratory data analysis: distributions, patterns, relationships**](https://marctollis.github.io/cs506-book/eda.html) | PS6 |  |
 | 7 | Oct 7 / 9 |  | Mini Hackathon (Tuesday) | Mini Hackathon | Quiz 3 (Thursday) |
-| 8 | Oct 14 / 16 | [Ch. 7 - Data Import](https://r4ds.hadley.nz/data-import.html) | [**Data Import**](https://marctollis.github.io/cs506-book/dataimport.html): `readr`, parsing | PS7 |  |
+| 8 | Oct 14 / 16 | [Ch. 7 - Data Import](https://r4ds.hadley.nz/data-import.html) | [**Data Import**](https://marctollis.github.io/cs506-book/dataimport.html): `readr`, column types | PS7 |  |
 | 9 | Oct 21 / 23 | [Ch. 12 through 18 – Transform](https://r4ds.hadley.nz/transform.html) | [**Logical Vectors and Numbers**](https://marctollis.github.io/cs506-book/transform.html); [**Strings & Regular Expressions**](https://marctollis.github.io/cs506-book/strings.html): `stringr` | PS8 | Quiz 4 |
 | 10 | Oct 28 / 30 | [Ch. 12 through 18 – Transform (continued)](https://r4ds.hadley.nz/transform.html) | [**Factors & Categorical Data**](https://marctollis.github.io/cs506-book/strings.html): `forcats` | PS9 |  |
 | 11 | Nov 4 / 6 | [Ch. 19 – Joins](https://r4ds.hadley.nz/joins.html) | [**Relational Data**](https://marctollis.github.io/cs506-book/relational.html): joining tables (`left_join`, etc.) | PS10 | Quiz 5 |
