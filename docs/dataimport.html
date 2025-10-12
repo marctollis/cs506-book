@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.40">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>9&nbsp; Data Import with readr and readxl – CS506: Data Wrangling and Management</title>
+<title>9&nbsp; Data Import with readr – CS506: Data Wrangling and Management</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dataimport.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Import with readr and readxl</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dataimport.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Import with readr</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -186,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dataimport.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Import with readr and readxl</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Import with readr</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -261,39 +261,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a href="#reading-csv-and-tsv-files" id="toc-reading-csv-and-tsv-files" class="nav-link" data-scroll-target="#reading-csv-and-tsv-files"><span class="header-section-number">9.2</span> Reading CSV and TSV Files</a>
   <ul class="collapse">
 <li><a href="#example-reading-a-csv-file" id="toc-example-reading-a-csv-file" class="nav-link" data-scroll-target="#example-reading-a-csv-file"><span class="header-section-number">9.2.1</span> Example: Reading a CSV file</a></li>
-  <li><a href="#example-reading-a-tsv-file" id="toc-example-reading-a-tsv-file" class="nav-link" data-scroll-target="#example-reading-a-tsv-file"><span class="header-section-number">9.2.2</span> Example: Reading a TSV file</a></li>
-  <li><a href="#in-class-exercise-1-csvtsv" id="toc-in-class-exercise-1-csvtsv" class="nav-link" data-scroll-target="#in-class-exercise-1-csvtsv"><span class="header-section-number">9.2.3</span> In-Class Exercise 1 – CSV/TSV</a></li>
+  <li><a href="#other-arguments" id="toc-other-arguments" class="nav-link" data-scroll-target="#other-arguments"><span class="header-section-number">9.2.2</span> Other arguments</a></li>
+  <li><a href="#also-reading-a-tsv-file" id="toc-also-reading-a-tsv-file" class="nav-link" data-scroll-target="#also-reading-a-tsv-file"><span class="header-section-number">9.2.3</span> Also: Reading a TSV file</a></li>
+  <li><a href="#in-class-exercise-1-csv" id="toc-in-class-exercise-1-csv" class="nav-link" data-scroll-target="#in-class-exercise-1-csv"><span class="header-section-number">9.2.4</span> In-Class Exercise 1 – CSV</a></li>
+  <li><a href="#in-class-challenge" id="toc-in-class-challenge" class="nav-link" data-scroll-target="#in-class-challenge"><span class="header-section-number">9.2.5</span> In-Class Challenge</a></li>
   </ul>
 </li>
   <li>
 <a href="#column-types-and-parsing" id="toc-column-types-and-parsing" class="nav-link" data-scroll-target="#column-types-and-parsing"><span class="header-section-number">9.3</span> Column Types and Parsing</a>
   <ul class="collapse">
-<li><a href="#example-overriding-column-types" id="toc-example-overriding-column-types" class="nav-link" data-scroll-target="#example-overriding-column-types"><span class="header-section-number">9.3.1</span> Example: Overriding column types</a></li>
-  <li><a href="#in-class-exercise-2-parsing" id="toc-in-class-exercise-2-parsing" class="nav-link" data-scroll-target="#in-class-exercise-2-parsing"><span class="header-section-number">9.3.2</span> In-Class Exercise 2 – Parsing</a></li>
+<li><a href="#but-what-if-the-data-is-not-clean" id="toc-but-what-if-the-data-is-not-clean" class="nav-link" data-scroll-target="#but-what-if-the-data-is-not-clean"><span class="header-section-number">9.3.1</span> But what if the data is not clean?</a></li>
+  <li><a href="#in-class-exercise-2" id="toc-in-class-exercise-2" class="nav-link" data-scroll-target="#in-class-exercise-2"><span class="header-section-number">9.3.2</span> In-Class Exercise 2</a></li>
+  <li><a href="#in-class-challenge-1" id="toc-in-class-challenge-1" class="nav-link" data-scroll-target="#in-class-challenge-1"><span class="header-section-number">9.3.3</span> In-Class Challenge</a></li>
   </ul>
 </li>
   <li>
-<a href="#importing-excel-files" id="toc-importing-excel-files" class="nav-link" data-scroll-target="#importing-excel-files"><span class="header-section-number">9.4</span> Importing Excel Files</a>
+<a href="#writing-to-a-file" id="toc-writing-to-a-file" class="nav-link" data-scroll-target="#writing-to-a-file"><span class="header-section-number">9.4</span> Writing to a file</a>
   <ul class="collapse">
-<li><a href="#example-reading-an-excel-sheet" id="toc-example-reading-an-excel-sheet" class="nav-link" data-scroll-target="#example-reading-an-excel-sheet"><span class="header-section-number">9.4.1</span> Example: Reading an Excel sheet</a></li>
-  <li><a href="#in-class-exercise-3-excel-import" id="toc-in-class-exercise-3-excel-import" class="nav-link" data-scroll-target="#in-class-exercise-3-excel-import"><span class="header-section-number">9.4.2</span> In-Class Exercise 3 – Excel Import</a></li>
+<li><a href="#in-class-exercise-3" id="toc-in-class-exercise-3" class="nav-link" data-scroll-target="#in-class-exercise-3"><span class="header-section-number">9.4.1</span> In-Class Exercise 3</a></li>
   </ul>
 </li>
-  <li><a href="#handling-import-problems" id="toc-handling-import-problems" class="nav-link" data-scroll-target="#handling-import-problems"><span class="header-section-number">9.5</span> Handling Import Problems</a></li>
-  <li>
-<a href="#reading-other-formats-optional" id="toc-reading-other-formats-optional" class="nav-link" data-scroll-target="#reading-other-formats-optional"><span class="header-section-number">9.6</span> Reading Other Formats (Optional)</a>
-  <ul class="collapse">
-<li><a href="#in-class-challenge-import-clean-workflow" id="toc-in-class-challenge-import-clean-workflow" class="nav-link" data-scroll-target="#in-class-challenge-import-clean-workflow"><span class="header-section-number">9.6.1</span> In-Class Challenge – Import &amp; Clean Workflow</a></li>
-  </ul>
-</li>
-  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">9.7</span> Homework Preview</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">9.8</span> Next Steps</a></li>
+  <li><a href="#homework-preview" id="toc-homework-preview" class="nav-link" data-scroll-target="#homework-preview"><span class="header-section-number">9.5</span> Homework Preview</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">9.6</span> Next Steps</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/marctollis/cs506-book/blob/main/dataimport.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/marctollis/cs506-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Import with readr and readxl</span>
+<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Data Import with readr</span>
 </h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -314,10 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Import CSV and TSV files with <code>readr</code>
 </li>
-<li>Read Excel files with <code>readxl</code>
-</li>
-<li>Understand how column types are parsed</li>
-<li>Parse dates, times, and numbers correctly</li>
+<li>Understand column types</li>
 <li>Diagnose and fix import problems</li>
 </ul>
 <hr></section><section id="reading-csv-and-tsv-files" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="reading-csv-and-tsv-files">
@@ -325,138 +317,359 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The <code>readr</code> package (part of the tidyverse) provides fast and friendly functions for reading text data.</p>
 <section id="example-reading-a-csv-file" class="level3" data-number="9.2.1"><h3 data-number="9.2.1" class="anchored" data-anchor-id="example-reading-a-csv-file">
 <span class="header-section-number">9.2.1</span> Example: Reading a CSV file</h3>
+<p>Using <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code>, give the path of the file. For instance, you download a file to your <code>data</code> folder.</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">### students &lt;- read_csv("data/students.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here, we will just use the url:</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
+✔ ggplot2   3.5.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">students</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://pos.it/r4ds-students-csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Rows: 12 Columns: 4
+<pre><code>Rows: 6 Columns: 5
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
-chr (1): Month
-dbl (3): 1958, 1959, 1960
+chr (4): Full Name, favourite.food, mealPlan, AGE
+dbl (1): Student ID
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">students</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 12
-Columns: 4
-$ Month  &lt;chr&gt; "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", …
-$ `1958` &lt;dbl&gt; 340, 318, 362, 348, 363, 435, 491, 505, 404, 359, 310, 337
-$ `1959` &lt;dbl&gt; 360, 342, 406, 396, 420, 472, 548, 559, 463, 407, 362, 405
-$ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432</code></pre>
+<pre><code># A tibble: 6 × 5
+  `Student ID` `Full Name`      favourite.food     mealPlan            AGE  
+         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;
+1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    
+2            2 Barclay Lynn     French fries       Lunch only          5    
+3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    
+4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; 
+5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five 
+6            6 Güvenç Attila    Ice cream          Lunch only          6    </code></pre>
 </div>
 </div>
-</section><section id="example-reading-a-tsv-file" class="level3" data-number="9.2.2"><h3 data-number="9.2.2" class="anchored" data-anchor-id="example-reading-a-tsv-file">
-<span class="header-section-number">9.2.2</span> Example: Reading a TSV file</h3>
+<p><strong>Practical Advice:</strong> Look at your data so you can transform it. See the “N/A”s?</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df_tsv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_tsv</a></span><span class="op">(</span><span class="st">"data/example.tsv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">students</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://pos.it/r4ds-students-csv"</span>, na <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"N/A"</span>, <span class="st">""</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 6 Columns: 5
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (4): Full Name, favourite.food, mealPlan, AGE
+dbl (1): Student ID
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<hr></section><section id="in-class-exercise-1-csvtsv" class="level3" data-number="9.2.3"><h3 data-number="9.2.3" class="anchored" data-anchor-id="in-class-exercise-1-csvtsv">
-<span class="header-section-number">9.2.3</span> In-Class Exercise 1 – CSV/TSV</h3>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">students</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  `Student ID` `Full Name`      favourite.food     mealPlan            AGE  
+         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;
+1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    
+2            2 Barclay Lynn     French fries       Lunch only          5    
+3            3 Jayendra Lyne    &lt;NA&gt;               Breakfast and lunch 7    
+4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; 
+5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five 
+6            6 Güvenç Attila    Ice cream          Lunch only          6    </code></pre>
+</div>
+</div>
+<p>Type <code>students</code> at your R prompt. Notice that <code>Student ID</code> and <code>Full Name</code> have backticks.</p>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">students</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span></span>
+<span>    student_id <span class="op">=</span> <span class="va">`Student ID`</span>,</span>
+<span>    full_name <span class="op">=</span> <span class="va">`Full Name`</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  student_id full_name        favourite.food     mealPlan            AGE  
+       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;
+1          1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    
+2          2 Barclay Lynn     French fries       Lunch only          5    
+3          3 Jayendra Lyne    &lt;NA&gt;               Breakfast and lunch 7    
+4          4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; 
+5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch five 
+6          6 Güvenç Attila    Ice cream          Lunch only          6    </code></pre>
+</div>
+</div>
+</section><section id="other-arguments" class="level3" data-number="9.2.2"><h3 data-number="9.2.2" class="anchored" data-anchor-id="other-arguments">
+<span class="header-section-number">9.2.2</span> Other arguments</h3>
+<div class="cell">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span></span>
+<span>  <span class="st">"a,b,c</span></span>
+<span><span class="st">  1,2,3</span></span>
+<span><span class="st">  4,5,6"</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 2 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (3): a, b, c
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+      a     b     c
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     1     2     3
+2     4     5     6</code></pre>
+</div>
+</div>
+<p>You can read a CSV and skip the first few lines if they contain metadata.</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span></span>
+<span>  <span class="st">"The first line of metadata</span></span>
+<span><span class="st">  The second line of metadata</span></span>
+<span><span class="st">  x,y,z</span></span>
+<span><span class="st">  1,2,3"</span>,</span>
+<span>  skip <span class="op">=</span> <span class="fl">2</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 1 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (3): x, y, z
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+      x     y     z
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     1     2     3</code></pre>
+</div>
+</div>
+<p>If there are no column names:</p>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span></span>
+<span>  <span class="st">"1,2,3</span></span>
+<span><span class="st">  4,5,6"</span>,</span>
+<span>  col_names <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 2 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (3): X1, X2, X3
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+     X1    X2    X3
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     1     2     3
+2     4     5     6</code></pre>
+</div>
+</div>
+<p>Or, add column names:</p>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span></span>
+<span>  <span class="st">"1,2,3</span></span>
+<span><span class="st">  4,5,6"</span>,</span>
+<span>  col_names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"x"</span>, <span class="st">"y"</span>, <span class="st">"z"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 2 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (3): x, y, z
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+      x     y     z
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     1     2     3
+2     4     5     6</code></pre>
+</div>
+</div>
+</section><section id="also-reading-a-tsv-file" class="level3" data-number="9.2.3"><h3 data-number="9.2.3" class="anchored" data-anchor-id="also-reading-a-tsv-file">
+<span class="header-section-number">9.2.3</span> Also: Reading a TSV file</h3>
+<div class="cell">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">### df_tsv &lt;- read_tsv("data/example.tsv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr></section><section id="in-class-exercise-1-csv" class="level3" data-number="9.2.4"><h3 data-number="9.2.4" class="anchored" data-anchor-id="in-class-exercise-1-csv">
+<span class="header-section-number">9.2.4</span> In-Class Exercise 1 – CSV</h3>
 <ol type="1">
-<li>Download a small CSV file (e.g., from the course repository).<br>
+<li>Download the <code>students</code> data (e.g., from the course repository).<br>
 </li>
 <li>Read it into R using <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code>.<br>
 </li>
-<li>Inspect its structure with <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code> and <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code>.<br>
+<li>Inspect its structure with <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code>.<br>
 </li>
-<li>What data types were automatically detected?</li>
-</ol>
-<hr></section></section><section id="column-types-and-parsing" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="column-types-and-parsing">
+<li>What data types were automatically detected?<br>
+</li>
+<li>Notice the tick marks around some column names.<br>
+</li>
+<li>Use <code><a href="https://sfirke.github.io/janitor/reference/clean_names.html">janitor::clean_names()</a></code> to turn all column names to snake case.</li>
+</ol></section><section id="in-class-challenge" class="level3" data-number="9.2.5"><h3 data-number="9.2.5" class="anchored" data-anchor-id="in-class-challenge">
+<span class="header-section-number">9.2.5</span> In-Class Challenge</h3>
+<p>Change the data type stored in the <code>meal_plan</code> column. Hint: you can use <code><a href="https://rdrr.io/r/base/factor.html">factor()</a></code> with <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>.</p>
+</section></section><section id="column-types-and-parsing" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="column-types-and-parsing">
 <span class="header-section-number">9.3</span> Column Types and Parsing</h2>
 <p><code>readr</code> automatically guesses column types, but you can override them.</p>
-<section id="example-overriding-column-types" class="level3" data-number="9.3.1"><h3 data-number="9.3.1" class="anchored" data-anchor-id="example-overriding-column-types">
-<span class="header-section-number">9.3.1</span> Example: Overriding column types</h3>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/mydata.csv"</span>, col_types <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/cols.html">cols</a></span><span class="op">(</span></span>
-<span>  id <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_atomic.html">col_character</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  date <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_datetime.html">col_date</a></span><span class="op">(</span>format <span class="op">=</span> <span class="st">"%Y-%m-%d"</span><span class="op">)</span></span>
-<span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"</span></span>
+<span><span class="st">  logical,numeric,date,string</span></span>
+<span><span class="st">  TRUE,1,2021-01-15,abc</span></span>
+<span><span class="st">  false,4.5,2021-02-15,def</span></span>
+<span><span class="st">  T,Inf,2021-02-16,ghi</span></span>
+<span><span class="st">"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 3 Columns: 4
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (1): string
+dbl  (1): numeric
+lgl  (1): logical
+date (1): date
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  logical numeric date       string
+  &lt;lgl&gt;     &lt;dbl&gt; &lt;date&gt;     &lt;chr&gt; 
+1 TRUE        1   2021-01-15 abc   
+2 FALSE       4.5 2021-02-15 def   
+3 TRUE      Inf   2021-02-16 ghi   </code></pre>
+</div>
+</div>
+<section id="but-what-if-the-data-is-not-clean" class="level3" data-number="9.3.1"><h3 data-number="9.3.1" class="anchored" data-anchor-id="but-what-if-the-data-is-not-clean">
+<span class="header-section-number">9.3.1</span> But what if the data is not clean?</h3>
+<div class="cell">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">simple_csv</span> <span class="op">&lt;-</span> <span class="st">"</span></span>
+<span><span class="st">  x</span></span>
+<span><span class="st">  10</span></span>
+<span><span class="st">  .</span></span>
+<span><span class="st">  20</span></span>
+<span><span class="st">  30"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Read it with <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> - see that it’s a character column?</p>
+<div class="cell">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="va">simple_csv</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 4 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): x
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 1
+  x    
+  &lt;chr&gt;
+1 10   
+2 .    
+3 20   
+4 30   </code></pre>
+</div>
+</div>
+<p>There is some missing data. So <code>readr</code> turns what should be a double or numeric column into a character column.</p>
+<p>Tell <code>readr</code> that it is a numeric column with <code>col_types</code>.</p>
+<p>The <code>col_types</code> function takes a named list where the names match the column names in the CSV file.</p>
+<div class="cell">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span></span>
+<span>  <span class="va">simple_csv</span>, </span>
+<span>  col_types <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_atomic.html">col_double</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
+e.g.:
+  dat &lt;- vroom(...)
+  problems(dat)</code></pre>
+</div>
+</div>
+<p>Read the warning. Use <code>problems</code> to find out what that’s about:</p>
+<div class="cell">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/problems.html">problems</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 5
+    row   col expected actual file                                              
+  &lt;int&gt; &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;                                             
+1     3     1 a double .      /private/var/folders/2n/pg5xtmj97p51tsr0ch_1jkqw6…</code></pre>
+</div>
+</div>
+<p>We can make <code>.</code> indicate missing data using <code>na = "."</code>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="va">simple_csv</span>, na <span class="op">=</span> <span class="st">"."</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 4 Columns: 1
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (1): x
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 1
+      x
+  &lt;dbl&gt;
+1    10
+2    NA
+3    20
+4    30</code></pre>
+</div>
+</div>
+<p>Other column type functions in <code>readr</code> are <code><a href="https://readr.tidyverse.org/reference/parse_atomic.html">col_logical()</a></code>, <code><a href="https://readr.tidyverse.org/reference/parse_atomic.html">col_integer()</a></code>, <code><a href="https://readr.tidyverse.org/reference/parse_atomic.html">col_character()</a></code>, <code><a href="https://readr.tidyverse.org/reference/parse_factor.html">col_factor()</a></code>, <code><a href="https://readr.tidyverse.org/reference/parse_datetime.html">col_date()</a></code>, <code>col_datetime</code>, and <code><a href="https://readr.tidyverse.org/reference/parse_number.html">col_number()</a></code>.</p>
 <p>You can parse numbers with <code><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number()</a></code>, dates with <code><a href="https://readr.tidyverse.org/reference/parse_datetime.html">parse_date()</a></code>, and times with <code><a href="https://readr.tidyverse.org/reference/parse_datetime.html">parse_time()</a></code>.</p>
-<hr></section><section id="in-class-exercise-2-parsing" class="level3" data-number="9.3.2"><h3 data-number="9.3.2" class="anchored" data-anchor-id="in-class-exercise-2-parsing">
-<span class="header-section-number">9.3.2</span> In-Class Exercise 2 – Parsing</h3>
+</section><section id="in-class-exercise-2" class="level3" data-number="9.3.2"><h3 data-number="9.3.2" class="anchored" data-anchor-id="in-class-exercise-2">
+<span class="header-section-number">9.3.2</span> In-Class Exercise 2</h3>
 <ol type="1">
-<li>Create a vector of messy numbers: <code>c("$100", "250%", "300")</code>.<br>
+<li>Load a simple CSV file with <code>simple_csv()</code>.<br>
 </li>
-<li>Use <code><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number()</a></code> to extract numeric values.<br>
+<li>Use <code>col_types()</code> to change a data type of a column.<br>
 </li>
-<li>Create a vector of dates as strings and use <code><a href="https://readr.tidyverse.org/reference/parse_datetime.html">parse_date()</a></code>.</li>
-</ol>
-<hr></section></section><section id="importing-excel-files" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="importing-excel-files">
-<span class="header-section-number">9.4</span> Importing Excel Files</h2>
-<p>The <code>readxl</code> package is used to read Excel files (<code>.xls</code>, <code>.xlsx</code>).</p>
-<section id="example-reading-an-excel-sheet" class="level3" data-number="9.4.1"><h3 data-number="9.4.1" class="anchored" data-anchor-id="example-reading-an-excel-sheet">
-<span class="header-section-number">9.4.1</span> Example: Reading an Excel sheet</h3>
+<li>Use <code><a href="https://readr.tidyverse.org/reference/problems.html">problems()</a></code> to diagnose a warning.<br>
+</li>
+<li>Use <code>na =</code> to properly code missing data.<br>
+</li>
+</ol></section><section id="in-class-challenge-1" class="level3" data-number="9.3.3"><h3 data-number="9.3.3" class="anchored" data-anchor-id="in-class-challenge-1">
+<span class="header-section-number">9.3.3</span> In-Class Challenge</h3>
+<ol type="1">
+<li>Read a TSV file from PanTHERIA: “https://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt”<br>
+</li>
+<li>Use <code>na =</code> to change all <code>999.00</code>s to missing data.<br>
+</li>
+</ol></section></section><section id="writing-to-a-file" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="writing-to-a-file">
+<span class="header-section-number">9.4</span> Writing to a file</h2>
+<p>You can use <code><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv()</a></code> or <code><a href="https://readr.tidyverse.org/reference/write_delim.html">write_tsv()</a></code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">excel_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"data/example.xlsx"</span>, sheet <span class="op">=</span> <span class="st">"Sheet1"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">excel_df</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv</a></span><span class="op">(</span><span class="va">students</span>, <span class="st">"students.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr></section><section id="in-class-exercise-3-excel-import" class="level3" data-number="9.4.2"><h3 data-number="9.4.2" class="anchored" data-anchor-id="in-class-exercise-3-excel-import">
-<span class="header-section-number">9.4.2</span> In-Class Exercise 3 – Excel Import</h3>
+<section id="in-class-exercise-3" class="level3" data-number="9.4.1"><h3 data-number="9.4.1" class="anchored" data-anchor-id="in-class-exercise-3">
+<span class="header-section-number">9.4.1</span> In-Class Exercise 3</h3>
 <ol type="1">
-<li>Use a provided Excel file (or download one).<br>
+<li>Write a CSV (i.e.&nbsp;<code>students</code>) to a file <code>students-2.csv</code><br>
 </li>
-<li>Read the first sheet with <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel()</a></code>.<br>
+<li>Read that file in again with <code>read_csv</code>.<br>
 </li>
-<li>Specify a different sheet and check the result.</li>
-</ol>
-<hr></section></section><section id="handling-import-problems" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="handling-import-problems">
-<span class="header-section-number">9.5</span> Handling Import Problems</h2>
-<p>When column parsing fails:</p>
-<ul>
-<li>Use <code><a href="https://readr.tidyverse.org/reference/problems.html">problems()</a></code> to diagnose</li>
-<li>Use <code>col_types</code> to fix column types</li>
-<li>Clean data after import using <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>
-</li>
-</ul>
-<p>Example:</p>
-<div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bad</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/bad.csv"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://readr.tidyverse.org/reference/problems.html">problems</a></span><span class="op">(</span><span class="va">bad</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<hr></section><section id="reading-other-formats-optional" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="reading-other-formats-optional">
-<span class="header-section-number">9.6</span> Reading Other Formats (Optional)</h2>
-<ul>
-<li>
-<code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_delim()</a></code> – for custom delimiters</li>
-<li>
-<code><a href="https://readr.tidyverse.org/reference/read_table.html">read_table()</a></code> – for whitespace-delimited files</li>
-<li>
-<code><a href="https://readr.tidyverse.org/reference/read_lines.html">read_lines()</a></code> – for line-by-line text</li>
-<li>
-<code><a href="https://jeroen.r-universe.dev/jsonlite/reference/fromJSON.html">jsonlite::fromJSON()</a></code> – for JSON files (optional preview)</li>
-</ul>
-<hr>
-<section id="in-class-challenge-import-clean-workflow" class="level3" data-number="9.6.1"><h3 data-number="9.6.1" class="anchored" data-anchor-id="in-class-challenge-import-clean-workflow">
-<span class="header-section-number">9.6.1</span> In-Class Challenge – Import &amp; Clean Workflow</h3>
-<ol type="1">
-<li>Import a messy CSV file with mixed types.<br>
-</li>
-<li>Fix incorrect column parsing.<br>
-</li>
-<li>Convert a date column to proper Date format.<br>
-</li>
-<li>Summarize the data by a grouping variable.</li>
-</ol>
-<hr></section></section><section id="homework-preview" class="level2" data-number="9.7"><h2 data-number="9.7" class="anchored" data-anchor-id="homework-preview">
-<span class="header-section-number">9.7</span> Homework Preview</h2>
+</ol></section></section><section id="homework-preview" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="homework-preview">
+<span class="header-section-number">9.5</span> Homework Preview</h2>
 <p>For homework, you will:</p>
 <ul>
 <li>Import at least <strong>one CSV</strong> and <strong>one Excel</strong> dataset</li>
@@ -465,9 +678,8 @@ $ `1960` &lt;dbl&gt; 417, 391, 419, 461, 472, 535, 622, 606, 508, 461, 390, 432<
 </li>
 <li>Provide a short summary (using <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code>)</li>
 <li>Render to PDF and submit</li>
-</ul>
-<hr></section><section id="next-steps" class="level2" data-number="9.8"><h2 data-number="9.8" class="anchored" data-anchor-id="next-steps">
-<span class="header-section-number">9.8</span> Next Steps</h2>
+</ul></section><section id="next-steps" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="next-steps">
+<span class="header-section-number">9.6</span> Next Steps</h2>
 <p>Next week, we will learn to <strong>work with text data and regular expressions</strong> using the <code>stringr</code> package.</p>
 
 
@@ -951,150 +1163,219 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Data Import with readr and readxl"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>By the end of this chapter, you should be able to:</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Import CSV and TSV files with <span class="in">`readr`</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Read Excel files with <span class="in">`readxl`</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Understand how column types are parsed</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Parse dates, times, and numbers correctly</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Diagnose and fix import problems</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reading CSV and TSV Files</span></span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>The <span class="in">`readr`</span> package (part of the tidyverse) provides fast and friendly functions for reading text data.</span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example: Reading a CSV file</span></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv"</span>)</span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example: Reading a TSV file</span></span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="in">df_tsv &lt;- read_tsv("data/example.tsv")</span></span>
-<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 1 – CSV/TSV</span></span>
-<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Download a small CSV file (e.g., from the course repository).\</span>
-<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Read it into R using <span class="in">`read_csv()`</span>.\</span>
-<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Inspect its structure with <span class="in">`glimpse()`</span> and <span class="in">`summary()`</span>.\</span>
-<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>What data types were automatically detected?</span>
-<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Column Types and Parsing</span></span>
-<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="in">`readr`</span> automatically guesses column types, but you can override them.</span>
-<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example: Overriding column types</span></span>
-<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="in">df &lt;- read_csv("data/mydata.csv", col_types = cols(</span></span>
-<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="in">  id = col_character(),</span></span>
-<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a><span class="in">  date = col_date(format = "%Y-%m-%d")</span></span>
-<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="in">))</span></span>
-<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>You can parse numbers with <span class="in">`parse_number()`</span>, dates with <span class="in">`parse_date()`</span>, and times with <span class="in">`parse_time()`</span>.</span>
-<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 2 – Parsing</span></span>
-<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Create a vector of messy numbers: <span class="in">`c("$100", "250%", "300")`</span>.\</span>
-<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Use <span class="in">`parse_number()`</span> to extract numeric values.\</span>
-<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Create a vector of dates as strings and use <span class="in">`parse_date()`</span>.</span>
-<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## Importing Excel Files</span></span>
-<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a>The <span class="in">`readxl`</span> package is used to read Excel files (<span class="in">`.xls`</span>, <span class="in">`.xlsx`</span>).</span>
-<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example: Reading an Excel sheet</span></span>
-<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a><span class="in">library(readxl)</span></span>
-<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a><span class="in">excel_df &lt;- read_excel("data/example.xlsx", sheet = "Sheet1")</span></span>
-<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a><span class="in">head(excel_df)</span></span>
-<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 3 – Excel Import</span></span>
-<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Use a provided Excel file (or download one).\</span>
-<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Read the first sheet with <span class="in">`read_excel()`</span>.\</span>
-<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Specify a different sheet and check the result.</span>
-<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## Handling Import Problems</span></span>
-<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a>When column parsing fails:</span>
-<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use <span class="in">`problems()`</span> to diagnose</span>
-<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use <span class="in">`col_types`</span> to fix column types</span>
-<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Clean data after import using <span class="in">`mutate()`</span></span>
-<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a>Example:</span>
-<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a><span class="in">bad &lt;- read_csv("data/bad.csv")</span></span>
-<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a><span class="in">problems(bad)</span></span>
-<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reading Other Formats (Optional)</span></span>
-<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read_delim()`</span> – for custom delimiters</span>
-<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read_table()`</span> – for whitespace-delimited files</span>
-<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`read_lines()`</span> – for line-by-line text</span>
-<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`jsonlite::fromJSON()`</span> – for JSON files (optional preview)</span>
-<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Challenge – Import &amp; Clean Workflow</span></span>
-<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Import a messy CSV file with mixed types.\</span>
-<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Fix incorrect column parsing.\</span>
-<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Convert a date column to proper Date format.\</span>
-<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Summarize the data by a grouping variable.</span>
-<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## Homework Preview</span></span>
-<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a>For homework, you will:</span>
-<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Import at least **one CSV** and **one Excel** dataset</span>
-<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Fix any parsing issues (e.g., column types, dates)</span>
-<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Clean at least one column with <span class="in">`mutate()`</span></span>
-<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Provide a short summary (using <span class="in">`group_by()`</span> and <span class="in">`summarize()`</span>)</span>
-<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Render to PDF and submit</span>
-<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
-<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a>Next week, we will learn to **work with text data and regular expressions** using the <span class="in">`stringr`</span> package.</span>
+<div class="sourceCode" id="cb42" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Data Import with readr"</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>By the end of this chapter, you should be able to:</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Import CSV and TSV files with <span class="in">`readr`</span></span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Understand column types</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Diagnose and fix import problems</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reading CSV and TSV Files</span></span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>The <span class="in">`readr`</span> package (part of the tidyverse) provides fast and friendly functions for reading text data.</span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### Example: Reading a CSV file</span></span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a>Using <span class="in">`read_csv()`</span>, give the path of the file. For instance, you download a file to your <span class="in">`data`</span> folder.</span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
+<span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a><span class="in">### students &lt;- read_csv("data/students.csv")</span></span>
+<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-26"><a href="#cb42-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-27"><a href="#cb42-27" aria-hidden="true" tabindex="-1"></a>Here, we will just use the url:</span>
+<span id="cb42-28"><a href="#cb42-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-31"><a href="#cb42-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-32"><a href="#cb42-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb42-33"><a href="#cb42-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-34"><a href="#cb42-34" aria-hidden="true" tabindex="-1"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://pos.it/r4ds-students-csv"</span>)</span>
+<span id="cb42-35"><a href="#cb42-35" aria-hidden="true" tabindex="-1"></a>students</span>
+<span id="cb42-36"><a href="#cb42-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-37"><a href="#cb42-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-38"><a href="#cb42-38" aria-hidden="true" tabindex="-1"></a>**Practical Advice:** Look at your data so you can transform it. See the "N/A"s?</span>
+<span id="cb42-39"><a href="#cb42-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-42"><a href="#cb42-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-43"><a href="#cb42-43" aria-hidden="true" tabindex="-1"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://pos.it/r4ds-students-csv"</span>, <span class="at">na =</span> <span class="fu">c</span>(<span class="st">"N/A"</span>, <span class="st">""</span>))</span>
+<span id="cb42-44"><a href="#cb42-44" aria-hidden="true" tabindex="-1"></a>students</span>
+<span id="cb42-45"><a href="#cb42-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-46"><a href="#cb42-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-47"><a href="#cb42-47" aria-hidden="true" tabindex="-1"></a>Type <span class="in">`students`</span> at your R prompt. Notice that <span class="in">`Student ID`</span> and <span class="in">`Full Name`</span> have backticks.</span>
+<span id="cb42-48"><a href="#cb42-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-51"><a href="#cb42-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-52"><a href="#cb42-52" aria-hidden="true" tabindex="-1"></a>students <span class="sc">|&gt;</span> </span>
+<span id="cb42-53"><a href="#cb42-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb42-54"><a href="#cb42-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">student_id =</span> <span class="st">`</span><span class="at">Student ID</span><span class="st">`</span>,</span>
+<span id="cb42-55"><a href="#cb42-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span></span>
+<span id="cb42-56"><a href="#cb42-56" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb42-57"><a href="#cb42-57" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-58"><a href="#cb42-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-59"><a href="#cb42-59" aria-hidden="true" tabindex="-1"></a><span class="fu">### Other arguments</span></span>
+<span id="cb42-60"><a href="#cb42-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-63"><a href="#cb42-63" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-64"><a href="#cb42-64" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(</span>
+<span id="cb42-65"><a href="#cb42-65" aria-hidden="true" tabindex="-1"></a>  <span class="st">"a,b,c</span></span>
+<span id="cb42-66"><a href="#cb42-66" aria-hidden="true" tabindex="-1"></a><span class="st">  1,2,3</span></span>
+<span id="cb42-67"><a href="#cb42-67" aria-hidden="true" tabindex="-1"></a><span class="st">  4,5,6"</span></span>
+<span id="cb42-68"><a href="#cb42-68" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-69"><a href="#cb42-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-70"><a href="#cb42-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-71"><a href="#cb42-71" aria-hidden="true" tabindex="-1"></a>You can read a CSV and skip the first few lines if they contain metadata.</span>
+<span id="cb42-72"><a href="#cb42-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-75"><a href="#cb42-75" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-76"><a href="#cb42-76" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(</span>
+<span id="cb42-77"><a href="#cb42-77" aria-hidden="true" tabindex="-1"></a>  <span class="st">"The first line of metadata</span></span>
+<span id="cb42-78"><a href="#cb42-78" aria-hidden="true" tabindex="-1"></a><span class="st">  The second line of metadata</span></span>
+<span id="cb42-79"><a href="#cb42-79" aria-hidden="true" tabindex="-1"></a><span class="st">  x,y,z</span></span>
+<span id="cb42-80"><a href="#cb42-80" aria-hidden="true" tabindex="-1"></a><span class="st">  1,2,3"</span>,</span>
+<span id="cb42-81"><a href="#cb42-81" aria-hidden="true" tabindex="-1"></a>  <span class="at">skip =</span> <span class="dv">2</span></span>
+<span id="cb42-82"><a href="#cb42-82" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-83"><a href="#cb42-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-84"><a href="#cb42-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-85"><a href="#cb42-85" aria-hidden="true" tabindex="-1"></a>If there are no column names:</span>
+<span id="cb42-86"><a href="#cb42-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-89"><a href="#cb42-89" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-90"><a href="#cb42-90" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(</span>
+<span id="cb42-91"><a href="#cb42-91" aria-hidden="true" tabindex="-1"></a>  <span class="st">"1,2,3</span></span>
+<span id="cb42-92"><a href="#cb42-92" aria-hidden="true" tabindex="-1"></a><span class="st">  4,5,6"</span>,</span>
+<span id="cb42-93"><a href="#cb42-93" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_names =</span> <span class="cn">FALSE</span></span>
+<span id="cb42-94"><a href="#cb42-94" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-95"><a href="#cb42-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-96"><a href="#cb42-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-97"><a href="#cb42-97" aria-hidden="true" tabindex="-1"></a>Or, add column names:</span>
+<span id="cb42-98"><a href="#cb42-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-101"><a href="#cb42-101" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-102"><a href="#cb42-102" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(</span>
+<span id="cb42-103"><a href="#cb42-103" aria-hidden="true" tabindex="-1"></a>  <span class="st">"1,2,3</span></span>
+<span id="cb42-104"><a href="#cb42-104" aria-hidden="true" tabindex="-1"></a><span class="st">  4,5,6"</span>,</span>
+<span id="cb42-105"><a href="#cb42-105" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_names =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>, <span class="st">"z"</span>)</span>
+<span id="cb42-106"><a href="#cb42-106" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-107"><a href="#cb42-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-108"><a href="#cb42-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-109"><a href="#cb42-109" aria-hidden="true" tabindex="-1"></a><span class="fu">### Also: Reading a TSV file</span></span>
+<span id="cb42-110"><a href="#cb42-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-111"><a href="#cb42-111" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
+<span id="cb42-112"><a href="#cb42-112" aria-hidden="true" tabindex="-1"></a><span class="in">### df_tsv &lt;- read_tsv("data/example.tsv")</span></span>
+<span id="cb42-113"><a href="#cb42-113" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-114"><a href="#cb42-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-115"><a href="#cb42-115" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb42-116"><a href="#cb42-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-117"><a href="#cb42-117" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 1 – CSV</span></span>
+<span id="cb42-118"><a href="#cb42-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-119"><a href="#cb42-119" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Download the <span class="in">`students`</span> data (e.g., from the course repository).\</span>
+<span id="cb42-120"><a href="#cb42-120" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Read it into R using <span class="in">`read_csv()`</span>.\</span>
+<span id="cb42-121"><a href="#cb42-121" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Inspect its structure with <span class="in">`glimpse()`</span>.\</span>
+<span id="cb42-122"><a href="#cb42-122" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>What data types were automatically detected?\</span>
+<span id="cb42-123"><a href="#cb42-123" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>Notice the tick marks around some column names.\</span>
+<span id="cb42-124"><a href="#cb42-124" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>Use <span class="in">`janitor::clean_names()`</span> to turn all column names to snake case.</span>
+<span id="cb42-125"><a href="#cb42-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-126"><a href="#cb42-126" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Challenge</span></span>
+<span id="cb42-127"><a href="#cb42-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-128"><a href="#cb42-128" aria-hidden="true" tabindex="-1"></a>Change the data type stored in the <span class="in">`meal_plan`</span> column. Hint: you can use <span class="in">`factor()`</span> with <span class="in">`mutate()`</span>.</span>
+<span id="cb42-129"><a href="#cb42-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-130"><a href="#cb42-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## Column Types and Parsing</span></span>
+<span id="cb42-131"><a href="#cb42-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-132"><a href="#cb42-132" aria-hidden="true" tabindex="-1"></a><span class="in">`readr`</span> automatically guesses column types, but you can override them.</span>
+<span id="cb42-133"><a href="#cb42-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-136"><a href="#cb42-136" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-137"><a href="#cb42-137" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"</span></span>
+<span id="cb42-138"><a href="#cb42-138" aria-hidden="true" tabindex="-1"></a><span class="st">  logical,numeric,date,string</span></span>
+<span id="cb42-139"><a href="#cb42-139" aria-hidden="true" tabindex="-1"></a><span class="st">  TRUE,1,2021-01-15,abc</span></span>
+<span id="cb42-140"><a href="#cb42-140" aria-hidden="true" tabindex="-1"></a><span class="st">  false,4.5,2021-02-15,def</span></span>
+<span id="cb42-141"><a href="#cb42-141" aria-hidden="true" tabindex="-1"></a><span class="st">  T,Inf,2021-02-16,ghi</span></span>
+<span id="cb42-142"><a href="#cb42-142" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb42-143"><a href="#cb42-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-144"><a href="#cb42-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-145"><a href="#cb42-145" aria-hidden="true" tabindex="-1"></a><span class="fu">### But what if the data is not clean?</span></span>
+<span id="cb42-146"><a href="#cb42-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-149"><a href="#cb42-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-150"><a href="#cb42-150" aria-hidden="true" tabindex="-1"></a>simple_csv <span class="ot">&lt;-</span> <span class="st">"</span></span>
+<span id="cb42-151"><a href="#cb42-151" aria-hidden="true" tabindex="-1"></a><span class="st">  x</span></span>
+<span id="cb42-152"><a href="#cb42-152" aria-hidden="true" tabindex="-1"></a><span class="st">  10</span></span>
+<span id="cb42-153"><a href="#cb42-153" aria-hidden="true" tabindex="-1"></a><span class="st">  .</span></span>
+<span id="cb42-154"><a href="#cb42-154" aria-hidden="true" tabindex="-1"></a><span class="st">  20</span></span>
+<span id="cb42-155"><a href="#cb42-155" aria-hidden="true" tabindex="-1"></a><span class="st">  30"</span></span>
+<span id="cb42-156"><a href="#cb42-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-157"><a href="#cb42-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-158"><a href="#cb42-158" aria-hidden="true" tabindex="-1"></a>Read it with <span class="in">`read_csv()`</span> - see that it's a character column?</span>
+<span id="cb42-159"><a href="#cb42-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-162"><a href="#cb42-162" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-163"><a href="#cb42-163" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(simple_csv)</span>
+<span id="cb42-164"><a href="#cb42-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-165"><a href="#cb42-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-166"><a href="#cb42-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-167"><a href="#cb42-167" aria-hidden="true" tabindex="-1"></a>There is some missing data. So <span class="in">`readr`</span> turns what should be a double or numeric column into a character column.</span>
+<span id="cb42-168"><a href="#cb42-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-169"><a href="#cb42-169" aria-hidden="true" tabindex="-1"></a>Tell <span class="in">`readr`</span> that it is a numeric column with <span class="in">`col_types`</span>.</span>
+<span id="cb42-170"><a href="#cb42-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-171"><a href="#cb42-171" aria-hidden="true" tabindex="-1"></a>The <span class="in">`col_types`</span> function takes a named list where the names match the column names in the CSV file.</span>
+<span id="cb42-172"><a href="#cb42-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-175"><a href="#cb42-175" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-176"><a href="#cb42-176" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb42-177"><a href="#cb42-177" aria-hidden="true" tabindex="-1"></a>  simple_csv, </span>
+<span id="cb42-178"><a href="#cb42-178" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_types =</span> <span class="fu">list</span>(<span class="at">x =</span> <span class="fu">col_double</span>())</span>
+<span id="cb42-179"><a href="#cb42-179" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-180"><a href="#cb42-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-181"><a href="#cb42-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-182"><a href="#cb42-182" aria-hidden="true" tabindex="-1"></a>Read the warning. Use <span class="in">`problems`</span> to find out what that's about:</span>
+<span id="cb42-183"><a href="#cb42-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-186"><a href="#cb42-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-187"><a href="#cb42-187" aria-hidden="true" tabindex="-1"></a><span class="fu">problems</span>(df)</span>
+<span id="cb42-188"><a href="#cb42-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-189"><a href="#cb42-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-190"><a href="#cb42-190" aria-hidden="true" tabindex="-1"></a>We can make <span class="in">`.`</span> indicate missing data using <span class="in">`na = "."`</span>:</span>
+<span id="cb42-191"><a href="#cb42-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-194"><a href="#cb42-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-195"><a href="#cb42-195" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(simple_csv, <span class="at">na =</span> <span class="st">"."</span>)</span>
+<span id="cb42-196"><a href="#cb42-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-197"><a href="#cb42-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-198"><a href="#cb42-198" aria-hidden="true" tabindex="-1"></a>Other column type functions in <span class="in">`readr`</span> are <span class="in">`col_logical()`</span>, <span class="in">`col_integer()`</span>, <span class="in">`col_character()`</span>, <span class="in">`col_factor()`</span>, <span class="in">`col_date()`</span>, <span class="in">`col_datetime`</span>, and <span class="in">`col_number()`</span>.</span>
+<span id="cb42-199"><a href="#cb42-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-200"><a href="#cb42-200" aria-hidden="true" tabindex="-1"></a>You can parse numbers with <span class="in">`parse_number()`</span>, dates with <span class="in">`parse_date()`</span>, and times with <span class="in">`parse_time()`</span>.</span>
+<span id="cb42-201"><a href="#cb42-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-202"><a href="#cb42-202" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 2</span></span>
+<span id="cb42-203"><a href="#cb42-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-204"><a href="#cb42-204" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Load a simple CSV file with <span class="in">`simple_csv()`</span>.\</span>
+<span id="cb42-205"><a href="#cb42-205" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Use <span class="in">`col_types()`</span> to change a data type of a column.\</span>
+<span id="cb42-206"><a href="#cb42-206" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Use <span class="in">`problems()`</span> to diagnose a warning.\</span>
+<span id="cb42-207"><a href="#cb42-207" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Use <span class="in">`na =`</span> to properly code missing data.\</span>
+<span id="cb42-208"><a href="#cb42-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-209"><a href="#cb42-209" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Challenge</span></span>
+<span id="cb42-210"><a href="#cb42-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-211"><a href="#cb42-211" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Read a TSV file from PanTHERIA: "https://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt"\</span>
+<span id="cb42-212"><a href="#cb42-212" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Use <span class="in">`na =`</span> to change all <span class="in">`999.00`</span>s to missing data.\</span>
+<span id="cb42-213"><a href="#cb42-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-214"><a href="#cb42-214" aria-hidden="true" tabindex="-1"></a><span class="fu">## Writing to a file</span></span>
+<span id="cb42-215"><a href="#cb42-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-216"><a href="#cb42-216" aria-hidden="true" tabindex="-1"></a>You can use <span class="in">`write_csv()`</span> or <span class="in">`write_tsv()`</span>.</span>
+<span id="cb42-217"><a href="#cb42-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-220"><a href="#cb42-220" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-221"><a href="#cb42-221" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(students, <span class="st">"students.csv"</span>)</span>
+<span id="cb42-222"><a href="#cb42-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-223"><a href="#cb42-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-224"><a href="#cb42-224" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 3</span></span>
+<span id="cb42-225"><a href="#cb42-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-226"><a href="#cb42-226" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Write a CSV (i.e. <span class="in">`students`</span>) to a file <span class="in">`students-2.csv`</span>\</span>
+<span id="cb42-227"><a href="#cb42-227" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Read that file in again with <span class="in">`read_csv`</span>.\</span>
+<span id="cb42-228"><a href="#cb42-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-229"><a href="#cb42-229" aria-hidden="true" tabindex="-1"></a><span class="fu">## Homework Preview</span></span>
+<span id="cb42-230"><a href="#cb42-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-231"><a href="#cb42-231" aria-hidden="true" tabindex="-1"></a>For homework, you will:</span>
+<span id="cb42-232"><a href="#cb42-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-233"><a href="#cb42-233" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Import at least **one CSV** and **one Excel** dataset</span>
+<span id="cb42-234"><a href="#cb42-234" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Fix any parsing issues (e.g., column types, dates)</span>
+<span id="cb42-235"><a href="#cb42-235" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Clean at least one column with <span class="in">`mutate()`</span></span>
+<span id="cb42-236"><a href="#cb42-236" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Provide a short summary (using <span class="in">`group_by()`</span> and <span class="in">`summarize()`</span>)</span>
+<span id="cb42-237"><a href="#cb42-237" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Render to PDF and submit</span>
+<span id="cb42-238"><a href="#cb42-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-239"><a href="#cb42-239" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
+<span id="cb42-240"><a href="#cb42-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-241"><a href="#cb42-241" aria-hidden="true" tabindex="-1"></a>Next week, we will learn to **work with text data and regular expressions** using the <span class="in">`stringr`</span> package.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

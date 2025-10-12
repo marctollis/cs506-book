@@ -1,5 +1,5 @@
 ---
-title: "Data Import with readr and readxl"
+title: "Data Import with readr"
 ---
 
 ## Learning Objectives
@@ -7,9 +7,7 @@ title: "Data Import with readr and readxl"
 By the end of this chapter, you should be able to:
 
 -   Import CSV and TSV files with `readr`
--   Read Excel files with `readxl`
--   Understand how column types are parsed
--   Parse dates, times, and numbers correctly
+-   Understand column types
 -   Diagnose and fix import problems
 
 ------------------------------------------------------------------------
@@ -20,112 +18,185 @@ The `readr` package (part of the tidyverse) provides fast and friendly functions
 
 ### Example: Reading a CSV file
 
+Using `read_csv()`, give the path of the file. For instance, you download a file to your `data` folder.
+
+```{r eval=FALSE}
+### students <- read_csv("data/students.csv")
+```
+
+Here, we will just use the url:
+
 ```{r}
 library(tidyverse)
 
-df <- read_csv("https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv")
-glimpse(df)
+students <- read_csv("https://pos.it/r4ds-students-csv")
+students
 ```
 
-### Example: Reading a TSV file
+**Practical Advice:** Look at your data so you can transform it. See the "N/A"s?
+
+```{r}
+students <- read_csv("https://pos.it/r4ds-students-csv", na = c("N/A", ""))
+students
+```
+
+Type `students` at your R prompt. Notice that `Student ID` and `Full Name` have backticks.
+
+```{r}
+students |> 
+  rename(
+    student_id = `Student ID`,
+    full_name = `Full Name`
+  )
+```
+
+### Other arguments
+
+```{r}
+read_csv(
+  "a,b,c
+  1,2,3
+  4,5,6"
+)
+```
+
+You can read a CSV and skip the first few lines if they contain metadata.
+
+```{r}
+read_csv(
+  "The first line of metadata
+  The second line of metadata
+  x,y,z
+  1,2,3",
+  skip = 2
+)
+```
+
+If there are no column names:
+
+```{r}
+read_csv(
+  "1,2,3
+  4,5,6",
+  col_names = FALSE
+)
+```
+
+Or, add column names:
+
+```{r}
+read_csv(
+  "1,2,3
+  4,5,6",
+  col_names = c("x", "y", "z")
+)
+```
+
+### Also: Reading a TSV file
 
 ```{r, eval=FALSE}
-df_tsv <- read_tsv("data/example.tsv")
+### df_tsv <- read_tsv("data/example.tsv")
 ```
 
 ------------------------------------------------------------------------
 
-### In-Class Exercise 1 – CSV/TSV
+### In-Class Exercise 1 – CSV
 
-1.  Download a small CSV file (e.g., from the course repository).\
+1.  Download the `students` data (e.g., from the course repository).\
 2.  Read it into R using `read_csv()`.\
-3.  Inspect its structure with `glimpse()` and `summary()`.\
-4.  What data types were automatically detected?
+3.  Inspect its structure with `glimpse()`.\
+4.  What data types were automatically detected?\
+5.  Notice the tick marks around some column names.\
+6.  Use `janitor::clean_names()` to turn all column names to snake case.
 
-------------------------------------------------------------------------
+### In-Class Challenge
+
+Change the data type stored in the `meal_plan` column. Hint: you can use `factor()` with `mutate()`.
 
 ## Column Types and Parsing
 
 `readr` automatically guesses column types, but you can override them.
 
-### Example: Overriding column types
-
-```{r, eval=FALSE}
-df <- read_csv("data/mydata.csv", col_types = cols(
-  id = col_character(),
-  date = col_date(format = "%Y-%m-%d")
-))
+```{r}
+read_csv("
+  logical,numeric,date,string
+  TRUE,1,2021-01-15,abc
+  false,4.5,2021-02-15,def
+  T,Inf,2021-02-16,ghi
+")
 ```
+
+### But what if the data is not clean?
+
+```{r}
+simple_csv <- "
+  x
+  10
+  .
+  20
+  30"
+```
+
+Read it with `read_csv()` - see that it's a character column?
+
+```{r}
+read_csv(simple_csv)
+
+```
+
+There is some missing data. So `readr` turns what should be a double or numeric column into a character column.
+
+Tell `readr` that it is a numeric column with `col_types`.
+
+The `col_types` function takes a named list where the names match the column names in the CSV file.
+
+```{r}
+df <- read_csv(
+  simple_csv, 
+  col_types = list(x = col_double())
+)
+```
+
+Read the warning. Use `problems` to find out what that's about:
+
+```{r}
+problems(df)
+```
+
+We can make `.` indicate missing data using `na = "."`:
+
+```{r}
+read_csv(simple_csv, na = ".")
+```
+
+Other column type functions in `readr` are `col_logical()`, `col_integer()`, `col_character()`, `col_factor()`, `col_date()`, `col_datetime`, and `col_number()`.
 
 You can parse numbers with `parse_number()`, dates with `parse_date()`, and times with `parse_time()`.
 
-------------------------------------------------------------------------
+### In-Class Exercise 2
 
-### In-Class Exercise 2 – Parsing
+1.  Load a simple CSV file with `simple_csv()`.\
+2.  Use `col_types()` to change a data type of a column.\
+3.  Use `problems()` to diagnose a warning.\
+4.  Use `na =` to properly code missing data.\
 
-1.  Create a vector of messy numbers: `c("$100", "250%", "300")`.\
-2.  Use `parse_number()` to extract numeric values.\
-3.  Create a vector of dates as strings and use `parse_date()`.
+### In-Class Challenge
 
-------------------------------------------------------------------------
+1.  Read a TSV file from PanTHERIA: "https://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt"\
+2.  Use `na =` to change all `999.00`s to missing data.\
 
-## Importing Excel Files
+## Writing to a file
 
-The `readxl` package is used to read Excel files (`.xls`, `.xlsx`).
+You can use `write_csv()` or `write_tsv()`.
 
-### Example: Reading an Excel sheet
-
-```{r, eval=FALSE}
-library(readxl)
-
-excel_df <- read_excel("data/example.xlsx", sheet = "Sheet1")
-head(excel_df)
+```{r}
+write_csv(students, "students.csv")
 ```
 
-------------------------------------------------------------------------
+### In-Class Exercise 3
 
-### In-Class Exercise 3 – Excel Import
-
-1.  Use a provided Excel file (or download one).\
-2.  Read the first sheet with `read_excel()`.\
-3.  Specify a different sheet and check the result.
-
-------------------------------------------------------------------------
-
-## Handling Import Problems
-
-When column parsing fails:
-
--   Use `problems()` to diagnose
--   Use `col_types` to fix column types
--   Clean data after import using `mutate()`
-
-Example:
-
-```{r, eval=FALSE}
-bad <- read_csv("data/bad.csv")
-problems(bad)
-```
-
-------------------------------------------------------------------------
-
-## Reading Other Formats (Optional)
-
--   `read_delim()` – for custom delimiters
--   `read_table()` – for whitespace-delimited files
--   `read_lines()` – for line-by-line text
--   `jsonlite::fromJSON()` – for JSON files (optional preview)
-
-------------------------------------------------------------------------
-
-### In-Class Challenge – Import & Clean Workflow
-
-1.  Import a messy CSV file with mixed types.\
-2.  Fix incorrect column parsing.\
-3.  Convert a date column to proper Date format.\
-4.  Summarize the data by a grouping variable.
-
-------------------------------------------------------------------------
+1.  Write a CSV (i.e. `students`) to a file `students-2.csv`\
+2.  Read that file in again with `read_csv`.\
 
 ## Homework Preview
 
@@ -136,8 +207,6 @@ For homework, you will:
 -   Clean at least one column with `mutate()`
 -   Provide a short summary (using `group_by()` and `summarize()`)
 -   Render to PDF and submit
-
-------------------------------------------------------------------------
 
 ## Next Steps
 
