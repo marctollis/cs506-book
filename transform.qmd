@@ -8,12 +8,12 @@ What are the types of variables we see in data frames, and what are the differen
 
 By the end of this chapter, you should be able to:
 
-- Understand how logical vectors work in R
-- Use logical conditions to filter and manipulate data
-- Convert between logical, numeric, and character types
-- Parse numbers from messy strings
+-   Understand how logical vectors work in R
+-   Use logical conditions to filter and manipulate data
+-   Convert between logical, numeric, and character types
+-   Parse numbers from messy strings
 
----
+------------------------------------------------------------------------
 
 ## Logical Vectors
 
@@ -38,15 +38,22 @@ sum(nums > 4)   # Count how many values are > 4
 mean(nums > 4)  # Proportion of values > 4
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 1 – Logical Conditions
 
-1. Create a numeric vector with 10 random values.  
-2. Which values are greater than the mean?  
-3. What proportion is above the mean?
+1.  Create a numeric vector with 10 random values.\
+2.  How many values are greater than the mean?
+3.  What proportion is above the mean?
 
----
+```{r}
+# use sample() to create a random list:
+rands <- sample(x = c(1:10), size = 10)
+sum(rands > mean(rands)) # number of values above the mean
+mean(rands > mean(rands)) # proportion of values above the mean
+```
+
+------------------------------------------------------------------------
 
 ## Logical Operations
 
@@ -56,17 +63,17 @@ Combine logical vectors with `&` (and), `|` (or), and `!` (not):
 a <- c(TRUE, FALSE, TRUE)
 b <- c(TRUE, TRUE, FALSE)
 
-a & b
-a | b
-!a
+a & b # and
+a | b # or
+!a # not
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-Class Exercise 2 – Combining Conditions
 
-1. Using the `mpg` dataset, create a logical condition for cars with `hwy > 30` **and** `cyl == 4`.  
-2. How many such cars exist?
+1.  Using the `mpg` dataset, create a logical condition for cars with `hwy > 30` **and** `cyl == 4`.\
+2.  How many such cars exist?
 
 ```{r}
 library(tidyverse)
@@ -76,79 +83,248 @@ mpg |>
   nrow()
 ```
 
----
+------------------------------------------------------------------------
 
-## Numbers and Coercion
+## Comparisons
 
-Logical values behave like numbers: `TRUE` = 1, `FALSE` = 0.
-
-```{r}
-as.numeric(c(TRUE, FALSE, TRUE))
-```
-
-This makes calculations on logical vectors easy.
-
----
-
-## Parsing Numbers
-
-Real-world data often stores numbers as text with extra symbols.  
-Use `readr::parse_number()` to extract numeric values.
-
-```{r}
-library(readr)
-
-x <- c("$100", "200%", "300kg")
-parse_number(x)
-```
-
----
-
-### In-Class Exercise 3 – Parsing
-
-1. Create a character vector: `c("10 kg", "$50", "30%")`.  
-2. Use `parse_number()` to convert it to numeric.  
-3. What happens if there are unexpected characters?
-
----
-
-## Dealing with Missing Values
-
-Logical and numeric vectors can contain `NA`.  
-Handle them with `na.rm = TRUE` or functions like `replace_na()`.
-
-```{r}
-nums <- c(1, 2, NA, 4)
-mean(nums, na.rm = TRUE)
-```
-
----
-
-## In-Class Challenge – Logical Filtering
-
-- Using `flights` from `nycflights13`, calculate the proportion of flights that departed late (`dep_delay > 0`) **and** arrived on time (`arr_delay <= 0`).
+The following filter (using `filter`) finds all daytime departures that arrive roughly on time:
 
 ```{r}
 library(nycflights13)
+flights |> 
+  filter(dep_time > 600 & dep_time < 2000 & abs(arr_delay) < 20)
 
-flights |>
-  summarize(on_time = mean(dep_delay > 0 & arr_delay <= 0, na.rm = TRUE))
 ```
 
----
+The underlying logical variables can be made visible with `mutate()`:
 
-# Homework Preview
+```{r}
+flights |> 
+  mutate(
+    daytime = dep_time > 600 & dep_time < 2000,
+    approx_ontime = abs(arr_delay) < 20,
+    .keep = "used"
+  )
+```
 
-For the next homework, you will:
+Which really means that the first filter is equivalent to:
 
-- Create a numeric vector and use logical comparisons to summarize it
-- Filter a dataset using a logical condition
-- Parse a messy character column into numeric
-- Render to PDF and submit on Canvas
+```{r}
+flights |> 
+  mutate(
+    daytime = dep_time > 600 & dep_time < 2000,
+    approx_ontime = abs(arr_delay) < 20,
+  ) |> 
+  filter(daytime & approx_ontime)
+```
 
----
+------------------------------------------------------------------------
+
+### Floating point comparison
+
+What happens when you use `==` with numbers? Check it out:
+
+What are the outcomes of these two equations?
+
+```{r}
+x <- c(1 / 49 * 49, sqrt(2) ^ 2)
+x
+```
+
+Looks like 1 and 2.
+
+Now look:
+
+```{r}
+x == c(1, 2)
+```
+
+You get all `FALSE`. This is because there’s no way to exactly represent 1/49 or `sqrt(2)` without **ROUNDING**:
+
+```{r}
+print(x, digits = 16)
+```
+
+So `==` is dangerous with numbers. But, you can use `dplyr::near`:
+
+```{r}
+near(x, c(1, 2))
+```
+
+### Missing values
+
+Missing values pop up easily in `R` because unknown values are always evaluated that way. If:
+
+```{r}
+NA > 5
+```
+
+Then the following should be true:
+
+```{r}
+10 == NA
+```
+
+Same here:
+
+```{r}
+NA == NA
+```
+
+Print the flights where `dep_time` is missing. Well, you might want to do this:
+
+```{r}
+flights |>
+  filter(dep_time == NA)
+```
+
+But it gives `NA` for every row, so you get nothing. This is where `is.na()` comes in handy:
+
+```{r}
+flights |> 
+  filter(is.na(dep_time))
+```
+
+## Boolean algebra
+
+You can combine logical vectors using Boolean algebra.
+
+For instance, this will find all rows where `x` is not missing.
+
+```{r eval=FALSE}
+df |>
+  filter(!is.na(x))
+```
+
+This will find all rows where `x` is smaller than -10 or bigger than 0.
+
+```{r eval = FALSE}
+df |>
+  filter(x < -10 | x > 0)
+```
+
+### Missing values
+
+```{r}
+df <- tibble(x = c(TRUE, FALSE, NA))
+
+df |>
+  mutate(
+    and = x & NA,
+    or = x | NA
+  )
+```
+
+This is based on "`TRUE` and `NA`" evaluates to `NA` while "`TRUE` or `NA`" evaluates to `TRUE` (because at least one of them is `TRUE`).
+
+### Order of operations and `%in%`
+
+Note the difference between these two outputs:
+
+```{r}
+flights |> 
+   filter(month == 11 | month == 12)
+```
+
+```{r}
+flights |> 
+   filter(month == 11 | 12)
+```
+
+The second one doesn't work properly. It doesn't evaluate as "Find all flights that departed in November or December."
+
+This is because `month == 11` creates a logical vector. This vector is then compared to `12`, which evaluates to `TRUE` - so it prints the whole table. Here is an illustration:
+
+```{r}
+flights |> 
+  mutate(
+    nov = month == 11,
+    final = nov | 12,
+    .keep = "used"
+  )
+```
+
+This is where `%in%` comes in. `x %in% y` outputs a logical vector the same length as `x` that is `TRUE` whenever a value in `x` is in `y`.
+
+```{r}
+1:12 %in% c(1,5,11)
+```
+
+```{r}
+letters[1:10] %in% c("a", "e", "i", "o", "u")
+```
+
+### In-Class Exercise
+
+Find all the flights in November and December with `%in%`
+
+```{r}
+flights |>
+  filter(month %in% c(11,12))
+```
+
+## In-Class Challenge
+
+1.  Find all flights where `arr_delay` is missing but `dep_delay` is not.\
+2.  Find all flights where neither `arr_time` nor `sched_arr_time` are missing, but `arr_delay` is.
+
+## Summaries
+
+### Logical summaries `any()` and `all()`
+
+`any()` returns `TRUE` if there are any `TRUE`s in `x`. (same as `|`)
+
+`all()` returns `TRUE` only if all values of `x` are `TRUE`'s. (same as `&`)
+
+### In-Class Exercise
+
+Use `all()` and `any()` to find out if every flight was delayed on departure by at most an hour or if any flights were delayed on arrival by five hours or more.
+
+Using `group_by` allows us to do that by day:
+
+```{r}
+flights |> 
+  group_by(year, month, day) |> 
+  summarize(
+    all_delayed = all(dep_delay <= 60, na.rm = TRUE),
+    any_long_delay = any(arr_delay >= 300, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+
+### Numeric summaries of logical vectors
+
+-   `sum(x)` gives the number of `TRUE`s.\
+-   `mean(x)` gives the proportion of `TRUE`s.
+
+Therefore, to see the proportion of flights that were delayed on departure by at most an hour and the number of flights that were delayed on arrival by five hours or more:
+
+```{r}
+flights |> 
+  group_by(year, month, day) |> 
+  summarize(
+    proportion_delayed = mean(dep_delay <= 60, na.rm = TRUE),
+    count_long_delay = sum(arr_delay >= 300, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+
+### Logical subsetting
+You can use a logical vector to filter a single variable to a subset of interest. 
+We can subset using `[]`.
+```{r}
+flights |> 
+  group_by(year, month, day) |> 
+  summarize(
+    behind = mean(arr_delay[arr_delay > 0], na.rm = TRUE),
+    ahead = mean(arr_delay[arr_delay < 0], na.rm = TRUE),
+    n = n(),
+    .groups = "drop"
+  )
+```
+
+
 
 # Next Steps
 
-Next, you’ll learn how to manipulate and clean **strings** using the `stringr` package.
-
+Next, we will cover **conditional transformations**  and next week you’ll learn how to manipulate and clean **strings** using the `stringr` package.
