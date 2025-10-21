@@ -323,8 +323,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Understand how logical vectors work in R</li>
 <li>Use logical conditions to filter and manipulate data</li>
-<li>Convert between logical, numeric, and character types</li>
-<li>Parse numbers from messy strings</li>
 </ul>
 <hr></section><section id="logical-vectors" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="logical-vectors">
 <span class="header-section-number">10.2</span> Logical Vectors</h2>
@@ -407,21 +405,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.4.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   4.0.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
+✔ ggplot2   3.5.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mpg</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mpg</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">hwy</span> <span class="op">&gt;</span> <span class="fl">30</span> <span class="op">&amp;</span> <span class="va">cyl</span> <span class="op">==</span> <span class="fl">4</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -432,7 +427,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">10.4</span> Comparisons</h2>
 <p>The following filter (using <code>filter</code>) finds all daytime departures that arrive roughly on time:</p>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/hadley/nycflights13">nycflights13</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/hadley/nycflights13">nycflights13</a></span><span class="op">)</span></span>
 <span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dep_time</span> <span class="op">&gt;</span> <span class="fl">600</span> <span class="op">&amp;</span> <span class="va">dep_time</span> <span class="op">&lt;</span> <span class="fl">2000</span> <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="va">arr_delay</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">20</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -457,7 +452,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The underlying logical variables can be made visible with <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
 <span>    daytime <span class="op">=</span> <span class="va">dep_time</span> <span class="op">&gt;</span> <span class="fl">600</span> <span class="op">&amp;</span> <span class="va">dep_time</span> <span class="op">&lt;</span> <span class="fl">2000</span>,</span>
 <span>    approx_ontime <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="va">arr_delay</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">20</span>,</span>
@@ -482,7 +477,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Which really means that the first filter is equivalent to:</p>
 <div class="cell">
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
 <span>    daytime <span class="op">=</span> <span class="va">dep_time</span> <span class="op">&gt;</span> <span class="fl">600</span> <span class="op">&amp;</span> <span class="va">dep_time</span> <span class="op">&lt;</span> <span class="fl">2000</span>,</span>
 <span>    approx_ontime <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="va">arr_delay</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">20</span>,</span>
@@ -515,7 +510,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>What happens when you use <code>==</code> with numbers? Check it out:</p>
 <p>What are the outcomes of these two equations?</p>
 <div class="cell">
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span> <span class="op">/</span> <span class="fl">49</span> <span class="op">*</span> <span class="fl">49</span>, <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span> <span class="op">^</span> <span class="fl">2</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span> <span class="op">/</span> <span class="fl">49</span> <span class="op">*</span> <span class="fl">49</span>, <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span> <span class="op">^</span> <span class="fl">2</span><span class="op">)</span></span>
 <span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2</code></pre>
@@ -524,21 +519,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Looks like 1 and 2.</p>
 <p>Now look:</p>
 <div class="cell">
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE FALSE</code></pre>
 </div>
 </div>
 <p>You get all <code>FALSE</code>. This is because there’s no way to exactly represent 1/49 or <code>sqrt(2)</code> without <strong>ROUNDING</strong>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">x</span>, digits <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">x</span>, digits <span class="op">=</span> <span class="fl">16</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9999999999999999 2.0000000000000004</code></pre>
 </div>
 </div>
 <p>So <code>==</code> is dangerous with numbers. But, you can use <code><a href="https://dplyr.tidyverse.org/reference/near.html">dplyr::near</a></code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/near.html">near</a></span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/near.html">near</a></span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE TRUE</code></pre>
 </div>
@@ -547,28 +542,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">10.4.2</span> Missing values</h3>
 <p>Missing values pop up easily in <code>R</code> because unknown values are always evaluated that way. If:</p>
 <div class="cell">
-<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="cn">NA</span> <span class="op">&gt;</span> <span class="fl">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="cn">NA</span> <span class="op">&gt;</span> <span class="fl">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
 </div>
 </div>
 <p>Then the following should be true:</p>
 <div class="cell">
-<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">10</span> <span class="op">==</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">10</span> <span class="op">==</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
 </div>
 </div>
 <p>Same here:</p>
 <div class="cell">
-<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="cn">NA</span> <span class="op">==</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="cn">NA</span> <span class="op">==</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
 </div>
 </div>
 <p>Print the flights where <code>dep_time</code> is missing. Well, you might want to do this:</p>
 <div class="cell">
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dep_time</span> <span class="op">==</span> <span class="cn">NA</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 0 × 19
@@ -581,7 +576,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>But it gives <code>NA</code> for every row, so you get nothing. This is where <code><a href="https://rdrr.io/r/base/NA.html">is.na()</a></code> comes in handy:</p>
 <div class="cell">
-<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">dep_time</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8,255 × 19
@@ -608,18 +603,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You can combine logical vectors using Boolean algebra.</p>
 <p>For instance, this will find all rows where <code>x</code> is not missing.</p>
 <div class="cell">
-<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This will find all rows where <code>x</code> is smaller than -10 or bigger than 0.</p>
 <div class="cell">
-<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">x</span> <span class="op">&lt;</span> <span class="op">-</span><span class="fl">10</span> <span class="op">|</span> <span class="va">x</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="missing-values-1" class="level3" data-number="10.5.1"><h3 data-number="10.5.1" class="anchored" data-anchor-id="missing-values-1">
 <span class="header-section-number">10.5.1</span> Missing values</h3>
 <div class="cell">
-<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
@@ -641,7 +636,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </h3>
 <p>Note the difference between these two outputs:</p>
 <div class="cell">
-<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">month</span> <span class="op">==</span> <span class="fl">11</span> <span class="op">|</span> <span class="va">month</span> <span class="op">==</span> <span class="fl">12</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 55,403 × 19
@@ -664,7 +659,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">month</span> <span class="op">==</span> <span class="fl">11</span> <span class="op">|</span> <span class="fl">12</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 336,776 × 19
@@ -689,7 +684,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The second one doesn’t work properly. It doesn’t evaluate as “Find all flights that departed in November or December.”</p>
 <p>This is because <code>month == 11</code> creates a logical vector. This vector is then compared to <code>12</code>, which evaluates to <code>TRUE</code> - so it prints the whole table. Here is an illustration:</p>
 <div class="cell">
-<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
 <span>    nov <span class="op">=</span> <span class="va">month</span> <span class="op">==</span> <span class="fl">11</span>,</span>
 <span>    final <span class="op">=</span> <span class="va">nov</span> <span class="op">|</span> <span class="fl">12</span>,</span>
@@ -714,13 +709,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>This is where <code>%in%</code> comes in. <code>x %in% y</code> outputs a logical vector the same length as <code>x</code> that is <code>TRUE</code> whenever a value in <code>x</code> is in <code>y</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">5</span>,<span class="fl">11</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">5</span>,<span class="fl">11</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  TRUE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">]</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"e"</span>, <span class="st">"i"</span>, <span class="st">"o"</span>, <span class="st">"u"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">]</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"e"</span>, <span class="st">"i"</span>, <span class="st">"o"</span>, <span class="st">"u"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  TRUE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE</code></pre>
 </div>
@@ -729,7 +724,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">10.5.3</span> In-Class Exercise</h3>
 <p>Find all the flights in November and December with <code>%in%</code></p>
 <div class="cell">
-<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">month</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">11</span>,<span class="fl">12</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 55,403 × 19
@@ -769,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Use <code><a href="https://rdrr.io/r/base/all.html">all()</a></code> and <code><a href="https://rdrr.io/r/base/any.html">any()</a></code> to find out if every flight was delayed on departure by at most an hour or if any flights were delayed on arrival by five hours or more.</p>
 <p>Using <code>group_by</code> allows us to do that by day:</p>
 <div class="cell">
-<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">month</span>, <span class="va">day</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
 <span>    all_delayed <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/all.html">all</a></span><span class="op">(</span><span class="va">dep_delay</span> <span class="op">&lt;=</span> <span class="fl">60</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
@@ -804,7 +799,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Therefore, to see the proportion of flights that were delayed on departure by at most an hour and the number of flights that were delayed on arrival by five hours or more:</p>
 <div class="cell">
-<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">month</span>, <span class="va">day</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
 <span>    proportion_delayed <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">dep_delay</span> <span class="op">&lt;=</span> <span class="fl">60</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
@@ -832,7 +827,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">10.7.4</span> Logical subsetting</h3>
 <p>You can use a logical vector to filter a single variable to a subset of interest. We can subset using <code>[]</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">month</span>, <span class="va">day</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
 <span>    behind <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">arr_delay</span><span class="op">[</span><span class="va">arr_delay</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
@@ -1342,336 +1337,334 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb70" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Transform: Logical Vectors and Numbers"</span></span>
-<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>What are the types of variables we see in data frames, and what are the different tools we can use to work with them?</span>
-<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
-<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>By the end of this chapter, you should be able to:</span>
-<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Understand how logical vectors work in R</span>
-<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use logical conditions to filter and manipulate data</span>
-<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Convert between logical, numeric, and character types</span>
-<span id="cb70-14"><a href="#cb70-14" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Parse numbers from messy strings</span>
-<span id="cb70-15"><a href="#cb70-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-16"><a href="#cb70-16" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb70-17"><a href="#cb70-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-18"><a href="#cb70-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Logical Vectors</span></span>
-<span id="cb70-19"><a href="#cb70-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-20"><a href="#cb70-20" aria-hidden="true" tabindex="-1"></a>Logical vectors contain only <span class="in">`TRUE`</span>, <span class="in">`FALSE`</span>, or <span class="in">`NA`</span>.</span>
-<span id="cb70-21"><a href="#cb70-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-24"><a href="#cb70-24" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-25"><a href="#cb70-25" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">NA</span>)</span>
-<span id="cb70-26"><a href="#cb70-26" aria-hidden="true" tabindex="-1"></a>x</span>
-<span id="cb70-27"><a href="#cb70-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-28"><a href="#cb70-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-29"><a href="#cb70-29" aria-hidden="true" tabindex="-1"></a><span class="fu">### Logical comparisons create logical vectors:</span></span>
-<span id="cb70-30"><a href="#cb70-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-33"><a href="#cb70-33" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-34"><a href="#cb70-34" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">1</span>)</span>
-<span id="cb70-35"><a href="#cb70-35" aria-hidden="true" tabindex="-1"></a>nums <span class="sc">&gt;</span> <span class="dv">4</span></span>
-<span id="cb70-36"><a href="#cb70-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-37"><a href="#cb70-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-38"><a href="#cb70-38" aria-hidden="true" tabindex="-1"></a>You can use these directly with functions like <span class="in">`sum()`</span> and <span class="in">`mean()`</span>:</span>
-<span id="cb70-39"><a href="#cb70-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-42"><a href="#cb70-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-43"><a href="#cb70-43" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(nums <span class="sc">&gt;</span> <span class="dv">4</span>)   <span class="co"># Count how many values are &gt; 4</span></span>
-<span id="cb70-44"><a href="#cb70-44" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(nums <span class="sc">&gt;</span> <span class="dv">4</span>)  <span class="co"># Proportion of values &gt; 4</span></span>
-<span id="cb70-45"><a href="#cb70-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-46"><a href="#cb70-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-47"><a href="#cb70-47" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb70-48"><a href="#cb70-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-49"><a href="#cb70-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 1 – Logical Conditions</span></span>
-<span id="cb70-50"><a href="#cb70-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-51"><a href="#cb70-51" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Create a numeric vector with 10 random values.\</span>
-<span id="cb70-52"><a href="#cb70-52" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>How many values are greater than the mean?</span>
-<span id="cb70-53"><a href="#cb70-53" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>What proportion is above the mean?</span>
-<span id="cb70-54"><a href="#cb70-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-57"><a href="#cb70-57" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-58"><a href="#cb70-58" aria-hidden="true" tabindex="-1"></a><span class="co"># use sample() to create a random list:</span></span>
-<span id="cb70-59"><a href="#cb70-59" aria-hidden="true" tabindex="-1"></a>rands <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">size =</span> <span class="dv">10</span>)</span>
-<span id="cb70-60"><a href="#cb70-60" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(rands <span class="sc">&gt;</span> <span class="fu">mean</span>(rands)) <span class="co"># number of values above the mean</span></span>
-<span id="cb70-61"><a href="#cb70-61" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(rands <span class="sc">&gt;</span> <span class="fu">mean</span>(rands)) <span class="co"># proportion of values above the mean</span></span>
-<span id="cb70-62"><a href="#cb70-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-63"><a href="#cb70-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-64"><a href="#cb70-64" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb70-65"><a href="#cb70-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-66"><a href="#cb70-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Logical Operations</span></span>
-<span id="cb70-67"><a href="#cb70-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-68"><a href="#cb70-68" aria-hidden="true" tabindex="-1"></a>Combine logical vectors with <span class="in">`&amp;`</span> (and), <span class="in">`|`</span> (or), and <span class="in">`!`</span> (not):</span>
-<span id="cb70-69"><a href="#cb70-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-72"><a href="#cb70-72" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-73"><a href="#cb70-73" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)</span>
-<span id="cb70-74"><a href="#cb70-74" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb70-75"><a href="#cb70-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-76"><a href="#cb70-76" aria-hidden="true" tabindex="-1"></a>a <span class="sc">&amp;</span> b <span class="co"># and</span></span>
-<span id="cb70-77"><a href="#cb70-77" aria-hidden="true" tabindex="-1"></a>a <span class="sc">|</span> b <span class="co"># or</span></span>
-<span id="cb70-78"><a href="#cb70-78" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>a <span class="co"># not</span></span>
-<span id="cb70-79"><a href="#cb70-79" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-80"><a href="#cb70-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-81"><a href="#cb70-81" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb70-82"><a href="#cb70-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-83"><a href="#cb70-83" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 2 – Combining Conditions</span></span>
-<span id="cb70-84"><a href="#cb70-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-85"><a href="#cb70-85" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Using the <span class="in">`mpg`</span> dataset, create a logical condition for cars with <span class="in">`hwy &gt; 30`</span> **and** <span class="in">`cyl == 4`</span>.\</span>
-<span id="cb70-86"><a href="#cb70-86" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>How many such cars exist?</span>
-<span id="cb70-87"><a href="#cb70-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-90"><a href="#cb70-90" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-91"><a href="#cb70-91" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb70-92"><a href="#cb70-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-93"><a href="#cb70-93" aria-hidden="true" tabindex="-1"></a>mpg <span class="sc">|&gt;</span></span>
-<span id="cb70-94"><a href="#cb70-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(hwy <span class="sc">&gt;</span> <span class="dv">30</span> <span class="sc">&amp;</span> cyl <span class="sc">==</span> <span class="dv">4</span>) <span class="sc">|&gt;</span></span>
-<span id="cb70-95"><a href="#cb70-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nrow</span>()</span>
-<span id="cb70-96"><a href="#cb70-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-97"><a href="#cb70-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-98"><a href="#cb70-98" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb70-99"><a href="#cb70-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-100"><a href="#cb70-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comparisons</span></span>
-<span id="cb70-101"><a href="#cb70-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-102"><a href="#cb70-102" aria-hidden="true" tabindex="-1"></a>The following filter (using <span class="in">`filter`</span>) finds all daytime departures that arrive roughly on time:</span>
-<span id="cb70-103"><a href="#cb70-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-106"><a href="#cb70-106" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-107"><a href="#cb70-107" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb70-108"><a href="#cb70-108" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-109"><a href="#cb70-109" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dep_time <span class="sc">&gt;</span> <span class="dv">600</span> <span class="sc">&amp;</span> dep_time <span class="sc">&lt;</span> <span class="dv">2000</span> <span class="sc">&amp;</span> <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;</span> <span class="dv">20</span>)</span>
-<span id="cb70-110"><a href="#cb70-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-111"><a href="#cb70-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-112"><a href="#cb70-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-113"><a href="#cb70-113" aria-hidden="true" tabindex="-1"></a>The underlying logical variables can be made visible with <span class="in">`mutate()`</span>:</span>
-<span id="cb70-114"><a href="#cb70-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-117"><a href="#cb70-117" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-118"><a href="#cb70-118" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-119"><a href="#cb70-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb70-120"><a href="#cb70-120" aria-hidden="true" tabindex="-1"></a>    <span class="at">daytime =</span> dep_time <span class="sc">&gt;</span> <span class="dv">600</span> <span class="sc">&amp;</span> dep_time <span class="sc">&lt;</span> <span class="dv">2000</span>,</span>
-<span id="cb70-121"><a href="#cb70-121" aria-hidden="true" tabindex="-1"></a>    <span class="at">approx_ontime =</span> <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;</span> <span class="dv">20</span>,</span>
-<span id="cb70-122"><a href="#cb70-122" aria-hidden="true" tabindex="-1"></a>    <span class="at">.keep =</span> <span class="st">"used"</span></span>
-<span id="cb70-123"><a href="#cb70-123" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb70-124"><a href="#cb70-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-125"><a href="#cb70-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-126"><a href="#cb70-126" aria-hidden="true" tabindex="-1"></a>Which really means that the first filter is equivalent to:</span>
-<span id="cb70-127"><a href="#cb70-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-130"><a href="#cb70-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-131"><a href="#cb70-131" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-132"><a href="#cb70-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb70-133"><a href="#cb70-133" aria-hidden="true" tabindex="-1"></a>    <span class="at">daytime =</span> dep_time <span class="sc">&gt;</span> <span class="dv">600</span> <span class="sc">&amp;</span> dep_time <span class="sc">&lt;</span> <span class="dv">2000</span>,</span>
-<span id="cb70-134"><a href="#cb70-134" aria-hidden="true" tabindex="-1"></a>    <span class="at">approx_ontime =</span> <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;</span> <span class="dv">20</span>,</span>
-<span id="cb70-135"><a href="#cb70-135" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb70-136"><a href="#cb70-136" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(daytime <span class="sc">&amp;</span> approx_ontime)</span>
-<span id="cb70-137"><a href="#cb70-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-138"><a href="#cb70-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-139"><a href="#cb70-139" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb70-140"><a href="#cb70-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-141"><a href="#cb70-141" aria-hidden="true" tabindex="-1"></a><span class="fu">### Floating point comparison</span></span>
-<span id="cb70-142"><a href="#cb70-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-143"><a href="#cb70-143" aria-hidden="true" tabindex="-1"></a>What happens when you use <span class="in">`==`</span> with numbers? Check it out:</span>
-<span id="cb70-144"><a href="#cb70-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-145"><a href="#cb70-145" aria-hidden="true" tabindex="-1"></a>What are the outcomes of these two equations?</span>
-<span id="cb70-146"><a href="#cb70-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-149"><a href="#cb70-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-150"><a href="#cb70-150" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">49</span> <span class="sc">*</span> <span class="dv">49</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>) <span class="sc">^</span> <span class="dv">2</span>)</span>
-<span id="cb70-151"><a href="#cb70-151" aria-hidden="true" tabindex="-1"></a>x</span>
-<span id="cb70-152"><a href="#cb70-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-153"><a href="#cb70-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-154"><a href="#cb70-154" aria-hidden="true" tabindex="-1"></a>Looks like 1 and 2.</span>
-<span id="cb70-155"><a href="#cb70-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-156"><a href="#cb70-156" aria-hidden="true" tabindex="-1"></a>Now look:</span>
-<span id="cb70-157"><a href="#cb70-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-160"><a href="#cb70-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-161"><a href="#cb70-161" aria-hidden="true" tabindex="-1"></a>x <span class="sc">==</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb70-162"><a href="#cb70-162" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-163"><a href="#cb70-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-164"><a href="#cb70-164" aria-hidden="true" tabindex="-1"></a>You get all <span class="in">`FALSE`</span>. This is because there’s no way to exactly represent 1/49 or <span class="in">`sqrt(2)`</span> without **ROUNDING**:</span>
-<span id="cb70-165"><a href="#cb70-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-168"><a href="#cb70-168" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-169"><a href="#cb70-169" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x, <span class="at">digits =</span> <span class="dv">16</span>)</span>
-<span id="cb70-170"><a href="#cb70-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-171"><a href="#cb70-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-172"><a href="#cb70-172" aria-hidden="true" tabindex="-1"></a>So <span class="in">`==`</span> is dangerous with numbers. But, you can use <span class="in">`dplyr::near`</span>:</span>
-<span id="cb70-173"><a href="#cb70-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-176"><a href="#cb70-176" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-177"><a href="#cb70-177" aria-hidden="true" tabindex="-1"></a><span class="fu">near</span>(x, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
-<span id="cb70-178"><a href="#cb70-178" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-179"><a href="#cb70-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-180"><a href="#cb70-180" aria-hidden="true" tabindex="-1"></a><span class="fu">### Missing values</span></span>
-<span id="cb70-181"><a href="#cb70-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-182"><a href="#cb70-182" aria-hidden="true" tabindex="-1"></a>Missing values pop up easily in <span class="in">`R`</span> because unknown values are always evaluated that way. If:</span>
-<span id="cb70-183"><a href="#cb70-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-186"><a href="#cb70-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-187"><a href="#cb70-187" aria-hidden="true" tabindex="-1"></a><span class="cn">NA</span> <span class="sc">&gt;</span> <span class="dv">5</span></span>
-<span id="cb70-188"><a href="#cb70-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-189"><a href="#cb70-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-190"><a href="#cb70-190" aria-hidden="true" tabindex="-1"></a>Then the following should be true:</span>
-<span id="cb70-191"><a href="#cb70-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-194"><a href="#cb70-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-195"><a href="#cb70-195" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="cn">NA</span></span>
-<span id="cb70-196"><a href="#cb70-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-197"><a href="#cb70-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-198"><a href="#cb70-198" aria-hidden="true" tabindex="-1"></a>Same here:</span>
-<span id="cb70-199"><a href="#cb70-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-202"><a href="#cb70-202" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-203"><a href="#cb70-203" aria-hidden="true" tabindex="-1"></a><span class="cn">NA</span> <span class="sc">==</span> <span class="cn">NA</span></span>
-<span id="cb70-204"><a href="#cb70-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-205"><a href="#cb70-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-206"><a href="#cb70-206" aria-hidden="true" tabindex="-1"></a>Print the flights where <span class="in">`dep_time`</span> is missing. Well, you might want to do this:</span>
-<span id="cb70-207"><a href="#cb70-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-210"><a href="#cb70-210" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-211"><a href="#cb70-211" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span></span>
-<span id="cb70-212"><a href="#cb70-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dep_time <span class="sc">==</span> <span class="cn">NA</span>)</span>
-<span id="cb70-213"><a href="#cb70-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-214"><a href="#cb70-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-215"><a href="#cb70-215" aria-hidden="true" tabindex="-1"></a>But it gives <span class="in">`NA`</span> for every row, so you get nothing. This is where <span class="in">`is.na()`</span> comes in handy:</span>
-<span id="cb70-216"><a href="#cb70-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-219"><a href="#cb70-219" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-220"><a href="#cb70-220" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-221"><a href="#cb70-221" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(dep_time))</span>
-<span id="cb70-222"><a href="#cb70-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-223"><a href="#cb70-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-224"><a href="#cb70-224" aria-hidden="true" tabindex="-1"></a><span class="fu">## Boolean algebra</span></span>
-<span id="cb70-225"><a href="#cb70-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-226"><a href="#cb70-226" aria-hidden="true" tabindex="-1"></a>You can combine logical vectors using Boolean algebra.</span>
-<span id="cb70-227"><a href="#cb70-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-228"><a href="#cb70-228" aria-hidden="true" tabindex="-1"></a>For instance, this will find all rows where <span class="in">`x`</span> is not missing.</span>
-<span id="cb70-229"><a href="#cb70-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-230"><a href="#cb70-230" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
-<span id="cb70-231"><a href="#cb70-231" aria-hidden="true" tabindex="-1"></a><span class="in">df |&gt;</span></span>
-<span id="cb70-232"><a href="#cb70-232" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(!is.na(x))</span></span>
-<span id="cb70-233"><a href="#cb70-233" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-234"><a href="#cb70-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-235"><a href="#cb70-235" aria-hidden="true" tabindex="-1"></a>This will find all rows where <span class="in">`x`</span> is smaller than -10 or bigger than 0.</span>
-<span id="cb70-236"><a href="#cb70-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-237"><a href="#cb70-237" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = FALSE}</span></span>
-<span id="cb70-238"><a href="#cb70-238" aria-hidden="true" tabindex="-1"></a><span class="in">df |&gt;</span></span>
-<span id="cb70-239"><a href="#cb70-239" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(x &lt; -10 | x &gt; 0)</span></span>
-<span id="cb70-240"><a href="#cb70-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-241"><a href="#cb70-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-242"><a href="#cb70-242" aria-hidden="true" tabindex="-1"></a><span class="fu">### Missing values</span></span>
-<span id="cb70-243"><a href="#cb70-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-246"><a href="#cb70-246" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-247"><a href="#cb70-247" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">NA</span>))</span>
-<span id="cb70-248"><a href="#cb70-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-249"><a href="#cb70-249" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
-<span id="cb70-250"><a href="#cb70-250" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb70-251"><a href="#cb70-251" aria-hidden="true" tabindex="-1"></a>    <span class="at">and =</span> x <span class="sc">&amp;</span> <span class="cn">NA</span>,</span>
-<span id="cb70-252"><a href="#cb70-252" aria-hidden="true" tabindex="-1"></a>    <span class="at">or =</span> x <span class="sc">|</span> <span class="cn">NA</span></span>
-<span id="cb70-253"><a href="#cb70-253" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb70-254"><a href="#cb70-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-255"><a href="#cb70-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-256"><a href="#cb70-256" aria-hidden="true" tabindex="-1"></a>This is based on "<span class="in">`TRUE`</span> and <span class="in">`NA`</span>" evaluates to <span class="in">`NA`</span> while "<span class="in">`TRUE`</span> or <span class="in">`NA`</span>" evaluates to <span class="in">`TRUE`</span> (because at least one of them is <span class="in">`TRUE`</span>).</span>
-<span id="cb70-257"><a href="#cb70-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-258"><a href="#cb70-258" aria-hidden="true" tabindex="-1"></a><span class="fu">### Order of operations and `%in%`</span></span>
-<span id="cb70-259"><a href="#cb70-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-260"><a href="#cb70-260" aria-hidden="true" tabindex="-1"></a>Note the difference between these two outputs:</span>
-<span id="cb70-261"><a href="#cb70-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-264"><a href="#cb70-264" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-265"><a href="#cb70-265" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-266"><a href="#cb70-266" aria-hidden="true" tabindex="-1"></a>   <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">11</span> <span class="sc">|</span> month <span class="sc">==</span> <span class="dv">12</span>)</span>
-<span id="cb70-267"><a href="#cb70-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-268"><a href="#cb70-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-271"><a href="#cb70-271" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-272"><a href="#cb70-272" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-273"><a href="#cb70-273" aria-hidden="true" tabindex="-1"></a>   <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">11</span> <span class="sc">|</span> <span class="dv">12</span>)</span>
-<span id="cb70-274"><a href="#cb70-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-275"><a href="#cb70-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-276"><a href="#cb70-276" aria-hidden="true" tabindex="-1"></a>The second one doesn't work properly. It doesn't evaluate as "Find all flights that departed in November or December."</span>
-<span id="cb70-277"><a href="#cb70-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-278"><a href="#cb70-278" aria-hidden="true" tabindex="-1"></a>This is because <span class="in">`month == 11`</span> creates a logical vector. This vector is then compared to <span class="in">`12`</span>, which evaluates to <span class="in">`TRUE`</span> - so it prints the whole table. Here is an illustration:</span>
-<span id="cb70-279"><a href="#cb70-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-282"><a href="#cb70-282" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-283"><a href="#cb70-283" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-284"><a href="#cb70-284" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb70-285"><a href="#cb70-285" aria-hidden="true" tabindex="-1"></a>    <span class="at">nov =</span> month <span class="sc">==</span> <span class="dv">11</span>,</span>
-<span id="cb70-286"><a href="#cb70-286" aria-hidden="true" tabindex="-1"></a>    <span class="at">final =</span> nov <span class="sc">|</span> <span class="dv">12</span>,</span>
-<span id="cb70-287"><a href="#cb70-287" aria-hidden="true" tabindex="-1"></a>    <span class="at">.keep =</span> <span class="st">"used"</span></span>
-<span id="cb70-288"><a href="#cb70-288" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb70-289"><a href="#cb70-289" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-290"><a href="#cb70-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-291"><a href="#cb70-291" aria-hidden="true" tabindex="-1"></a>This is where <span class="in">`%in%`</span> comes in. <span class="in">`x %in% y`</span> outputs a logical vector the same length as <span class="in">`x`</span> that is <span class="in">`TRUE`</span> whenever a value in <span class="in">`x`</span> is in <span class="in">`y`</span>.</span>
-<span id="cb70-292"><a href="#cb70-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-295"><a href="#cb70-295" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-296"><a href="#cb70-296" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">12</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">11</span>)</span>
-<span id="cb70-297"><a href="#cb70-297" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-298"><a href="#cb70-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-301"><a href="#cb70-301" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-302"><a href="#cb70-302" aria-hidden="true" tabindex="-1"></a>letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>] <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"e"</span>, <span class="st">"i"</span>, <span class="st">"o"</span>, <span class="st">"u"</span>)</span>
-<span id="cb70-303"><a href="#cb70-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-304"><a href="#cb70-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-305"><a href="#cb70-305" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise</span></span>
-<span id="cb70-306"><a href="#cb70-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-307"><a href="#cb70-307" aria-hidden="true" tabindex="-1"></a>Find all the flights in November and December with <span class="in">`%in%`</span></span>
-<span id="cb70-308"><a href="#cb70-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-311"><a href="#cb70-311" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-312"><a href="#cb70-312" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span></span>
-<span id="cb70-313"><a href="#cb70-313" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">11</span>,<span class="dv">12</span>))</span>
-<span id="cb70-314"><a href="#cb70-314" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-315"><a href="#cb70-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-316"><a href="#cb70-316" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Challenge</span></span>
-<span id="cb70-317"><a href="#cb70-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-318"><a href="#cb70-318" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Find all flights where <span class="in">`arr_delay`</span> is missing but <span class="in">`dep_delay`</span> is not.\</span>
-<span id="cb70-319"><a href="#cb70-319" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Find all flights where neither <span class="in">`arr_time`</span> nor <span class="in">`sched_arr_time`</span> are missing, but <span class="in">`arr_delay`</span> is.</span>
-<span id="cb70-320"><a href="#cb70-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-321"><a href="#cb70-321" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summaries</span></span>
-<span id="cb70-322"><a href="#cb70-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-323"><a href="#cb70-323" aria-hidden="true" tabindex="-1"></a><span class="fu">### Logical summaries `any()` and `all()`</span></span>
-<span id="cb70-324"><a href="#cb70-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-325"><a href="#cb70-325" aria-hidden="true" tabindex="-1"></a><span class="in">`any()`</span> returns <span class="in">`TRUE`</span> if there are any <span class="in">`TRUE`</span>s in <span class="in">`x`</span>. (same as <span class="in">`|`</span>)</span>
-<span id="cb70-326"><a href="#cb70-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-327"><a href="#cb70-327" aria-hidden="true" tabindex="-1"></a><span class="in">`all()`</span> returns <span class="in">`TRUE`</span> only if all values of <span class="in">`x`</span> are <span class="in">`TRUE`</span>'s. (same as <span class="in">`&amp;`</span>)</span>
-<span id="cb70-328"><a href="#cb70-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-329"><a href="#cb70-329" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise</span></span>
-<span id="cb70-330"><a href="#cb70-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-331"><a href="#cb70-331" aria-hidden="true" tabindex="-1"></a>Use <span class="in">`all()`</span> and <span class="in">`any()`</span> to find out if every flight was delayed on departure by at most an hour or if any flights were delayed on arrival by five hours or more.</span>
-<span id="cb70-332"><a href="#cb70-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-333"><a href="#cb70-333" aria-hidden="true" tabindex="-1"></a>Using <span class="in">`group_by`</span> allows us to do that by day:</span>
-<span id="cb70-334"><a href="#cb70-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-337"><a href="#cb70-337" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-338"><a href="#cb70-338" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-339"><a href="#cb70-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
-<span id="cb70-340"><a href="#cb70-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb70-341"><a href="#cb70-341" aria-hidden="true" tabindex="-1"></a>    <span class="at">all_delayed =</span> <span class="fu">all</span>(dep_delay <span class="sc">&lt;=</span> <span class="dv">60</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb70-342"><a href="#cb70-342" aria-hidden="true" tabindex="-1"></a>    <span class="at">any_long_delay =</span> <span class="fu">any</span>(arr_delay <span class="sc">&gt;=</span> <span class="dv">300</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb70-343"><a href="#cb70-343" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb70-344"><a href="#cb70-344" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb70-345"><a href="#cb70-345" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-346"><a href="#cb70-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-347"><a href="#cb70-347" aria-hidden="true" tabindex="-1"></a><span class="fu">### Numeric summaries of logical vectors</span></span>
-<span id="cb70-348"><a href="#cb70-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-349"><a href="#cb70-349" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`sum(x)`</span> gives the number of <span class="in">`TRUE`</span>s.\</span>
-<span id="cb70-350"><a href="#cb70-350" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`mean(x)`</span> gives the proportion of <span class="in">`TRUE`</span>s.</span>
-<span id="cb70-351"><a href="#cb70-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-352"><a href="#cb70-352" aria-hidden="true" tabindex="-1"></a>Therefore, to see the proportion of flights that were delayed on departure by at most an hour and the number of flights that were delayed on arrival by five hours or more:</span>
-<span id="cb70-353"><a href="#cb70-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-356"><a href="#cb70-356" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-357"><a href="#cb70-357" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-358"><a href="#cb70-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
-<span id="cb70-359"><a href="#cb70-359" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb70-360"><a href="#cb70-360" aria-hidden="true" tabindex="-1"></a>    <span class="at">proportion_delayed =</span> <span class="fu">mean</span>(dep_delay <span class="sc">&lt;=</span> <span class="dv">60</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb70-361"><a href="#cb70-361" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_long_delay =</span> <span class="fu">sum</span>(arr_delay <span class="sc">&gt;=</span> <span class="dv">300</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb70-362"><a href="#cb70-362" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb70-363"><a href="#cb70-363" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb70-364"><a href="#cb70-364" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-365"><a href="#cb70-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-366"><a href="#cb70-366" aria-hidden="true" tabindex="-1"></a><span class="fu">### Logical subsetting</span></span>
-<span id="cb70-367"><a href="#cb70-367" aria-hidden="true" tabindex="-1"></a>You can use a logical vector to filter a single variable to a subset of interest. </span>
-<span id="cb70-368"><a href="#cb70-368" aria-hidden="true" tabindex="-1"></a>We can subset using <span class="in">`[]`</span>.</span>
-<span id="cb70-371"><a href="#cb70-371" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb70-372"><a href="#cb70-372" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb70-373"><a href="#cb70-373" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
-<span id="cb70-374"><a href="#cb70-374" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb70-375"><a href="#cb70-375" aria-hidden="true" tabindex="-1"></a>    <span class="at">behind =</span> <span class="fu">mean</span>(arr_delay[arr_delay <span class="sc">&gt;</span> <span class="dv">0</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb70-376"><a href="#cb70-376" aria-hidden="true" tabindex="-1"></a>    <span class="at">ahead =</span> <span class="fu">mean</span>(arr_delay[arr_delay <span class="sc">&lt;</span> <span class="dv">0</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb70-377"><a href="#cb70-377" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb70-378"><a href="#cb70-378" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb70-379"><a href="#cb70-379" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb70-380"><a href="#cb70-380" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb70-381"><a href="#cb70-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-382"><a href="#cb70-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-383"><a href="#cb70-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-384"><a href="#cb70-384" aria-hidden="true" tabindex="-1"></a><span class="fu"># Next Steps</span></span>
-<span id="cb70-385"><a href="#cb70-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-386"><a href="#cb70-386" aria-hidden="true" tabindex="-1"></a>Next, we will cover **conditional transformations**  and next week you’ll learn how to manipulate and clean **strings** using the <span class="in">`stringr`</span> package.</span>
+<div class="sourceCode" id="cb69" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Transform: Logical Vectors and Numbers"</span></span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a>What are the types of variables we see in data frames, and what are the different tools we can use to work with them?</span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
+<span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-9"><a href="#cb69-9" aria-hidden="true" tabindex="-1"></a>By the end of this chapter, you should be able to:</span>
+<span id="cb69-10"><a href="#cb69-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-11"><a href="#cb69-11" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Understand how logical vectors work in R</span>
+<span id="cb69-12"><a href="#cb69-12" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Use logical conditions to filter and manipulate data</span>
+<span id="cb69-13"><a href="#cb69-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-14"><a href="#cb69-14" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb69-15"><a href="#cb69-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-16"><a href="#cb69-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Logical Vectors</span></span>
+<span id="cb69-17"><a href="#cb69-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-18"><a href="#cb69-18" aria-hidden="true" tabindex="-1"></a>Logical vectors contain only <span class="in">`TRUE`</span>, <span class="in">`FALSE`</span>, or <span class="in">`NA`</span>.</span>
+<span id="cb69-19"><a href="#cb69-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-22"><a href="#cb69-22" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-23"><a href="#cb69-23" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">NA</span>)</span>
+<span id="cb69-24"><a href="#cb69-24" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb69-25"><a href="#cb69-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-26"><a href="#cb69-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-27"><a href="#cb69-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### Logical comparisons create logical vectors:</span></span>
+<span id="cb69-28"><a href="#cb69-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-31"><a href="#cb69-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-32"><a href="#cb69-32" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">1</span>)</span>
+<span id="cb69-33"><a href="#cb69-33" aria-hidden="true" tabindex="-1"></a>nums <span class="sc">&gt;</span> <span class="dv">4</span></span>
+<span id="cb69-34"><a href="#cb69-34" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-35"><a href="#cb69-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-36"><a href="#cb69-36" aria-hidden="true" tabindex="-1"></a>You can use these directly with functions like <span class="in">`sum()`</span> and <span class="in">`mean()`</span>:</span>
+<span id="cb69-37"><a href="#cb69-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-40"><a href="#cb69-40" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-41"><a href="#cb69-41" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(nums <span class="sc">&gt;</span> <span class="dv">4</span>)   <span class="co"># Count how many values are &gt; 4</span></span>
+<span id="cb69-42"><a href="#cb69-42" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(nums <span class="sc">&gt;</span> <span class="dv">4</span>)  <span class="co"># Proportion of values &gt; 4</span></span>
+<span id="cb69-43"><a href="#cb69-43" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-44"><a href="#cb69-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-45"><a href="#cb69-45" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb69-46"><a href="#cb69-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-47"><a href="#cb69-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 1 – Logical Conditions</span></span>
+<span id="cb69-48"><a href="#cb69-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-49"><a href="#cb69-49" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Create a numeric vector with 10 random values.\</span>
+<span id="cb69-50"><a href="#cb69-50" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>How many values are greater than the mean?</span>
+<span id="cb69-51"><a href="#cb69-51" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>What proportion is above the mean?</span>
+<span id="cb69-52"><a href="#cb69-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-55"><a href="#cb69-55" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-56"><a href="#cb69-56" aria-hidden="true" tabindex="-1"></a><span class="co"># use sample() to create a random list:</span></span>
+<span id="cb69-57"><a href="#cb69-57" aria-hidden="true" tabindex="-1"></a>rands <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">size =</span> <span class="dv">10</span>)</span>
+<span id="cb69-58"><a href="#cb69-58" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(rands <span class="sc">&gt;</span> <span class="fu">mean</span>(rands)) <span class="co"># number of values above the mean</span></span>
+<span id="cb69-59"><a href="#cb69-59" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(rands <span class="sc">&gt;</span> <span class="fu">mean</span>(rands)) <span class="co"># proportion of values above the mean</span></span>
+<span id="cb69-60"><a href="#cb69-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-61"><a href="#cb69-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-62"><a href="#cb69-62" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb69-63"><a href="#cb69-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-64"><a href="#cb69-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## Logical Operations</span></span>
+<span id="cb69-65"><a href="#cb69-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-66"><a href="#cb69-66" aria-hidden="true" tabindex="-1"></a>Combine logical vectors with <span class="in">`&amp;`</span> (and), <span class="in">`|`</span> (or), and <span class="in">`!`</span> (not):</span>
+<span id="cb69-67"><a href="#cb69-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-70"><a href="#cb69-70" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-71"><a href="#cb69-71" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb69-72"><a href="#cb69-72" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
+<span id="cb69-73"><a href="#cb69-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-74"><a href="#cb69-74" aria-hidden="true" tabindex="-1"></a>a <span class="sc">&amp;</span> b <span class="co"># and</span></span>
+<span id="cb69-75"><a href="#cb69-75" aria-hidden="true" tabindex="-1"></a>a <span class="sc">|</span> b <span class="co"># or</span></span>
+<span id="cb69-76"><a href="#cb69-76" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>a <span class="co"># not</span></span>
+<span id="cb69-77"><a href="#cb69-77" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-78"><a href="#cb69-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-79"><a href="#cb69-79" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb69-80"><a href="#cb69-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-81"><a href="#cb69-81" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise 2 – Combining Conditions</span></span>
+<span id="cb69-82"><a href="#cb69-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-83"><a href="#cb69-83" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Using the <span class="in">`mpg`</span> dataset, create a logical condition for cars with <span class="in">`hwy &gt; 30`</span> **and** <span class="in">`cyl == 4`</span>.\</span>
+<span id="cb69-84"><a href="#cb69-84" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>How many such cars exist?</span>
+<span id="cb69-85"><a href="#cb69-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-88"><a href="#cb69-88" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-89"><a href="#cb69-89" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb69-90"><a href="#cb69-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-91"><a href="#cb69-91" aria-hidden="true" tabindex="-1"></a>mpg <span class="sc">|&gt;</span></span>
+<span id="cb69-92"><a href="#cb69-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(hwy <span class="sc">&gt;</span> <span class="dv">30</span> <span class="sc">&amp;</span> cyl <span class="sc">==</span> <span class="dv">4</span>) <span class="sc">|&gt;</span></span>
+<span id="cb69-93"><a href="#cb69-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nrow</span>()</span>
+<span id="cb69-94"><a href="#cb69-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-95"><a href="#cb69-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-96"><a href="#cb69-96" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb69-97"><a href="#cb69-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-98"><a href="#cb69-98" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comparisons</span></span>
+<span id="cb69-99"><a href="#cb69-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-100"><a href="#cb69-100" aria-hidden="true" tabindex="-1"></a>The following filter (using <span class="in">`filter`</span>) finds all daytime departures that arrive roughly on time:</span>
+<span id="cb69-101"><a href="#cb69-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-104"><a href="#cb69-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-105"><a href="#cb69-105" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nycflights13)</span>
+<span id="cb69-106"><a href="#cb69-106" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-107"><a href="#cb69-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dep_time <span class="sc">&gt;</span> <span class="dv">600</span> <span class="sc">&amp;</span> dep_time <span class="sc">&lt;</span> <span class="dv">2000</span> <span class="sc">&amp;</span> <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;</span> <span class="dv">20</span>)</span>
+<span id="cb69-108"><a href="#cb69-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-109"><a href="#cb69-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-110"><a href="#cb69-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-111"><a href="#cb69-111" aria-hidden="true" tabindex="-1"></a>The underlying logical variables can be made visible with <span class="in">`mutate()`</span>:</span>
+<span id="cb69-112"><a href="#cb69-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-115"><a href="#cb69-115" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-116"><a href="#cb69-116" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-117"><a href="#cb69-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb69-118"><a href="#cb69-118" aria-hidden="true" tabindex="-1"></a>    <span class="at">daytime =</span> dep_time <span class="sc">&gt;</span> <span class="dv">600</span> <span class="sc">&amp;</span> dep_time <span class="sc">&lt;</span> <span class="dv">2000</span>,</span>
+<span id="cb69-119"><a href="#cb69-119" aria-hidden="true" tabindex="-1"></a>    <span class="at">approx_ontime =</span> <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;</span> <span class="dv">20</span>,</span>
+<span id="cb69-120"><a href="#cb69-120" aria-hidden="true" tabindex="-1"></a>    <span class="at">.keep =</span> <span class="st">"used"</span></span>
+<span id="cb69-121"><a href="#cb69-121" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb69-122"><a href="#cb69-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-123"><a href="#cb69-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-124"><a href="#cb69-124" aria-hidden="true" tabindex="-1"></a>Which really means that the first filter is equivalent to:</span>
+<span id="cb69-125"><a href="#cb69-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-128"><a href="#cb69-128" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-129"><a href="#cb69-129" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-130"><a href="#cb69-130" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb69-131"><a href="#cb69-131" aria-hidden="true" tabindex="-1"></a>    <span class="at">daytime =</span> dep_time <span class="sc">&gt;</span> <span class="dv">600</span> <span class="sc">&amp;</span> dep_time <span class="sc">&lt;</span> <span class="dv">2000</span>,</span>
+<span id="cb69-132"><a href="#cb69-132" aria-hidden="true" tabindex="-1"></a>    <span class="at">approx_ontime =</span> <span class="fu">abs</span>(arr_delay) <span class="sc">&lt;</span> <span class="dv">20</span>,</span>
+<span id="cb69-133"><a href="#cb69-133" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb69-134"><a href="#cb69-134" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(daytime <span class="sc">&amp;</span> approx_ontime)</span>
+<span id="cb69-135"><a href="#cb69-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-136"><a href="#cb69-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-137"><a href="#cb69-137" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb69-138"><a href="#cb69-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-139"><a href="#cb69-139" aria-hidden="true" tabindex="-1"></a><span class="fu">### Floating point comparison</span></span>
+<span id="cb69-140"><a href="#cb69-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-141"><a href="#cb69-141" aria-hidden="true" tabindex="-1"></a>What happens when you use <span class="in">`==`</span> with numbers? Check it out:</span>
+<span id="cb69-142"><a href="#cb69-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-143"><a href="#cb69-143" aria-hidden="true" tabindex="-1"></a>What are the outcomes of these two equations?</span>
+<span id="cb69-144"><a href="#cb69-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-147"><a href="#cb69-147" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-148"><a href="#cb69-148" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">49</span> <span class="sc">*</span> <span class="dv">49</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>) <span class="sc">^</span> <span class="dv">2</span>)</span>
+<span id="cb69-149"><a href="#cb69-149" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb69-150"><a href="#cb69-150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-151"><a href="#cb69-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-152"><a href="#cb69-152" aria-hidden="true" tabindex="-1"></a>Looks like 1 and 2.</span>
+<span id="cb69-153"><a href="#cb69-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-154"><a href="#cb69-154" aria-hidden="true" tabindex="-1"></a>Now look:</span>
+<span id="cb69-155"><a href="#cb69-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-158"><a href="#cb69-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-159"><a href="#cb69-159" aria-hidden="true" tabindex="-1"></a>x <span class="sc">==</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb69-160"><a href="#cb69-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-161"><a href="#cb69-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-162"><a href="#cb69-162" aria-hidden="true" tabindex="-1"></a>You get all <span class="in">`FALSE`</span>. This is because there’s no way to exactly represent 1/49 or <span class="in">`sqrt(2)`</span> without **ROUNDING**:</span>
+<span id="cb69-163"><a href="#cb69-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-166"><a href="#cb69-166" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-167"><a href="#cb69-167" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x, <span class="at">digits =</span> <span class="dv">16</span>)</span>
+<span id="cb69-168"><a href="#cb69-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-169"><a href="#cb69-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-170"><a href="#cb69-170" aria-hidden="true" tabindex="-1"></a>So <span class="in">`==`</span> is dangerous with numbers. But, you can use <span class="in">`dplyr::near`</span>:</span>
+<span id="cb69-171"><a href="#cb69-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-174"><a href="#cb69-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-175"><a href="#cb69-175" aria-hidden="true" tabindex="-1"></a><span class="fu">near</span>(x, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb69-176"><a href="#cb69-176" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-177"><a href="#cb69-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-178"><a href="#cb69-178" aria-hidden="true" tabindex="-1"></a><span class="fu">### Missing values</span></span>
+<span id="cb69-179"><a href="#cb69-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-180"><a href="#cb69-180" aria-hidden="true" tabindex="-1"></a>Missing values pop up easily in <span class="in">`R`</span> because unknown values are always evaluated that way. If:</span>
+<span id="cb69-181"><a href="#cb69-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-184"><a href="#cb69-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-185"><a href="#cb69-185" aria-hidden="true" tabindex="-1"></a><span class="cn">NA</span> <span class="sc">&gt;</span> <span class="dv">5</span></span>
+<span id="cb69-186"><a href="#cb69-186" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-187"><a href="#cb69-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-188"><a href="#cb69-188" aria-hidden="true" tabindex="-1"></a>Then the following should be true:</span>
+<span id="cb69-189"><a href="#cb69-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-192"><a href="#cb69-192" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-193"><a href="#cb69-193" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="cn">NA</span></span>
+<span id="cb69-194"><a href="#cb69-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-195"><a href="#cb69-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-196"><a href="#cb69-196" aria-hidden="true" tabindex="-1"></a>Same here:</span>
+<span id="cb69-197"><a href="#cb69-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-200"><a href="#cb69-200" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-201"><a href="#cb69-201" aria-hidden="true" tabindex="-1"></a><span class="cn">NA</span> <span class="sc">==</span> <span class="cn">NA</span></span>
+<span id="cb69-202"><a href="#cb69-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-203"><a href="#cb69-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-204"><a href="#cb69-204" aria-hidden="true" tabindex="-1"></a>Print the flights where <span class="in">`dep_time`</span> is missing. Well, you might want to do this:</span>
+<span id="cb69-205"><a href="#cb69-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-208"><a href="#cb69-208" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-209"><a href="#cb69-209" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span></span>
+<span id="cb69-210"><a href="#cb69-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dep_time <span class="sc">==</span> <span class="cn">NA</span>)</span>
+<span id="cb69-211"><a href="#cb69-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-212"><a href="#cb69-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-213"><a href="#cb69-213" aria-hidden="true" tabindex="-1"></a>But it gives <span class="in">`NA`</span> for every row, so you get nothing. This is where <span class="in">`is.na()`</span> comes in handy:</span>
+<span id="cb69-214"><a href="#cb69-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-217"><a href="#cb69-217" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-218"><a href="#cb69-218" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-219"><a href="#cb69-219" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(dep_time))</span>
+<span id="cb69-220"><a href="#cb69-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-221"><a href="#cb69-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-222"><a href="#cb69-222" aria-hidden="true" tabindex="-1"></a><span class="fu">## Boolean algebra</span></span>
+<span id="cb69-223"><a href="#cb69-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-224"><a href="#cb69-224" aria-hidden="true" tabindex="-1"></a>You can combine logical vectors using Boolean algebra.</span>
+<span id="cb69-225"><a href="#cb69-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-226"><a href="#cb69-226" aria-hidden="true" tabindex="-1"></a>For instance, this will find all rows where <span class="in">`x`</span> is not missing.</span>
+<span id="cb69-227"><a href="#cb69-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-228"><a href="#cb69-228" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
+<span id="cb69-229"><a href="#cb69-229" aria-hidden="true" tabindex="-1"></a><span class="in">df |&gt;</span></span>
+<span id="cb69-230"><a href="#cb69-230" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(!is.na(x))</span></span>
+<span id="cb69-231"><a href="#cb69-231" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-232"><a href="#cb69-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-233"><a href="#cb69-233" aria-hidden="true" tabindex="-1"></a>This will find all rows where <span class="in">`x`</span> is smaller than -10 or bigger than 0.</span>
+<span id="cb69-234"><a href="#cb69-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-235"><a href="#cb69-235" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = FALSE}</span></span>
+<span id="cb69-236"><a href="#cb69-236" aria-hidden="true" tabindex="-1"></a><span class="in">df |&gt;</span></span>
+<span id="cb69-237"><a href="#cb69-237" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(x &lt; -10 | x &gt; 0)</span></span>
+<span id="cb69-238"><a href="#cb69-238" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-239"><a href="#cb69-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-240"><a href="#cb69-240" aria-hidden="true" tabindex="-1"></a><span class="fu">### Missing values</span></span>
+<span id="cb69-241"><a href="#cb69-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-244"><a href="#cb69-244" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-245"><a href="#cb69-245" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">NA</span>))</span>
+<span id="cb69-246"><a href="#cb69-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-247"><a href="#cb69-247" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
+<span id="cb69-248"><a href="#cb69-248" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb69-249"><a href="#cb69-249" aria-hidden="true" tabindex="-1"></a>    <span class="at">and =</span> x <span class="sc">&amp;</span> <span class="cn">NA</span>,</span>
+<span id="cb69-250"><a href="#cb69-250" aria-hidden="true" tabindex="-1"></a>    <span class="at">or =</span> x <span class="sc">|</span> <span class="cn">NA</span></span>
+<span id="cb69-251"><a href="#cb69-251" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb69-252"><a href="#cb69-252" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-253"><a href="#cb69-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-254"><a href="#cb69-254" aria-hidden="true" tabindex="-1"></a>This is based on "<span class="in">`TRUE`</span> and <span class="in">`NA`</span>" evaluates to <span class="in">`NA`</span> while "<span class="in">`TRUE`</span> or <span class="in">`NA`</span>" evaluates to <span class="in">`TRUE`</span> (because at least one of them is <span class="in">`TRUE`</span>).</span>
+<span id="cb69-255"><a href="#cb69-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-256"><a href="#cb69-256" aria-hidden="true" tabindex="-1"></a><span class="fu">### Order of operations and `%in%`</span></span>
+<span id="cb69-257"><a href="#cb69-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-258"><a href="#cb69-258" aria-hidden="true" tabindex="-1"></a>Note the difference between these two outputs:</span>
+<span id="cb69-259"><a href="#cb69-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-262"><a href="#cb69-262" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-263"><a href="#cb69-263" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-264"><a href="#cb69-264" aria-hidden="true" tabindex="-1"></a>   <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">11</span> <span class="sc">|</span> month <span class="sc">==</span> <span class="dv">12</span>)</span>
+<span id="cb69-265"><a href="#cb69-265" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-266"><a href="#cb69-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-269"><a href="#cb69-269" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-270"><a href="#cb69-270" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-271"><a href="#cb69-271" aria-hidden="true" tabindex="-1"></a>   <span class="fu">filter</span>(month <span class="sc">==</span> <span class="dv">11</span> <span class="sc">|</span> <span class="dv">12</span>)</span>
+<span id="cb69-272"><a href="#cb69-272" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-273"><a href="#cb69-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-274"><a href="#cb69-274" aria-hidden="true" tabindex="-1"></a>The second one doesn't work properly. It doesn't evaluate as "Find all flights that departed in November or December."</span>
+<span id="cb69-275"><a href="#cb69-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-276"><a href="#cb69-276" aria-hidden="true" tabindex="-1"></a>This is because <span class="in">`month == 11`</span> creates a logical vector. This vector is then compared to <span class="in">`12`</span>, which evaluates to <span class="in">`TRUE`</span> - so it prints the whole table. Here is an illustration:</span>
+<span id="cb69-277"><a href="#cb69-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-280"><a href="#cb69-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-281"><a href="#cb69-281" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-282"><a href="#cb69-282" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb69-283"><a href="#cb69-283" aria-hidden="true" tabindex="-1"></a>    <span class="at">nov =</span> month <span class="sc">==</span> <span class="dv">11</span>,</span>
+<span id="cb69-284"><a href="#cb69-284" aria-hidden="true" tabindex="-1"></a>    <span class="at">final =</span> nov <span class="sc">|</span> <span class="dv">12</span>,</span>
+<span id="cb69-285"><a href="#cb69-285" aria-hidden="true" tabindex="-1"></a>    <span class="at">.keep =</span> <span class="st">"used"</span></span>
+<span id="cb69-286"><a href="#cb69-286" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb69-287"><a href="#cb69-287" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-288"><a href="#cb69-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-289"><a href="#cb69-289" aria-hidden="true" tabindex="-1"></a>This is where <span class="in">`%in%`</span> comes in. <span class="in">`x %in% y`</span> outputs a logical vector the same length as <span class="in">`x`</span> that is <span class="in">`TRUE`</span> whenever a value in <span class="in">`x`</span> is in <span class="in">`y`</span>.</span>
+<span id="cb69-290"><a href="#cb69-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-293"><a href="#cb69-293" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-294"><a href="#cb69-294" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">12</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">11</span>)</span>
+<span id="cb69-295"><a href="#cb69-295" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-296"><a href="#cb69-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-299"><a href="#cb69-299" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-300"><a href="#cb69-300" aria-hidden="true" tabindex="-1"></a>letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>] <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"e"</span>, <span class="st">"i"</span>, <span class="st">"o"</span>, <span class="st">"u"</span>)</span>
+<span id="cb69-301"><a href="#cb69-301" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-302"><a href="#cb69-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-303"><a href="#cb69-303" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise</span></span>
+<span id="cb69-304"><a href="#cb69-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-305"><a href="#cb69-305" aria-hidden="true" tabindex="-1"></a>Find all the flights in November and December with <span class="in">`%in%`</span></span>
+<span id="cb69-306"><a href="#cb69-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-309"><a href="#cb69-309" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-310"><a href="#cb69-310" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span></span>
+<span id="cb69-311"><a href="#cb69-311" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">11</span>,<span class="dv">12</span>))</span>
+<span id="cb69-312"><a href="#cb69-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-313"><a href="#cb69-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-314"><a href="#cb69-314" aria-hidden="true" tabindex="-1"></a><span class="fu">## In-Class Challenge</span></span>
+<span id="cb69-315"><a href="#cb69-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-316"><a href="#cb69-316" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Find all flights where <span class="in">`arr_delay`</span> is missing but <span class="in">`dep_delay`</span> is not.\</span>
+<span id="cb69-317"><a href="#cb69-317" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Find all flights where neither <span class="in">`arr_time`</span> nor <span class="in">`sched_arr_time`</span> are missing, but <span class="in">`arr_delay`</span> is.</span>
+<span id="cb69-318"><a href="#cb69-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-319"><a href="#cb69-319" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summaries</span></span>
+<span id="cb69-320"><a href="#cb69-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-321"><a href="#cb69-321" aria-hidden="true" tabindex="-1"></a><span class="fu">### Logical summaries `any()` and `all()`</span></span>
+<span id="cb69-322"><a href="#cb69-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-323"><a href="#cb69-323" aria-hidden="true" tabindex="-1"></a><span class="in">`any()`</span> returns <span class="in">`TRUE`</span> if there are any <span class="in">`TRUE`</span>s in <span class="in">`x`</span>. (same as <span class="in">`|`</span>)</span>
+<span id="cb69-324"><a href="#cb69-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-325"><a href="#cb69-325" aria-hidden="true" tabindex="-1"></a><span class="in">`all()`</span> returns <span class="in">`TRUE`</span> only if all values of <span class="in">`x`</span> are <span class="in">`TRUE`</span>'s. (same as <span class="in">`&amp;`</span>)</span>
+<span id="cb69-326"><a href="#cb69-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-327"><a href="#cb69-327" aria-hidden="true" tabindex="-1"></a><span class="fu">### In-Class Exercise</span></span>
+<span id="cb69-328"><a href="#cb69-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-329"><a href="#cb69-329" aria-hidden="true" tabindex="-1"></a>Use <span class="in">`all()`</span> and <span class="in">`any()`</span> to find out if every flight was delayed on departure by at most an hour or if any flights were delayed on arrival by five hours or more.</span>
+<span id="cb69-330"><a href="#cb69-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-331"><a href="#cb69-331" aria-hidden="true" tabindex="-1"></a>Using <span class="in">`group_by`</span> allows us to do that by day:</span>
+<span id="cb69-332"><a href="#cb69-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-335"><a href="#cb69-335" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-336"><a href="#cb69-336" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-337"><a href="#cb69-337" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
+<span id="cb69-338"><a href="#cb69-338" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb69-339"><a href="#cb69-339" aria-hidden="true" tabindex="-1"></a>    <span class="at">all_delayed =</span> <span class="fu">all</span>(dep_delay <span class="sc">&lt;=</span> <span class="dv">60</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb69-340"><a href="#cb69-340" aria-hidden="true" tabindex="-1"></a>    <span class="at">any_long_delay =</span> <span class="fu">any</span>(arr_delay <span class="sc">&gt;=</span> <span class="dv">300</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb69-341"><a href="#cb69-341" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb69-342"><a href="#cb69-342" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb69-343"><a href="#cb69-343" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-344"><a href="#cb69-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-345"><a href="#cb69-345" aria-hidden="true" tabindex="-1"></a><span class="fu">### Numeric summaries of logical vectors</span></span>
+<span id="cb69-346"><a href="#cb69-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-347"><a href="#cb69-347" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`sum(x)`</span> gives the number of <span class="in">`TRUE`</span>s.\</span>
+<span id="cb69-348"><a href="#cb69-348" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`mean(x)`</span> gives the proportion of <span class="in">`TRUE`</span>s.</span>
+<span id="cb69-349"><a href="#cb69-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-350"><a href="#cb69-350" aria-hidden="true" tabindex="-1"></a>Therefore, to see the proportion of flights that were delayed on departure by at most an hour and the number of flights that were delayed on arrival by five hours or more:</span>
+<span id="cb69-351"><a href="#cb69-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-354"><a href="#cb69-354" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-355"><a href="#cb69-355" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-356"><a href="#cb69-356" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
+<span id="cb69-357"><a href="#cb69-357" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb69-358"><a href="#cb69-358" aria-hidden="true" tabindex="-1"></a>    <span class="at">proportion_delayed =</span> <span class="fu">mean</span>(dep_delay <span class="sc">&lt;=</span> <span class="dv">60</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb69-359"><a href="#cb69-359" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_long_delay =</span> <span class="fu">sum</span>(arr_delay <span class="sc">&gt;=</span> <span class="dv">300</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb69-360"><a href="#cb69-360" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb69-361"><a href="#cb69-361" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb69-362"><a href="#cb69-362" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-363"><a href="#cb69-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-364"><a href="#cb69-364" aria-hidden="true" tabindex="-1"></a><span class="fu">### Logical subsetting</span></span>
+<span id="cb69-365"><a href="#cb69-365" aria-hidden="true" tabindex="-1"></a>You can use a logical vector to filter a single variable to a subset of interest. </span>
+<span id="cb69-366"><a href="#cb69-366" aria-hidden="true" tabindex="-1"></a>We can subset using <span class="in">`[]`</span>.</span>
+<span id="cb69-369"><a href="#cb69-369" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb69-370"><a href="#cb69-370" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb69-371"><a href="#cb69-371" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">|&gt;</span> </span>
+<span id="cb69-372"><a href="#cb69-372" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb69-373"><a href="#cb69-373" aria-hidden="true" tabindex="-1"></a>    <span class="at">behind =</span> <span class="fu">mean</span>(arr_delay[arr_delay <span class="sc">&gt;</span> <span class="dv">0</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb69-374"><a href="#cb69-374" aria-hidden="true" tabindex="-1"></a>    <span class="at">ahead =</span> <span class="fu">mean</span>(arr_delay[arr_delay <span class="sc">&lt;</span> <span class="dv">0</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb69-375"><a href="#cb69-375" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb69-376"><a href="#cb69-376" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb69-377"><a href="#cb69-377" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb69-378"><a href="#cb69-378" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb69-379"><a href="#cb69-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-380"><a href="#cb69-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-381"><a href="#cb69-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-382"><a href="#cb69-382" aria-hidden="true" tabindex="-1"></a><span class="fu"># Next Steps</span></span>
+<span id="cb69-383"><a href="#cb69-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-384"><a href="#cb69-384" aria-hidden="true" tabindex="-1"></a>Next, we will cover **conditional transformations**  and next week you’ll learn how to manipulate and clean **strings** using the <span class="in">`stringr`</span> package.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

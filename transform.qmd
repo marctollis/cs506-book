@@ -10,8 +10,6 @@ By the end of this chapter, you should be able to:
 
 -   Understand how logical vectors work in R
 -   Use logical conditions to filter and manipulate data
--   Convert between logical, numeric, and character types
--   Parse numbers from messy strings
 
 ------------------------------------------------------------------------
 
