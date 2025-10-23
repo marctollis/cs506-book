@@ -295,7 +295,9 @@ flights |>
 -   `sum(x)` gives the number of `TRUE`s.\
 -   `mean(x)` gives the proportion of `TRUE`s.
 
-Therefore, to see the proportion of flights that were delayed on departure by at most an hour and the number of flights that were delayed on arrival by five hours or more:
+### In-Class Exercise
+
+What are the proportion of flights that were delayed on departure by **at most** an hour, and the number of flights that were delayed on arrival by five hours or more?
 
 ```{r}
 flights |> 
@@ -308,8 +310,13 @@ flights |>
 ```
 
 ### Logical subsetting
-You can use a logical vector to filter a single variable to a subset of interest. 
-We can subset using `[]`.
+
+You can use a logical vector to filter a single variable to a subset of interest. We can subset using `[]`.
+
+### In-Class Exercise
+
+Compute the average delay for flights that arrived early.
+
 ```{r}
 flights |> 
   group_by(year, month, day) |> 
@@ -321,8 +328,99 @@ flights |>
   )
 ```
 
+## Conditional Transformations
 
+A lot of the time, we want to do one thing for condition x, and something different for condition y.
+
+You can use conditional transformations with logical vectors to do this.
+
+### `if_else()`
+
+There are four arguments to `if_else`:\
+1. `condition`: a logical vector.\
+2. `true`: gives the output when the condition is true.\
+3. `false`: gives the output when the condition is false.\
+4 (optional). `missing`: gives the output if the input is `NA`.\
+
+```{r}
+# assign a vector of integers between -3 and 3 to a variable, and tack an NA on the end of that vector:
+x <- c(-3:3, NA)
+```
+
+Let's use `if_else` to label a vector as either positive ("+ve") or negative ("-ve"):
+
+```{r}
+if_else(x > 0, "+ve", "-ve", "???")
+```
+
+**\<**<wink wink>\>: notice something weird here? We'll come back to it.
+
+To stick with our new tradition of using vectors in our arguments:
+
+```{r}
+# If x is negative, then print the negative of it, else print the positive
+# this is kind of like abs().
+if_else(x < 0, -x, x)
+```
+
+You can also mix and match different vectors:
+
+```{r}
+x1 <- c(NA, 1, 2, NA)
+y1 <- c(3, NA, 4, 6)
+if_else(is.na(x1), y1, x1)
+```
+
+### `case_when`
+
+This is a flexible way of performing different computations for different conditions.
+
+The syntax is not something we are very used to in the `tidyverse`. It contains pairs of `condition ~ output`, where `condition` is a logical vector. When `condition == TRUE`, the output is used.
+
+The reason we use it is because `if_else` can get ugly quickly. For instance, if we want to resolve the fact that zero is neither positive or negative in our `x` vector above (see the **\<**<wink wink>\>), we have to do some fancy nesting:
+
+```{r}
+if_else(x == 0, "0", if_else(x < 0, "-ve", "+ve"), "???")
+```
+
+But `case_when` can reslove this quite easily:
+
+```{r}
+x <- c(-3:3, NA)
+case_when(
+  x == 0   ~ "0",
+  x < 0    ~ "-ve", 
+  x > 0    ~ "+ve",
+  is.na(x) ~ "???"
+)
+```
+
+### In-Class Challenge
+
+Use `case_when` to add a `status` columns containing human-readable labels to the `flights` table that describe arrival delays from the `arr_delay` column.\
+1. When `arr_delay` is missing, the flight is "cancelled".\
+2. When `arr_delay` is 30 minutes early or more, it is "very early".\
+3, When `arr_delay` is less than 15 minutes early or late, it is "on time".\
+4. When `arr_delay` is less than 60 minutes late, it is "late".\
+5. When`arr_delay`is more than an hour but less than`Inf\` (infinity) late, it is "very late"\
+
+Hint: keep the "used" columns.
+
+```{r}
+flights |> 
+  mutate(
+    status = case_when(
+      is.na(arr_delay)      ~ "cancelled",
+      arr_delay < -30       ~ "very early",
+      arr_delay < -15       ~ "early",
+      abs(arr_delay) <= 15  ~ "on time",
+      arr_delay < 60        ~ "late",
+      arr_delay < Inf       ~ "very late",
+    ),
+    .keep = "used"
+  )
+```
 
 # Next Steps
 
-Next, we will cover **conditional transformations**  and next week you’ll learn how to manipulate and clean **strings** using the `stringr` package.
+Next, you’ll learn how to manipulate and clean **strings** using the `stringr` package.
