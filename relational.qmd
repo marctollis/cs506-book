@@ -30,14 +30,29 @@ Example tables from `nycflights13`:
 
 ## Keys
 
--   **Primary key**: uniquely identifies each row in a table\
+-   **Primary key**: uniquely identifies each row in a table
+    -   **Compound key:** when multiple variables are needed.\
 -   **Foreign key**: column that matches a primary key in another table
 
 Example: `flights$carrier` matches `airlines$carrier`.
 
+### Surrogate Keys
+
+Sometimes primary keys may contain unique information but are not actually useful `airports$altitude` or `airports$latitude` may be unique, but that is not useful for data analysis of airline flights (for most people).
+
+A good surrogate key would be to add rows names as unique identifiers:
+
+```{r}
+library(tidyverse)
+library(nycflights13)
+flights2 <- flights |>
+  mutate(id = row_number(), .before = 1)
+flights2
+```
+
 ------------------------------------------------------------------------
 
-## Joins with dplyr
+## Mutating joins with dplyr
 
 `dplyr` join functions merge tables by keys.
 
@@ -58,52 +73,18 @@ flights |>
 
 ------------------------------------------------------------------------
 
-### `inner_join()`
+#### `inner_join()` keeps only matching rows.
 
-Keeps only matching rows:
-
-```{r}
-flights |>
-  inner_join(airlines, by = "carrier") |>
-  rename(airline_name = name) |>
-  select(airline_name, carrier, flight) |>
-  head()
-```
+#### `full_join()` keeps all rows from both tables.
 
 ------------------------------------------------------------------------
 
-### `full_join()`
+## Filtering joins
 
-Keeps all rows from both tables:
-
-```{r}
-flights |>
-  full_join(airlines, by = "carrier") |>
-  rename(airline_name = name) |>
-  select(airline_name, carrier, flight) |>
-  head()
-```
-
-------------------------------------------------------------------------
-
-### `semi_join()` and `anti_join()`
+#### `semi_join()` and `anti_join()`:
 
 -   `semi_join()`: keeps rows in first table with matches in second\
 -   `anti_join()`: keeps rows with no matches
-
-```{r}
-flights |>
-  semi_join(airlines, by = "carrier") |>
-  head()
-```
-
-------------------------------------------------------------------------
-
-### In-Class Exercise 1 – Basic Joins
-
-1.  Use `left_join()` to add airline names to `flights` (rename to `airline_name`).\
-2.  Count the number of flights for each airline.\
-3.  Use `inner_join()` and compare the number of rows.
 
 ------------------------------------------------------------------------
 
